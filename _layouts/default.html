@@ -1,43 +1,53 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
   <head>
     <meta charset="UTF-8">
-
     {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
+
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-
-      {%- comment -%}
-      
       {% if site.github.is_project_page %}
-        
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
       {% if site.show_downloads %}
-        
+        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
-      {%- endcomment -%}
     </header>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
-    </main>
 
-    <footer class="site-footer" role="contentinfo">
-      <p>© 2025 RadarRoster — Data Science & Analytics Services by Daryoosh Dehestani.</p>
-      <p>This site is proudly hosted on <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.</p>
-    </footer>
+      <section class="custom-services">
+        <h3>Our Services</h3>
+        <p>
+          In addition to data analytics and system integration, we also offer tailored services in executive recruitment, headhunting for specialists in tech and business fields, and solutions for nearshoring or offshoring your operations.
+        </p>
+        <p>
+          Based in Germany, we support clients across the EU and globally. Our services are designed for smooth cross-border cooperation.
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner">Proudly created by <a href="https://github.com/dda-oo">dda-oo</a>.</span>
+        <span class="site-footer-credits">
+          Powered by <a href="https://pages.github.com">GitHub Pages</a>.
+          <br>
+          <a href="/impressum.html">Impressum</a>
+        </span>
+      </footer>
+    </main>
   </body>
 </html>
