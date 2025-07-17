@@ -44,8 +44,6 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
 
 ## Trusted By
 
-<h2 style="text-align:center;">Trusted By</h2>
-
 <section id="clients" style="padding: 2rem 0;">
   <div class="clients-logos" style="
     display: grid;
@@ -56,7 +54,6 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
     max-width: 1000px;
     margin: 0 auto;
   ">
-
     <!-- Client 1 -->
     <a href="https://www.uni-bayreuth.de" target="_blank" rel="noopener noreferrer" title="University of Bayreuth">
       <img src="/assets/img/clients/ubt.jpg" alt="University of Bayreuth" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
@@ -64,26 +61,26 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
 
     <!-- Client 2 -->
     <a href="https://www.pass-ag.com" target="_blank" rel="noopener noreferrer" title="Pass Stanztechnik AG">
-      <img src="/assets/img/clients/pass-tech.png" alt="Client 2 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+      <img src="/assets/img/clients/pass-tech.png" alt="Pass Stanztechnik AG Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
     </a>
 
     <!-- Client 3 -->
     <a href="https://cueconcept.de" target="_blank" rel="noopener noreferrer" title="Cueconcept GmbH">
-      <img src="/assets/img/clients/cueconcept.png" alt="Client 3 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+      <img src="/assets/img/clients/cueconcept.png" alt="Cueconcept GmbH Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
     </a>
 
     <!-- Client 4 -->
     <a href="https://rent-a-programmer.de" target="_blank" rel="noopener noreferrer" title="Rent a Programmer">
-      <img src="/assets/img/clients/rp.png" alt="Client 4 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+      <img src="/assets/img/clients/rp.png" alt="Rent a Programmer Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
     </a>
 
     <!-- Client 5 -->
     <a href="https://cewe.de" target="_blank" rel="noopener noreferrer" title="CEWE">
-      <img src="/assets/img/clients/cewe.png" alt="Client 4 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+      <img src="/assets/img/clients/cewe.png" alt="CEWE Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
     </a>
-
   </div>
 </section>
+
 
 ---
 
