@@ -9,15 +9,4 @@ description: RadarRoster Blog – Ideas, updates, and insights from the world of
 
 Stay updated with expert insights, practical tips, and real-world lessons in AI, analytics, and tech leadership.
 
-💡 **Coming soon**: Our latest posts and thought leadership will appear here.
-
----
-
-{% for post in site.posts %}
-### [{{ post.title }}]({{ post.url }})
-<small>{{ post.date | date: "%B %d, %Y" }}</small>  
-{{ post.description }}
-
----
-
-{% endfor %}
+🧠 **Discover articles and strategic insights on [LinkedIn](https://www.linkedin.com/in/daryooshdehestani/recent-activity/articles/)** — featuring perspectives on the future of data, AI, and tech leadership.
