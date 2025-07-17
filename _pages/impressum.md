@@ -7,7 +7,7 @@ permalink: /impressum/
 # Impressum
 
 **Radar Roster**  
-Offenburg, Germany  
+Offenburg, Deutschland  
 E-Mail: [dehestani@radarroster.com](mailto:dehestani@radarroster.com)
 
 ---
@@ -20,7 +20,7 @@ Radar Roster bietet datengetriebene Dienstleistungen wie Business Intelligence, 
 
 ## Rechtliche Hinweise
 
-Diese Website enthält journalistische Inhalte (z. B. Blogs, Podcasts), E-Commerce-Elemente und professionelle Dienstleistungen. Sie richtet sich an Unternehmen mit Sitz in der EU sowie weltweit. Umsatzsteuerrechtlich relevante Leistungen werden entsprechend der geltenden Rechtslage erbracht.
+Diese Website kann journalistische Inhalte (z. B. Blogs, Podcasts), E-Commerce-Elemente oder professionelle Dienstleistungen umfassen oder in Zukunft aufnehmen. Die Angebote richten sich an Unternehmen mit Sitz in der EU sowie weltweit. Umsatzsteuerrechtlich relevante Leistungen werden stets gemäß der geltenden Rechtslage erbracht.
 
 ---
 
