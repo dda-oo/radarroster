@@ -25,7 +25,7 @@ RadarRoster provides end-to-end data and analytics capabilities, including:
 - **Executive Recruitment & Talent Solutions:** Headhunting for data, AI, and tech experts who fit your company culture and goals  
 - **Nearshoring & Offshoring Consulting:** Optimizing cross-border collaboration and resource allocation with seamless operational integration  
 
-With a deep commitment to fully understanding your unique needs, RadarRoster delivers **fully automated, scalable solutions** crafted for any size organization, any complexity, and any challenge — turning your data into actionable, sustainable business advantage.
+With a deep commitment to fully understanding your unique needs, RadarRoster delivers fully automated, scalable solutions crafted for any size organization, any complexity, and any challenge — turning your data into actionable, sustainable business advantage.
 
 ---
 
@@ -45,7 +45,6 @@ Delivering impactful, cutting-edge projects tailored to real-world business need
 ## Trusted By
 
 <div class="clients-logos" style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center;">
-  <!-- Replace the href and src below with your clients’ actual URLs and logo images -->
   <a href="https://client1.com" target="_blank" rel="noopener noreferrer" title="Client 1">
     <img src="/assets/img/client1-logo.png" alt="Client 1 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
   </a>
@@ -61,7 +60,7 @@ Delivering impactful, cutting-edge projects tailored to real-world business need
 
 ## Let's Connect
 
-Ready to unlock the full potential of your data? Whether you're a startup or an established enterprise, RadarRoster offers tailored solutions that elevate your business.
+Ready to unlock the full potential of your data? Whether you’re a startup or an established enterprise, RadarRoster offers tailored solutions that elevate your business.
 
 Reach out to discuss your project or explore how we can collaborate:
 
@@ -75,21 +74,27 @@ Reach out to discuss your project or explore how we can collaborate:
   <input type="text" name="_honey" style="display:none" />
 
   <label for="name">Name:</label><br />
-  <input type="text" id="name" name="name" required style="width:100%; padding:0.4rem;"/><br /><br />
+  <input type="text" id="name" name="name" required style="width:100%; padding:0.4rem;" /><br /><br />
 
   <label for="email">Email:</label><br />
-  <input type="email" id="email" name="email" required style="width:100%; padding:0.4rem;"/><br /><br />
+  <input type="email" id="email" name="email" required style="width:100%; padding:0.4rem;" /><br /><br />
 
   <label for="message">Message:</label><br />
-  <textarea id="message" name="message" rows="6" required style="width:100%; padding:0.4rem;"></textarea><br /><br />
+  <textarea
+    id="message"
+    name="message"
+    rows="6"
+    required
+    style="width:100%; padding:0.4rem;"
+  ></textarea
+  ><br /><br />
 
-  <button type="submit" style="padding:0.6rem 1.2rem; font-weight:bold; cursor:pointer;">Send</button>
+  <button type="submit" style="padding: 0.6rem 1.2rem; font-weight: bold; cursor: pointer;">
+    Send
+  </button>
 </form>
 
-<div
-  id="form-status"
-  style="margin-top: 1rem; font-weight: bold; text-align:center;"
-></div>
+<div id="form-status" style="margin-top: 1rem; font-weight: bold; text-align: center;"></div>
 
 <script>
   document.getElementById("contact-form").addEventListener("submit", function (event) {
