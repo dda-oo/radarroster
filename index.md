@@ -1,6 +1,6 @@
 ---
 layout: default
-title: RadarRoster – Advanced Data Science & Analytics Solutions
+title: RadarRoster – Turning Numbers Into Narratives
 description: Delivering impactful Business Intelligence, AI, and Data Engineering services by Daryoosh Dehestani — your trusted partner for data-driven success.
 ---
 
