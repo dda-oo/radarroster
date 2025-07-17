@@ -44,16 +44,23 @@ Delivering impactful, cutting-edge projects tailored to real-world business need
 
 ## Trusted By
 
-<div class="clients-logos" style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center;">
-  <a href="https://client1.com" target="_blank" rel="noopener noreferrer" title="Client 1">
-    <img src="/assets/img/client1-logo.png" alt="Client 1 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
+<div class="clients-logos" style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; align-items:center;">
+  
+  <!-- Client 1 -->
+  <a href="https://www.uni-bayreuth.de" target="_blank" rel="noopener noreferrer" title="University of Bayreuth">
+    <img src="https://raw.githubusercontent.com/dda-oo/radarroster/main/assets/img/clients/ubt.jpg" alt="UBT" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
   </a>
+
+  <!-- Client 2 -->
   <a href="https://client2.com" target="_blank" rel="noopener noreferrer" title="Client 2">
-    <img src="/assets/img/client2-logo.png" alt="Client 2 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
+    <img src="https://raw.githubusercontent.com/dda-oo/radarroster/main/assets/img/clients/client2-logo.jpg" alt="Client 2 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
   </a>
+
+  <!-- Client 3 -->
   <a href="https://client3.com" target="_blank" rel="noopener noreferrer" title="Client 3">
-    <img src="/assets/img/client3-logo.png" alt="Client 3 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
+    <img src="https://raw.githubusercontent.com/dda-oo/radarroster/main/assets/img/clients/client3-logo.jpg" alt="Client 3 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
   </a>
+
 </div>
 
 ---
