@@ -81,6 +81,14 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
   </div>
 </section>
 
+---
+
+
+## More from RadarRoster
+
+- 📘 [Read Our Blog](/blog/)
+- 🛠️ [See Project Showcase](/showcase/)
+
 
 ---
 
