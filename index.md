@@ -124,10 +124,9 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
 
   <!-- Calendly Embed or CTA Box -->
 <div style="flex: 1 1 320px; max-width: 400px; border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; text-align: center; background-color: #f9f9f9;">
-  <h3 style="margin-top: 0; font-size: 1.5rem;">Prefer to chat?</h3>
-  <p style="margin: 0.5rem 0 1rem;">
-  Skip the back-and-forth — book a free strategy session and let’s meet face-to-face (virtually, of course).<br />
-  You’ll get an automatic Zoom invite right after booking. 🎥✨
+  <h3 style="margin-top: 0;">Prefer to chat?</h3>
+<p style="margin: 0.5rem 0 1rem;">
+  Book a free strategy session — you’ll get a Zoom link instantly. 🎥
 </p>
   <a
     href="https://calendly.com/radarroster/meeting"
