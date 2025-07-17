@@ -63,21 +63,24 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
     </a>
 
     <!-- Client 2 -->
-    <a href="https://client2.com" target="_blank" rel="noopener noreferrer" title="Client 2">
-      <img src="/assets/img/clients/client2-logo.jpg" alt="Client 2 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+    <a href="https://www.pass-ag.com" target="_blank" rel="noopener noreferrer" title="Pass Stanztechnik AG">
+      <img src="/assets/img/clients/pass-tech.png" alt="Client 2 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
     </a>
 
     <!-- Client 3 -->
-    <a href="https://client3.com" target="_blank" rel="noopener noreferrer" title="Client 3">
-      <img src="/assets/img/clients/client3-logo.jpg" alt="Client 3 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+    <a href="https://cueconcept.de" target="_blank" rel="noopener noreferrer" title="Cueconcept GmbH">
+      <img src="/assets/img/clients/cueconcept.png" alt="Client 3 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
     </a>
 
     <!-- Client 4 -->
-    <a href="https://client4.com" target="_blank" rel="noopener noreferrer" title="Client 4">
-      <img src="/assets/img/clients/client4-logo.jpg" alt="Client 4 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+    <a href="https://rent-a-programmer.de" target="_blank" rel="noopener noreferrer" title="Rent a Programmer">
+      <img src="/assets/img/clients/rp.png" alt="Client 4 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
     </a>
 
-    <!-- Add more clients as needed -->
+    <!-- Client 5 -->
+    <a href="https://cewe.de" target="_blank" rel="noopener noreferrer" title="CEWE">
+      <img src="/assets/img/clients/cewe.png" alt="Client 4 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+    </a>
 
   </div>
 </section>
