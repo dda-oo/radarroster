@@ -88,36 +88,54 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
 
 Ready to unlock the full potential of your data? Whether you're a startup or an established enterprise, RadarRoster offers tailored, scalable solutions — fast.
 
-<form
-  id="contact-form"
-  action="https://formsubmit.co/dehestani@radarroster.com"
-  method="POST"
-  style="max-width: 400px; margin: 2rem auto;"
->
-  <input type="hidden" name="_captcha" value="false" />
-  <input type="text" name="_honey" style="display: none;" />
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
 
-  <label for="name">Name:</label><br />
-  <input type="text" id="name" name="name" required style="width:100%; padding:0.4rem;" /><br /><br />
+  <!-- Contact Form -->
+  <form
+    id="contact-form"
+    action="https://formsubmit.co/dehestani@radarroster.com"
+    method="POST"
+    style="flex: 1 1 320px; max-width: 400px;"
+  >
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="text" name="_honey" style="display: none;" />
 
-  <label for="email">Email:</label><br />
-  <input type="email" id="email" name="email" required style="width:100%; padding:0.4rem;" /><br /><br />
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required style="width:100%; padding:0.4rem;" /><br /><br />
 
-  <label for="message">Message:</label><br />
-  <textarea
-    id="message"
-    name="message"
-    rows="6"
-    required
-    style="width:100%; padding:0.4rem;"
-  ></textarea><br /><br />
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required style="width:100%; padding:0.4rem;" /><br /><br />
 
-  <button type="submit" style="padding: 0.6rem 1.2rem; font-weight: bold; cursor: pointer;">
-    Send
-  </button>
-</form>
+    <label for="message">Message:</label><br />
+    <textarea
+      id="message"
+      name="message"
+      rows="6"
+      required
+      style="width:100%; padding:0.4rem;"
+    ></textarea><br /><br />
 
-<div id="form-status" style="margin-top: 1rem; font-weight: bold; text-align: center;"></div>
+    <button type="submit" style="padding: 0.6rem 1.2rem; font-weight: bold; cursor: pointer;">
+      Send
+    </button>
+
+    <div id="form-status" style="margin-top: 1rem; font-weight: bold;"></div>
+  </form>
+
+  <!-- Calendly Embed or CTA Box -->
+  <div style="flex: 1 1 320px; max-width: 400px; border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; text-align: center;">
+    <h3 style="margin-top: 0;">Prefer a call?</h3>
+    <p>Skip the email and book a free strategy call directly in my calendar.</p>
+    <a
+      href="https://calendly.com/dehestani/30min"
+      target="_blank"
+      rel="noopener noreferrer"
+      style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background-color: #0069ff; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;"
+    >
+      📅 Book Appointment
+    </a>
+  </div>
+</div>
 
 <script>
   document.getElementById("contact-form").addEventListener("submit", function (event) {
@@ -145,6 +163,7 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
       });
   });
 </script>
+
 
 ---
 
