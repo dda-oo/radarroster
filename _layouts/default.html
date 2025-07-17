@@ -18,6 +18,8 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+
+      {%- comment -%}
       {% if site.github.is_project_page %}
         <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
       {% endif %}
@@ -25,6 +27,7 @@
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
+      {%- endcomment -%}
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -45,7 +48,7 @@
         <span class="site-footer-credits">
           Powered by <a href="https://pages.github.com">GitHub Pages</a>.
           <br>
-          <a href="/impressum.html">Impressum</a>
+          <a href="/impressum/">Impressum</a>
         </span>
       </footer>
     </main>
