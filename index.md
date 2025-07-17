@@ -4,4 +4,6 @@ layout: default
 
 # Welcome to RadarRoster
 
-This is my site using the Cayman theme on GitHub Pages.
+This site is powered by the Cayman GitHub Pages theme.
+
+Customize this content in the `index.md` file.
