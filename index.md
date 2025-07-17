@@ -1,7 +1,7 @@
 ---
 layout: default
 title: RadarRoster – Turning Numbers Into Narratives
-description: Delivering impactful Business Intelligence, AI, and Data Engineering services by Daryoosh Dehestani — your trusted partner for data-driven success.
+description: Make smarter business decisions, backed by data.
 ---
 
 # Welcome to RadarRoster
