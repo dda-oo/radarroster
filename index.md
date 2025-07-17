@@ -123,18 +123,23 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
   </form>
 
   <!-- Calendly Embed or CTA Box -->
-  <div style="flex: 1 1 320px; max-width: 400px; border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; text-align: center;">
-    <h3 style="margin-top: 0;">Prefer a call?</h3>
-    <p>Skip the email and book a free strategy call directly in my calendar.</p>
-    <a
-      href="https://calendly.com/dehestani/30min"
-      target="_blank"
-      rel="noopener noreferrer"
-      style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; background-color: #0069ff; color: white; text-decoration: none; border-radius: 4px; font-weight: bold;"
-    >
-      📅 Book Appointment
-    </a>
-  </div>
+<div style="flex: 1 1 320px; max-width: 400px; border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; text-align: center; background-color: #f9f9f9;">
+  <h3 style="margin-top: 0; font-size: 1.5rem;">Prefer to chat?</h3>
+  <p style="margin: 0.5rem 0 1rem;">
+  Skip the back-and-forth — book a free strategy session and let’s meet face-to-face (virtually, of course).<br />
+  You’ll get an automatic Zoom invite right after booking. 🎥✨
+</p>
+  <a
+    href="https://calendly.com/dehestani/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: #0069ff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: background-color 0.3s ease;"
+    onmouseover="this.style.backgroundColor='#0053cc'"
+    onmouseout="this.style.backgroundColor='#0069ff'"
+  >
+    📅 Book Appointment
+  </a>
+</div>
 </div>
 
 <script>
