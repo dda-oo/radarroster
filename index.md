@@ -13,13 +13,19 @@ Explore my professional world:
 
 ---
 
-## Why Work with RadarRoster?
+## Our Services
 
-- Over a decade of cross-sector expertise turning data into actionable advantage  
-- A unique blend of business acumen and philosophical insight, ensuring solutions that are rigorous, ethical, and innovative  
-- Strategic partner with the agility of a consultancy and the thoughtful depth of a trusted advisor  
-- Focus on human-centered, transparent, and scalable analytics that drive measurable impact  
-- Personalized attention and commitment of a dedicated expert, delivering enterprise-grade results  
+RadarRoster provides end-to-end data and analytics capabilities, including:
+
+- **Business Intelligence & Data Visualization:** Interactive and customized dashboards with Power BI, Tableau, IBM Cognos, and more — integrating diverse data sources such as Workday, SAP, billing systems, stock monitoring, and other enterprise applications  
+- **Advanced Data Science & AI:** Predictive modeling, natural language processing, deep learning, and time series forecasting tailored to your business challenges  
+- **Data Engineering:** ETL pipeline design, cloud data platforms (GCP, AWS, Azure), and robust data warehousing for scalable analytics  
+- **AI Application Development:** Chatbots, recommendation engines, and automation workflows designed to enhance efficiency and engagement  
+- **Consulting & Strategy:** Comprehensive data strategy, analytics maturity assessments, and team upskilling to unlock your organization’s full potential  
+- **Executive Recruitment & Talent Solutions:** Headhunting for data, AI, and tech experts who fit your company culture and goals  
+- **Nearshoring & Offshoring Consulting:** Optimizing cross-border collaboration and resource allocation with seamless operational integration  
+
+With a deep commitment to fully understanding your unique needs, RadarRoster delivers **fully automated, scalable solutions** crafted for any size organization, any complexity, and any challenge — turning your data into actionable, sustainable business advantage.
 
 ---
 
@@ -36,27 +42,19 @@ Delivering impactful, cutting-edge projects tailored to real-world business need
 
 ---
 
-## Our Services
-
-RadarRoster provides end-to-end data and analytics capabilities, including:
-
-- **Business Intelligence & Data Visualization:** Interactive dashboards, KPI reporting, and storytelling  
-- **Advanced Data Science & AI:** Predictive modeling, NLP, deep learning, time series analysis  
-- **Data Engineering:** ETL design, cloud data platforms (GCP, AWS, Azure), data warehousing  
-- **AI Application Development:** Chatbots, recommendation engines, automation workflows  
-- **Consulting & Strategy:** Data strategy, analytics maturity assessments, and team upskilling  
-- **Executive Recruitment & Talent Solutions:** Headhunting for data, AI, and tech experts  
-- **Nearshoring & Offshoring Consulting:** Optimizing cross-border collaboration and resource allocation  
-
----
-
 ## Trusted By
 
-<div class="clients-logos">
-<!-- Add your clients logos or names here -->
-<a href="https://client1.com" target="_blank" rel="noopener noreferrer"><img src="/assets/img/client1-logo.png" alt="Client 1" /></a>
-<a href="https://client2.com" target="_blank" rel="noopener noreferrer"><img src="/assets/img/client2-logo.png" alt="Client 2" /></a>
-<a href="https://client3.com" target="_blank" rel="noopener noreferrer"><img src="/assets/img/client3-logo.png" alt="Client 3" /></a>
+<div class="clients-logos" style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;align-items:center;">
+  <!-- Replace the href and src below with your clients’ actual URLs and logo images -->
+  <a href="https://client1.com" target="_blank" rel="noopener noreferrer" title="Client 1">
+    <img src="/assets/img/client1-logo.png" alt="Client 1 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
+  </a>
+  <a href="https://client2.com" target="_blank" rel="noopener noreferrer" title="Client 2">
+    <img src="/assets/img/client2-logo.png" alt="Client 2 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
+  </a>
+  <a href="https://client3.com" target="_blank" rel="noopener noreferrer" title="Client 3">
+    <img src="/assets/img/client3-logo.png" alt="Client 3 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
+  </a>
 </div>
 
 ---
@@ -67,44 +65,57 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
 
 Reach out to discuss your project or explore how we can collaborate:
 
-<form id="contact-form" action="https://formsubmit.co/dehestani@radarroster.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="text" name="_honey" style="display:none">
-  
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
-  
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-  
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="6" required></textarea><br><br>
-  
-  <button type="submit">Send</button>
+<form
+  id="contact-form"
+  action="https://formsubmit.co/dehestani@radarroster.com"
+  method="POST"
+  style="max-width:400px; margin:auto;"
+>
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="text" name="_honey" style="display:none" />
+
+  <label for="name">Name:</label><br />
+  <input type="text" id="name" name="name" required style="width:100%; padding:0.4rem;"/><br /><br />
+
+  <label for="email">Email:</label><br />
+  <input type="email" id="email" name="email" required style="width:100%; padding:0.4rem;"/><br /><br />
+
+  <label for="message">Message:</label><br />
+  <textarea id="message" name="message" rows="6" required style="width:100%; padding:0.4rem;"></textarea><br /><br />
+
+  <button type="submit" style="padding:0.6rem 1.2rem; font-weight:bold; cursor:pointer;">Send</button>
 </form>
 
-<div id="form-status" style="margin-top: 1rem; font-weight: bold;"></div>
+<div
+  id="form-status"
+  style="margin-top: 1rem; font-weight: bold; text-align:center;"
+></div>
 
 <script>
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form);
-  fetch(form.action, {
-    method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
-      form.reset();
-      document.getElementById('form-status').textContent = "Thank you! I will get back to you shortly.";
-    } else {
-      document.getElementById('form-status').textContent = "Oops! There was an issue submitting your message.";
-    }
-  }).catch(() => {
-    document.getElementById('form-status').textContent = "Oops! There was an issue submitting your message.";
+  document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    })
+      .then((response) => {
+        if (response.ok) {
+          form.reset();
+          document.getElementById("form-status").textContent =
+            "Thank you! I will get back to you shortly.";
+        } else {
+          document.getElementById("form-status").textContent =
+            "Oops! There was an issue submitting your message.";
+        }
+      })
+      .catch(() => {
+        document.getElementById("form-status").textContent =
+          "Oops! There was an issue submitting your message.";
+      });
   });
-});
 </script>
 
 ---
