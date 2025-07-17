@@ -130,7 +130,7 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
   You’ll get an automatic Zoom invite right after booking. 🎥✨
 </p>
   <a
-    href="https://calendly.com/dehestani/30min"
+    href="https://calendly.com/radarroster/meeting"
     target="_blank"
     rel="noopener noreferrer"
     style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: #0069ff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: background-color 0.3s ease;"
