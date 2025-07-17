@@ -15,70 +15,87 @@ Explore my professional world:
 
 ## Our Services
 
-RadarRoster provides end-to-end data and analytics capabilities, including:
+RadarRoster delivers end-to-end data and analytics capabilities, designed for flexibility, speed, and business alignment:
 
-- **Business Intelligence & Data Visualization:** Interactive and customized dashboards with Power BI, Tableau, IBM Cognos, and more — integrating diverse data sources such as Workday, SAP, billing systems, stock monitoring, and other enterprise applications  
-- **Advanced Data Science & AI:** Predictive modeling, natural language processing, deep learning, and time series forecasting tailored to your business challenges  
-- **Data Engineering:** ETL pipeline design, cloud data platforms (GCP, AWS, Azure), and robust data warehousing for scalable analytics  
-- **AI Application Development:** Chatbots, recommendation engines, and automation workflows designed to enhance efficiency and engagement  
-- **Consulting & Strategy:** Comprehensive data strategy, analytics maturity assessments, and team upskilling to unlock your organization’s full potential  
-- **Executive Recruitment & Talent Solutions:** Headhunting for data, AI, and tech experts who fit your company culture and goals  
-- **Nearshoring & Offshoring Consulting:** Optimizing cross-border collaboration and resource allocation with seamless operational integration  
+- **Business Intelligence & Data Visualization:** Custom dashboards with Power BI, Tableau, and IBM Cognos — integrated with SAP, Workday, billing platforms, stock systems, and other enterprise tools  
+- **Advanced Data Science & AI:** Predictive modeling, NLP, time-series forecasting, and deep learning tailored to business impact  
+- **Data Engineering:** ETL pipeline design, scalable cloud solutions (GCP, AWS, Azure), and modern data warehousing  
+- **AI Application Development:** Chatbots, recommender systems, automation workflows — all crafted with performance and UX in mind  
+- **Consulting & Strategy:** Analytics maturity assessments, data audits, and executive data literacy programs  
+- **Executive Recruitment & Talent Solutions:** Elite headhunting in AI, data, and tech, ensuring cultural and strategic alignment  
+- **Nearshoring & Offshoring Consulting:** Seamless team integration across borders — from talent to technology
 
-With a deep commitment to fully understanding your unique needs, RadarRoster delivers fully automated, scalable solutions crafted for any size organization, any complexity, and any challenge — turning your data into actionable, sustainable business advantage.
+We specialize in fully understanding your unique needs and building **end-to-end automated solutions** for **any scale**, **any complexity**, and **any challenge** — helping you turn data into measurable business advantage.
 
 ---
 
 ## Recent Innovations & Solutions
 
-Delivering impactful, cutting-edge projects tailored to real-world business needs:
+Some recent examples of impactful, AI-driven solutions we’ve delivered:
 
-- **Burnout Prediction Model:** Early detection of employee fatigue via advanced ML on HR data  
-- **Psychology AI Bot:** Real-time emotional state tracking to boost workforce well-being  
-- **Personalized Training Recommender:** AI-driven learning paths tailored to individual growth and performance  
-- **Small-Cap Scout:** Interactive platform for financial forecasting and investment insights on emerging stocks  
-- **E-commerce Automation Bots:** Telegram & WhatsApp bots designed to streamline sales, supply chain, and customer management  
-- **Custom Chatbot Ecosystems:** Intelligent automation platforms enhancing internal workflows and customer engagement  
+- 🧠 **Burnout Prediction Model:** Detects early signs of employee fatigue using machine learning on HR datasets  
+- 💬 **Emotional AI Chatbot:** Real-time NLP-driven mental health insights for organizational wellness  
+- 📚 **Training Recommender:** Personalized learning path engine based on user goals and performance data  
+- 📈 **Small-Cap Scout:** Live dashboards and AI forecasting for niche investment opportunities  
+- 🤖 **E-commerce Automation Bots:** Smart Telegram/WhatsApp agents for sales, inventory, and CRM automation  
+- 🛠️ **Custom Chatbot Ecosystems:** End-to-end platform development for customer engagement and internal automation  
 
 ---
 
 ## Trusted By
 
-<div class="clients-logos" style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center; align-items:center;">
-  
-  <!-- Client 1 -->
-  <a href="https://www.uni-bayreuth.de" target="_blank" rel="noopener noreferrer" title="University of Bayreuth">
-    <img src="https://raw.githubusercontent.com/dda-oo/radarroster/main/assets/img/clients/ubt.jpg" alt="UBT" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
-  </a>
+<h2 style="text-align:center;">Trusted By</h2>
 
-  <!-- Client 2 -->
-  <a href="https://client2.com" target="_blank" rel="noopener noreferrer" title="Client 2">
-    <img src="https://raw.githubusercontent.com/dda-oo/radarroster/main/assets/img/clients/client2-logo.jpg" alt="Client 2 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
-  </a>
+<section id="clients" style="padding: 2rem 0;">
+  <div class="clients-logos" style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  ">
 
-  <!-- Client 3 -->
-  <a href="https://client3.com" target="_blank" rel="noopener noreferrer" title="Client 3">
-    <img src="https://raw.githubusercontent.com/dda-oo/radarroster/main/assets/img/clients/client3-logo.jpg" alt="Client 3 Logo" style="max-width:140px; filter: grayscale(30%); transition: filter 0.3s ease-in-out;" />
-  </a>
+    <!-- Client 1 -->
+    <a href="https://www.uni-bayreuth.de" target="_blank" rel="noopener noreferrer" title="University of Bayreuth">
+      <img src="/assets/img/clients/ubt.jpg" alt="University of Bayreuth" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+    </a>
 
-</div>
+    <!-- Client 2 -->
+    <a href="https://client2.com" target="_blank" rel="noopener noreferrer" title="Client 2">
+      <img src="/assets/img/clients/client2-logo.jpg" alt="Client 2 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+    </a>
+
+    <!-- Client 3 -->
+    <a href="https://client3.com" target="_blank" rel="noopener noreferrer" title="Client 3">
+      <img src="/assets/img/clients/client3-logo.jpg" alt="Client 3 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+    </a>
+
+    <!-- Client 4 -->
+    <a href="https://client4.com" target="_blank" rel="noopener noreferrer" title="Client 4">
+      <img src="/assets/img/clients/client4-logo.jpg" alt="Client 4 Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
+    </a>
+
+    <!-- Add more clients as needed -->
+
+  </div>
+</section>
 
 ---
 
-## Let's Connect
+## Let’s Connect
 
-Ready to unlock the full potential of your data? Whether you’re a startup or an established enterprise, RadarRoster offers tailored solutions that elevate your business.
-
-Reach out to discuss your project or explore how we can collaborate:
+Ready to unlock the full potential of your data? Whether you're a startup or an established enterprise, RadarRoster offers tailored, scalable solutions — fast.
 
 <form
   id="contact-form"
   action="https://formsubmit.co/dehestani@radarroster.com"
   method="POST"
-  style="max-width:400px; margin:auto;"
+  style="max-width: 400px; margin: 2rem auto;"
 >
   <input type="hidden" name="_captcha" value="false" />
-  <input type="text" name="_honey" style="display:none" />
+  <input type="text" name="_honey" style="display: none;" />
 
   <label for="name">Name:</label><br />
   <input type="text" id="name" name="name" required style="width:100%; padding:0.4rem;" /><br /><br />
@@ -93,8 +110,7 @@ Reach out to discuss your project or explore how we can collaborate:
     rows="6"
     required
     style="width:100%; padding:0.4rem;"
-  ></textarea
-  ><br /><br />
+  ></textarea><br /><br />
 
   <button type="submit" style="padding: 0.6rem 1.2rem; font-weight: bold; cursor: pointer;">
     Send
@@ -132,4 +148,4 @@ Reach out to discuss your project or explore how we can collaborate:
 
 ---
 
-Thanks for visiting — let's build something amazing together.
+Thanks for visiting — let’s build something amazing together.
