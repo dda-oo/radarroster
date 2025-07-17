@@ -86,8 +86,8 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
 
 ## More from RadarRoster
 
-- 📘 [Read Our Blog](/blog/)
-- 🛠️ [See Project Showcase](/showcase/)
+- 📘 [Explore Insights & Ideas on the Blog](/blog/)
+- 🛠️ [Discover Latest Project Highlights](/showcase/)
 
 
 ---
