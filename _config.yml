@@ -1,4 +1,6 @@
-<footer>
-  <p>© 2025 RadarRoster — Data Science & Analytics Services by Daryoosh Dehestani.</p>
-  <p>This site is proudly hosted on GitHub Pages.</p>
-</footer>
+title: RadarRoster
+description: Data Science & Analytics Services by Daryoosh Dehestani
+theme: pages-themes/cayman@v0.2.0
+
+# Optional config for Cayman theme
+show_downloads: false
