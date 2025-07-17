@@ -1,6 +1,16 @@
-remote_theme: pages-themes/cayman@v0.2.0
 title: RadarRoster
-description: Homepage for RadarRoster using Cayman theme
+description: Data Science & Analytics Services by Daryoosh Dehestani
+remote_theme: pages-themes/cayman@v0.2.0
 
+# Enable GitHub Pages to use remote themes
 plugins:
   - jekyll-remote-theme
+
+# Optional Cayman config
+show_downloads: false
+
+# Output pages from the _pages folder (if you're using it)
+collections:
+  pages:
+    output: true
+    permalink: /:name/
