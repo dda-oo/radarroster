@@ -1,33 +1,76 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
+      as="style"
+      type="text/css"
+      crossorigin
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#157878" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    />
     {% include head-custom.html %}
+    <style>
+      /* Simple styling for clients logos */
+      #clients {
+        margin-top: 3rem;
+      }
+      #clients h3 {
+        margin-bottom: 1rem;
+      }
+      #clients .client-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+      }
+      #clients .client-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 140px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #333;
+        text-decoration: none;
+        transition: transform 0.2s ease-in-out;
+      }
+      #clients .client-item:hover {
+        transform: scale(1.05);
+      }
+      #clients .client-logo {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
+        filter: grayscale(30%);
+        transition: filter 0.2s ease-in-out;
+      }
+      #clients .client-item:hover .client-logo {
+        filter: none;
+      }
+    </style>
   </head>
 
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-
-      {%- comment -%}
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
-      {%- endcomment -%}
+      <h1 class="project-name">
+        {{ page.title | default: site.title | default: site.github.repository_name }}
+      </h1>
+      <h2 class="project-tagline">
+        {{ page.description | default: site.description | default: site.github.project_tagline }}
+      </h2>
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -35,20 +78,93 @@
 
       <section class="custom-services">
         <h3>Our Services</h3>
+        <ul>
+          <li><strong>Business Intelligence & Data Visualization:</strong> Interactive dashboards, KPI reporting, and storytelling</li>
+          <li><strong>Advanced Data Science & AI:</strong> Predictive modeling, NLP, deep learning, time series analysis</li>
+          <li><strong>Data Engineering:</strong> ETL design, cloud data platforms (GCP, AWS, Azure), data warehousing</li>
+          <li><strong>AI Application Development:</strong> Chatbots, recommendation engines, automation workflows</li>
+          <li><strong>Consulting & Strategy:</strong> Data strategy, analytics maturity assessments, and team upskilling</li>
+          <li><strong>Executive Recruitment & Talent Solutions:</strong> Headhunting for data, AI, and tech experts</li>
+          <li><strong>Nearshoring & Offshoring Consulting:</strong> Optimizing cross-border collaboration and resource allocation</li>
+        </ul>
+
         <p>
-          In addition to data analytics and system integration, we also offer tailored services in executive recruitment, headhunting for specialists in tech and business fields, and solutions for nearshoring or offshoring your operations.
+          In addition to these core offerings, RadarRoster delivers tailored services in executive recruitment, headhunting for specialists in tech and business fields, and solutions for nearshoring or offshoring your operations.
         </p>
         <p>
-          Based in Germany, we support clients across the EU and globally. Our services are designed for smooth cross-border cooperation.
+          Based in Germany, we support clients across the EU and globally, providing seamless cross-border cooperation and professional service.
         </p>
       </section>
 
-      <footer class="site-footer" style="margin-top:2rem; font-size:0.9rem; color:#555; text-align:center;">
-        <span class="site-footer-owner" style="margin-right:0.5rem;">
-          Crafted with ❤️ by <a href="https://github.com/dda-oo" target="_blank" rel="noopener noreferrer">dda-oo</a>
+      <section id="intro" style="margin-top:3rem;">
+        <p style="font-size:1.2rem; font-weight:500; max-width:600px; margin:auto;">
+          Thanks for visiting — let’s build something amazing together. At RadarRoster, we transform complex data into clear, actionable insights that drive smarter, faster, and more human-centered decisions. Whether you need advanced analytics, AI, or strategic consulting, you’ll find a dedicated partner committed to your success.
+        </p>
+      </section>
+
+      <section id="clients">
+        <h3>Trusted By</h3>
+        <div class="client-list">
+          <a
+            href="https://client1website.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="client-item"
+            aria-label="Client 1"
+          >
+            <img
+              src="/assets/images/client1-logo.png"
+              alt="Client 1 Logo"
+              class="client-logo"
+              loading="lazy"
+            />
+            <span>Client 1</span>
+          </a>
+
+          <a
+            href="https://client2website.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="client-item"
+            aria-label="Client 2"
+          >
+            <img
+              src="/assets/images/client2-logo.png"
+              alt="Client 2 Logo"
+              class="client-logo"
+              loading="lazy"
+            />
+            <span>Client 2</span>
+          </a>
+
+          <!-- Add more clients here -->
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top: 4rem;">
+        <h3>Get In Touch</h3>
+        <!-- Assume your contact form or contact info here -->
+        {{ content }}
+      </section>
+
+      <footer
+        class="site-footer"
+        style="margin-top: 3rem; font-size: 0.9rem; color: #555; text-align: center;"
+      >
+        <span class="site-footer-owner" style="margin-right: 0.5rem;">
+          Crafted with ❤️ by
+          <a
+            href="https://github.com/dda-oo"
+            target="_blank"
+            rel="noopener noreferrer"
+            >dda-oo</a
+          >
         </span>
-        <span class="site-footer-credits" style="margin-right:0.5rem;">
-          | Proudly hosted on <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="site-footer-credits" style="margin-right: 0.5rem;">
+          | Proudly hosted on
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+            >GitHub</a
+          >
         </span>
         <br />
         <span class="site-footer-legal">
