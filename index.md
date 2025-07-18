@@ -78,83 +78,62 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
 
-<!-- Load Google reCAPTCHA -->
+<!-- Load Google reCAPTCHA API -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<!-- Contact Form -->
-<form
-  id="contact-form"
-  action="https://formsubmit.co/ajax/dehestani@radarroster.com"
-  method="POST"
-  style="max-width: 480px; width: 100%;"
->
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Name"
-    required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 4px;"
-  />
-  <input
-    type="email"
-    name="email"
-    placeholder="Your Email"
-    required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 4px;"
-  />
-  <textarea
-    name="message"
-    placeholder="Your Message"
-    required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 4px;"
-  ></textarea>
+<form id="contact-form" action="https://formsubmit.co/ajax/dehestani@radarroster.com" method="POST" style="max-width: 480px; margin: 0 auto;">
+  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+  <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea>
 
-  <!-- reCAPTCHA widget -->
+  <!-- Your actual reCAPTCHA site key here -->
   <div class="g-recaptcha" data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS" style="margin-bottom: 1rem;"></div>
 
-  <button
-    type="submit"
-    style="width: 100%; padding: 0.75rem; background-color: #0069ff; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;"
-  >
-    Send
-  </button>
+  <button type="submit" style="padding: 0.6rem 1.2rem; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;">Send</button>
 
-  <p id="form-status" style="margin-top: 1rem; font-weight: bold; color: #333;"></p>
+  <p id="form-status" style="margin-top: 1rem; font-weight: bold;"></p>
 </form>
 
-<!-- Form Submission Script -->
 <script>
-  document.getElementById("contact-form").addEventListener("submit", async function (event) {
+  document.getElementById('contact-form').addEventListener('submit', async function(event) {
     event.preventDefault();
 
-    const status = document.getElementById("form-status");
+    const form = event.target;
+    const status = document.getElementById('form-status');
     const captchaResponse = grecaptcha.getResponse();
 
     if (!captchaResponse) {
-      status.textContent = "⚠️ Please complete the CAPTCHA before submitting.";
+      status.style.color = 'red';
+      status.textContent = '⚠️ Please complete the CAPTCHA before submitting.';
       return;
     }
 
-    status.textContent = "⏳ Sending your message...";
+    status.style.color = 'black';
+    status.textContent = '⏳ Sending your message...';
 
-    const formData = new FormData(this);
+    const formData = new FormData(form);
 
     try {
-      const response = await fetch(this.action, {
-        method: "POST",
+      const response = await fetch(form.action, {
+        method: 'POST',
         body: formData,
-        headers: { Accept: "application/json" },
+        headers: {
+          'Accept': 'application/json'
+        }
       });
 
       if (response.ok) {
-        status.textContent = "✅ Thank you! We'll be in touch soon.";
-        this.reset();
+        status.style.color = 'green';
+        status.textContent = '✅ Thank you! We\'ll be in touch soon.';
+        form.reset();
         grecaptcha.reset();
       } else {
-        status.textContent = "❌ Something went wrong. Please try again later.";
+        status.style.color = 'red';
+        status.textContent = '❌ Something went wrong. Please try again later.';
       }
     } catch (error) {
-      status.textContent = "❌ Network error. Please check your connection.";
+      status.style.color = 'red';
+      status.textContent = '❌ Network error. Please check your connection.';
     }
   });
 </script>
