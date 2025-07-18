@@ -78,42 +78,90 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
 
-<!-- Load reCAPTCHA -->
+<!-- Load Google reCAPTCHA -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<!-- Contact Form -->
 <form
   id="contact-form"
   action="https://formsubmit.co/dehestani@radarroster.com"
   method="POST"
+  onsubmit="return handleFormSubmit(event)"
   style="max-width: 480px; margin: 0 auto; padding: 1rem;"
 >
-  <!-- Hidden FormSubmit Controls -->
+  <!-- ✅ Hidden FormSubmit controls -->
   <input type="hidden" name="_captcha" value="false" />
   <input type="text" name="_honey" style="display: none;" />
   <input type="hidden" name="_next" value="https://radarroster.com/thanks" />
 
-  <!-- Form Fields -->
+  <!-- Name -->
   <label for="name">Name:</label><br />
-  <input type="text" id="name" name="name" required style="width:100%; padding:0.5rem; margin-bottom:1rem;" />
+  <input
+    type="text"
+    id="name"
+    name="name"
+    required
+    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
+  /><br />
 
+  <!-- Email -->
   <label for="email">Email:</label><br />
-  <input type="email" id="email" name="email" required style="width:100%; padding:0.5rem; margin-bottom:1rem;" />
+  <input
+    type="email"
+    id="email"
+    name="email"
+    required
+    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
+  /><br />
 
+  <!-- Message -->
   <label for="message">Message:</label><br />
-  <textarea id="message" name="message" rows="6" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"></textarea>
+  <textarea
+    id="message"
+    name="message"
+    rows="6"
+    required
+    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
+  ></textarea><br />
 
-  <!-- reCAPTCHA -->
-  <div class="g-recaptcha" data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS" style="margin-bottom: 1rem;"></div>
+  <!-- ✅ reCAPTCHA Widget -->
+  <div
+    class="g-recaptcha"
+    data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS"
+    style="margin-bottom: 1rem;"
+  ></div>
 
   <!-- Submit Button -->
-  <button type="submit" style="padding: 0.6rem 1.2rem; font-weight: bold; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;">
+  <button
+    type="submit"
+    style="padding: 0.6rem 1.2rem; font-weight: bold; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;"
+  >
     Send
   </button>
 
   <!-- Status Message -->
-  <div id="form-status" style="margin-top: 1rem; font-weight: bold; color: #333;"></div>
+  <div
+    id="form-status"
+    style="margin-top: 1rem; font-weight: bold; color: #333;"
+  ></div>
 </form>
+
+<script>
+  function handleFormSubmit(event) {
+    const captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+      event.preventDefault();
+      document.getElementById("form-status").textContent =
+        "⚠️ Please complete the CAPTCHA before submitting.";
+      return false;
+    }
+
+    // Allow normal form submission (do not use fetch)
+    document.getElementById("form-status").textContent =
+      "⏳ Sending your message...";
+    return true;
+  }
+</script>
+
 
 <!-- Calendly Box -->
 <div style="flex: 1 1 320px; max-width: 400px; border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; text-align: center; background-color: #f9f9f9;">
@@ -124,40 +172,6 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
   </a>
 </div>
 </div>
-
-<!-- CAPTCHA + Form Submission Logic -->
-<script>
-  document.getElementById("contact-form").addEventListener("submit", function (event) {
-    const captchaResponse = grecaptcha.getResponse();
-    if (!captchaResponse) {
-      event.preventDefault();
-      document.getElementById("form-status").textContent = "⚠️ Please complete the CAPTCHA before submitting.";
-      return;
-    }
-
-    event.preventDefault();
-    const form = event.target;
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
-    })
-      .then((response) => {
-        if (response.ok) {
-          form.reset();
-          grecaptcha.reset();
-          document.getElementById("form-status").textContent = "✅ Thank you! I’ll get back to you shortly.";
-        } else {
-          document.getElementById("form-status").textContent = "❌ There was a problem submitting your message. Please try again.";
-        }
-      })
-      .catch(() => {
-        document.getElementById("form-status").textContent = "❌ There was a network error. Please check your connection.";
-      });
-  });
-</script>
 
 ---
 
