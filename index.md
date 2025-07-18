@@ -81,90 +81,86 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
 <!-- Load Google reCAPTCHA -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+<!-- Contact Form -->
 <form
   id="contact-form"
-  action="https://formsubmit.co/dehestani@radarroster.com"
+  action="https://formsubmit.co/ajax/dehestani@radarroster.com"
   method="POST"
-  onsubmit="return handleFormSubmit(event)"
-  style="max-width: 480px; margin: 0 auto; padding: 1rem;"
+  style="max-width: 480px; width: 100%;"
 >
-  <!-- ✅ Hidden FormSubmit controls -->
-  <input type="hidden" name="_captcha" value="false" />
-  <input type="text" name="_honey" style="display: none;" />
-  <input type="hidden" name="_next" value="https://radarroster.com/thanks" />
-
-  <!-- Name -->
-  <label for="name">Name:</label><br />
   <input
     type="text"
-    id="name"
     name="name"
+    placeholder="Your Name"
     required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
-  /><br />
-
-  <!-- Email -->
-  <label for="email">Email:</label><br />
+    style="width:100%; padding:0.5rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 4px;"
+  />
   <input
     type="email"
-    id="email"
     name="email"
+    placeholder="Your Email"
     required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
-  /><br />
-
-  <!-- Message -->
-  <label for="message">Message:</label><br />
+    style="width:100%; padding:0.5rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 4px;"
+  />
   <textarea
-    id="message"
     name="message"
-    rows="6"
+    placeholder="Your Message"
     required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
-  ></textarea><br />
+    style="width:100%; padding:0.5rem; margin-bottom:1rem; border: 1px solid #ccc; border-radius: 4px;"
+  ></textarea>
 
-  <!-- ✅ reCAPTCHA Widget -->
-  <div
-    class="g-recaptcha"
-    data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS"
-    style="margin-bottom: 1rem;"
-  ></div>
+  <!-- reCAPTCHA widget -->
+  <div class="g-recaptcha" data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS" style="margin-bottom: 1rem;"></div>
 
-  <!-- Submit Button -->
   <button
     type="submit"
-    style="padding: 0.6rem 1.2rem; font-weight: bold; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;"
+    style="width: 100%; padding: 0.75rem; background-color: #0069ff; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;"
   >
     Send
   </button>
 
-  <!-- Status Message -->
-  <div
-    id="form-status"
-    style="margin-top: 1rem; font-weight: bold; color: #333;"
-  ></div>
+  <p id="form-status" style="margin-top: 1rem; font-weight: bold; color: #333;"></p>
 </form>
 
+<!-- Form Submission Script -->
 <script>
-  function handleFormSubmit(event) {
+  document.getElementById("contact-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const status = document.getElementById("form-status");
     const captchaResponse = grecaptcha.getResponse();
+
     if (!captchaResponse) {
-      event.preventDefault();
-      document.getElementById("form-status").textContent =
-        "⚠️ Please complete the CAPTCHA before submitting.";
-      return false;
+      status.textContent = "⚠️ Please complete the CAPTCHA before submitting.";
+      return;
     }
 
-    // Allow normal form submission (do not use fetch)
-    document.getElementById("form-status").textContent =
-      "⏳ Sending your message...";
-    return true;
-  }
+    status.textContent = "⏳ Sending your message...";
+
+    const formData = new FormData(this);
+
+    try {
+      const response = await fetch(this.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        status.textContent = "✅ Thank you! We'll be in touch soon.";
+        this.reset();
+        grecaptcha.reset();
+      } else {
+        status.textContent = "❌ Something went wrong. Please try again later.";
+      }
+    } catch (error) {
+      status.textContent = "❌ Network error. Please check your connection.";
+    }
+  });
 </script>
 
-
 <!-- Calendly Box -->
-<div style="flex: 1 1 320px; max-width: 400px; border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; text-align: center; background-color: #f9f9f9;">
+<div style="flex: 1 1 320px; max-width: 400px; border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; text-align: center; background-color: #f9f9f9; margin-left: 2rem;">
   <h3 style="margin-top: 0;">Prefer to chat?</h3>
   <p>Book a free strategy session — you’ll get a Zoom link instantly. 🎥</p>
   <a href="https://calendly.com/radarroster/meeting" target="_blank" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: #0069ff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
