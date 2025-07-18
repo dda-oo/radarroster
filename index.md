@@ -54,41 +54,21 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
     max-width: 1000px;
     margin: 0 auto;
   ">
-    <!-- Client 1 -->
-    <a href="https://www.uni-bayreuth.de" target="_blank" rel="noopener noreferrer" title="University of Bayreuth">
-      <img src="/assets/img/clients/ubt.jpg" alt="University of Bayreuth" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
-    </a>
-
-    <!-- Client 2 -->
-    <a href="https://www.pass-ag.com" target="_blank" rel="noopener noreferrer" title="Pass Stanztechnik AG">
-      <img src="/assets/img/clients/pass-tech.png" alt="Pass Stanztechnik AG Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
-    </a>
-
-    <!-- Client 3 -->
-    <a href="https://cueconcept.de" target="_blank" rel="noopener noreferrer" title="Cueconcept GmbH">
-      <img src="/assets/img/clients/cueconcept.png" alt="Cueconcept GmbH Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
-    </a>
-
-    <!-- Client 4 -->
-    <a href="https://rent-a-programmer.de" target="_blank" rel="noopener noreferrer" title="Rent a Programmer">
-      <img src="/assets/img/clients/rp.png" alt="Rent a Programmer Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
-    </a>
-
-    <!-- Client 5 -->
-    <a href="https://cewe.de" target="_blank" rel="noopener noreferrer" title="CEWE">
-      <img src="/assets/img/clients/cewe.png" alt="CEWE Logo" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" />
-    </a>
+    <!-- Client Logos -->
+    <a href="https://www.uni-bayreuth.de" target="_blank"><img src="/assets/img/clients/ubt.jpg" alt="University of Bayreuth" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <a href="https://www.pass-ag.com" target="_blank"><img src="/assets/img/clients/pass-tech.png" alt="Pass Stanztechnik AG" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <a href="https://cueconcept.de" target="_blank"><img src="/assets/img/clients/cueconcept.png" alt="Cueconcept GmbH" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <a href="https://rent-a-programmer.de" target="_blank"><img src="/assets/img/clients/rp.png" alt="Rent a Programmer" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <a href="https://cewe.de" target="_blank"><img src="/assets/img/clients/cewe.png" alt="CEWE" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
   </div>
 </section>
 
 ---
 
-
 ## More from RadarRoster
 
 - 📘 [Explore Insights & Ideas on the Blog](/blog/)
 - 🛠️ [Discover Latest Project Highlights](/showcase/)
-
 
 ---
 
@@ -98,136 +78,67 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: flex-start; padding: 2rem 0;">
 
-  <!-- CONTACT FORM WITH CAPTCHA -->
-
-<!-- Load Google reCAPTCHA -->
+<!-- Load reCAPTCHA -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+<!-- Contact Form -->
 <form
   id="contact-form"
   action="https://formsubmit.co/dehestani@radarroster.com"
   method="POST"
   style="max-width: 480px; margin: 0 auto; padding: 1rem;"
 >
-  <!-- ✅ Hidden FormSubmit controls -->
+  <!-- Hidden FormSubmit Controls -->
   <input type="hidden" name="_captcha" value="false" />
   <input type="text" name="_honey" style="display: none;" />
   <input type="hidden" name="_next" value="https://radarroster.com/thanks" />
 
-  <!-- Name -->
+  <!-- Form Fields -->
   <label for="name">Name:</label><br />
-  <input
-    type="text"
-    id="name"
-    name="name"
-    required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
-  /><br />
+  <input type="text" id="name" name="name" required style="width:100%; padding:0.5rem; margin-bottom:1rem;" />
 
-  <!-- Email -->
   <label for="email">Email:</label><br />
-  <input
-    type="email"
-    id="email"
-    name="email"
-    required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
-  /><br />
+  <input type="email" id="email" name="email" required style="width:100%; padding:0.5rem; margin-bottom:1rem;" />
 
-  <!-- Message -->
   <label for="message">Message:</label><br />
-  <textarea
-    id="message"
-    name="message"
-    rows="6"
-    required
-    style="width:100%; padding:0.5rem; margin-bottom:1rem;"
-  ></textarea><br />
+  <textarea id="message" name="message" rows="6" required style="width:100%; padding:0.5rem; margin-bottom:1rem;"></textarea>
 
-  <!-- ✅ reCAPTCHA Widget -->
-  <div
-    class="g-recaptcha"
-    data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS"
-    style="margin-bottom: 1rem;"
-  ></div>
+  <!-- reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS" style="margin-bottom: 1rem;"></div>
 
   <!-- Submit Button -->
-  <button
-    type="submit"
-    style="padding: 0.6rem 1.2rem; font-weight: bold; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;"
-  >
+  <button type="submit" style="padding: 0.6rem 1.2rem; font-weight: bold; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;">
     Send
   </button>
 
   <!-- Status Message -->
-  <div
-    id="form-status"
-    style="margin-top: 1rem; font-weight: bold; color: #333;"
-  ></div>
+  <div id="form-status" style="margin-top: 1rem; font-weight: bold; color: #333;"></div>
 </form>
 
-<!-- JavaScript for CAPTCHA validation + status handling -->
-<script>
-  document.getElementById("contact-form").addEventListener("submit", function (event) {
-    const captchaResponse = grecaptcha.getResponse();
-    if (!captchaResponse) {
-      event.preventDefault();
-      document.getElementById("form-status").textContent =
-        "⚠️ Please complete the CAPTCHA before submitting.";
-      return;
-    }
-
-    event.preventDefault(); // Prevent default form submission
-    const form = event.target;
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" },
-    })
-      .then((response) => {
-        if (response.ok) {
-          form.reset();
-          grecaptcha.reset(); // Reset CAPTCHA widget
-          document.getElementById("form-status").textContent =
-            "✅ Thank you! I’ll get back to you shortly.";
-        } else {
-          document.getElementById("form-status").textContent =
-            "❌ There was a problem submitting your message. Please try again.";
-        }
-      })
-      .catch(() => {
-        document.getElementById("form-status").textContent =
-          "❌ There was a network error. Please check your connection.";
-      });
-  });
-</script>
-
-  <!-- Calendly Embed or CTA Box -->
+<!-- Calendly Box -->
 <div style="flex: 1 1 320px; max-width: 400px; border: 1px solid #ccc; padding: 1.5rem; border-radius: 8px; text-align: center; background-color: #f9f9f9;">
   <h3 style="margin-top: 0;">Prefer to chat?</h3>
-<p style="margin: 0.5rem 0 1rem;">
-  Book a free strategy session — you’ll get a Zoom link instantly. 🎥
-</p>
-  <a
-    href="https://calendly.com/radarroster/meeting"
-    target="_blank"
-    rel="noopener noreferrer"
-    style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: #0069ff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 1rem; transition: background-color 0.3s ease;"
-    onmouseover="this.style.backgroundColor='#0053cc'"
-    onmouseout="this.style.backgroundColor='#0069ff'"
-  >
+  <p>Book a free strategy session — you’ll get a Zoom link instantly. 🎥</p>
+  <a href="https://calendly.com/radarroster/meeting" target="_blank" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: #0069ff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
     📅 Book Appointment
   </a>
 </div>
 </div>
 
+<!-- CAPTCHA + Form Submission Logic -->
 <script>
   document.getElementById("contact-form").addEventListener("submit", function (event) {
+    const captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+      event.preventDefault();
+      document.getElementById("form-status").textContent = "⚠️ Please complete the CAPTCHA before submitting.";
+      return;
+    }
+
     event.preventDefault();
     const form = event.target;
     const formData = new FormData(form);
+
     fetch(form.action, {
       method: "POST",
       body: formData,
@@ -236,20 +147,17 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
       .then((response) => {
         if (response.ok) {
           form.reset();
-          document.getElementById("form-status").textContent =
-            "Thank you! I will get back to you shortly.";
+          grecaptcha.reset();
+          document.getElementById("form-status").textContent = "✅ Thank you! I’ll get back to you shortly.";
         } else {
-          document.getElementById("form-status").textContent =
-            "Oops! There was an issue submitting your message.";
+          document.getElementById("form-status").textContent = "❌ There was a problem submitting your message. Please try again.";
         }
       })
       .catch(() => {
-        document.getElementById("form-status").textContent =
-          "Oops! There was an issue submitting your message.";
+        document.getElementById("form-status").textContent = "❌ There was a network error. Please check your connection.";
       });
   });
 </script>
-
 
 ---
 
