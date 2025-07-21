@@ -76,97 +76,90 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
 
 Ready to unlock the full potential of your data? Whether you're a startup or an established enterprise, RadarRoster offers tailored, scalable solutions — fast.
 
-<!-- Load Google reCAPTCHA API -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 <div
   style="
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
-    align-items: start;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
+    align-items: flex-start;
+    padding: 2rem 0;
     max-width: 960px;
-    margin: 2rem auto;
-    padding: 2rem;
-    box-sizing: border-box;
+    margin: 0 auto;
   "
 >
-  <!-- Contact Form -->
-  <form
-    action="https://api.web3forms.com/submit"
-    method="POST"
-    style="
-      background: #f9f9f9;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    "
-  >
-    <h3 style="margin-top: 0;">Let's talk data!</h3>
-    <p>Send a message and we’ll get back to you shortly.</p>
+  <!-- Contact Form (FormSubmit + Honeypot Spam Protection) -->
+  <form id="contact-form" action="https://formsubmit.co/ajax/dehestani@radarroster.com" method="POST" style="max-width: 480px; margin: 0 auto;">
+    <h3 style="margin-top: 0;">Let’s talk data!</h3>
+    <p style="margin-bottom: 1rem;">Send a message and we’ll get back to you shortly.</p>
 
-    <!-- Web3Forms Access Key -->
-    <input type="hidden" name="access_key" value="0700498f-3d29-46e0-9912-a01112046423" />
+    <!-- Visible Inputs -->
+    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+    <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+    <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea>
 
-    <!-- Honeypot -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+    <!-- Spam Protection -->
+    <input type="text" name="_honey" style="display:none">
+    <input type="hidden" name="_timestamp" id="timestamp" />
 
-    <input
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required
-      style="width: 100%; padding: 0.5rem; margin-top: 1rem;"
-    />
-    <input
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required
-      style="width: 100%; padding: 0.5rem; margin-top: 1rem;"
-    />
-    <textarea
-      name="message"
-      placeholder="Your Message"
-      required
-      style="width: 100%; padding: 0.5rem; margin-top: 1rem; height: 100px;"
-    ></textarea>
+    <!-- Optional FormSubmit Customizations -->
+    <input type="hidden" name="_subject" value="New RadarRoster.com Inquiry" />
+    <input type="hidden" name="_template" value="box" />
+    <input type="hidden" name="_captcha" value="false" />
 
-    <!-- reCAPTCHA -->
-    <div
-      class="g-recaptcha"
-      data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS"
-      style="margin: 1rem 0;"
-    ></div>
-
-    <button
-      type="submit"
-      style="
-        padding: 0.6rem 1.2rem;
-        background-color: #0069ff;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 4px;
-        font-weight: bold;
-        width: 100%;
-      "
-    >
-      Send Message
-    </button>
-
+    <!-- Submit Button -->
+    <button type="submit" style="padding: 0.6rem 1.2rem; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;">Send</button>
     <p id="form-status" style="margin-top: 1rem; font-weight: bold;"></p>
   </form>
 
-  <!-- Calendly Embed -->
+  <!-- Inject timestamp on page load -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("timestamp").value = Date.now();
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', async function (event) {
+      event.preventDefault();
+      const form = event.target;
+      const status = document.getElementById('form-status');
+      const formData = new FormData(form);
+
+      status.style.color = 'black';
+      status.textContent = '⏳ Sending your message...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          status.style.color = 'green';
+          status.textContent = '✅ Thank you! We’ll be in touch soon.';
+          form.reset();
+        } else {
+          status.style.color = 'red';
+          status.textContent = '❌ Something went wrong. Please try again.';
+        }
+      } catch (error) {
+        status.style.color = 'red';
+        status.textContent = '❌ Network error. Please check your connection.';
+      }
+    });
+  </script>
+
+  <!-- Calendly Box Wrapper -->
   <div
     style="
-      background-color: #f9f9f9;
+      flex: 0 1 320px;
+      border: 1px solid #ccc;
       padding: 1.5rem;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       text-align: center;
+      background-color: #f9f9f9;
+      min-width: 280px;
+      box-sizing: border-box;
     "
   >
     <h3 style="margin-top: 0;">Prefer to chat?</h3>
@@ -184,9 +177,7 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
         border-radius: 6px;
         font-weight: bold;
       "
-    >
-      📅 Book Appointment
-    </a>
+    >📅 Book Appointment</a>
   </div>
 </div>
 
