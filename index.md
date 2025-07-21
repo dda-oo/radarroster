@@ -76,6 +76,9 @@ Some recent examples of impactful, AI-driven solutions we’ve delivered:
 
 Ready to unlock the full potential of your data? Whether you're a startup or an established enterprise, RadarRoster offers tailored, scalable solutions — fast.
 
+<!-- Load Google reCAPTCHA API -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 <div
   style="
     display: flex;
@@ -88,71 +91,35 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
     margin: 0 auto;
   "
 >
-  <!-- Load Google reCAPTCHA API -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<form id="contact-form" action="https://formsubmit.co/ajax/dehestani@radarroster.com" method="POST" style="max-width: 480px; margin: 0 auto;">
-  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
-  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
-  <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea>
+  <!-- Contact Form (Web3Forms + reCAPTCHA v2) -->
+  <form action="https://api.web3forms.com/submit" method="POST" style="flex: 1 1 380px; max-width: 480px; margin: 0 auto; background: #f9f9f9; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+    
+    <h3 style="margin-top: 0;">Let's talk data!</h3>
+    <p style="margin-bottom: 1rem;">Send a message and we’ll get back to you shortly.</p>
 
-  <!-- Your actual reCAPTCHA site key here -->
-  <div class="g-recaptcha" data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS" style="margin-bottom: 1rem;"></div>
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="0700498f-3d29-46e0-9912-a01112046423">
 
-  <button type="submit" style="padding: 0.6rem 1.2rem; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;">Send</button>
+    <!-- Honeypot -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-  <p id="form-status" style="margin-top: 1rem; font-weight: bold;"></p>
-</form>
+    <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+    <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
+    <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea>
 
-<script>
-  document.getElementById('contact-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
+    <!-- reCAPTCHA -->
+    <div class="g-recaptcha" data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS" style="margin-bottom: 1rem;"></div>
 
-    const form = event.target;
-    const status = document.getElementById('form-status');
-    const captchaResponse = grecaptcha.getResponse();
+    <button type="submit" style="padding: 0.6rem 1.2rem; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;">Send Message</button>
 
-    if (!captchaResponse) {
-      status.style.color = 'red';
-      status.textContent = '⚠️ Please complete the CAPTCHA before submitting.';
-      return;
-    }
+    <p id="form-status" style="margin-top: 1rem; font-weight: bold;"></p>
+  </form>
 
-    status.style.color = 'black';
-    status.textContent = '⏳ Sending your message...';
-
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        status.style.color = 'green';
-        status.textContent = '✅ Thank you! We\'ll be in touch soon.';
-        form.reset();
-        grecaptcha.reset();
-      } else {
-        status.style.color = 'red';
-        status.textContent = '❌ Something went wrong. Please try again later.';
-      }
-    } catch (error) {
-      status.style.color = 'red';
-      status.textContent = '❌ Network error. Please check your connection.';
-    }
-  });
-</script>
-
-
-  <!-- Calendly Box Wrapper -->
+  <!-- Calendly Box -->
   <div
     style="
-      flex: 0 1 320px;
+      flex: 1 1 320px;
       border: 1px solid #ccc;
       padding: 1.5rem;
       border-radius: 8px;
@@ -177,10 +144,11 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
         border-radius: 6px;
         font-weight: bold;
       "
-      >📅 Book Appointment</a
-    >
+    >📅 Book Appointment</a>
   </div>
+
 </div>
+
 
 ---
 
