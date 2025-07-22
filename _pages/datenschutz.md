@@ -14,7 +14,7 @@ Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Diese Daten
 
 Radar Roster  
 Offenburg, Deutschland  
-E-Mail: <a href="mailto:&#104;&#101;&#108;&#108;&#111;&#64;&#114;&#97;&#100;&#97;&#114;&#114;&#111;&#115;&#116;&#101;&#114;&#46;&#99;&#111;&#109;">hello@radarroster.com</a>
+E-Mail: h&nbsp;e&nbsp;l&nbsp;l&nbsp;o&nbsp;&#91;at&#93;&nbsp;r&nbsp;a&nbsp;d&nbsp;a&nbsp;r&nbsp;r&nbsp;o&nbsp;s&nbsp;t&nbsp;e&nbsp;r&nbsp;&#91;dot&#93;&nbsp;c&nbsp;o&nbsp;m
 
 ---
 
@@ -51,7 +51,7 @@ Sie haben das Recht, jederzeit Auskunft über die bei uns gespeicherten personen
 Für Anfragen oder zur Ausübung Ihrer Rechte wenden Sie sich bitte an:
 
 Radar Roster  
-E-Mail: <a href="mailto:&#104;&#101;&#108;&#108;&#111;&#64;&#114;&#97;&#100;&#97;&#114;&#114;&#111;&#115;&#116;&#101;&#114;&#46;&#99;&#111;&#109;">hello@radarroster.com</a>
+E-Mail: h&nbsp;e&nbsp;l&nbsp;l&nbsp;o&nbsp;&#91;at&#93;&nbsp;r&nbsp;a&nbsp;d&nbsp;a&nbsp;r&nbsp;r&nbsp;o&nbsp;s&nbsp;t&nbsp;e&nbsp;r&nbsp;&#91;dot&#93;&nbsp;c&nbsp;o&nbsp;m
 
 ---
 
