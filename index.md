@@ -188,7 +188,7 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
     "
   >
     <h3 style="margin-top: 0;">Prefer to chat?</h3>
-    <p>Book a free strategy session — you’ll get a Zoom link instantly. 🎥</p>
+    <p>Book a free strategy session; you’ll get a Zoom link instantly. 🎥</p>
     <a
       href="https://calendly.com/radarroster/meeting"
       target="_blank"
@@ -209,4 +209,4 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
 
 ---
 
-Thanks for visiting — let’s build something amazing together.
+Thanks for visiting, let’s build something amazing together.
