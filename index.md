@@ -1,7 +1,7 @@
 ---
 layout: default
 title: RadarRoster – Smart Data Solutions for Business Growth
-description: Empowering businesses — from startups to enterprises — to unlock actionable insights from data.
+description: Empowering businesses: from startups to enterprises; to unlock actionable insights from data.
 
 ---
 
@@ -11,18 +11,18 @@ At **RadarRoster**, we help organizations of all sizes make smarter, faster, and
 
 We combine the precision and reliability that **enterprises require** with the flexibility and speed that **startups and small businesses** love.
 
-Whether you’re modernizing legacy systems or beginning to automate workflows — we’ll tailor the right solution for you.
+Whether you’re modernizing legacy systems or beginning to automate workflows; we’ll tailor the right solution for you.
 
 ---
 
 ## What We Do
 
-Our core services are designed to grow with you — from agile MVPs to full-scale enterprise platforms:
+Our core services are designed to grow with you; from agile MVPs to full-scale enterprise platforms:
 
 ### 🔍 Data & Analytics
 - **Business Intelligence & Dashboards:** Power BI, Tableau, Cognos, and cloud-native solutions with live ERP integrations (GCP, Azure, SAP)  
 - **Predictive Modeling & AI:** Forecasting, NLP, recommender engines, anomaly detection  
-- **Custom Data Apps:** Lightweight AI tools for everyday problems — from small workflows to enterprise bots  
+- **Custom Data Apps:** Lightweight AI tools for everyday problems; from small workflows to enterprise bots  
 - **Automation & ETL Pipelines:** From raw data to insights across GCP, Azure, SAP, and more
 
 ### 🧩 ERP & Cloud Modernization
@@ -102,7 +102,7 @@ Want to explore more behind-the-scenes thinking, tools, or side projects?
 
 ## Let’s Connect
 
-Ready to unlock the full potential of your data? Whether you're a startup or an established enterprise, RadarRoster offers tailored, scalable solutions — fast.
+Ready to unlock the full potential of your data? Whether you're a startup or an established enterprise, RadarRoster offers tailored, scalable solutions; fast.
 
 <div
   style="
