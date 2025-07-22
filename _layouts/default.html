@@ -28,6 +28,13 @@
   <h1 class="project-name">
     {{ page.title | default: site.title | default: site.github.repository_name }}
   </h1>
+
+  {% if page.subtitle %}
+    <h2 class="project-subtitle">
+      {{ page.subtitle }}
+    </h2>
+  {% endif %}
+
   <h2 class="project-tagline">
     {{ page.description | default: site.description | default: site.github.project_tagline }}
   </h2>
