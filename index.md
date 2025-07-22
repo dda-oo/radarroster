@@ -1,6 +1,7 @@
 ---
 layout: default
-title: RadarRoster – Smart Data Solutions for Business Growth
+title: RadarRoster 
+Smart Data Solutions for Business Growth
 description: "Empowering businesses: from startups to enterprises; to unlock actionable insights from data."
 
 ---
