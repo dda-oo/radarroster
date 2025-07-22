@@ -22,13 +22,29 @@ E-Mail: h&nbsp;e&nbsp;l&nbsp;l&nbsp;o&nbsp;&#91;at&#93;&nbsp;r&nbsp;a&nbsp;d&nbs
 
 Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.
 
-Auf dieser Website werden personenbezogene Daten nur erhoben, wenn Sie uns diese freiwillig, z. B. durch Ausfüllen eines Kontaktformulars, mitteilen.
+Auf dieser Website werden personenbezogene Daten nur erhoben, wenn Sie uns diese freiwillig, z. B. durch Ausfüllen eines Kontaktformulars oder Terminbuchung, mitteilen.
+
+---
+
+## Kontaktformulare und Terminvereinbarung
+
+### Kontaktformular via SubmitForm
+
+Wenn Sie das Kontaktformular auf dieser Website nutzen, werden die eingegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) an den Dienst **SubmitForm** (SubmitForm, Inc., USA) übermittelt. Die Daten werden dort verarbeitet und an uns weitergeleitet. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Bearbeitung Ihrer Anfrage.
+
+Mehr Informationen finden Sie in der Datenschutzerklärung von SubmitForm: [https://submitform.io/legal/privacy-policy](https://submitform.io/legal/privacy-policy)
+
+### Terminvereinbarung via Calendly
+
+Zur einfachen Terminvereinbarung ist auf dieser Website ein Widget des Dienstes **Calendly** (Calendly LLC, USA) eingebunden. Wenn Sie einen Termin buchen, werden personenbezogene Daten wie Name, E-Mail-Adresse und ggf. weitere Angaben an Calendly übermittelt. Die Nutzung erfolgt freiwillig auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+
+Weitere Informationen finden Sie in der Datenschutzerklärung von Calendly: [https://calendly.com/privacy](https://calendly.com/privacy)
 
 ---
 
 ## Verwendung der Daten
 
-Die von Ihnen übermittelten Daten verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage oder zur Kontaktaufnahme mit Ihnen. Eine Weitergabe an Dritte erfolgt nicht, sofern keine gesetzliche Verpflichtung besteht.
+Die von Ihnen übermittelten Daten verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage, zur Kontaktaufnahme oder zur Terminvereinbarung. Eine Weitergabe an Dritte erfolgt nicht, sofern keine gesetzliche Verpflichtung besteht.
 
 ---
 
@@ -48,7 +64,7 @@ Es werden keine Tracking- oder Analyse-Tools wie Google Analytics eingesetzt.
 
 Sie haben das Recht, jederzeit Auskunft über die bei uns gespeicherten personenbezogenen Daten zu erhalten, diese berichtigen oder löschen zu lassen sowie der Verarbeitung zu widersprechen.
 
-Für Anfragen oder zur Ausübung Ihrer Rechte wenden Sie sich bitte an:
+Zur Ausübung Ihrer Rechte oder bei Fragen zum Datenschutz wenden Sie sich bitte an:
 
 Radar Roster  
 E-Mail: h&nbsp;e&nbsp;l&nbsp;l&nbsp;o&nbsp;&#91;at&#93;&nbsp;r&nbsp;a&nbsp;d&nbsp;a&nbsp;r&nbsp;r&nbsp;o&nbsp;s&nbsp;t&nbsp;e&nbsp;r&nbsp;&#91;dot&#93;&nbsp;c&nbsp;o&nbsp;m
@@ -64,6 +80,12 @@ Wir treffen angemessene technische und organisatorische Maßnahmen, um Ihre Date
 ## Haftungsausschluss
 
 Für externe Links auf dieser Website übernehmen wir keine Haftung, da wir keinen Einfluss auf deren Inhalte haben.
+
+---
+
+## Vertragsbedingungen und AGB
+
+Individuelle Vertragsbedingungen werden bei Projektbeginn einvernehmlich vereinbart. Es gelten keine vorformulierten Allgemeinen Geschäftsbedingungen (AGB).
 
 ---
 
