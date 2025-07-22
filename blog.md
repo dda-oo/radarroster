@@ -2,7 +2,7 @@
 layout: default
 title: Blog – Insights & Ideas
 permalink: /blog/
-description: RadarRoster Blog – Ideas, updates, and insights from the world of data, AI, and tech strategy.
+description: Practical insights, ideas, and lessons from the world of data, AI, and modern tech strategy.
 ---
 
 # Blog
