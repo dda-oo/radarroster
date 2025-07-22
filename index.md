@@ -33,7 +33,7 @@ Our core services are designed to grow with you — from agile MVPs to full-scal
 
 ---
 
-## Whether You're a Team of 5 or 5,000
+## Whether You're a Team of 5 or 5,000+
 
 > ✅ You don’t need to be a tech company to benefit from tech.
 
