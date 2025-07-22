@@ -28,17 +28,17 @@ Auf dieser Website werden personenbezogene Daten nur erhoben, wenn Sie uns diese
 
 ## Kontaktformulare und Terminvereinbarung
 
-### Kontaktformular via SubmitForm
+### Kontaktformular via FormSubmit
 
-Wenn Sie das Kontaktformular auf dieser Website nutzen, werden die eingegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) an den Dienst **SubmitForm** (SubmitForm, Inc., USA) übermittelt. Die Daten werden dort verarbeitet und an uns weitergeleitet. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Bearbeitung Ihrer Anfrage.
+Wenn Sie das Kontaktformular auf dieser Website nutzen, werden die eingegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) an den Dienst **FormSubmit** (FormSubmit, Inc., USA) übermittelt. Die Daten werden dort verarbeitet und an uns weitergeleitet. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Bearbeitung Ihrer Anfrage.
 
-Mehr Informationen finden Sie in der Datenschutzerklärung von SubmitForm: [https://submitform.io/legal/privacy-policy](https://submitform.io/legal/privacy-policy)
+Mehr Informationen finden Sie in der Datenschutzerklärung von FormSubmit: [https://formsubmit.co/privacy.pdf](https://formsubmit.co/privacy.pdf)
 
 ### Terminvereinbarung via Calendly
 
 Zur einfachen Terminvereinbarung ist auf dieser Website ein Widget des Dienstes **Calendly** (Calendly LLC, USA) eingebunden. Wenn Sie einen Termin buchen, werden personenbezogene Daten wie Name, E-Mail-Adresse und ggf. weitere Angaben an Calendly übermittelt. Die Nutzung erfolgt freiwillig auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
 
-Weitere Informationen finden Sie in der Datenschutzerklärung von Calendly: [https://calendly.com/privacy](https://calendly.com/privacy)
+Weitere Informationen finden Sie in der Datenschutzerklärung von Calendly: [https://calendly.com/legal](https://calendly.com/legal)
 
 ---
 
@@ -85,7 +85,7 @@ Für externe Links auf dieser Website übernehmen wir keine Haftung, da wir kein
 
 ## Vertragsbedingungen und AGB
 
-Individuelle Vertragsbedingungen werden bei Projektbeginn einvernehmlich vereinbart. Es gelten keine vorformulierten Allgemeinen Geschäftsbedingungen (AGB).
+Vertragsbedingungen werden individuell und projektbezogen vereinbart. Es kommen keine vorformulierten Allgemeinen Geschäftsbedingungen (AGB) zur Anwendung.
 
 ---
 
