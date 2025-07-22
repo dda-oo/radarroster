@@ -26,7 +26,7 @@ Diese Website kann journalistische Inhalte (z. B. Blogs, Podcasts), E-Commerce
 
 ## EU-Streitschlichtung
 
-Plattform der EU-Kommission zur Online-Streitbeilegung: [https://ec.europa.eu/consumers/odr](https://ec.europa.eu/consumers/odr)
+Plattform der EU-Kommission zur Online-Streitbeilegung: [https://ec.europa.eu/consumers/odr](https://consumer-redress.ec.europa.eu/index_en)
 
 ---
 
