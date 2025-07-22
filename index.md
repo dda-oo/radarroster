@@ -116,7 +116,7 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
     margin: 0 auto;
   "
 >
-  <!-- Load Google reCAPTCHA API -->
+  <!-- Load reCAPTCHA -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <form id="contact-form" action="https://formsubmit.co/ajax/dehestani@radarroster.com" method="POST" style="max-width: 480px; margin: 0 auto;">
