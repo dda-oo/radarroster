@@ -1,16 +1,25 @@
-title: RadarRoster
-description: Data Science & Analytics Services by Daryoosh Dehestani
-remote_theme: pages-themes/cayman@v0.2.0
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  </head>
+  <body>
+    <header style="text-align:center; padding: 2rem 0;">
+      <h1>{{ site.title }}</h1>
+      <p>{{ site.description }}</p>
+    </header>
 
-# Enable GitHub Pages to use remote themes
-plugins:
-  - jekyll-remote-theme
+    <main style="max-width: 900px; margin: 0 auto; padding: 0 1rem;">
+      {{ content }}
+    </main>
 
-# Optional Cayman config
-show_downloads: false
-
-# Output pages from the _pages folder (if you're using it)
-collections:
-  pages:
-    output: true
-    permalink: /:name/
+    <footer style="text-align: center; font-size: 0.9rem; color: #555; margin: 3rem 0;">
+      Built with curiosity and care by Daryoosh | Running proudly on GitHub<br />
+      <a href="/impressum/">Impressum</a> | <a href="/datenschutz/">Datenschutz</a>
+    </footer>
+  </body>
+</html>
