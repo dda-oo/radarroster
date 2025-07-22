@@ -1,63 +1,44 @@
 ---
 layout: default
-title: RadarRoster – Boutique Data & Digital Solutions for Smart Growth
-description: Helping organizations — from startups to enterprises — turn data into clarity and results.
+title: RadarRoster – Turning Numbers Into Narratives
+description: Make smarter business decisions, backed by data.
 ---
 
 # Welcome to RadarRoster
 
-At **RadarRoster**, we help organizations of all sizes make smarter, faster, and more human-centered decisions with data, AI, and cloud technology.
+**RadarRoster** transforms complexity into clarity with high-impact, bespoke data solutions. Led by Daryoosh Dehestani, we craft tailored strategies in Business Intelligence, Data Science, AI, and Data Engineering — empowering organizations across Europe and worldwide to make smarter, faster, and more human-centered decisions.
 
-We combine the precision and reliability that **enterprises require** with the flexibility and speed that **startups and small businesses** love.
-
-Whether you're modernizing HR systems at scale or just starting to automate your operations — we’ll tailor the right solution for you.
-
----
-
-## What We Do
-
-Our core services are designed to grow with you — from agile MVPs to full-scale enterprise platforms:
-
-### 🔍 Data & Analytics
-- **Business Intelligence & Dashboards:** Power BI, Tableau, and Cognos with live ERP integrations  
-- **Predictive Modeling & AI:** Forecasting, NLP, recommender engines, anomaly detection  
-- **Custom Data Apps:** Lightweight AI tools for everyday problems — from small workflows to enterprise bots  
-- **Automation & ETL Pipelines:** From raw data to insights across GCP, Azure, SAP, and more
-
-### 🧩 ERP & Cloud Modernization
-- **SAP & Workday Integration:** Analytics dashboards, automation, and performance tuning  
-- **Cloud Migration & Strategy:** Azure, GCP, hybrid solutions, and modernization from legacy systems  
-- **Process Optimization:** Tailored improvements to operations, HR, finance, and logistics  
-- **Retail & SME Support:** POS systems, CRM dashboards, Zoho & MailerLite integrations  
+Explore my professional world:  
+🔗 [LinkedIn](https://www.linkedin.com/in/daryooshdehestani/) | 🔗 [GitHub](https://github.com/dda-oo)
 
 ---
 
-## Whether You're a Team of 5 or 5,000
+## Our Services
 
-> ✅ You don’t need to be a tech company to benefit from tech.
+RadarRoster delivers end-to-end data and analytics capabilities, designed for flexibility, speed, and business alignment:
 
-We’ve helped:
-- 📈 Enterprises get faster, more accurate reporting  
-- 🛍️ Local shops automate sales and inventory  
-- 🧑‍💼 HR teams predict burnout and improve wellbeing  
-- 🚀 Startups launch data products in weeks, not months
+- **Business Intelligence & Data Visualization:** Custom dashboards with Power BI, Tableau, and IBM Cognos — integrated with SAP, Workday, billing platforms, stock systems, and other enterprise tools  
+- **Advanced Data Science & AI:** Predictive modeling, NLP, time-series forecasting, and deep learning tailored to business impact  
+- **Data Engineering:** ETL pipeline design, scalable cloud solutions (GCP, AWS, Azure), and modern data warehousing  
+- **AI Application Development:** Chatbots, recommender systems, automation workflows — all crafted with performance and UX in mind  
+- **Consulting & Strategy:** Analytics maturity assessments, data audits, and executive data literacy programs  
+- **Executive Recruitment & Talent Solutions:** Elite headhunting in AI, data, and tech, ensuring cultural and strategic alignment  
+- **Nearshoring & Offshoring Consulting:** Seamless team integration across borders — from talent to technology
 
-We love working with:
-- Small teams needing affordable automation  
-- Companies upgrading their ERP systems  
-- Agencies needing white-labeled dashboards  
-- Innovation leads ready to test AI solutions
+We specialize in fully understanding your unique needs and building **end-to-end automated solutions** for **any scale**, **any complexity**, and **any challenge** — helping you turn data into measurable business advantage.
 
 ---
 
-## Recent Projects
+## Recent Innovations & Solutions
 
-- 🧠 **Burnout Risk Prediction** – For HR teams using Workday & SAP HR  
-- 💬 **Emotional AI Chatbot** – For startups supporting employee wellness  
-- 📚 **AI-Powered Training Recommender** – For enterprise L&D platforms  
-- 📈 **Small-Cap Investment Dashboard** – Built for a niche financial investor  
-- 🤖 **Sales Automation Bots** – WhatsApp & Telegram agents for CRM + inventory  
-- ⚙️ **SAP-Power BI Bridge** – Realtime dashboards from enterprise ERP
+Some recent examples of impactful, AI-driven solutions we’ve delivered:
+
+- 🧠 **Burnout Prediction Model:** Detects early signs of employee fatigue using machine learning on HR datasets  
+- 💬 **Emotional AI Chatbot:** Real-time NLP-driven mental health insights for organizational wellness  
+- 📚 **Training Recommender:** Personalized learning path engine based on user goals and performance data  
+- 📈 **Small-Cap Scout:** Live dashboards and AI forecasting for niche investment opportunities  
+- 🤖 **E-commerce Automation Bots:** Smart Telegram/WhatsApp agents for sales, inventory, and CRM automation  
+- 🛠️ **Custom Chatbot Ecosystems:** End-to-end platform development for customer engagement and internal automation  
 
 ---
 
@@ -73,11 +54,12 @@ We love working with:
     max-width: 1000px;
     margin: 0 auto;
   ">
-    <a href="https://www.uni-bayreuth.de" target="_blank" rel="noopener"><img src="/assets/img/clients/ubt.jpg" alt="University of Bayreuth" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
-    <a href="https://www.pass-ag.com" target="_blank" rel="noopener"><img src="/assets/img/clients/pass-tech.png" alt="Pass Stanztechnik AG" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
-    <a href="https://cueconcept.de" target="_blank" rel="noopener"><img src="/assets/img/clients/cueconcept.png" alt="Cueconcept GmbH" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
-    <a href="https://rent-a-programmer.de" target="_blank" rel="noopener"><img src="/assets/img/clients/rp.png" alt="Rent a Programmer" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
-    <a href="https://cewe.de" target="_blank" rel="noopener"><img src="/assets/img/clients/cewe.png" alt="CEWE" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <!-- Client Logos -->
+    <a href="https://www.uni-bayreuth.de" target="_blank"><img src="/assets/img/clients/ubt.jpg" alt="University of Bayreuth" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <a href="https://www.pass-ag.com" target="_blank"><img src="/assets/img/clients/pass-tech.png" alt="Pass Stanztechnik AG" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <a href="https://cueconcept.de" target="_blank"><img src="/assets/img/clients/cueconcept.png" alt="Cueconcept GmbH" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <a href="https://rent-a-programmer.de" target="_blank"><img src="/assets/img/clients/rp.png" alt="Rent a Programmer" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
+    <a href="https://cewe.de" target="_blank"><img src="/assets/img/clients/cewe.png" alt="CEWE" style="max-width: 120px; filter: grayscale(30%); transition: filter 0.3s;" /></a>
   </div>
 </section>
 
@@ -87,15 +69,6 @@ We love working with:
 
 - 📘 [Explore Insights & Ideas on the Blog](/blog/)
 - 🛠️ [Discover Latest Project Highlights](/showcase/)
-
----
-
-## See More
-
-Want to explore more behind-the-scenes thinking, tools, or side projects?
-
-🔗 [GitHub](https://github.com/dda-oo)  
-🔗 [LinkedIn](https://www.linkedin.com/in/daryooshdehestani/)
 
 ---
 
@@ -123,6 +96,7 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
   <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;" />
   <textarea name="message" placeholder="Your Message" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea>
 
+  <!-- Your actual reCAPTCHA site key here -->
   <div class="g-recaptcha" data-sitekey="6LeJN4crAAAAAAmejXLmM2V5AoEhNM98Qq3Jd9uS" style="margin-bottom: 1rem;"></div>
 
   <button type="submit" style="padding: 0.6rem 1.2rem; background-color: #0069ff; color: white; border: none; cursor: pointer; border-radius: 4px;">Send</button>
@@ -174,6 +148,8 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
   });
 </script>
 
+
+  <!-- Calendly Box Wrapper -->
   <div
     style="
       flex: 0 1 320px;
@@ -205,6 +181,7 @@ Ready to unlock the full potential of your data? Whether you're a startup or an 
     >
   </div>
 </div>
+
 
 ---
 
