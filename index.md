@@ -1,14 +1,14 @@
 ---
 layout: default
 title: RadarRoster 
-subtitle: Smart Data Solutions for Business Growth
-description: "Empowering businesses: from startups to enterprises; to unlock actionable insights from data."
+subtitle: Smart AI & Data Solutions for Business Growth
+description: "Empowering businesses: from startups to enterprises; with AI and data-driven insights."
 
 ---
 
 # Welcome to RadarRoster
 
-At **RadarRoster**, we help organizations of all sizes make smarter, faster, and more human-centered decisions with data, AI, and cloud technology.
+At **RadarRoster**, we help organizations of all sizes make smarter, faster, and more human-centered decisions with AI, data and cloud technology.
 
 We combine the precision and reliability that **enterprises require** with the flexibility and speed that **startups and small businesses** love.
 
@@ -20,17 +20,22 @@ Whether you’re modernizing legacy systems or beginning to automate workflows; 
 
 Our core services are designed to grow with you; from agile MVPs to full-scale enterprise platforms:
 
-### 🔍 Data & Analytics
-- **Business Intelligence & Dashboards:** Power BI, Tableau, Cognos, and cloud-native solutions with live ERP integrations (GCP, Azure, SAP)  
-- **Predictive Modeling & AI:** Forecasting, NLP, recommender engines, anomaly detection  
-- **Custom Data Apps:** Lightweight AI tools for everyday problems; from small workflows to enterprise bots  
-- **Automation & ETL Pipelines:** From raw data to insights across GCP, Azure, SAP, and more
+### 🤖 AI & Intelligent Systems
+- **AI-Powered Dashboards & Insights:** Business intelligence that thinks ahead — using Power BI, Tableau, Cognos, and cloud-native ERP integrations (Azure, GCP, SAP)  
+- **Predictive Modeling & Machine Learning:** Forecast trends, detect anomalies, understand behavior, and optimize outcomes with custom ML models  
+- **Conversational & Intelligent Agents:** From internal support bots to customer-facing AI agents — tailored assistants for HR, sales, finance, and more  
+- **Lightweight AI Apps:** Smart microtools that automate decisions and workflows — built fast, scaled as needed  
+
+### 📊 Data Engineering & Automation
+- **Custom ETL Pipelines & DataOps:** Seamless flow from raw sources to insights across Azure, GCP, SAP, and hybrid ecosystems  
+- **Real-Time Data Apps:** Fast, reliable, and secure data pipelines for analytics, AI training, and decision systems  
+- **Analytics Modernization:** Migrate legacy systems, unify cloud tools, and streamline data access with performance in mind  
 
 ### 🧩 ERP & Cloud Modernization
 - **SAP & Workday Integration:** Analytics dashboards, automation, and performance tuning  
 - **Cloud Migration & Strategy:** Azure, GCP, hybrid solutions, and modernization from legacy systems  
 - **Process Optimization:** Tailored improvements to operations, HR, finance, and logistics  
-- **Retail & SME Support:** POS, CRM dashboards, and seamless integrations with leading marketing & sales platforms  
+- **Retail & SME Support:** POS, CRM dashboards, and seamless integrations with leading marketing & sales platforms    
 
 ---
 
@@ -39,16 +44,18 @@ Our core services are designed to grow with you; from agile MVPs to full-scale e
 > ✅ You don’t need to be a tech company to benefit from tech.
 
 We’ve helped:
-- 📈 Enterprises get faster, more accurate reporting  
-- 🛍️ Local shops automate sales and inventory  
-- 🧑‍💼 Helping teams predict trends, optimize performance, and enhance wellbeing through advanced analytics  
-- 🚀 Startups launch data products in weeks, not months
 
-We love working with:
-- Small teams needing affordable automation  
-- Companies with ERP upgrades, migrations, and seamless system transitions
-- Agencies needing white-labeled dashboards  
-- Innovation leads ready to test AI solutions
+- 🤖📈 Businesses of all sizes—from local shops to global enterprises—leverage AI-powered analytics for faster, more accurate, and actionable reporting  
+- 🛍️ Small retailers automate sales, inventory, and customer engagement with intelligent, easy-to-use AI tools  
+- 🧑‍💼 Teams across industries harness predictive AI models to forecast trends, optimize performance, and enhance employee wellbeing  
+- 🚀 Startups accelerate innovation by launching AI-driven data products in weeks, not months  
+
+We love partnering with:
+
+- 🤖 Small teams seeking affordable, AI-powered automation to boost efficiency  
+- 🚀 Companies undergoing ERP upgrades, cloud migrations, and seamless AI-enhanced system transitions  
+- 🎨 Agencies looking for white-labeled, AI-driven dashboards and analytics solutions  
+- 💡 Innovation leaders eager to pilot cutting-edge AI technologies and transform their business
 
 ---
 
@@ -103,7 +110,7 @@ Want to explore more behind-the-scenes thinking, tools, or side projects?
 
 ## Let’s Connect
 
-Ready to unlock the full potential of your data? Whether you're a startup or an established enterprise, RadarRoster offers tailored, scalable solutions; fast.
+Ready to unlock the full potential of AI and data? Whether you're a startup or an established enterprise, RadarRoster delivers tailored, scalable AI-powered solutions; fast!
 
 <div
   style="
