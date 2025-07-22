@@ -29,4 +29,4 @@ An intuitive dashboard for small-cap analytics and AI-powered forecasting to hel
 
 ---
 
-*More projects coming soon — this showcase grows with every new collaboration.*
+*More projects coming soon; this showcase grows with every new collaboration.*
