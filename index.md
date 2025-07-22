@@ -1,7 +1,8 @@
 ---
 layout: default
-title: RadarRoster – Boutique Data & Digital Solutions for Smart Growth
-description: Helping organizations — from startups to enterprises — turn data into clarity and results.
+title: RadarRoster – Smart Data Solutions for Business Growth
+description: Empowering businesses — from startups to enterprises — to unlock actionable insights from data.
+
 ---
 
 # Welcome to RadarRoster
@@ -10,7 +11,7 @@ At **RadarRoster**, we help organizations of all sizes make smarter, faster, and
 
 We combine the precision and reliability that **enterprises require** with the flexibility and speed that **startups and small businesses** love.
 
-Whether you're modernizing HR systems at scale or just starting to automate your operations — we’ll tailor the right solution for you.
+Whether you’re modernizing legacy systems or beginning to automate workflows — we’ll tailor the right solution for you.
 
 ---
 
@@ -19,7 +20,7 @@ Whether you're modernizing HR systems at scale or just starting to automate your
 Our core services are designed to grow with you — from agile MVPs to full-scale enterprise platforms:
 
 ### 🔍 Data & Analytics
-- **Business Intelligence & Dashboards:** Power BI, Tableau, and Cognos with live ERP integrations  
+- **Business Intelligence & Dashboards:** Power BI, Tableau, Cognos, and cloud-native solutions with live ERP integrations (GCP, Azure, SAP)  
 - **Predictive Modeling & AI:** Forecasting, NLP, recommender engines, anomaly detection  
 - **Custom Data Apps:** Lightweight AI tools for everyday problems — from small workflows to enterprise bots  
 - **Automation & ETL Pipelines:** From raw data to insights across GCP, Azure, SAP, and more
@@ -28,7 +29,7 @@ Our core services are designed to grow with you — from agile MVPs to full-scal
 - **SAP & Workday Integration:** Analytics dashboards, automation, and performance tuning  
 - **Cloud Migration & Strategy:** Azure, GCP, hybrid solutions, and modernization from legacy systems  
 - **Process Optimization:** Tailored improvements to operations, HR, finance, and logistics  
-- **Retail & SME Support:** POS systems, CRM dashboards, Zoho & MailerLite integrations  
+- **Retail & SME Support:** POS, CRM dashboards, and seamless integrations with leading marketing & sales platforms  
 
 ---
 
@@ -39,12 +40,12 @@ Our core services are designed to grow with you — from agile MVPs to full-scal
 We’ve helped:
 - 📈 Enterprises get faster, more accurate reporting  
 - 🛍️ Local shops automate sales and inventory  
-- 🧑‍💼 HR teams predict burnout and improve wellbeing  
+- 🧑‍💼 Helping teams predict trends, optimize performance, and enhance wellbeing through advanced analytics  
 - 🚀 Startups launch data products in weeks, not months
 
 We love working with:
 - Small teams needing affordable automation  
-- Companies upgrading their ERP systems  
+- Companies with ERP upgrades, migrations, and seamless system transitions
 - Agencies needing white-labeled dashboards  
 - Innovation leads ready to test AI solutions
 
