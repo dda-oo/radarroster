@@ -28,163 +28,123 @@ if (mobileMenuButton && mobileMenu) {
     });
 }
 
-// ============================================
-// CALENDLY INTEGRATION
-// ============================================
-
+// Calendly integration
 const calendlyButton = document.getElementById('calendly-button');
-
 if (calendlyButton) {
-    calendlyButton.addEventListener('click', function() {
-        // Your actual Calendly link
-        const calendlyUrl = 'https://calendly.com/radarroster/meeting';
-        
-        // Open Calendly popup
-        if (typeof Calendly !== 'undefined') {
-            Calendly.initPopupWidget({
-                url: calendlyUrl
-            });
-        } else {
-            // Fallback: open in new tab if widget doesn't load
-            window.open(calendlyUrl, '_blank');
-        }
+    calendlyButton.addEventListener('click', () => {
+        Calendly.initPopupWidget({url: 'https://calendly.com/radarroster/30min'});
         return false;
     });
 }
 
-// ============================================
-// CONTACT FORM with FormSubmit
-// ============================================
+// Contact form submission with Web3Forms
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const submitButton = contactForm?.querySelector('button[type="submit"]');
+    const submitText = document.getElementById('submit-text');
+    const submitLoader = document.getElementById('submit-loader');
+    const submitIcon = document.getElementById('submit-icon');
+    const formMessage = document.getElementById('form-message');
+    
+    // Set the access key directly
+    const accessKeyInput = document.getElementById('web3forms_access_key');
+    if (accessKeyInput) {
+        accessKeyInput.value = 'fc055f0b-0423-454a-8625-57e197ca487c';
+    }
 
-const contactForm = document.getElementById('contactForm');
-const submitText = document.getElementById('submit-text');
-const submitLoader = document.getElementById('submit-loader');
-const submitIcon = document.getElementById('submit-icon');
-const formMessage = document.getElementById('form-message');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            company: formData.get('company') || 'Not provided',
-            message: formData.get('message'),
-            _subject: 'New Contact Form Submission - RadarRoster',
-            _captcha: 'false'
-        };
-        
-        // Show loading state
-        submitText.classList.add('hidden');
-        submitIcon.classList.add('hidden');
-        submitLoader.classList.remove('hidden');
-        
-        try {
-            // Using FormSubmit.co - REPLACE 'YOUR_EMAIL' with your actual email
-            const response = await fetch('https://formsubmit.co/hello@radarroster.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
             
-            if (response.ok) {
-                // Success
-                formMessage.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
-                formMessage.className = 'text-green-400 text-center text-sm';
-                formMessage.classList.remove('hidden');
-                
-                // Reset form
-                contactForm.reset();
-                
-                // Hide message after 5 seconds
-                setTimeout(() => {
-                    formMessage.classList.add('hidden');
-                }, 5000);
-            } else {
-                throw new Error('Failed to send message');
+            // Show loading state
+            submitButton.disabled = true;
+            submitText.classList.add('hidden');
+            submitLoader.classList.remove('hidden');
+            submitIcon.classList.add('hidden');
+            formMessage.classList.add('hidden');
+
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Success message
+                    formMessage.textContent = '✓ Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
+                    formMessage.classList.remove('hidden', 'text-red-400');
+                    formMessage.classList.add('text-green-400');
+                    contactForm.reset();
+                } else {
+                    throw new Error(data.message || 'Something went wrong');
+                }
+            } catch (error) {
+                // Error message
+                formMessage.textContent = '✗ Oops! Something went wrong. Please try again or email us directly at hello@radarroster.com';
+                formMessage.classList.remove('hidden', 'text-green-400');
+                formMessage.classList.add('text-red-400');
+                console.error('Form submission error:', error);
+            } finally {
+                // Reset button state
+                submitButton.disabled = false;
+                submitText.classList.remove('hidden');
+                submitLoader.classList.add('hidden');
+                submitIcon.classList.remove('hidden');
             }
-        } catch (error) {
-            // Error
-            formMessage.textContent = '✗ Failed to send message. Please email us directly at hello@radarroster.com';
-            formMessage.className = 'text-red-400 text-center text-sm';
-            formMessage.classList.remove('hidden');
+        });
+    }
+
+    // Newsletter form submission
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitButton = newsletterForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
             
-            console.error('Form submission error:', error);
-        } finally {
-            // Reset button state
-            submitText.classList.remove('hidden');
-            submitIcon.classList.remove('hidden');
-            submitLoader.classList.add('hidden');
-        }
-    });
-}
+            submitButton.disabled = true;
+            submitButton.textContent = 'Subscribing...';
 
-// ============================================
-// NEWSLETTER SUBSCRIPTION
-// ============================================
+            const formData = new FormData(newsletterForm);
+            formData.append('access_key', CONFIG.WEB3FORMS_ACCESS_KEY);
+            formData.append('subject', 'New Newsletter Subscription');
+            formData.append('from_name', 'RadarRoster Newsletter');
 
-const newsletterForm = document.getElementById('newsletterForm');
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
 
-if (newsletterForm) {
-    newsletterForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const email = this.querySelector('input[name="email"]').value;
-        const submitButton = this.querySelector('button[type="submit"]');
-        const originalText = submitButton.textContent;
-        
-        submitButton.textContent = 'Subscribing...';
-        submitButton.disabled = true;
-        
-        try {
-            // Using FormSubmit.co for newsletter
-            const response = await fetch('https://formsubmit.co/hello@radarroster.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({ 
-                    email, 
-                    _subject: 'New Newsletter Subscription - RadarRoster',
-                    _captcha: 'false'
-                })
-            });
-            
-            if (response.ok) {
-                submitButton.textContent = '✓ Subscribed!';
-                submitButton.classList.remove('bg-brand-blue');
-                submitButton.classList.add('bg-green-600');
-                this.reset();
-                
+                const data = await response.json();
+
+                if (data.success) {
+                    submitButton.textContent = '✓ Subscribed!';
+                    submitButton.classList.add('bg-green-600');
+                    newsletterForm.reset();
+                    setTimeout(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.classList.remove('bg-green-600');
+                    }, 3000);
+                } else {
+                    throw new Error(data.message);
+                }
+            } catch (error) {
+                submitButton.textContent = '✗ Error';
                 setTimeout(() => {
                     submitButton.textContent = originalText;
-                    submitButton.classList.remove('bg-green-600');
-                    submitButton.classList.add('bg-brand-blue');
-                    submitButton.disabled = false;
                 }, 3000);
-            } else {
-                throw new Error('Subscription failed');
-            }
-        } catch (error) {
-            submitButton.textContent = '✗ Try again';
-            submitButton.classList.add('bg-red-600');
-            console.error('Newsletter subscription error:', error);
-            
-            setTimeout(() => {
-                submitButton.textContent = originalText;
-                submitButton.classList.remove('bg-red-600');
+                console.error('Newsletter subscription error:', error);
+            } finally {
                 submitButton.disabled = false;
-            }, 3000);
-        }
-    });
-}
+            }
+        });
+    }
+});
 
 // ============================================
 // SCROLL ANIMATIONS

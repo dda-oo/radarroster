@@ -9,3 +9,13 @@ Thumbs.db
 # Temp
 *.log
 *.tmp
+
+# Config files with sensitive data
+assets/js/config.js
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.local

@@ -95,7 +95,37 @@ fetch('/api/contact', {
 vercel --prod
 ```
 
-## 📄 License
+# RadarRoster
+
+AI & Data Intelligence Solutions
+
+## Setup
+
+1. Clone the repository
+2. Copy the config example file:
+   ```bash
+   cp assets/js/config.example.js assets/js/config.js
+   ```
+3. Add your Web3Forms access key to `assets/js/config.js`
+4. Open `index.html` in your browser
+
+## Contact Form
+
+The contact form uses [Web3Forms](https://web3forms.com/) for message delivery. Messages are sent to `hello@radarroster.com`.
+
+The form includes:
+- Honeypot spam protection
+- Client-side validation
+- Success/error feedback
+- Secure access key handling (gitignored)
+
+## Security
+
+- The `assets/js/config.js` file is gitignored to keep the access key private
+- Use `config.example.js` as a template
+- Web3Forms access keys can be regenerated anytime from your dashboard
+
+## License
 
 © 2025 RadarRoster. All rights reserved.
 
