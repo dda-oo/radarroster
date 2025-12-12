@@ -50,6 +50,15 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
+            // Check if hCaptcha is filled
+            const hCaptchaResponse = contactForm.querySelector('textarea[name=h-captcha-response]')?.value;
+            if (!hCaptchaResponse) {
+                formMessage.textContent = '✗ Please complete the captcha verification';
+                formMessage.classList.remove('hidden', 'text-green-400');
+                formMessage.classList.add('text-red-400');
+                return;
+            }
+            
             // Show loading state
             submitButton.disabled = true;
             submitText.textContent = 'Sending...';

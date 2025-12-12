@@ -772,6 +772,10 @@
                             <label class="block text-sm font-medium mb-2">Message *</label>
                             <textarea name="message" rows="4" required class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition" placeholder="Tell us about your project..."></textarea>
                         </div>
+                        
+                        <!-- hCaptcha -->
+                        <div class="h-captcha" data-captcha="true"></div>
+                        
                         <button type="submit" class="w-full bg-brand-blue hover:bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold transition inline-flex items-center justify-center">
                             <span id="submit-text">Send Message</span>
                             <span id="submit-loader" class="hidden">Sending...</span>
@@ -869,6 +873,9 @@
 
     <!-- Calendly Script -->
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <!-- Web3Forms Script for hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     
     <!-- Custom Scripts -->
     <script src="assets/js/main.js"></script>
