@@ -2,14 +2,17 @@
 
 A modern, professional one-page consulting business website showcasing AI, data engineering, and cloud modernization services.
 
+🌐 **Live Site:** https://radarroster.com
+
 ## 🚀 Features
 
 - **Responsive Design**: Works perfectly on all devices
 - **Modern Tech Stack**: HTML5, Tailwind CSS, Vanilla JavaScript
 - **Smooth Animations**: Scroll-based animations and hover effects
-- **Contact Form**: Ready for backend integration
+- **Functional Contact Form**: Web3Forms integration with hCaptcha spam protection
 - **SEO Optimized**: Semantic HTML structure
 - **Fast Loading**: Minimal dependencies, CDN-based
+- **GitHub Pages**: Auto-deploys on push to main branch
 
 ## 🛠️ Tech Stack
 
@@ -61,36 +64,65 @@ All content is in `index.html`. Update text directly in the HTML.
 - Services: Core offerings
 - Projects: Portfolio showcase
 - About: Trust and company info
-- Contact: Form and CTA
+- Contact: Form with Web3Forms integration
 
-## 📧 Contact Form Integration
+## 📧 Contact Form
 
-The form currently shows an alert. To integrate with a backend:
+The contact form is fully functional using **Web3Forms** with **hCaptcha** spam protection.
 
-```javascript
-// Replace the alert in the form submission handler with:
-fetch('/api/contact', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
-})
+### Features:
+- ✅ Sends emails to: `hello@radarroster.com`
+- ✅ hCaptcha spam protection
+- ✅ Honeypot field for bot detection
+- ✅ Client-side validation
+- ✅ Success/error feedback
+
+### Setup Guides:
+- **Contact Form Setup:** [CONTACT_FORM_GUIDE.md](CONTACT_FORM_GUIDE.md)
+- **Web3Forms Configuration:** [WEB3FORMS_SETUP.md](WEB3FORMS_SETUP.md)
+- **hCaptcha Setup:** [HCAPTCHA_SETUP.md](HCAPTCHA_SETUP.md)
+
+### Testing:
+```bash
+# Run diagnostic
+./diagnose.sh
+
+# Verify form setup
+./verify-form.sh
+
+# Test locally
+python3 -m http.server 8001
+# Visit: http://localhost:8001/test-debug.html
 ```
 
 ## 🚀 Deployment
 
-### GitHub Pages
-1. Push to GitHub
-2. Go to Settings > Pages
-3. Select branch and `/` folder
-4. Save
+This site is configured for **GitHub Pages** with custom domain: **radarroster.com**
 
-### Netlify
+### Automatic Deployment
+Every push to `main` branch automatically deploys to production.
+
+```bash
+git add .
+git commit -m "Your changes"
+git push origin main
+# Wait 1-2 minutes for GitHub Pages to rebuild
+```
+
+### Manual Deployment Script
+```bash
+./deploy.sh
+```
+
+### Other Platforms
+
+**Netlify:**
 ```bash
 # Drop the entire folder in Netlify
 # Or connect your Git repository
 ```
 
-### Vercel
+**Vercel:**
 ```bash
 vercel --prod
 ```
