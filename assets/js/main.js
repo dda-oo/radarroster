@@ -32,7 +32,7 @@ if (mobileMenuButton && mobileMenu) {
 const calendlyButton = document.getElementById('calendly-button');
 if (calendlyButton) {
     calendlyButton.addEventListener('click', () => {
-        Calendly.initPopupWidget({url: 'https://calendly.com/radarroster/30min'});
+        Calendly.initPopupWidget({url: 'https://calendly.com/radarroster'});
         return false;
     });
 }
