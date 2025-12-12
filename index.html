@@ -749,18 +749,9 @@
 
                 <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
                     <h3 class="text-2xl font-bold mb-6">Send us a message</h3>
-                    <form id="contactForm" class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
+                    <form id="contactForm" class="space-y-6">
                         <!-- Web3Forms Access Key (hidden) -->
                         <input type="hidden" name="access_key" id="web3forms_access_key">
-                        
-                        <!-- Redirect URL after submission -->
-                        <input type="hidden" name="redirect" value="https://radarroster.com/thank-you">
-                        
-                        <!-- Email recipient -->
-                        <input type="hidden" name="email" value="hello@radarroster.com">
-                        
-                        <!-- Subject line -->
-                        <input type="hidden" name="subject" value="New Contact Form Submission from RadarRoster">
                         
                         <!-- Honeypot field (hidden from users, catches bots) -->
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">

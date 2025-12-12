@@ -65,6 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const formData = new FormData(contactForm);
             
+            // Log form data for debugging
+            console.log('Submitting form with data:');
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
+            }
+            
             try {
                 const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
@@ -72,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 const data = await response.json();
+                console.log('Web3Forms response:', data);
 
                 if (data.success) {
                     // Success message
@@ -79,6 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     formMessage.classList.remove('hidden', 'text-red-400');
                     formMessage.classList.add('text-green-400');
                     contactForm.reset();
+                    // Re-set the access key after reset
+                    if (accessKeyInput) {
+                        accessKeyInput.value = 'fc055f0b-0423-454a-8625-57e197ca487c';
+                    }
                 } else {
                     throw new Error(data.message || 'Something went wrong');
                 }
