@@ -157,10 +157,20 @@ The form includes:
 - Use `config.example.js` as a template
 - Web3Forms access keys can be regenerated anytime from your dashboard
 
-## License
+## 📄 License
 
-© 2025 RadarRoster. All rights reserved.
+© 2025 RadarRoster (dda-oo). Licensed under [Creative Commons Attribution-NonCommercial 4.0 International](LICENSE).
 
-## 🤝 Contributing
+**You are free to:**
+- View, learn from, and fork this project
+- Adapt and build upon it for personal or educational use
 
-Built with care by dda-oo. Feel free to fork and customize for your needs!
+**Under these terms:**
+- **Attribution Required**: Credit RadarRoster (dda-oo) with a link to this repository
+- **NonCommercial**: No commercial use without written permission
+
+See [LICENSE](LICENSE) file for full terms.
+
+---
+
+Built with excellence by [dda-oo](https://github.com/dda-oo) • [RadarRoster](https://radarroster.com)
