@@ -60,7 +60,7 @@
     <h1>Test Contact Form - Web3Forms</h1>
     <p>This is a simple test to verify the Web3Forms integration works.</p>
     
-    <form id="testForm">
+    <form id="testForm" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="fc055f0b-0423-454a-8625-57e197ca487c">
         <input type="checkbox" name="botcheck" style="display: none;">
         
@@ -85,6 +85,11 @@
             const form = e.target;
             const formData = new FormData(form);
             const messageDiv = document.getElementById('message');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
             
             // Show what we're sending
             console.log('Sending form data:');
@@ -100,12 +105,15 @@
                 
                 const data = await response.json();
                 console.log('Response from Web3Forms:', data);
+                console.log('Response status:', response.status);
+                console.log('Response OK:', response.ok);
                 
                 messageDiv.style.display = 'block';
                 
-                if (data.success) {
+                // Use response.ok check (per Web3Forms official example)
+                if (response.ok) {
                     messageDiv.className = 'message success';
-                    messageDiv.textContent = '✓ Success! Message sent. Check your email at the address configured in Web3Forms dashboard.';
+                    messageDiv.textContent = '✓ Success! Message sent. Check your email at hello@radarroster.com';
                     form.reset();
                 } else {
                     messageDiv.className = 'message error';
@@ -116,6 +124,9 @@
                 messageDiv.className = 'message error';
                 messageDiv.textContent = '✗ Network error: ' + error.message;
                 console.error('Error:', error);
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
             }
         });
     </script>

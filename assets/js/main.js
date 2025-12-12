@@ -45,12 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitLoader = document.getElementById('submit-loader');
     const submitIcon = document.getElementById('submit-icon');
     const formMessage = document.getElementById('form-message');
-    
-    // Set the access key directly
-    const accessKeyInput = document.getElementById('web3forms_access_key');
-    if (accessKeyInput) {
-        accessKeyInput.value = 'fc055f0b-0423-454a-8625-57e197ca487c';
-    }
 
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -58,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Show loading state
             submitButton.disabled = true;
-            submitText.classList.add('hidden');
+            submitText.textContent = 'Sending...';
             submitLoader.classList.remove('hidden');
             submitIcon.classList.add('hidden');
             formMessage.classList.add('hidden');
@@ -79,18 +73,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const data = await response.json();
                 console.log('Web3Forms response:', data);
+                console.log('Response status:', response.status);
+                console.log('Response OK:', response.ok);
 
-                if (data.success) {
+                // Check response.ok first (per Web3Forms official example)
+                if (response.ok) {
                     // Success message
                     formMessage.textContent = '✓ Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
                     formMessage.classList.remove('hidden', 'text-red-400');
                     formMessage.classList.add('text-green-400');
                     contactForm.reset();
-                    // Re-set the access key after reset
-                    if (accessKeyInput) {
-                        accessKeyInput.value = 'fc055f0b-0423-454a-8625-57e197ca487c';
-                    }
                 } else {
+                    // Error from API
                     throw new Error(data.message || 'Something went wrong');
                 }
             } catch (error) {
@@ -102,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } finally {
                 // Reset button state
                 submitButton.disabled = false;
-                submitText.classList.remove('hidden');
+                submitText.textContent = 'Send Message';
                 submitLoader.classList.add('hidden');
                 submitIcon.classList.remove('hidden');
             }
