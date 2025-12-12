@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutz - RadarRoster</title>
+    <title>Datenschutzerklärung - RadarRoster</title>
+    <meta name="description" content="Datenschutzerklärung von RadarRoster">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,10 +37,31 @@
                     </div>
                     <span class="text-xl font-bold">RadarRoster</span>
                 </a>
-                <div class="flex space-x-8">
-                    <a href="../index.html" class="hover:text-brand-blue transition">Home</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#services" class="hover:text-brand-blue transition">Services</a>
+                    <a href="../index.html#projects" class="hover:text-brand-blue transition">Projects</a>
+                    <a href="../index.html#about" class="hover:text-brand-blue transition">About</a>
+                    <a href="blog.html" class="hover:text-brand-blue transition">Newsletter</a>
                     <a href="../index.html#contact" class="bg-brand-blue hover:bg-blue-600 px-6 py-2 rounded-lg transition">Contact</a>
                 </div>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="../index.html#services" class="block py-2 hover:text-brand-blue transition">Services</a>
+                <a href="../index.html#projects" class="block py-2 hover:text-brand-blue transition">Projects</a>
+                <a href="../index.html#about" class="block py-2 hover:text-brand-blue transition">About</a>
+                <a href="blog.html" class="block py-2 hover:text-brand-blue transition">Newsletter</a>
+                <a href="../index.html#contact" class="block py-2 hover:text-brand-blue transition">Contact</a>
             </div>
         </div>
     </nav>
@@ -51,117 +73,87 @@
             
             <div class="prose prose-invert max-w-none space-y-8">
                 <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <p class="text-gray-300 leading-relaxed">
-                        Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und Zweck der Verarbeitung personenbezogener Daten auf dieser Website.
-                    </p>
-                </div>
-
-                <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Verantwortlicher</h2>
-                    <p class="text-gray-300 mb-2"><strong>Radar Roster</strong></p>
-                    <p class="text-gray-300 mb-2">Offenburg, Deutschland</p>
-                    <p class="text-gray-300">E-Mail: hello [at] radarroster [dot] com</p>
-                </div>
-
-                <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Erhebung und Verarbeitung personenbezogener Daten</h2>
+                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">1. Datenschutz auf einen Blick</h2>
+                    <h3 class="text-xl font-bold mb-2 text-gray-300">Allgemeine Hinweise</h3>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.
+                        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
                     </p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-300">Datenerfassung auf dieser Website</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Auf dieser Website werden personenbezogene Daten nur erhoben, wenn Sie uns diese freiwillig, z. B. durch Ausfüllen eines Kontaktformulars oder Terminbuchung, mitteilen.
+                        <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+                        Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
                     </p>
                 </div>
 
                 <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Kontaktformulare und Terminvereinbarung</h2>
-                    
-                    <h3 class="text-xl font-bold mb-3 text-brand-blue">Kontaktformular via FormSubmit</h3>
+                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">2. Hosting und Content Delivery Networks (CDN)</h2>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        Wenn Sie das Kontaktformular auf dieser Website nutzen, werden die eingegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) an den Dienst FormSubmit (FormSubmit.co, USA) übermittelt. Die Daten werden dort verarbeitet und an uns weitergeleitet. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Bearbeitung Ihrer Anfrage.
+                        Diese Website wird auf GitHub Pages gehostet. Anbieter ist die GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.
                     </p>
-                    <p class="text-gray-300 leading-relaxed mb-6">
-                        Mehr Informationen finden Sie in der Datenschutzerklärung von FormSubmit: 
-                        <a href="https://formsubmit.co/privacy.pdf" target="_blank" class="text-brand-blue hover:text-blue-400 underline">
-                            https://formsubmit.co/privacy.pdf
-                        </a>
+                    <p class="text-gray-300 leading-relaxed">
+                        GitHub kann beim Besuch dieser Website technische Informationen inklusive Ihrer IP-Adresse erfassen. Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" class="text-brand-blue hover:text-blue-400 underline">GitHub Privacy Statement</a>.
                     </p>
-                    
-                    <h3 class="text-xl font-bold mb-3 text-brand-blue">Terminvereinbarung via Calendly</h3>
+                </div>
+
+                <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
+                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">3. Allgemeine Hinweise und Pflichtinformationen</h2>
+                    <h3 class="text-xl font-bold mb-2 text-gray-300">Datenschutz</h3>
                     <p class="text-gray-300 leading-relaxed mb-4">
-                        Zur einfachen Terminvereinbarung ist auf dieser Website ein Widget des Dienstes Calendly (Calendly LLC, USA) eingebunden. Wenn Sie einen Termin buchen, werden personenbezogene Daten wie Name, E-Mail-Adresse und ggf. weitere Angaben an Calendly übermittelt. Die Nutzung erfolgt freiwillig auf Grundlage Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.
+                        Der Betreiber dieser Seite nimmt den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
                     </p>
+                    <h3 class="text-xl font-bold mb-2 text-gray-300">Hinweis zur verantwortlichen Stelle</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Weitere Informationen finden Sie in der Datenschutzerklärung von Calendly: 
-                        <a href="https://calendly.com/legal" target="_blank" class="text-brand-blue hover:text-blue-400 underline">
-                            https://calendly.com/legal
-                        </a>
-                    </p>
-                </div>
-
-                <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Verwendung der Daten</h2>
-                    <p class="text-gray-300 leading-relaxed">
-                        Die von Ihnen übermittelten Daten verwenden wir ausschließlich zur Bearbeitung Ihrer Anfrage, zur Kontaktaufnahme oder zur Terminvereinbarung. Eine Weitergabe an Dritte erfolgt nicht, sofern keine gesetzliche Verpflichtung besteht.
-                    </p>
-                </div>
-
-                <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Cookies</h2>
-                    <p class="text-gray-300 leading-relaxed">
-                        Diese Website verwendet keine Cookies, die personenbezogene Daten speichern oder auswerten.
-                    </p>
-                </div>
-
-                <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Analyse-Tools und Werbung</h2>
-                    <p class="text-gray-300 leading-relaxed">
-                        Es werden keine Tracking- oder Analyse-Tools wie Google Analytics eingesetzt.
-                    </p>
-                </div>
-
-                <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Ihre Rechte</h2>
-                    <p class="text-gray-300 leading-relaxed mb-4">
-                        Sie haben das Recht, jederzeit Auskunft über die bei uns gespeicherten personenbezogenen Daten zu erhalten, diese berichtigen oder löschen zu lassen sowie der Verarbeitung zu widersprechen.
-                    </p>
-                    <p class="text-gray-300 leading-relaxed">
-                        Zur Ausübung Ihrer Rechte oder bei Fragen zum Datenschutz wenden Sie sich bitte an:<br>
-                        <strong>Radar Roster</strong><br>
+                        Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br><br>
+                        Daryoosh Dehestani<br>
+                        Gewerbe: RadarRoster<br>
+                        Offenburg, Deutschland<br>
                         E-Mail: hello [at] radarroster [dot] com
                     </p>
                 </div>
 
                 <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Sicherheit</h2>
+                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">4. Datenerfassung auf dieser Website</h2>
+                    <h3 class="text-xl font-bold mb-2 text-gray-300">Server-Log-Dateien</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-4">
+                        <li>Browsertyp und Browserversion</li>
+                        <li>Verwendetes Betriebssystem</li>
+                        <li>Referrer URL</li>
+                        <li>Hostname des zugreifenden Rechners</li>
+                        <li>Uhrzeit der Serveranfrage</li>
+                        <li>IP-Adresse</li>
+                    </ul>
+                    <h3 class="text-xl font-bold mb-2 text-gray-300">Kontaktformular</h3>
                     <p class="text-gray-300 leading-relaxed">
-                        Wir treffen angemessene technische und organisatorische Maßnahmen, um Ihre Daten vor Verlust, Manipulation und unbefugtem Zugriff zu schützen.
+                        Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
                     </p>
                 </div>
 
                 <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Haftungsausschluss</h2>
+                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">5. Web3Forms</h2>
                     <p class="text-gray-300 leading-relaxed">
-                        Für externe Links auf dieser Website übernehmen wir keine Haftung, da wir keinen Einfluss auf deren Inhalte haben.
+                        Diese Website nutzt Web3Forms für die Verarbeitung von Kontaktformularen. Anbieter ist Web3Forms. Wenn Sie das Kontaktformular nutzen, werden die eingegebenen Daten zur Bearbeitung Ihrer Anfrage verwendet. Weitere Informationen finden Sie in der Datenschutzerklärung von Web3Forms: <a href="https://web3forms.com/privacy" target="_blank" class="text-brand-blue hover:text-blue-400 underline">Web3Forms Privacy Policy</a>.
                     </p>
                 </div>
 
                 <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Vertragsbedingungen und AGB</h2>
+                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">6. hCaptcha</h2>
                     <p class="text-gray-300 leading-relaxed">
-                        Vertragsbedingungen werden individuell und projektbezogen vereinbart. Es kommen keine vorformulierten Allgemeinen Geschäftsbedingungen (AGB) zur Anwendung.
+                        Wir nutzen hCaptcha (Anbieter: Intuition Machines, Inc.) zum Schutz vor Spam und Missbrauch. Dabei werden Daten an hCaptcha übermittelt. Weitere Informationen: <a href="https://www.hcaptcha.com/privacy" target="_blank" class="text-brand-blue hover:text-blue-400 underline">hCaptcha Privacy Policy</a>.
                     </p>
                 </div>
 
                 <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
-                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">Änderungen dieser Datenschutzerklärung</h2>
+                    <h2 class="text-2xl font-bold mb-4 text-brand-blue">7. Ihre Rechte</h2>
                     <p class="text-gray-300 leading-relaxed">
-                        Wir behalten uns das Recht vor, diese Datenschutzerklärung bei Bedarf anzupassen. Die jeweils aktuelle Version ist auf dieser Seite verfügbar.
+                        Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.
                     </p>
                 </div>
 
                 <div class="text-center text-gray-500 text-sm mt-12">
-                    <p>Last updated: January 2025</p>
+                    <p>Letzte Aktualisierung: Dezember 2025</p>
                 </div>
             </div>
         </div>
@@ -170,14 +162,25 @@
     <!-- Footer -->
     <footer class="bg-card-bg border-t border-gray-800 py-8 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto text-center">
-            <p class="text-gray-400 text-sm">© 2025 RadarRoster. All rights reserved.</p>
-            <div class="mt-4 space-x-4">
-                <a href="../index.html" class="text-brand-blue hover:text-blue-400">Home</a>
-                <a href="impressum.html" class="text-brand-blue hover:text-blue-400">Impressum</a>
-                <a href="datenschutz.html" class="text-brand-blue hover:text-blue-400">Datenschutz</a>
+            <p class="text-gray-400 mb-4">❤️ Built with curiosity and care by <a href="https://github.com/dda-oo" target="_blank" class="text-brand-blue hover:text-blue-400">dda-oo</a></p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="../index.html" class="text-gray-400 hover:text-brand-blue transition">Home</a>
+                <a href="impressum.html" class="text-gray-400 hover:text-brand-blue transition">Impressum</a>
+                <a href="datenschutz.html" class="text-gray-400 hover:text-brand-blue transition">Datenschutz</a>
             </div>
+            <p class="text-gray-500 text-sm">Running proudly on <a href="https://github.com" target="_blank" class="text-brand-blue hover:text-blue-400">GitHub</a></p>
         </div>
     </footer>
 
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
