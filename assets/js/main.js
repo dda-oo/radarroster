@@ -1,15 +1,9 @@
-// ============================================
-// NAVIGATION
-// ============================================
-
-// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Close mobile menu if open
             const mobileMenu = document.getElementById('mobile-menu');
             if (mobileMenu) {
                 mobileMenu.classList.add('hidden');
@@ -18,7 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu toggle
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -28,7 +21,6 @@ if (mobileMenuButton && mobileMenu) {
     });
 }
 
-// Calendly integration
 const calendlyButton = document.getElementById('calendly-button');
 if (calendlyButton) {
     calendlyButton.addEventListener('click', () => {
@@ -37,7 +29,6 @@ if (calendlyButton) {
     });
 }
 
-// Contact form submission with Web3Forms
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     const submitButton = contactForm?.querySelector('button[type="submit"]');
@@ -50,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // Check if hCaptcha is filled
             const hCaptchaResponse = contactForm.querySelector('textarea[name=h-captcha-response]')?.value;
             if (!hCaptchaResponse) {
                 formMessage.textContent = '✗ Please complete the captcha verification';
@@ -59,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Show loading state
             submitButton.disabled = true;
             submitText.textContent = 'Sending...';
             submitLoader.classList.remove('hidden');
@@ -68,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const formData = new FormData(contactForm);
             
-            // Log form data for debugging
             console.log('Submitting form with data:');
             for (let pair of formData.entries()) {
                 console.log(pair[0] + ': ' + pair[1]);
@@ -85,15 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Response status:', response.status);
                 console.log('Response OK:', response.ok);
 
-                // Check response.ok first (per Web3Forms official example)
                 if (response.ok) {
-                    // Success message
                     formMessage.textContent = '✓ Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
                     formMessage.classList.remove('hidden', 'text-red-400');
                     formMessage.classList.add('text-green-400');
                     contactForm.reset();
                 } else {
-                    // Error from API - show the actual error message
                     const errorMsg = data.message || 'Unknown error occurred';
                     formMessage.textContent = '✗ Error: ' + errorMsg;
                     formMessage.classList.remove('hidden', 'text-green-400');
@@ -106,13 +91,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             } catch (error) {
-                // Network error
                 formMessage.textContent = '✗ Network error: ' + error.message + '. Please check your connection or email us at hello@radarroster.com';
                 formMessage.classList.remove('hidden', 'text-green-400');
                 formMessage.classList.add('text-red-400');
                 console.error('Form submission error:', error);
             } finally {
-                // Reset button state
                 submitButton.disabled = false;
                 submitText.textContent = 'Send Message';
                 submitLoader.classList.add('hidden');
@@ -121,7 +104,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Newsletter form submission
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', async (e) => {
@@ -169,10 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// ============================================
-// SCROLL ANIMATIONS
-// ============================================
-
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -194,9 +172,4 @@ document.querySelectorAll('.card-hover').forEach(el => {
     observer.observe(el);
 });
 
-// ============================================
-// UTILITIES
-// ============================================
-
-// Log page views (optional - for debugging)
 console.log('RadarRoster - Page loaded:', window.location.pathname);

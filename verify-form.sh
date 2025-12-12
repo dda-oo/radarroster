@@ -5,7 +5,6 @@ echo "Web3Forms Integration Verification"
 echo "======================================"
 echo ""
 
-# Check the form structure
 echo "✓ Checking form attributes..."
 if grep -q 'action="https://api.web3forms.com/submit"' index.html && grep -q 'method="POST"' index.html; then
     echo "  ✓ Form has correct action and method"
@@ -13,7 +12,6 @@ else
     echo "  ✗ Form missing action/method attributes"
 fi
 
-# Check access key
 echo ""
 echo "✓ Checking access key..."
 if grep -q 'value="fc055f0b-0423-454a-8625-57e197ca487c"' index.html; then
@@ -22,7 +20,6 @@ else
     echo "  ✗ Access key not found in HTML"
 fi
 
-# Check response.ok usage
 echo ""
 echo "✓ Checking JavaScript implementation..."
 if grep -q 'response.ok' assets/js/main.js; then
@@ -31,7 +28,6 @@ else
     echo "  ✗ Not using response.ok check"
 fi
 
-# Check required fields
 echo ""
 echo "✓ Checking form fields..."
 fields=("name" "email" "message")
@@ -43,7 +39,6 @@ for field in "${fields[@]}"; do
     fi
 done
 
-# Check honeypot
 echo ""
 echo "✓ Checking spam protection..."
 if grep -q 'name="botcheck"' index.html; then

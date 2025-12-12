@@ -5,11 +5,10 @@ echo "RadarRoster Contact Form Diagnostic Tool"
 echo "================================================"
 echo ""
 
-# Colors
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
 echo "1. Testing if Web3Forms API is accessible..."
 if curl -s -o /dev/null -w "%{http_code}" https://api.web3forms.com/submit | grep -q "405"; then
