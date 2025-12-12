@@ -84,12 +84,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     formMessage.classList.add('text-green-400');
                     contactForm.reset();
                 } else {
-                    // Error from API
-                    throw new Error(data.message || 'Something went wrong');
+                    // Error from API - show the actual error message
+                    const errorMsg = data.message || 'Unknown error occurred';
+                    formMessage.textContent = '✗ Error: ' + errorMsg;
+                    formMessage.classList.remove('hidden', 'text-green-400');
+                    formMessage.classList.add('text-red-400');
+                    console.error('Web3Forms API Error:', {
+                        status: response.status,
+                        statusText: response.statusText,
+                        message: errorMsg,
+                        fullResponse: data
+                    });
                 }
             } catch (error) {
-                // Error message
-                formMessage.textContent = '✗ Oops! Something went wrong. Please try again or email us directly at hello@radarroster.com';
+                // Network error
+                formMessage.textContent = '✗ Network error: ' + error.message + '. Please check your connection or email us at hello@radarroster.com';
                 formMessage.classList.remove('hidden', 'text-green-400');
                 formMessage.classList.add('text-red-400');
                 console.error('Form submission error:', error);
