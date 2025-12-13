@@ -10,9 +10,6 @@
     <!-- Calendly CSS -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     
-    <!-- Kit Newsletter Script -->
-    <script async data-uid="6b11e3cdee" src="https://radarroster.kit.com/6b11e3cdee/index.js"></script>
-    
     <script>
         tailwind.config = {
             theme: {
@@ -781,10 +778,10 @@
         <div class="max-w-4xl mx-auto text-center">
             <h3 class="text-2xl font-bold mb-4">Stay Updated with Data & AI Insights</h3>
             <p class="text-gray-400 mb-6">Join our newsletter for practical tips, industry trends, and exclusive resources.</p>
-            <form action="https://app.kit.com/forms/8869562/subscriptions" method="post" data-sv-form="8869562" data-uid="6b11e3cdee" data-format="inline" data-version="5" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
-                <input type="email" name="email_address" required placeholder="your@email.com" class="flex-1 bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition">
+            <form class="newsletter-form flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                <input type="email" name="email" required placeholder="your@email.com" class="flex-1 bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition">
                 <button type="submit" class="bg-brand-blue hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition">
-                    Subscribe
+                    <span>Subscribe</span>
                 </button>
             </form>
             <p class="text-gray-500 text-sm mt-4">We respect your privacy. Unsubscribe anytime.</p>
