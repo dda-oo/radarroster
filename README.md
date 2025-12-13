@@ -29,10 +29,11 @@ A modern, professional one-page consulting business website showcasing AI, data 
 
 For development:
 ```bash
-# Serve locally with Python
 python3 -m http.server 8000
+```
 
-# Or with Node.js
+Or with Node.js:
+```bash
 npx serve .
 ```
 
@@ -83,17 +84,21 @@ The contact form is fully functional using **Web3Forms** with **hCaptcha** spam 
 - **hCaptcha Setup:** [HCAPTCHA_SETUP.md](HCAPTCHA_SETUP.md)
 
 ### Testing:
+Run diagnostic:
 ```bash
-# Run diagnostic
 ./diagnose.sh
-
-# Verify form setup
-./verify-form.sh
-
-# Test locally
-python3 -m http.server 8001
-# Visit: http://localhost:8001/test-debug.html
 ```
+
+Verify form setup:
+```bash
+./verify-form.sh
+```
+
+Test locally:
+```bash
+python3 -m http.server 8001
+```
+Visit: http://localhost:8001/test-debug.html
 
 ## 🚀 Deployment
 
@@ -106,8 +111,8 @@ Every push to `main` branch automatically deploys to production.
 git add .
 git commit -m "Your changes"
 git push origin main
-# Wait 1-2 minutes for GitHub Pages to rebuild
 ```
+Wait 1-2 minutes for GitHub Pages to rebuild.
 
 ### Manual Deployment Script
 ```bash
@@ -117,10 +122,7 @@ git push origin main
 ### Other Platforms
 
 **Netlify:**
-```bash
-# Drop the entire folder in Netlify
-# Or connect your Git repository
-```
+Drop the entire folder in Netlify or connect your Git repository.
 
 **Vercel:**
 ```bash

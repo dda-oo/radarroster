@@ -1,27 +1,36 @@
 #!/bin/bash
 
-echo "🚀 RadarRoster Deployment Script"
-echo "================================"
+echo "========================================="
+echo "RadarRoster Deployment"
+echo "========================================="
 
-# Check if we're in the right directory
-if [ ! -f "index.html" ]; then
-    echo "❌ Error: index.html not found. Are you in the project root?"
-    exit 1
+echo ""
+echo "Checking git status..."
+git status
+
+echo ""
+read -p "Continue with deployment? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "Adding all changes..."
+    git add .
+    
+    echo ""
+    read -p "Enter commit message: " commit_msg
+    
+    echo "Committing changes..."
+    git commit -m "$commit_msg"
+    
+    echo "Pushing to GitHub..."
+    git push origin main
+    
+    echo ""
+    echo "========================================="
+    echo "Deployment Complete!"
+    echo "Site will be live in 1-2 minutes"
+    echo "https://radarroster.com"
+    echo "========================================="
+else
+    echo "Deployment cancelled"
 fi
-
-# Add all changes
-echo "📦 Adding files..."
-git add .
-
-# Commit with timestamp
-TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
-echo "💾 Committing changes..."
-git commit -m "Update: $TIMESTAMP"
-
-# Push to GitHub
-echo "🌐 Pushing to GitHub..."
-git push origin main
-
-echo "✅ Deployment complete!"
-echo "🔗 Your site will be live at: https://dda-oo.github.io/rr/"
-echo "⏱️  Allow 1-2 minutes for changes to appear"

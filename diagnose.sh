@@ -1,78 +1,102 @@
 #!/bin/bash
 
-echo "================================================"
-echo "RadarRoster Contact Form Diagnostic Tool"
-echo "================================================"
+: '
+Contact Form Diagnostic Script
+Comprehensive check of form configuration
+'
+
+echo "========================================="
+echo "RadarRoster Contact Form Diagnostics"
+echo "========================================="
+
 echo ""
+echo "1. Checking File Structure..."
+echo "----------------------------"
 
-GREEN='\033[0;32m'
-RED='\033[0;31m'
-YELLOW='\033[1;33m'
-NC='\033[0m'
-
-echo "1. Testing if Web3Forms API is accessible..."
-if curl -s -o /dev/null -w "%{http_code}" https://api.web3forms.com/submit | grep -q "405"; then
-    echo -e "${GREEN}✓ Web3Forms API is accessible${NC}"
+if [ -f "index.html" ]; then
+    echo "✓ index.html found"
 else
-    echo -e "${RED}✗ Cannot reach Web3Forms API${NC}"
+    echo "✗ index.html MISSING"
+fi
+
+if [ -f "assets/js/config.js" ]; then
+    echo "✓ config.js found"
+else
+    echo "✗ config.js MISSING - copy from config.example.js"
+fi
+
+if [ -f "assets/js/config.example.js" ]; then
+    echo "✓ config.example.js found"
+else
+    echo "✗ config.example.js MISSING"
+fi
+
+if [ -f "assets/js/main.js" ]; then
+    echo "✓ main.js found"
+else
+    echo "✗ main.js MISSING"
 fi
 
 echo ""
-echo "2. Checking if index.html has the contact form..."
-if grep -q "contactForm" index.html; then
-    echo -e "${GREEN}✓ Contact form found in index.html${NC}"
-else
-    echo -e "${RED}✗ Contact form not found${NC}"
+echo "2. Checking Configuration..."
+echo "----------------------------"
+
+if [ -f "assets/js/config.js" ]; then
+    if grep -q "YOUR_ACCESS_KEY_HERE" assets/js/config.js; then
+        echo "⚠ WARNING: Using placeholder access key"
+        echo "  → Update config.js with your Web3Forms access key"
+    else
+        echo "✓ Access key appears to be configured"
+    fi
 fi
 
 echo ""
-echo "3. Checking if access key is set in main.js..."
-if grep -q "fc055f0b-0423-454a-8625-57e197ca487c" assets/js/main.js; then
-    echo -e "${GREEN}✓ Access key found in main.js${NC}"
-else
-    echo -e "${RED}✗ Access key not found${NC}"
+echo "3. Checking Form Integration..."
+echo "--------------------------------"
+
+if [ -f "index.html" ]; then
+    if grep -q "web3forms.com/submit" index.html; then
+        echo "✓ Web3Forms action URL found"
+    else
+        echo "⚠ Web3Forms action URL missing"
+    fi
+    
+    if grep -q "name=\"access_key\"" index.html; then
+        echo "✓ Access key input field found"
+    else
+        echo "⚠ Access key field missing"
+    fi
+    
+    if grep -q "botcheck" index.html; then
+        echo "✓ Honeypot field found"
+    else
+        echo "⚠ Honeypot field missing"
+    fi
 fi
 
 echo ""
-echo "4. Checking for naming conflicts..."
-if grep -A 20 "contactForm" index.html | grep -c 'name="email"' | grep -q "1"; then
-    echo -e "${GREEN}✓ No email field naming conflicts${NC}"
+echo "4. Checking Scripts..."
+echo "----------------------"
+
+if grep -q "web3forms.com/client/script.js" index.html 2>/dev/null; then
+    echo "✓ Web3Forms client script loaded"
 else
-    echo -e "${YELLOW}⚠ Multiple email fields detected - this may cause issues${NC}"
+    echo "⚠ Web3Forms client script missing"
+fi
+
+if grep -q "assets/js/main.js" index.html 2>/dev/null; then
+    echo "✓ main.js script loaded"
+else
+    echo "⚠ main.js script not loaded"
 fi
 
 echo ""
-echo "5. Checking if honeypot is present..."
-if grep -q "botcheck" index.html; then
-    echo -e "${GREEN}✓ Honeypot field present${NC}"
-else
-    echo -e "${YELLOW}⚠ Honeypot field not found${NC}"
-fi
-
+echo "========================================="
+echo "Diagnostics Complete"
+echo "========================================="
 echo ""
-echo "================================================"
 echo "Next Steps:"
-echo "================================================"
+echo "1. Ensure config.js has your Web3Forms access key"
+echo "2. Test the form at: http://localhost:8000"
+echo "3. Check browser console for any errors"
 echo ""
-echo "1. Configure Web3Forms Dashboard:"
-echo "   → Go to: https://web3forms.com/dashboard"
-echo "   → Set recipient email to: hello@radarroster.com"
-echo "   → Verify the email address"
-echo ""
-echo "2. Test locally:"
-echo "   → Run: python3 -m http.server 8001"
-echo "   → Open: http://localhost:8001"
-echo "   → Fill and submit the contact form"
-echo "   → Check browser console (F12) for errors"
-echo ""
-echo "3. Test on production:"
-echo "   → Visit: https://radarroster.com"
-echo "   → Submit test message"
-echo "   → Check Web3Forms dashboard for submission"
-echo "   → Check hello@radarroster.com inbox"
-echo ""
-echo "4. View form submissions:"
-echo "   → Web3Forms dashboard: https://web3forms.com/dashboard"
-echo "   → Look for recent submissions"
-echo ""
-echo "================================================"
