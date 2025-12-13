@@ -95,18 +95,18 @@
                     </p>
                 </div>
 
-                <form id="newsletterForm" class="space-y-6">
+                <form action="https://app.kit.com/forms/8869536/subscriptions" method="post" data-sv-form="8869536" data-uid="5ae1bb43de" class="space-y-6">
                     <div>
                         <input 
                             type="email" 
-                            name="email" 
+                            name="email_address" 
                             required 
                             placeholder="your@email.com"
                             class="w-full bg-dark-bg border border-gray-700 rounded-lg px-6 py-4 text-lg focus:outline-none focus:border-brand-blue transition"
                         >
                     </div>
                     <button type="submit" class="w-full bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition inline-flex items-center justify-center">
-                        <span id="newsletter-text">Subscribe Now</span>
+                        <span>Subscribe Now</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
@@ -252,54 +252,6 @@
         }
 
         // Newsletter form submission
-        const newsletterForm = document.getElementById('newsletterForm');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                const submitButton = newsletterForm.querySelector('button[type="submit"]');
-                const submitText = document.getElementById('newsletter-text');
-                const originalText = submitText.textContent;
-                
-                submitButton.disabled = true;
-                submitText.textContent = 'Subscribing...';
-
-                const formData = new FormData(newsletterForm);
-                formData.append('access_key', 'fc055f0b-0423-454a-8625-57e197ca487c');
-                formData.append('subject', 'New Newsletter Subscription - RadarRoster');
-                formData.append('from_name', 'RadarRoster Newsletter');
-
-                try {
-                    const response = await fetch('https://api.web3forms.com/submit', {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    const data = await response.json();
-
-                    if (response.ok) {
-                        submitText.textContent = '✓ Subscribed!';
-                        submitButton.classList.add('bg-green-600');
-                        submitButton.classList.remove('bg-brand-blue');
-                        newsletterForm.reset();
-                        setTimeout(() => {
-                            submitText.textContent = originalText;
-                            submitButton.classList.remove('bg-green-600');
-                            submitButton.classList.add('bg-brand-blue');
-                        }, 3000);
-                    } else {
-                        throw new Error(data.message);
-                    }
-                } catch (error) {
-                    submitText.textContent = '✗ Error - Try again';
-                    setTimeout(() => {
-                        submitText.textContent = originalText;
-                    }, 3000);
-                    console.error('Newsletter subscription error:', error);
-                } finally {
-                    submitButton.disabled = false;
-                }
-            });
-        }
     </script>
 </body>
 </html>

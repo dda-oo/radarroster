@@ -103,52 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    const newsletterForm = document.getElementById('newsletterForm');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const submitButton = newsletterForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            
-            submitButton.disabled = true;
-            submitButton.textContent = 'Subscribing...';
-
-            const formData = new FormData(newsletterForm);
-            formData.append('access_key', CONFIG.WEB3FORMS_ACCESS_KEY);
-            formData.append('subject', 'New Newsletter Subscription');
-            formData.append('from_name', 'RadarRoster Newsletter');
-
-            try {
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                });
-
-                const data = await response.json();
-
-                if (data.success) {
-                    submitButton.textContent = '✓ Subscribed!';
-                    submitButton.classList.add('bg-green-600');
-                    newsletterForm.reset();
-                    setTimeout(() => {
-                        submitButton.textContent = originalText;
-                        submitButton.classList.remove('bg-green-600');
-                    }, 3000);
-                } else {
-                    throw new Error(data.message);
-                }
-            } catch (error) {
-                submitButton.textContent = '✗ Error';
-                setTimeout(() => {
-                    submitButton.textContent = originalText;
-                }, 3000);
-                console.error('Newsletter subscription error:', error);
-            } finally {
-                submitButton.disabled = false;
-            }
-        });
-    }
 });
 
 const observerOptions = {
