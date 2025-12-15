@@ -2,11 +2,11 @@
 
 A sleek, modern, one-page consulting website showcasing **AI, Data Engineering, and Cloud Modernization** services.
 
-🌐 **Live Site:** [radarroster.com](https://radarroster.com)
+**Live Site:** [radarroster.com](https://radarroster.com)
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Responsive Design** – Optimized for all devices  
 - **Modern Tech Stack** – HTML5, Tailwind CSS, Vanilla JavaScript  
@@ -18,7 +18,7 @@ A sleek, modern, one-page consulting website showcasing **AI, Data Engineering, 
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - HTML5  
 - Tailwind CSS  
@@ -27,7 +27,7 @@ A sleek, modern, one-page consulting website showcasing **AI, Data Engineering, 
 
 ---
 
-## 📩 Contact Form
+## Contact Form
 
 The contact form includes:  
 
@@ -38,7 +38,7 @@ The contact form includes:
 
 ---
 
-## 📄 License
+## License
 
 © 2025 RadarRoster & Daryoosh Dehestani (dda-oo). Licensed under [Creative Commons Attribution-NonCommercial 4.0 International](./LICENSE).  
 
@@ -54,7 +54,7 @@ See [LICENSE](./LICENSE) for full terms.
 
 ---
 
-## 💡 Credits
+## Credits
 
 This site is designed, developed, and maintained by **Daryoosh Dehestani (dda-oo)**.  
 RadarRoster: **AI & Data Solutions** – bringing data to life with actionable insights.  
