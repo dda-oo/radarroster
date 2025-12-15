@@ -59,7 +59,7 @@ See [LICENSE](./LICENSE) for full terms.
 This site is designed, developed, and maintained by **Daryoosh Dehestani (dda-oo)**.  
 RadarRoster: **AI & Data Solutions** – bringing data to life with actionable insights.  
 
-- [Daryoosh on GitHub](https://github.com/dda-oo)  
+- [Daryoosh Dehestani on GitHub](https://github.com/dda-oo)  
 - [RadarRoster Website](https://radarroster.com)  
 
 Built with passion, precision, and professional care.  
