@@ -6,13 +6,103 @@
     <title>RadarRoster - Transform Your Business with AI & Data Intelligence</title>
     <meta name="description" content="Your partner for AI, data engineering, and cloud modernization. From strategy to implementation, we make your business more efficient, innovative and future-proof.">
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2T8XLF4KWH"></script>
+    <!-- Klaro! Consent Manager -->
+    <script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/v0.7/klaro.js"></script>
     <script>
+        var klaroConfig = {
+            elementID: 'klaro',
+            storageMethod: 'cookie',
+            cookieName: 'klaro',
+            cookieExpiresAfterDays: 365,
+            privacyPolicy: '/datenschutz.html',
+            default: false,
+            mustConsent: true,
+            acceptAll: true,
+            hideDeclineAll: false,
+            hideLearnMore: false,
+            lang: 'de',
+            translations: {
+                de: {
+                    consentModal: {
+                        title: 'Cookie-Einstellungen',
+                        description: 'Wir verwenden Cookies und ähnliche Technologien, um die Nutzung unserer Website zu analysieren und zu verbessern. Mit Ihrer Zustimmung helfen Sie uns dabei, unsere Dienste zu optimieren.',
+                    },
+                    consentNotice: {
+                        changeDescription: 'Es gab Änderungen seit Ihrem letzten Besuch, bitte erneuern Sie Ihre Zustimmung.',
+                        description: 'Wir sammeln und verarbeiten Ihre persönlichen Daten zu folgenden Zwecken: Analytik, Personalisierung.',
+                        learnMore: 'Mehr erfahren',
+                    },
+                    googleAnalytics: {
+                        description: 'Google Analytics hilft uns, die Nutzung unserer Website zu verstehen und zu verbessern.',
+                    },
+                    purposes: {
+                        analytics: 'Analyse',
+                    },
+                    acceptAll: 'Alle akzeptieren',
+                    acceptSelected: 'Ausgewählte akzeptieren',
+                    decline: 'Ablehnen',
+                    ok: 'OK',
+                    save: 'Speichern',
+                    close: 'Schließen',
+                    service: {
+                        disableAll: {
+                            title: 'Dienste umschalten',
+                            description: 'Nutzen Sie diesen Schalter, um alle Dienste zu aktivieren/deaktivieren.',
+                        },
+                        optOut: {
+                            title: '(Opt-out)',
+                            description: 'Dieser Dienst wird standardmäßig geladen (Sie können ihn jedoch deaktivieren)',
+                        },
+                        required: {
+                            title: '(immer erforderlich)',
+                            description: 'Dieser Dienst ist immer erforderlich',
+                        },
+                        purposes: 'Zwecke',
+                        purposes_plural: 'Zwecke',
+                    },
+                },
+                en: {
+                    consentModal: {
+                        title: 'Cookie Settings',
+                        description: 'We use cookies and similar technologies to analyze website usage and improve our services. Your consent helps us optimize our offerings.',
+                    },
+                    consentNotice: {
+                        changeDescription: 'There have been changes since your last visit, please renew your consent.',
+                        description: 'We collect and process your personal data for the following purposes: Analytics, Personalization.',
+                        learnMore: 'Learn more',
+                    },
+                    googleAnalytics: {
+                        description: 'Google Analytics helps us understand and improve website usage.',
+                    },
+                    purposes: {
+                        analytics: 'Analytics',
+                    },
+                },
+            },
+            services: [
+                {
+                    name: 'googleAnalytics',
+                    title: 'Google Analytics',
+                    purposes: ['analytics'],
+                    cookies: [
+                        [/^_ga/i, '/', 'radarroster.com'],
+                        [/^_gid/i, '/', 'radarroster.com'],
+                    ],
+                    required: false,
+                    optOut: false,
+                    onlyOnce: true,
+                },
+            ],
+        };
+    </script>
+    
+    <!-- Google Analytics (Managed by Klaro) -->
+    <script type="opt-in" data-type="application/javascript" data-name="googleAnalytics" async src="https://www.googletagmanager.com/gtag/js?id=G-2T8XLF4KWH"></script>
+    <script type="opt-in" data-type="application/javascript" data-name="googleAnalytics">
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-2T8XLF4KWH');
+        gtag('config', 'G-2T8XLF4KWH', { 'anonymize_ip': true });
     </script>
     
     <script src="https://cdn.tailwindcss.com"></script>
