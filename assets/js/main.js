@@ -43,14 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const hCaptchaResponse = contactForm.querySelector('textarea[name=h-captcha-response]')?.value;
             if (!hCaptchaResponse) {
-                formMessage.textContent = '✗ Please complete the captcha verification';
+                const lang = localStorage.getItem('language') || 'en';
+                formMessage.textContent = '✗ ' + translations[lang].contact.form.captchaError;
                 formMessage.classList.remove('hidden', 'text-green-400');
                 formMessage.classList.add('text-red-400');
                 return;
             }
             
+            const lang = localStorage.getItem('language') || 'en';
             submitButton.disabled = true;
-            submitText.textContent = 'Sending...';
+            submitText.textContent = translations[lang].contact.form.sending;
             submitLoader.classList.remove('hidden');
             submitIcon.classList.add('hidden');
             formMessage.classList.add('hidden');
@@ -74,13 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Response OK:', response.ok);
 
                 if (response.ok) {
-                    formMessage.textContent = '✓ Thank you! Your message has been sent successfully. We\'ll get back to you soon.';
+                    formMessage.textContent = '✓ ' + translations[lang].contact.form.success;
                     formMessage.classList.remove('hidden', 'text-red-400');
                     formMessage.classList.add('text-green-400');
                     contactForm.reset();
                 } else {
                     const errorMsg = data.message || 'Unknown error occurred';
-                    formMessage.textContent = '✗ Error: ' + errorMsg;
+                    formMessage.textContent = '✗ ' + translations[lang].contact.form.error + ' ' + errorMsg;
                     formMessage.classList.remove('hidden', 'text-green-400');
                     formMessage.classList.add('text-red-400');
                     console.error('Web3Forms API Error:', {
@@ -91,13 +93,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
             } catch (error) {
-                formMessage.textContent = '✗ Network error: ' + error.message + '. Please check your connection or email us at hello@radarroster.com';
+                formMessage.textContent = '✗ ' + translations[lang].contact.form.networkError + ' ' + error.message + '. ' + translations[lang].contact.form.checkConnection;
                 formMessage.classList.remove('hidden', 'text-green-400');
                 formMessage.classList.add('text-red-400');
                 console.error('Form submission error:', error);
             } finally {
                 submitButton.disabled = false;
-                submitText.textContent = 'Send Message';
+                submitText.textContent = translations[lang].contact.form.submit;
                 submitLoader.classList.add('hidden');
                 submitIcon.classList.remove('hidden');
             }

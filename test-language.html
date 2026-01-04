@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Test - RadarRoster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/translations.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-8">Language System Test</h1>
+        
+        <!-- Language Switcher -->
+        <div class="mb-8 flex gap-4">
+            <button onclick="setLanguage('en')" data-lang-btn="en" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold transition">
+                Switch to English
+            </button>
+            <button onclick="setLanguage('de')" data-lang-btn="de" class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-lg font-semibold transition">
+                Switch to German (Deutsch)
+            </button>
+        </div>
+
+        <!-- Current Language Display -->
+        <div class="mb-8 p-4 bg-gray-800 rounded-lg">
+            <p><strong>Current Language:</strong> <span id="current-lang">Loading...</span></p>
+        </div>
+
+        <!-- Test Content -->
+        <div class="space-y-6 bg-gray-800 p-8 rounded-lg">
+            <h2 class="text-2xl font-bold mb-4">Sample Translations:</h2>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-gray-700 p-4 rounded">
+                    <h3 class="font-bold mb-2">Navigation</h3>
+                    <p data-i18n="nav.whyUs" class="mb-1">Why Us</p>
+                    <p data-i18n="nav.services" class="mb-1">Services</p>
+                    <p data-i18n="nav.newsletter" class="mb-1">Newsletter</p>
+                </div>
+
+                <div class="bg-gray-700 p-4 rounded">
+                    <h3 class="font-bold mb-2">Hero Section</h3>
+                    <p data-i18n="hero.title" class="mb-1">Transform Data into</p>
+                    <p data-i18n="hero.titleGradient" class="mb-1">Strategic Advantage</p>
+                </div>
+
+                <div class="bg-gray-700 p-4 rounded">
+                    <h3 class="font-bold mb-2">Stats</h3>
+                    <p data-i18n="hero.stats.projects" class="mb-1">Successful Projects</p>
+                    <p data-i18n="hero.stats.technologies" class="mb-1">AI Technologies</p>
+                </div>
+
+                <div class="bg-gray-700 p-4 rounded">
+                    <h3 class="font-bold mb-2">Contact Form</h3>
+                    <p data-i18n="contact.form.name" class="mb-1">Your Name</p>
+                    <p data-i18n="contact.form.email" class="mb-1">Email Address</p>
+                    <p data-i18n="contact.form.submit" class="mb-1">Send Message</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="mt-8 p-4 bg-green-900 rounded-lg">
+            <p class="text-green-200">
+                ✓ Language system is working! Switch between EN and DE to see the translations update in real-time.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Display current language
+        function updateCurrentLangDisplay() {
+            const lang = localStorage.getItem('language') || 'en';
+            document.getElementById('current-lang').textContent = lang === 'en' ? 'English' : 'German (Deutsch)';
+        }
+
+        // Update on load and after language changes
+        document.addEventListener('DOMContentLoaded', updateCurrentLangDisplay);
+        
+        // Override setLanguage to also update display
+        const originalSetLanguage = setLanguage;
+        setLanguage = function(lang) {
+            originalSetLanguage(lang);
+            updateCurrentLangDisplay();
+        };
+    </script>
+</body>
+</html>
