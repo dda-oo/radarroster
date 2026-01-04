@@ -1,7 +1,5 @@
-// @ts-nocheck
 const translations = {
     en: {
-        // Navigation
         nav: {
             whyUs: "Why Us",
             services: "Services",
