@@ -984,7 +984,7 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                © 2025 RadarRoster. All rights reserved.
+                © <span id="copyright-year"></span> RadarRoster. All rights reserved.
             </div>
         </div>
     </footer>
@@ -997,5 +997,13 @@
     
     <!-- Custom Scripts -->
     <script src="assets/js/main.js"></script>
+    <script>
+        // Set copyright year dynamically
+        document.addEventListener('DOMContentLoaded', () => {
+            const year = new Date().getFullYear();
+            const el = document.getElementById('copyright-year');
+            if (el) el.textContent = year;
+        });
+    </script>
 </body>
 </html>

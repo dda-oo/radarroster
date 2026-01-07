@@ -145,7 +145,7 @@
                 </div>
 
                 <div class="text-center text-gray-500 text-sm mt-12">
-                    <p>Letzte Aktualisierung: Dezember 2025</p>
+                    <p>Letzte Aktualisierung: Dezember 2026</p>
                 </div>
             </div>
         </div>
@@ -202,7 +202,7 @@
             
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
                 <p class="mb-2">Built with excellence by <a href="https://github.com/dda-oo" target="_blank" class="text-brand-blue hover:text-blue-400">dda-oo</a></p>
-                <p>© 2025 RadarRoster. All rights reserved.</p>
+                <p>© <span class="copyright-year"></span> RadarRoster. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -216,6 +216,10 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
+
+        // Set copyright year dynamically
+        const year = new Date().getFullYear();
+        document.querySelectorAll('.copyright-year').forEach(el => el.textContent = year);
     </script>
 </body>
 </html>
