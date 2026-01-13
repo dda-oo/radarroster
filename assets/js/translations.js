@@ -402,6 +402,16 @@ const translations = {
             callButton: "📅 Book a Call Instead"
         },
 
+        faqPage: {
+            title: "Frequently Asked",
+            titleGradient: "Questions",
+            subtitle: "Everything you need to know about RadarRoster's AI & Data Intelligence services",
+            stillQuestions: "Still have questions?",
+            stillQuestionsDesc: "Can't find what you're looking for? Our AI assistant is here to help!",
+            chatButton: "💬 Ask Our AI Assistant",
+            bookButton: "📅 Book a Strategy Call"
+        },
+
         footer: {
             services: "Services",
             aiImplementation: "AI Implementation",
@@ -783,6 +793,16 @@ const translations = {
             subtitle: "Erhalten Sie sofortige Antworten zu Preisen, Zeitplänen, Implementierung und mehr in unserem umfassenden FAQ",
             button: "📚 Alle FAQs ansehen",
             callButton: "📅 Stattdessen Anruf buchen"
+        },
+
+        faqPage: {
+            title: "Häufig gestellte",
+            titleGradient: "Fragen",
+            subtitle: "Alles, was Sie über RadarRosters KI- & Daten-Intelligence-Services wissen müssen",
+            stillQuestions: "Haben Sie noch Fragen?",
+            stillQuestionsDesc: "Können Sie nicht finden, wonach Sie suchen? Unser KI-Assistent hilft Ihnen gerne!",
+            chatButton: "💬 Fragen Sie unseren KI-Assistenten",
+            bookButton: "📅 Strategieberatung buchen"
         },
 
         footer: {
