@@ -375,7 +375,7 @@ const translations = {
             
             label1: "Number of Employees Handling Data",
             label2: "Average Hourly Rate (€)",
-            label3: "Hours/Week on Manual Data Tasks",
+            label3: "Hours/Week on Manual Data Tasks (per employee)",
             label3Hint: "Reports, exports, data reconciliation, manual analysis",
             label4: "Data Quality Issues Per Month",
             label4Hint: "Errors, rework, wrong reports, bad decisions",
@@ -734,7 +734,7 @@ const translations = {
             
             label1: "Anzahl Mitarbeiter mit Datenverwaltung",
             label2: "Durchschnittlicher Stundensatz (€)",
-            label3: "Stunden/Woche für manuelle Datenaufgaben",
+            label3: "Stunden/Woche für manuelle Datenaufgaben (pro Mitarbeiter)",
             label3Hint: "Berichte, Exporte, Datenabgleich, manuelle Analysen",
             label4: "Datenqualitätsprobleme pro Monat",
             label4Hint: "Fehler, Nacharbeit, falsche Berichte, schlechte Entscheidungen",

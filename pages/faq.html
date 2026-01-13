@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - RadarRoster | Frequently Asked Questions</title>
+    <meta name="description" content="Get answers to common questions about RadarRoster's AI, data engineering, and cloud services. Learn about pricing, timelines, implementation, and more.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#4A90E2',
+                        'dark-bg': '#0A0E27',
+                        'card-bg': '#151933'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0A0E27 0%, #151933 100%);
+            color: white;
+        }
+        
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            transform: translateX(4px);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer.open {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-icon.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-dark-bg/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-brand-blue to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">R</span>
+                        </div>
+                        <span class="text-xl font-bold">RadarRoster</span>
+                    </a>
+                </div>
+                <a href="../index.html#contact" class="px-6 py-2 bg-brand-blue hover:bg-blue-600 rounded-lg font-semibold transition">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl font-bold mb-6">
+                Frequently Asked <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-purple-600">Questions</span>
+            </h1>
+            <p class="text-xl text-gray-400 mb-8">
+                Everything you need to know about RadarRoster's AI & Data Intelligence services
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="pb-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-4">
+            
+            <!-- FAQ Item 1 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">How much does AI implementation cost?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed">
+                        Project costs vary based on scope and complexity. Most projects range from <strong>€10,000 to €100,000+</strong>. We offer:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 mt-3 space-y-2">
+                        <li><strong>Small Projects (€10-25K):</strong> MVP chatbots, simple dashboards, proof-of-concept AI models</li>
+                        <li><strong>Medium Projects (€25-75K):</strong> Data pipeline automation, predictive analytics, ERP integrations</li>
+                        <li><strong>Large Projects (€75K+):</strong> Enterprise-wide data platforms, custom AI solutions, cloud migrations</li>
+                    </ul>
+                    <p class="text-gray-400 mt-3">
+                        💡 <strong>Pro tip:</strong> Use our <a href="../index.html#roi-calculator" class="text-brand-blue hover:underline">ROI Calculator</a> to estimate your potential savings!
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">How long does a typical project take?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed">
+                        We focus on rapid delivery with our agile methodology:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 mt-3 space-y-2">
+                        <li><strong>2-4 weeks:</strong> MVP and proof-of-concept projects</li>
+                        <li><strong>1-3 months:</strong> Standard implementations (dashboards, chatbots, basic pipelines)</li>
+                        <li><strong>3-6 months:</strong> Complex enterprise solutions (full data platforms, AI systems, ERP modernization)</li>
+                    </ul>
+                    <p class="text-gray-400 mt-3">
+                        Unlike traditional consultancies that take 6-12 months, we prioritize <strong>speed without sacrificing quality</strong>. You'll see working prototypes within the first 2-3 weeks!
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">Do you work with small companies or just enterprises?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed">
+                        We work with <strong>teams of all sizes</strong> - from 5-person startups to 5,000+ employee enterprises!
+                    </p>
+                    <div class="mt-4 grid md:grid-cols-2 gap-4">
+                        <div class="border border-gray-700 rounded-lg p-4">
+                            <h4 class="font-bold text-brand-blue mb-2">Small Teams (5-50)</h4>
+                            <p class="text-sm text-gray-400">Affordable automation, AI chatbots, basic analytics dashboards</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-4">
+                            <h4 class="font-bold text-brand-blue mb-2">Enterprises (500+)</h4>
+                            <p class="text-sm text-gray-400">ERP integrations, cloud migrations, enterprise data platforms</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mt-3">
+                        Our philosophy: <em>You don't need to be a tech company to benefit from tech.</em>
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">What if we don't have clean data?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed">
+                        <strong>This is actually our specialty!</strong> Most companies struggle with messy, siloed, or incomplete data. We help with:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 mt-3 space-y-2">
+                        <li><strong>Data Assessment:</strong> We audit your current data landscape and identify gaps</li>
+                        <li><strong>Data Cleaning:</strong> Automated pipelines to standardize, validate, and enrich your data</li>
+                        <li><strong>Quality Frameworks:</strong> Ongoing monitoring to maintain 99%+ data quality</li>
+                        <li><strong>ETL/ELT Pipelines:</strong> Connect siloed systems (SAP, Workday, CRM, etc.) into a single source of truth</li>
+                    </ul>
+                    <p class="text-gray-400 mt-3">
+                        💡 In fact, <strong>70% of our clients</strong> start with poor data quality. It's part of the journey!
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">Can you integrate with our existing ERP (SAP/Workday/Oracle)?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed">
+                        <strong>Yes!</strong> We specialize in ERP integrations and modernization:
+                    </p>
+                    <div class="mt-4 space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-400 mt-1">✓</span>
+                            <div>
+                                <strong class="text-white">SAP:</strong>
+                                <span class="text-gray-400">SAP SuccessFactors, SAP S/4HANA, SAP BW/4HANA integration via APIs and BAPI</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-400 mt-1">✓</span>
+                            <div>
+                                <strong class="text-white">Workday:</strong>
+                                <span class="text-gray-400">HCM, Financial Management, custom reports via REST API and RaaS</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-400 mt-1">✓</span>
+                            <div>
+                                <strong class="text-white">Oracle:</strong>
+                                <span class="text-gray-400">Oracle Cloud HCM, Oracle EBS, Oracle NetSuite</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-400 mt-1">✓</span>
+                            <div>
+                                <strong class="text-white">Others:</strong>
+                                <span class="text-gray-400">Salesforce, Microsoft Dynamics, custom legacy systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mt-3">
+                        We build real-time data pipelines to sync ERP data with Power BI, Tableau, or custom analytics platforms.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">What's your implementation methodology?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        We use a <strong>3-phase proven methodology</strong> combining Design Thinking, Double Diamond, and Agile:
+                    </p>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-brand-blue pl-4">
+                            <h4 class="font-bold text-white mb-2">Phase 1: Analysis & Strategy (1-2 weeks)</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• Data landscape assessment</li>
+                                <li>• Use case identification & prioritization</li>
+                                <li>• Custom roadmap development</li>
+                                <li>• Technology stack selection</li>
+                            </ul>
+                        </div>
+                        <div class="border-l-4 border-purple-600 pl-4">
+                            <h4 class="font-bold text-white mb-2">Phase 2: Implementation (2-8 weeks)</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• Rapid prototyping & MVP development</li>
+                                <li>• Data pipeline construction</li>
+                                <li>• AI model integration & fine-tuning</li>
+                                <li>• Dashboard & analytics setup</li>
+                            </ul>
+                        </div>
+                        <div class="border-l-4 border-green-600 pl-4">
+                            <h4 class="font-bold text-white mb-2">Phase 3: Enablement (Ongoing)</h4>
+                            <ul class="text-sm text-gray-400 space-y-1">
+                                <li>• Team training & upskilling</li>
+                                <li>• Optimization support</li>
+                                <li>• Best practices & documentation</li>
+                                <li>• Long-term strategic partnership</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">Do you provide ongoing support after launch?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed">
+                        <strong>Absolutely!</strong> We believe in long-term partnerships, not one-time projects. Our support includes:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-400 mt-3 space-y-2">
+                        <li><strong>30-Day Warranty:</strong> Free bug fixes and adjustments for all projects</li>
+                        <li><strong>Ongoing Maintenance:</strong> Optional monthly retainers for updates, monitoring, and optimization</li>
+                        <li><strong>Training & Enablement:</strong> We teach your team to manage and extend the solution independently</li>
+                        <li><strong>Strategic Consulting:</strong> Quarterly reviews to identify new opportunities and improvements</li>
+                    </ul>
+                    <p class="text-gray-400 mt-3">
+                        💡 Most clients choose ongoing support (20-40 hours/month) to continuously improve and scale their solutions.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">How do you handle data security and GDPR?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        <strong>Security and compliance are built into everything we do:</strong>
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-400 mt-1 text-xl">🔒</span>
+                            <div>
+                                <strong class="text-white">GDPR Compliant:</strong>
+                                <span class="text-gray-400">All data processing follows GDPR requirements (Art. 6, Art. 32)</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-400 mt-1 text-xl">🛡️</span>
+                            <div>
+                                <strong class="text-white">ISO 27001 Standards:</strong>
+                                <span class="text-gray-400">Security best practices for data storage, encryption, and access control</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-400 mt-1 text-xl">☁️</span>
+                            <div>
+                                <strong class="text-white">Cloud Security:</strong>
+                                <span class="text-gray-400">We use Azure, AWS, and GCP with encryption at rest and in transit</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <span class="text-green-400 mt-1 text-xl">📜</span>
+                            <div>
+                                <strong class="text-white">Data Processing Agreements:</strong>
+                                <span class="text-gray-400">We sign DPAs and NDAs for all enterprise clients</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mt-3">
+                        Your data stays <strong>in your control</strong>. We never share or sell client data.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">What makes RadarRoster different from other consultancies?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead>
+                                <tr class="border-b border-gray-700">
+                                    <th class="text-left py-3 px-2 text-gray-400">Feature</th>
+                                    <th class="text-left py-3 px-2 text-brand-blue">RadarRoster</th>
+                                    <th class="text-left py-3 px-2 text-gray-500">Traditional Firms</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-400">
+                                <tr class="border-b border-gray-800">
+                                    <td class="py-3 px-2 font-semibold">Pricing</td>
+                                    <td class="py-3 px-2 text-green-400">✓ Fixed-price projects</td>
+                                    <td class="py-3 px-2">Time & materials</td>
+                                </tr>
+                                <tr class="border-b border-gray-800">
+                                    <td class="py-3 px-2 font-semibold">Speed</td>
+                                    <td class="py-3 px-2 text-green-400">✓ 2-6 weeks MVP</td>
+                                    <td class="py-3 px-2">3-6 months</td>
+                                </tr>
+                                <tr class="border-b border-gray-800">
+                                    <td class="py-3 px-2 font-semibold">Transparency</td>
+                                    <td class="py-3 px-2 text-green-400">✓ Daily updates, co-creation</td>
+                                    <td class="py-3 px-2">Monthly status reports</td>
+                                </tr>
+                                <tr class="border-b border-gray-800">
+                                    <td class="py-3 px-2 font-semibold">Tech Stack</td>
+                                    <td class="py-3 px-2 text-green-400">✓ Modern (Cloud, AI-native)</td>
+                                    <td class="py-3 px-2">Legacy-focused</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-2 font-semibold">Team</td>
+                                    <td class="py-3 px-2 text-green-400">✓ Lean, senior experts</td>
+                                    <td class="py-3 px-2">Large, mixed skill levels</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-gray-400 mt-4">
+                        <strong>Our philosophy:</strong> <em>Transparency as a Service</em>. You're not a spectator - you're a co-creator.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
+                <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
+                    <h3 class="text-xl font-bold pr-8">How do I get started?</h3>
+                    <svg class="faq-icon w-6 h-6 text-brand-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="faq-answer px-6 pb-6">
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        <strong>It's simple! Choose your preferred method:</strong>
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="bg-gradient-to-br from-brand-blue/10 to-purple-600/10 border border-brand-blue/30 rounded-lg p-4 text-center">
+                            <div class="text-3xl mb-2">📅</div>
+                            <h4 class="font-bold mb-2">Book a Call</h4>
+                            <p class="text-sm text-gray-400 mb-3">Free 30-min strategy session</p>
+                            <a href="https://calendly.com/radarroster/meeting" target="_blank" class="text-brand-blue hover:underline text-sm">
+                                calendly.com/radarroster
+                            </a>
+                        </div>
+                        <div class="bg-gradient-to-br from-brand-blue/10 to-purple-600/10 border border-brand-blue/30 rounded-lg p-4 text-center">
+                            <div class="text-3xl mb-2">📧</div>
+                            <h4 class="font-bold mb-2">Email Us</h4>
+                            <p class="text-sm text-gray-400 mb-3">Direct contact for details</p>
+                            <a href="mailto:hello@radarroster.com" class="text-brand-blue hover:underline text-sm">
+                                hello@radarroster.com
+                            </a>
+                        </div>
+                        <div class="bg-gradient-to-br from-brand-blue/10 to-purple-600/10 border border-brand-blue/30 rounded-lg p-4 text-center">
+                            <div class="text-3xl mb-2">💬</div>
+                            <h4 class="font-bold mb-2">Live Chat</h4>
+                            <p class="text-sm text-gray-400 mb-3">Instant AI assistant</p>
+                            <a href="../index.html#chat" class="text-brand-blue hover:underline text-sm">
+                                Start chatting
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mt-4 text-center">
+                        ⚡ We typically respond within <strong>24 hours</strong>!
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-brand-blue/10 to-purple-600/10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Still have questions?</h2>
+            <p class="text-gray-400 mb-8">Our team is here to help. Book a free consultation or send us a message.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://calendly.com/radarroster/meeting" target="_blank" class="px-8 py-4 bg-brand-blue hover:bg-blue-600 rounded-lg font-semibold transition">
+                    📅 Book Free Strategy Call
+                </a>
+                <a href="../index.html#contact" class="px-8 py-4 bg-gray-800 hover:bg-gray-700 border border-gray-700 rounded-lg font-semibold transition">
+                    📧 Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; <span id="footer-year"></span> RadarRoster. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="../pages/impressum.html" class="hover:text-brand-blue transition">Impressum</a>
+                <a href="../pages/datenschutz.html" class="hover:text-brand-blue transition">Datenschutz</a>
+                <a href="../index.html" class="hover:text-brand-blue transition">Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('.faq-icon');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('open');
+                    item.parentElement.querySelector('.faq-icon').classList.remove('rotate');
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('open');
+            icon.classList.toggle('rotate');
+        }
+        
+        // Set footer year
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
+
+    <!-- Smart Chatbot -->
+    <script src="../assets/js/chatbot.js"></script>
+</body>
+</html>

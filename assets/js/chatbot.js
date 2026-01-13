@@ -340,6 +340,73 @@ class SmartChatbot {
         this.messageCount++;
         this.renderMessages();
         
+        // Handle qualification questions
+        if (this.qualificationStep) {
+            setTimeout(() => {
+                let response = '';
+                
+                if (this.qualificationStep === 'budget') {
+                    const budgetMapping = {
+                        '1': 'Under €10K',
+                        '2': '€10-50K',
+                        '3': '€50-100K',
+                        '4': 'Over €100K',
+                        '5': 'Not sure yet'
+                    };
+                    
+                    const budgetChoice = message.trim();
+                    if (budgetMapping[budgetChoice]) {
+                        this.qualificationData.budget = budgetMapping[budgetChoice];
+                        response = `Got it! Budget: **${budgetMapping[budgetChoice]}**\n\n**2. When do you want to start?**\n\nType the number:\n1️⃣ Within 1 month\n2️⃣ 1-3 months\n3️⃣ 3-6 months\n4️⃣ Just exploring`;
+                        this.qualificationStep = 'timeline';
+                    } else {
+                        response = `Please choose a number (1-5) that matches your budget range.`;
+                    }
+                } else if (this.qualificationStep === 'timeline') {
+                    const timelineMapping = {
+                        '1': 'Within 1 month',
+                        '2': '1-3 months',
+                        '3': '3-6 months',
+                        '4': 'Just exploring'
+                    };
+                    
+                    const timelineChoice = message.trim();
+                    if (timelineMapping[timelineChoice]) {
+                        this.qualificationData.timeline = timelineMapping[timelineChoice];
+                        
+                        // Calculate lead score
+                        let leadScore = 'COLD';
+                        if ((this.qualificationData.budget === '€50-100K' || this.qualificationData.budget === 'Over €100K') && 
+                            (this.qualificationData.timeline === 'Within 1 month' || this.qualificationData.timeline === '1-3 months')) {
+                            leadScore = 'HOT 🔥';
+                        } else if (this.qualificationData.budget !== 'Under €10K' || 
+                                   this.qualificationData.timeline !== 'Just exploring') {
+                            leadScore = 'WARM 🟡';
+                        }
+                        
+                        this.leadScore = leadScore;
+                        
+                        response = `Perfect! Thanks for sharing:\n✓ Budget: **${this.qualificationData.budget}**\n✓ Timeline: **${this.qualificationData.timeline}**\n\nNow, how can I help you today?\n\n💡 I can answer questions about our services, projects, pricing, and more!\n\n✨ **Tip:** Your conversation will be securely saved for our team to follow up with you.`;
+                        this.qualificationStep = null; // Done with qualification
+                        this.renderQuickActions();
+                    } else {
+                        response = `Please choose a number (1-4) that matches your timeline.`;
+                    }
+                }
+                
+                this.messages.push({
+                    type: 'bot',
+                    text: response,
+                    timestamp: new Date()
+                });
+                this.hideTypingIndicator();
+                this.renderMessages();
+            }, 800);
+            
+            this.showTypingIndicator();
+            return;
+        }
+        
         this.showTypingIndicator();
         
         setTimeout(() => {
@@ -541,12 +608,14 @@ class SmartChatbot {
         
         this.messages.push({
             type: 'bot',
-            text: `Great! I've got your email (${email}). How can I help you today?\n\n💡 I can answer questions about our services, projects, pricing, and more!\n\n✨ **Tip:** Your conversation will be saved and sent to both you and our team.`,
+            text: `Great! I've got your email (${email}). Before we dive in, let me ask you two quick questions to better help you:\n\n**1. What's your estimated budget for this project?**\n\nType the number that matches:\n1️⃣ Under €10,000\n2️⃣ €10,000 - €50,000\n3️⃣ €50,000 - €100,000\n4️⃣ Over €100,000\n5️⃣ Not sure yet`,
             timestamp: new Date()
         });
         
+        this.qualificationStep = 'budget'; // Track which question we're on
+        this.qualificationData = {}; // Store answers
+        
         this.renderMessages();
-        this.renderQuickActions();
         
         setTimeout(() => {
             document.getElementById('chat-input').focus();
@@ -566,6 +635,15 @@ class SmartChatbot {
         transcript += `Duration: ${chatDuration} minute${chatDuration !== 1 ? 's' : ''}\n`;
         transcript += `Messages Exchanged: ${this.messageCount}\n`;
         transcript += `Topics Discussed: ${this.lastTopic || 'General inquiry'}\n`;
+        
+        // Add lead qualification data
+        if (this.qualificationData && Object.keys(this.qualificationData).length > 0) {
+            transcript += `\n--- LEAD QUALIFICATION ---\n`;
+            transcript += `Budget: ${this.qualificationData.budget || 'Not provided'}\n`;
+            transcript += `Timeline: ${this.qualificationData.timeline || 'Not provided'}\n`;
+            transcript += `Lead Score: ${this.leadScore || 'UNQUALIFIED'}\n`;
+        }
+        
         transcript += `\n--- CONVERSATION ---\n\n`;
         
         this.messages.forEach(msg => {
