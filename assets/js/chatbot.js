@@ -129,6 +129,46 @@ class SmartChatbot {
 
             'yes|yeah|sure|okay|ok': {
                 response: "Great! 🎯\n\nHow can we assist you?\n\n**Popular topics:**\n• AI solutions\n• Data engineering\n• ERP modernization\n• Pricing & timeline\n• Book a call"
+            },
+
+            'faq|frequently asked|common question|question': {
+                response: "📚 **Frequently Asked Questions:**\n\nVisit our comprehensive FAQ page: [View all FAQs](/pages/faq.html)\n\n**Quick answers:**\n• Pricing ranges: €10K-€100K+\n• Timeline: 2-12 weeks typically\n• We work with all company sizes\n• ERP integrations available\n• Full GDPR compliance\n\nWhat specific question can we help with?"
+            },
+
+            'how much|cost|price range|pricing|budget|expensive': {
+                response: "💰 **Project Pricing:**\n\nMost projects range from **€10,000 to €100,000+** based on scope:\n\n**Small Projects (€10-25K):**\n• MVP chatbots\n• Simple dashboards\n• Proof-of-concept AI models\n\n**Medium Projects (€25-75K):**\n• Data pipeline automation\n• Predictive analytics\n• ERP integrations\n\n**Large Projects (€75K+):**\n• Enterprise data platforms\n• Custom AI solutions\n• Cloud migrations\n\n💡 Try our [ROI Calculator](#roi-calculator) to estimate potential savings!\n\nWant a custom quote? [📅 Book a call](https://calendly.com/radarroster/meeting)"
+            },
+
+            'timeline|how long|duration|time frame|delivery|fast': {
+                response: "⏱️ **Project Timeline:**\n\nWe focus on rapid delivery with agile methodology:\n\n**2-4 weeks:**\n• MVP & proof-of-concept projects\n\n**1-3 months:**\n• Standard implementations\n• Dashboards, chatbots, basic pipelines\n\n**3-6 months:**\n• Complex enterprise solutions\n• Full data platforms, AI systems\n• ERP modernization\n\nUnlike traditional consultancies (6-12 months), we prioritize **speed without sacrificing quality**. You'll see working prototypes within the first 2-3 weeks!\n\nWhat's your ideal timeline?"
+            },
+
+            'small business|startup|company size|enterprise|small team': {
+                response: "🏭 **We Work With All Sizes:**\n\nFrom 5-person startups to 5,000+ employee enterprises!\n\n**Small Teams (5-50):**\n• Affordable automation\n• AI chatbots\n• Basic analytics dashboards\n\n**Mid-size (50-500):**\n• Data pipeline integration\n• Predictive models\n• Process automation\n\n**Enterprises (500+):**\n• ERP integrations\n• Cloud migrations\n• Enterprise data platforms\n\n**Our philosophy:** *You don't need to be a tech company to benefit from tech.*\n\nWhat's your team size?"
+            },
+
+            'messy data|dirty data|data quality|bad data|clean data|data cleaning': {
+                response: "🧹 **Messy Data? That's Our Specialty!**\n\nMost companies struggle with siloed or incomplete data. We help with:\n\n**Data Assessment:**\n• Audit your current data landscape\n• Identify gaps and issues\n\n**Data Cleaning:**\n• Automated pipelines to standardize\n• Validate and enrich your data\n\n**Quality Frameworks:**\n• Ongoing monitoring\n• Maintain 99%+ data quality\n\n**ETL/ELT Pipelines:**\n• Connect siloed systems\n• Single source of truth\n\n💡 **70% of our clients** start with poor data quality. It's part of the journey!\n\nWhat data challenges are you facing?"
+            },
+
+            'erp integration|sap|workday|oracle|dynamics|erp system': {
+                response: "☁️ **ERP Integration & Modernization:**\n\n**Yes!** We specialize in ERP integrations:\n\n✅ **SAP Integration:**\n• SAP S/4HANA, ECC, SuccessFactors\n• Real-time data sync with analytics\n\n✅ **Workday Integration:**\n• HCM, Financial, Prism Analytics\n• Custom reporting & dashboards\n\n✅ **Oracle & Dynamics:**\n• Oracle Cloud, NetSuite\n• Microsoft Dynamics 365\n\n✅ **Cloud Migration:**\n• Legacy system modernization\n• Azure, AWS, GCP migration\n\nWe build **real-time data pipelines** to sync ERP data with Power BI, Tableau, or custom analytics platforms.\n\nWhich ERP system are you using?"
+            },
+
+            'methodology|process|approach|how you work|implementation': {
+                response: "🔄 **Our 3-Phase Methodology:**\n\nWe combine **Design Thinking, Double Diamond, and Agile:**\n\n**Phase 1: Analysis & Strategy (1-2 weeks)**\n• Data landscape assessment\n• Use case prioritization\n• Custom roadmap development\n\n**Phase 2: Implementation (2-8 weeks)**\n• Rapid prototyping & MVP\n• Data pipeline construction\n• AI model integration\n• Testing & refinement\n\n**Phase 3: Enablement (Ongoing)**\n• Team training & handoff\n• Documentation & support\n• Continuous optimization\n\n**Result:** Working prototypes in 2-3 weeks, full delivery in 2-12 weeks depending on scope.\n\nWant to discuss your project?"
+            },
+
+            'support|maintenance|after launch|ongoing|post-launch': {
+                response: "🔧 **Ongoing Support & Partnership:**\n\nWe believe in long-term partnerships!\n\n**30-Day Warranty:**\n• Free bug fixes and adjustments\n\n**Ongoing Maintenance:**\n• Optional monthly retainers\n• Updates, monitoring, optimization\n• Typically 20-40 hours/month\n\n**Training & Enablement:**\n• Teach your team to manage solutions\n• Extend capabilities independently\n\n**Strategic Consulting:**\n• Quarterly reviews\n• Identify new opportunities\n• Continuous improvement\n\n💡 Most clients choose ongoing support to continuously improve and scale their solutions.\n\nInterested in learning more?"
+            },
+
+            'security|gdpr|compliance|data protection|privacy|safe': {
+                response: "🔒 **Security & GDPR Compliance:**\n\nSecurity and compliance are built into everything we do:\n\n✅ **GDPR Compliant:**\n• Full Article 6 compliance\n• Data processing agreements\n• Right to deletion & portability\n\n✅ **End-to-End Encryption:**\n• Data in transit & at rest\n• Industry-standard protocols\n\n✅ **Access Controls:**\n• Role-based permissions\n• Multi-factor authentication\n• Audit logging\n\n✅ **Hosting in EU:**\n• Azure/AWS Frankfurt region\n• No data transfers outside EU\n\nYour data stays **in your control**. We never share or sell client data.\n\nView our full [Privacy Policy](/pages/datenschutz.html)"
+            },
+
+            'difference|why choose|better than|compared to|advantage': {
+                response: "⭐ **What Makes RadarRoster Different:**\n\n**RadarRoster:**\n✅ Custom solutions, not templates\n✅ 2-12 week delivery (rapid)\n✅ We use what we build (practitioners)\n✅ Full transparency & co-creation\n✅ Long-term partnership focus\n✅ Flexible pricing & ownership\n\n**Traditional Consultancies:**\n❌ Template-based solutions\n❌ 6-12 month timelines\n❌ Consultants, not practitioners\n❌ Black box approach\n❌ Project-based, then gone\n❌ Vendor lock-in models\n\n**Our Philosophy:**\n*Transparency as a Service* - You're not a spectator, you're a co-creator.\n\nReady to experience the difference?"
             }
         };
     }
@@ -759,9 +799,10 @@ class SmartChatbot {
             formData.append('access_key', this.config.web3formsKey);
             formData.append('subject', emailSubject);
             formData.append('from_name', 'RadarRoster Chatbot');
-            formData.append('email', this.visitorEmail);
+            formData.append('email', this.config.transcriptEmail);
+            formData.append('replyto', this.visitorEmail);
             formData.append('message', transcript);
-            formData.append('redirect', 'false'); // Don't redirect
+            formData.append('redirect', 'false');
             
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
@@ -772,14 +813,14 @@ class SmartChatbot {
             
             if (result.success) {
                 console.log('✅ Transcript sent successfully to', this.config.transcriptEmail);
-                console.log('📧 Copy sent to visitor:', this.visitorEmail);
+                console.log('📧 Reply-to set to visitor:', this.visitorEmail);
             } else {
                 console.error('❌ Failed to send transcript:', result);
-                this.transcriptSent = false; // Allow retry
+                this.transcriptSent = false;
             }
         } catch (error) {
             console.error('❌ Error sending transcript:', error);
-            this.transcriptSent = false; // Allow retry
+            this.transcriptSent = false;
         }
     }
 }
