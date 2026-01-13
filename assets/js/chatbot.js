@@ -808,12 +808,18 @@ class SmartChatbot {
             formData.append('message', transcript);
             formData.append('redirect', 'false');
             
+            console.log('📤 Sending transcript to:', this.config.transcriptEmail);
+            console.log('📝 Access key:', this.config.web3formsKey ? 'Present' : 'Missing');
+            
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 body: formData
             });
             
+            console.log('📡 Response status:', response.status);
+            
             const result = await response.json();
+            console.log('📬 Response data:', result);
             
             if (result.success) {
                 console.log('✅ Transcript sent successfully to', this.config.transcriptEmail);
@@ -821,7 +827,7 @@ class SmartChatbot {
                 this.markTranscriptAsSent();
                 return true;
             } else {
-                console.error('❌ Failed to send transcript:', result);
+                console.error('❌ Failed to send transcript. Error:', result.message || 'Unknown error');
                 this.transcriptSent = false;
                 return false;
             }
