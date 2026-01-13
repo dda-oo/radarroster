@@ -361,17 +361,20 @@ class SmartChatbot {
         }
     }
 
-    closeChat() {
+    async closeChat() {
 
         if (this.emailCaptured && this.messages.length > 1 && !this.transcriptSent) {
-            this.sendTranscript();
-
             const confirmMsg = {
                 type: 'bot',
-                text: "📧 Thank you for chatting! Our team has received your message and will be in touch soon!",
+                text: "📧 Sending transcript to our team...",
                 timestamp: new Date()
             };
             this.messages.push(confirmMsg);
+            this.renderMessages();
+
+            await this.sendTranscript();
+
+            confirmMsg.text = "✅ Thank you for chatting! Our team has received your message and will be in touch soon!";
             this.renderMessages();
 
             setTimeout(() => {
@@ -812,6 +815,8 @@ class SmartChatbot {
             
             if (result.success) {
                 console.log('✅ Transcript sent successfully to', this.config.transcriptEmail);
+                this.transcriptSent = true;
+                this.markTranscriptAsSent();
             } else {
                 console.error('❌ Failed to send transcript:', result);
                 this.transcriptSent = false;
