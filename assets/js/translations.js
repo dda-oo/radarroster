@@ -414,6 +414,10 @@ const translations = {
         // Footer
         footer: {
             services: "Services",
+            aiImplementation: "AI Implementation",
+            dataEngineering: "Data Engineering",
+            erpModernization: "ERP Modernization",
+            cloudModernization: "Cloud Modernization",
             ai: "AI Solutions",
             data: "Data Engineering",
             erp: "ERP Modernization",
@@ -424,6 +428,8 @@ const translations = {
             faq: "FAQ",
             newsletter: "Newsletter",
             contact: "Get in Touch",
+            freeCall: "Free Strategy Call",
+            email: "Email Us",
             strategy: "Free Strategy Call",
             tagline: "AI & Data Intelligence Consulting\nTransform Data into Strategic Advantage",
             builtBy: "Built with excellence by",
@@ -801,6 +807,10 @@ const translations = {
         // Footer
         footer: {
             services: "Leistungen",
+            aiImplementation: "KI-Implementierung",
+            dataEngineering: "Data Engineering",
+            erpModernization: "ERP-Modernisierung",
+            cloudModernization: "Cloud-Modernisierung",
             ai: "KI-Lösungen",
             data: "Data Engineering",
             erp: "ERP-Modernisierung",
@@ -811,6 +821,8 @@ const translations = {
             faq: "FAQ",
             newsletter: "Newsletter",
             contact: "Kontakt",
+            freeCall: "Kostenlose Strategieberatung",
+            email: "E-Mail an uns",
             strategy: "Kostenlose Strategieberatung",
             tagline: "KI & Daten Intelligence Beratung\nVerwandeln Sie Daten in strategische Vorteile",
             builtBy: "Mit Exzellenz gebaut von",
