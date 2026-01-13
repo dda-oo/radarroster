@@ -61,8 +61,12 @@
                     googleAnalytics: {
                         description: 'Google Analytics hilft uns, die Nutzung unserer Website zu verstehen und zu verbessern.',
                     },
+                    chatbot: {
+                        description: 'Unser KI-Chatbot hilft Ihnen bei Fragen zu unseren Dienstleistungen. Ihre E-Mail und Gesprächsverlauf werden sicher gespeichert, um Sie kontaktieren zu können.',
+                    },
                     purposes: {
                         analytics: 'Analyse',
+                        functional: 'Funktional',
                     },
                     acceptAll: 'Alle akzeptieren',
                     acceptSelected: 'Ausgewählte akzeptieren',
@@ -100,8 +104,12 @@
                     googleAnalytics: {
                         description: 'Google Analytics helps us understand and improve website usage.',
                     },
+                    chatbot: {
+                        description: 'Our AI chatbot helps answer questions about our services. Your email and conversation history are securely stored so we can contact you.',
+                    },
                     purposes: {
                         analytics: 'Analytics',
+                        functional: 'Functional',
                     },
                 },
             },
@@ -117,6 +125,15 @@
                     required: false,
                     optOut: false,
                     onlyOnce: true,
+                },
+                {
+                    name: 'chatbot',
+                    title: 'AI Chatbot',
+                    purposes: ['functional'],
+                    required: false,
+                    optOut: false,
+                    default: true,
+                    onlyOnce: false,
                 },
             ],
         };
@@ -871,6 +888,9 @@
                         <!-- Web3Forms Access Key (hidden) -->
                         <input type="hidden" name="access_key" value="fc055f0b-0423-454a-8625-57e197ca487c">
                         
+                        <!-- Static sender email to prevent CC to visitor -->
+                        <input type="hidden" name="email" value="noreply@radarroster.com">
+                        
                         <!-- Honeypot field (hidden from users, catches bots) -->
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         
@@ -880,7 +900,7 @@
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2" data-i18n="contact.form.email">Email *</label>
-                            <input type="email" name="email" required class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition">
+                            <input type="email" name="visitor_email" required class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition">
                         </div>
                         <div>
                             <label class="block text-sm font-medium mb-2" data-i18n="contact.form.company">Company (optional)</label>

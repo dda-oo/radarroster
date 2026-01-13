@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Email Delivery - RadarRoster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white p-8">
+    <div class="max-w-2xl mx-auto">
+        <h1 class="text-3xl font-bold mb-4">🧪 Test Email Delivery</h1>
+        <p class="text-gray-400 mb-8">This will test if Web3Forms is correctly configured to send emails to hello@radarroster.com</p>
+        
+        <div class="bg-gray-800 p-6 rounded-lg mb-6">
+            <h2 class="text-xl font-bold mb-4">Configuration Check</h2>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-start">
+                    <span class="text-green-400 mr-2">✓</span>
+                    <span><strong>Access Key:</strong> fc055f0b-0423-454a-8625-57e197ca487c</span>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-green-400 mr-2">✓</span>
+                    <span><strong>Recipient (configured in Web3Forms):</strong> hello@radarroster.com</span>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-yellow-400 mr-2">⚠</span>
+                    <span class="text-yellow-400"><strong>Important:</strong> This access key must be linked to hello@radarroster.com in your Web3Forms dashboard!</span>
+                </div>
+            </div>
+        </div>
+
+        <button 
+            onclick="sendTestEmail()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all mb-6">
+            📧 Send Test Email
+        </button>
+
+        <div id="result" class="hidden bg-gray-800 p-6 rounded-lg">
+            <h3 class="text-lg font-bold mb-3">Result:</h3>
+            <pre id="resultContent" class="bg-gray-900 p-4 rounded text-sm overflow-x-auto"></pre>
+        </div>
+
+        <div class="mt-8 bg-yellow-900 bg-opacity-30 border border-yellow-600 p-4 rounded-lg">
+            <h3 class="font-bold mb-2">⚠️ If Email Not Received:</h3>
+            <ol class="list-decimal list-inside space-y-2 text-sm">
+                <li><strong>Check Web3Forms Dashboard:</strong> Visit <a href="https://web3forms.com" class="text-blue-400 underline" target="_blank">web3forms.com</a></li>
+                <li><strong>Verify Access Key:</strong> Make sure access key <code class="bg-gray-800 px-1">fc055f0b-0423-454a-8625-57e197ca487c</code> is linked to hello@radarroster.com</li>
+                <li><strong>Check Spam Folder:</strong> Web3Forms emails sometimes land in spam initially</li>
+                <li><strong>Create New Access Key:</strong> If the key is invalid, create a new one at Web3Forms and update chatbot.js line 697</li>
+            </ol>
+        </div>
+
+        <div class="mt-6 bg-blue-900 bg-opacity-30 border border-blue-600 p-4 rounded-lg">
+            <h3 class="font-bold mb-2">📖 How Web3Forms Works:</h3>
+            <ul class="list-disc list-inside space-y-2 text-sm">
+                <li>The <code class="bg-gray-800 px-1">access_key</code> is tied to YOUR email (hello@radarroster.com) in Web3Forms dashboard</li>
+                <li>The <code class="bg-gray-800 px-1">email</code> field is used as the visitor's email (for reply-to)</li>
+                <li>Emails are ALWAYS sent to the address linked to your access_key</li>
+                <li>You control the recipient in Web3Forms dashboard, not in the code</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        async function sendTestEmail() {
+            const resultDiv = document.getElementById('result');
+            const resultContent = document.getElementById('resultContent');
+            
+            resultDiv.classList.remove('hidden');
+            resultContent.textContent = '⏳ Sending test email...';
+            
+            try {
+                const formData = new FormData();
+                formData.append('access_key', 'fc055f0b-0423-454a-8625-57e197ca487c');
+                formData.append('subject', '🧪 TEST: RadarRoster Chatbot Email');
+                formData.append('from_name', 'RadarRoster Test');
+                formData.append('email', 'test@example.com'); // Test visitor email
+                formData.append('replyto', 'test@example.com');
+                formData.append('message', `=== TEST EMAIL ===
+
+This is a test email to verify Web3Forms configuration.
+
+Timestamp: ${new Date().toLocaleString()}
+Test visitor email: test@example.com
+
+If you receive this email at hello@radarroster.com, 
+your chatbot email delivery is working correctly! ✅
+
+=== END TEST ===`);
+                formData.append('redirect', 'false');
+                
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                resultContent.textContent = JSON.stringify(result, null, 2);
+                
+                if (result.success) {
+                    resultContent.textContent += '\n\n✅ SUCCESS!\n\nCheck hello@radarroster.com inbox (and spam folder) in 1-2 minutes.';
+                } else {
+                    resultContent.textContent += '\n\n❌ FAILED!\n\nError: ' + (result.message || 'Unknown error');
+                    resultContent.textContent += '\n\nThe access key might be invalid or not configured correctly.';
+                    resultContent.textContent += '\nGo to https://web3forms.com to verify your setup.';
+                }
+            } catch (error) {
+                resultContent.textContent = '❌ ERROR:\n\n' + error.message;
+                resultContent.textContent += '\n\nPlease check your internet connection.';
+            }
+        }
+    </script>
+</body>
+</html>
