@@ -401,7 +401,34 @@ const translations = {
             stat2: "Faster Decision-Making",
             stat3: "Cost Reduction via Automation",
             
-            disclaimer: "* Based on industry studies (GitHub, MIT/Princeton) and actual RadarRoster client results. Individual outcomes may vary."        }
+            disclaimer: "* Based on industry studies (GitHub, MIT/Princeton) and actual RadarRoster client results. Individual outcomes may vary."        
+        },
+        // FAQ CTA Section
+        faqCta: {
+            title: "Have Questions?",
+            titleGradient: "We Have Answers",
+            subtitle: "Get instant answers about pricing, timelines, implementation, and more in our comprehensive FAQ",
+            button: "📚 View All FAQs",
+            callButton: "📅 Book a Call Instead"
+        },
+        // Footer
+        footer: {
+            services: "Services",
+            ai: "AI Solutions",
+            data: "Data Engineering",
+            erp: "ERP Modernization",
+            training: "Team Training",
+            company: "Company",
+            about: "About",
+            projects: "Projects",
+            faq: "FAQ",
+            newsletter: "Newsletter",
+            contact: "Get in Touch",
+            strategy: "Free Strategy Call",
+            tagline: "AI & Data Intelligence Consulting\nTransform Data into Strategic Advantage",
+            builtBy: "Built with excellence by",
+            rights: "All rights reserved."
+        }
     },
     de: {
         // Navigation
@@ -762,6 +789,32 @@ const translations = {
             stat3: "Kostensenkung durch Automatisierung",
             
             disclaimer: "* Basierend auf Branchenstudien (GitHub, MIT/Princeton) und tatsächlichen RadarRoster-Kundenergebnissen. Individuelle Ergebnisse können variieren."
+        },
+        // FAQ CTA Section
+        faqCta: {
+            title: "Haben Sie Fragen?",
+            titleGradient: "Wir haben Antworten",
+            subtitle: "Erhalten Sie sofortige Antworten zu Preisen, Zeitplänen, Implementierung und mehr in unserem umfassenden FAQ",
+            button: "📚 Alle FAQs ansehen",
+            callButton: "📅 Stattdessen Anruf buchen"
+        },
+        // Footer
+        footer: {
+            services: "Leistungen",
+            ai: "KI-Lösungen",
+            data: "Data Engineering",
+            erp: "ERP-Modernisierung",
+            training: "Team-Schulung",
+            company: "Unternehmen",
+            about: "Über uns",
+            projects: "Projekte",
+            faq: "FAQ",
+            newsletter: "Newsletter",
+            contact: "Kontakt",
+            strategy: "Kostenlose Strategieberatung",
+            tagline: "KI & Daten Intelligence Beratung\nVerwandeln Sie Daten in strategische Vorteile",
+            builtBy: "Mit Exzellenz gebaut von",
+            rights: "Alle Rechte vorbehalten."
         }
     }
 };
