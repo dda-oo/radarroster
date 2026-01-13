@@ -26,6 +26,7 @@ class SmartChatbot {
         this.chatStartTime = null;
         this.transcriptSent = this.checkIfTranscriptSent();
         this.messageCount = 0;
+        this.qualificationData = {};
         this.init();
     }
 
@@ -372,14 +373,18 @@ class SmartChatbot {
             this.messages.push(confirmMsg);
             this.renderMessages();
 
-            await this.sendTranscript();
+            const success = await this.sendTranscript();
 
-            confirmMsg.text = "✅ Thank you for chatting! Our team has received your message and will be in touch soon!";
+            if (success) {
+                confirmMsg.text = "✅ Thank you for chatting! Our team has received your message and will be in touch soon!";
+            } else {
+                confirmMsg.text = "⚠️ There was an issue sending the transcript. Please email us at hello[at]radarroster[dot]com";
+            }
             this.renderMessages();
 
             setTimeout(() => {
                 this.actuallyCloseChat();
-            }, 2000);
+            }, 2500);
         } else {
             this.actuallyCloseChat();
         }
@@ -753,10 +758,7 @@ class SmartChatbot {
     }
 
     async sendTranscript() {
-        if (!this.visitorEmail || this.messages.length <= 1 || this.transcriptSent) return;
-        
-        this.transcriptSent = true; // Prevent duplicate sends
-        this.markTranscriptAsSent(); // Mark in session storage
+        if (!this.visitorEmail || this.messages.length <= 1) return;
 
         const chatDuration = this.chatStartTime ? Math.round((new Date() - this.chatStartTime) / 1000 / 60) : 0;
 
@@ -817,13 +819,16 @@ class SmartChatbot {
                 console.log('✅ Transcript sent successfully to', this.config.transcriptEmail);
                 this.transcriptSent = true;
                 this.markTranscriptAsSent();
+                return true;
             } else {
                 console.error('❌ Failed to send transcript:', result);
                 this.transcriptSent = false;
+                return false;
             }
         } catch (error) {
             console.error('❌ Error sending transcript:', error);
             this.transcriptSent = false;
+            return false;
         }
     }
 }
