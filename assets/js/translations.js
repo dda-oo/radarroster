@@ -846,7 +846,7 @@ window.setLanguage = function(lang) {
     updateLanguageButtons();
 }
 
-function updateLanguageButtons() {
+window.updateLanguageButtons = function() {
     const buttons = document.querySelectorAll('[data-lang-btn]');
     buttons.forEach(btn => {
         if (btn.dataset.langBtn === window.currentLang) {
@@ -859,7 +859,7 @@ function updateLanguageButtons() {
     });
 }
 
-function updatePageContent() {
+window.updatePageContent = function() {
     const t = translations[window.currentLang];
 
     document.querySelectorAll('[data-i18n]').forEach(element => {
@@ -882,5 +882,6 @@ function updatePageContent() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    window.currentLang = localStorage.getItem('language') || 'en';
     window.setLanguage(window.currentLang);
 });

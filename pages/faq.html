@@ -583,16 +583,17 @@
         
         function setLanguage(lang) {
             localStorage.setItem('preferredLanguage', lang);
-            if (typeof updateLanguage === 'function') {
-                updateLanguage(lang);
-            }
+            window.currentLang = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+            updatePageContent();
+            updateLanguageButtons();
         }
         
         document.addEventListener('DOMContentLoaded', function() {
-            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-            if (typeof updateLanguage === 'function') {
-                updateLanguage(savedLang);
-            }
+            const savedLang = localStorage.getItem('preferredLanguage') || localStorage.getItem('language') || 'en';
+            window.currentLang = savedLang;
+            setLanguage(savedLang);
         });
         
         // Open chatbot function
