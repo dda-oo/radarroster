@@ -314,8 +314,8 @@ class SmartChatbot {
             this.toggleChat();
         });
 
-        document.getElementById('chat-close-btn').addEventListener('click', () => {
-            this.closeChat();
+        document.getElementById('chat-close-btn').addEventListener('click', async () => {
+            await this.closeChat();
         });
 
         document.getElementById('chat-send-btn').addEventListener('click', () => {
@@ -607,7 +607,7 @@ class SmartChatbot {
 
         this.lastTopic = null;
         
-        return "That's an interesting question! 🤔\n\nWe're best at answering questions about:\n• Services (AI, Data, ERP, Training)\n• Projects & Portfolio\n• Pricing & Process\n• Team & Contact\n\nOr speak with us directly:\n📅 [Calendly](https://calendly.com/radarroster/meeting) | 📧 hello@radarroster.com";
+        return "That's an interesting question! 🤔\n\nWe're best at answering questions about:\n• Services (AI, Data, ERP, Training)\n• Projects & Portfolio\n• Pricing & Process\n• Team & Contact\n\nOr speak with us directly:\n📅 [Calendly](https://calendly.com/radarroster/meeting) | 📧 hello[at]radarroster[dot]com";
     }
 
     showTypingIndicator() {
