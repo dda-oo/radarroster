@@ -810,7 +810,8 @@ class SmartChatbot {
             formData.append('redirect', 'false');
             
             console.log('📤 Sending transcript to:', this.config.transcriptEmail);
-            console.log('📝 Access key:', this.config.web3formsKey ? 'Present' : 'Missing');
+            console.log('📝 Access key:', this.config.web3formsKey);
+            console.log('🔑 Botcheck field:', formData.get('botcheck') !== null ? 'Added' : 'Missing');
             
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
