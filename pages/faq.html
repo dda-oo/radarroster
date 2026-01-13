@@ -23,7 +23,6 @@
             }
         }
     </script>
-    </script>
     
     <style>
         body {
@@ -53,6 +52,17 @@
         
         .faq-icon {
             transition: transform 0.3s ease;
+        }
+        
+        .faq-icon.rotate {
+            transform: rotate(180deg);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #4A90E2 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
     </style>
@@ -558,17 +568,13 @@
             icon.classList.toggle('rotate');
         }
         
-        // Language switching function
         function setLanguage(lang) {
+            localStorage.setItem('preferredLanguage', lang);
             if (typeof updateLanguage === 'function') {
                 updateLanguage(lang);
-            } else {
-                localStorage.setItem('preferredLanguage', lang);
-                location.reload();
             }
         }
         
-        // Initialize language on page load
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('preferredLanguage') || 'en';
             if (typeof updateLanguage === 'function') {
