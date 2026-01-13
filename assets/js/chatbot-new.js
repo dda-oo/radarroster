@@ -36,90 +36,90 @@ class SmartChatbot {
         return {
             // Company Information & Leadership
             'who|owner|founder|ceo|lead|management|team|behind': {
-                response: "RadarRoster is led by **Daryoosh Dehestani**, founder and owner of this AI & Data Intelligence consultancy based in Offenburg, Germany.\n\nWe're a team of practitioners who use our own solutions daily and believe in transparency as a service.\n\n🎯 **Ready to work with experts who walk the talk?**\n→ [Schedule a free 30-min strategy call](https://calendly.com/radarroster/meeting)\n→ Email Daryoosh directly: hello@radarroster.com"
+                response: "RadarRoster is led by **Daryoosh Dehestani**, founder and owner of this AI & Data Intelligence consultancy based in Offenburg, Germany.\n\nWe're a team of practitioners who use our own solutions daily and believe in transparency as a service.\n\nWould you like to connect with our team?"
             },
             // Location & Contact
             'address|location|office|where|headquarter|based': {
-                response: "📍 **Location:** Offenburg, Germany 🇩🇪\n📧 **Email:** hello@radarroster.com\n🌐 **Website:** radarroster.com\n\n🌍 **Serving clients globally from our German HQ**\n→ [Book in-person or virtual meeting](https://calendly.com/radarroster/meeting)\n→ Fast response within 24 hours!"
+                response: "📍 **Location:** Offenburg, Germany\n📧 **Email:** hello@radarroster.com\n🌐 **Website:** radarroster.com\n\n💡 Ready to discuss your project? [Book a meeting](https://calendly.com/radarroster/meeting)!"
             },
             // Booking & Calendly
             'book|appointment|meeting|schedule|calendly|call|demo|consultation': {
-                response: "📅 **Book Your Free Strategy Call:**\n\n🔗 [Schedule on Calendly](https://calendly.com/radarroster/meeting)\n\n✨ **What you'll get:**\n• 30-min personalized consultation\n• Custom AI/data roadmap\n• ROI projections\n• Zero obligation\n\n⚡ **Spots available this week!** [Book now](https://calendly.com/radarroster/meeting)"
+                response: "📅 **Book a Free Strategy Call:**\n\n🔗 [Schedule on Calendly](https://calendly.com/radarroster/meeting)\n\nOr use the contact form at the bottom of the page, or email hello@radarroster.com\n\nWhat time works best for you?"
             },
             // Services - AI
             'ai|artificial intelligence|machine learning|ml|predictive|chatbot|automation': {
-                response: "🤖 **AI Strategy & Implementation:**\n\n• Custom AI roadmaps tailored to your business\n• AI-powered dashboards (Power BI, Tableau)\n• Predictive modeling & machine learning\n• Conversational AI agents & chatbots like this one!\n\n✨ **Real Results:**\n• 55% productivity increase\n• 70% faster decision-making\n• 85% accuracy in predictions\n\n🚀 **Start your AI transformation today**\n→ [Get free AI readiness assessment](https://calendly.com/radarroster/meeting)\n→ See ROI in weeks, not months!"
+                response: "🤖 **AI Strategy & Implementation:**\n\n• Custom AI roadmaps tailored to your business\n• AI-powered dashboards (Power BI, Tableau)\n• Predictive modeling & machine learning\n• Conversational AI agents & chatbots like this one!\n\n✨ **Real Results:**\n• 55% productivity increase\n• 70% faster decision-making\n• 85% accuracy in predictions\n\nInterested in a specific AI solution?"
             },
             // Services - Data Engineering
             'data engineering|pipeline|etl|warehouse|database|data integration|snowflake|bigquery': {
-                response: "⚙️ **Data Engineering Services:**\n\n• Custom ETL/ELT pipeline development\n• Real-time data streaming & processing\n• Data warehouse modernization (Snowflake, BigQuery, Azure)\n• Data quality frameworks & governance\n\n✨ **Transform** siloed data into seamless, scalable flow\n\n💡 **Solve your data challenges now**\n→ [Book free data audit call](https://calendly.com/radarroster/meeting)\n→ Discover hidden value in your existing data!"
+                response: "⚙️ **Data Engineering Services:**\n\n• Custom ETL/ELT pipeline development\n• Real-time data streaming & processing\n• Data warehouse modernization (Snowflake, BigQuery, Azure)\n• Data quality frameworks & governance\n\n✨ **Transform** siloed data into seamless, scalable flow\n\nWhat's your current data challenge?"
             },
             // ERP & SAP/Workday
             'erp|sap|workday|oracle|cloud migration|modernization|prism|legacy system': {
-                response: "☁️ **ERP & Cloud Modernization:**\n\n• SAP, Workday & Oracle integration (including Prism Analytics)\n• Cloud migration (Azure, AWS, GCP)\n• Process automation & optimization\n• Legacy system modernization\n\n✨ **Overcome** technical debt and accelerate innovation\n\n🎯 **Escape legacy limitations today**\n→ [Get custom modernization roadmap](https://calendly.com/radarroster/meeting)\n→ Reduce costs while increasing agility!"
+                response: "☁️ **ERP & Cloud Modernization:**\n\n• SAP, Workday & Oracle integration (including Prism Analytics)\n• Cloud migration (Azure, AWS, GCP)\n• Process automation & optimization\n• Legacy system modernization\n\n✨ **Overcome** technical debt and accelerate innovation\n\nWhich ERP system are you using?"
             },
             // Training
             'training|workshop|learning|upskilling|enablement|course|education': {
-                response: "📚 **Training & Enablement:**\n\n• Role-based learning paths (developers, analysts, managers)\n• Hands-on workshops with real tools\n• Custom training for your tech stack\n• Ongoing support & knowledge transfer\n\n✨ **Build** long-term competency in your team\n\n🎓 **Invest in your team's future**\n→ [Design custom training program](https://calendly.com/radarroster/meeting)\n→ Turn skills into competitive advantage!"
+                response: "📚 **Training & Enablement:**\n\n• Role-based learning paths (developers, analysts, managers)\n• Hands-on workshops with real tools\n• Custom training for your tech stack\n• Ongoing support & knowledge transfer\n\n✨ **Build** long-term competency in your team\n\nWhat skills does your team need most?"
             },
             // All Services Overview
             'service|what do you do|offering|solutions|help': {
-                response: "🎯 **Our Core Services:**\n\n1️⃣ **AI Strategy & Implementation**\n   → Custom AI solutions & chatbots\n\n2️⃣ **Data Engineering & Pipelines**\n   → ETL, streaming, warehouse modernization\n\n3️⃣ **ERP & Cloud Modernization**\n   → SAP, Workday, Oracle integration\n\n4️⃣ **Training & Team Enablement**\n   → Hands-on workshops & upskilling\n\n💼 **Discover how we can help your business**\n→ [Book free 30-min consultation](https://calendly.com/radarroster/meeting)\n→ Get custom solution roadmap!"
+                response: "🎯 **Our Core Services:**\n\n1️⃣ **AI Strategy & Implementation**\n   → Custom AI solutions & chatbots\n\n2️⃣ **Data Engineering & Pipelines**\n   → ETL, streaming, warehouse modernization\n\n3️⃣ **ERP & Cloud Modernization**\n   → SAP, Workday, Oracle integration\n\n4️⃣ **Training & Team Enablement**\n   → Hands-on workshops & upskilling\n\nWhich area interests you most?"
             },
             // Pricing
             'price|cost|pricing|budget|how much|expensive|fee|rate': {
-                response: "💰 **Flexible Pricing:**\n\nOur pricing is customized based on your specific needs:\n\n✓ **Free** initial strategy consultation\n✓ **Flexible** engagement models (project/retainer)\n✓ **Transparent** pricing, no hidden costs\n✓ **ROI-focused** - we prove value first\n\n� **Get your personalized quote**\n→ [Book free consultation](https://calendly.com/radarroster/meeting) - zero obligation\n→ Transparent pricing + clear ROI projections"
+                response: "💰 **Flexible Pricing:**\n\nOur pricing is customized based on your specific needs:\n\n✓ **Free** initial strategy consultation\n✓ **Flexible** engagement models (project/retainer)\n✓ **Transparent** pricing, no hidden costs\n✓ **ROI-focused** - we prove value first\n\n📅 [Book a free call](https://calendly.com/radarroster/meeting) to get a custom quote for your project!"
             },
             // Contact
             'contact|email|phone|reach|connect|talk|speak': {
-                response: "📞 **Let's Connect:**\n\n📧 **Email:** hello@radarroster.com\n📅 **Calendly:** [Book a meeting](https://calendly.com/radarroster/meeting)\n💼 **LinkedIn:** [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n📰 **Newsletter:** [radarroster.substack.com](https://radarroster.substack.com)\n\n✨ **Choose your preferred channel:**\n→ [Book 30-min call](https://calendly.com/radarroster/meeting) - Available this week!\n→ Email: hello@radarroster.com - Response within 24h guaranteed!"
+                response: "📞 **Let's Connect:**\n\n📧 **Email:** hello@radarroster.com\n📅 **Calendly:** [Book a meeting](https://calendly.com/radarroster/meeting)\n💼 **LinkedIn:** [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n📰 **Newsletter:** [radarroster.substack.com](https://radarroster.substack.com)\n\n💡 **Prefer the contact form?** Scroll to the bottom of the page!\n\nHow would you like to proceed?"
             },
             // Process/Methodology
             'process|methodology|how you work|approach|steps|timeline': {
-                response: "🔄 **Our 3-Step Methodology:**\n\n**Phase 1: Analysis & Strategy** (1-2 weeks)\n   → Data landscape assessment\n   → Use case prioritization\n   → Custom roadmap development\n\n**Phase 2: Implementation** (4-12 weeks)\n   → Rapid prototyping & MVP\n   → Data pipeline construction\n   → AI model integration\n\n**Phase 3: Enablement** (Ongoing)\n   → Team training\n   → Continuous optimization\n   → Long-term partnership\n\nWe use **Design Thinking**, **Double Diamond**, and **Agile** frameworks.\n\n⚡ **Start your project journey today**\n→ [Get custom project timeline](https://calendly.com/radarroster/meeting)\n→ Fast-track with our proven methodology!"
+                response: "🔄 **Our 3-Step Methodology:**\n\n**Phase 1: Analysis & Strategy** (1-2 weeks)\n   → Data landscape assessment\n   → Use case prioritization\n   → Custom roadmap development\n\n**Phase 2: Implementation** (4-12 weeks)\n   → Rapid prototyping & MVP\n   → Data pipeline construction\n   → AI model integration\n\n**Phase 3: Enablement** (Ongoing)\n   → Team training\n   → Continuous optimization\n   → Long-term partnership\n\nWe use **Design Thinking**, **Double Diamond**, and **Agile** frameworks.\n\nWant to discuss your project timeline?"
             },
             // Projects/Portfolio
             'project|portfolio|example|case study|showcase|work|clients|success': {
-                response: "🚀 **Project Showcase** (20+ delivered):\n\n**HR Analytics**\n• Burnout Risk Prediction (85% accuracy)\n\n**Mental Wellness**\n• Emotional AI Chatbot (60% faster support)\n\n**Finance**\n• Small Cap Intelligence Dashboard\n\n**Enterprise L&D**\n• AI Training Recommender System\n\n**ERP Integration**\n• SAP & Workday Data Integration\n\n**Operations**\n• Sales & Operations Automation Bots\n\n🎯 **Get results like these for your business**\n→ [Request relevant case studies](https://calendly.com/radarroster/meeting)\n→ Learn from similar successful projects!"
+                response: "🚀 **Project Showcase** (20+ delivered):\n\n**HR Analytics**\n• Burnout Risk Prediction (85% accuracy)\n\n**Mental Wellness**\n• Emotional AI Chatbot (60% faster support)\n\n**Finance**\n• Small Cap Intelligence Dashboard\n\n**Enterprise L&D**\n• AI Training Recommender System\n\n**ERP Integration**\n• SAP & Workday Data Integration\n\n**Operations**\n• Sales & Operations Automation Bots\n\nWhich industry/use case resonates with you?"
             },
             // Why Choose Us
             'why|benefit|advantage|value proposition|different|better|choose': {
-                response: "⭐ **Why RadarRoster?**\n\n✅ **Proven Results:**\n   • 55% productivity increase\n   • 70% faster decision-making\n   • 30% cost reduction\n   • 20+ successful projects\n   • 100% client satisfaction\n\n✅ **Our Approach:**\n   • Custom solutions, not templates\n   • Deep AI & data expertise\n   • Transparent partnership\n   • We use what we build\n\n✅ **Your Success:**\n   • Free strategy call\n   • ROI-focused delivery\n   • Ongoing support\n\n🚀 **Experience the RadarRoster difference**\n→ [Start with free consultation](https://calendly.com/radarroster/meeting)\n→ Join 20+ satisfied clients!"
+                response: "⭐ **Why RadarRoster?**\n\n✅ **Proven Results:**\n   • 55% productivity increase\n   • 70% faster decision-making\n   • 30% cost reduction\n   • 20+ successful projects\n   • 100% client satisfaction\n\n✅ **Our Approach:**\n   • Custom solutions, not templates\n   • Deep AI & data expertise\n   • Transparent partnership\n   • We use what we build\n\n✅ **Your Success:**\n   • Free strategy call\n   • ROI-focused delivery\n   • Ongoing support\n\nReady to see what we can do for you?"
             },
             // About/Company
             'about|company|philosophy|mission|vision|story': {
-                response: "🎯 **About RadarRoster:**\n\nYour partner for AI-driven data solutions — from startups to enterprises.\n\n📍 **Based in:** Offenburg, Germany\n👤 **Founded by:** Daryoosh Dehestani\n\n**Our Philosophy:** *Transparency as a Service*\n\nWe believe in:\n✓ Co-creation with clients\n✓ Open communication\n✓ Long-term partnerships\n✓ Practical, proven solutions\n\n**We're not just consultants** — we're practitioners who use our own solutions daily.\n\n🤝 **Partner with a team that walks the talk**\n→ [Meet our team on a free call](https://calendly.com/radarroster/meeting)\n→ See our philosophy in action!"
+                response: "🎯 **About RadarRoster:**\n\nYour partner for AI-driven data solutions — from startups to enterprises.\n\n📍 **Based in:** Offenburg, Germany\n👤 **Founded by:** Daryoosh Dehestani\n\n**Our Philosophy:** *Transparency as a Service*\n\nWe believe in:\n✓ Co-creation with clients\n✓ Open communication\n✓ Long-term partnerships\n✓ Practical, proven solutions\n\n**We're not just consultants** — we're practitioners who use our own solutions daily.\n\nWhat brought you to RadarRoster today?"
             },
             // Newsletter/Blog
             'newsletter|blog|substack|article|news|content|insights': {
-                response: "📰 **Stay Updated:**\n\nSubscribe to our newsletter for AI & data insights:\n\n🔗 **Substack:** [radarroster.substack.com](https://radarroster.substack.com)\n🔗 **Newsletter Page:** [Visit our blog](/pages/blog.html)\n\nWe share:\n• Industry trends\n• Case studies\n• Practical tips\n• Technology updates\n\n🎁 **Join our community**\n→ [Subscribe to newsletter](https://radarroster.substack.com)\n→ Plus get free AI strategy guide when you book a call!"
+                response: "📰 **Stay Updated:**\n\nSubscribe to our newsletter for AI & data insights:\n\n🔗 **Substack:** [radarroster.substack.com](https://radarroster.substack.com)\n🔗 **Newsletter Page:** [Visit our blog](/pages/blog.html)\n\nWe share:\n• Industry trends\n• Case studies\n• Practical tips\n• Technology updates\n\nWhat topics interest you most?"
             },
             // Legal Pages
             'privacy|data protection|gdpr|security|safe': {
-                response: "🔒 **Privacy & Data Protection:**\n\nYour privacy matters to us.\n\n🔗 **Privacy Policy:** [View details](/pages/datenschutz.html)\n\n✓ Full GDPR compliance\n✓ Secure data handling\n✓ Transparent practices\n✓ Your data, your control\n\nWe take data protection seriously.\n\n🔐 **Work with a secure partner**\n→ [Discuss your security requirements](https://calendly.com/radarroster/meeting)\n→ Enterprise-grade data protection guaranteed!"
+                response: "🔒 **Privacy & Data Protection:**\n\nYour privacy matters to us.\n\n🔗 **Privacy Policy:** [View details](/pages/datenschutz.html)\n\n✓ Full GDPR compliance\n✓ Secure data handling\n✓ Transparent practices\n✓ Your data, your control\n\nWe take data protection seriously. Any questions?"
             },
             'imprint|impressum|legal|terms': {
                 response: "⚖️ **Legal Information:**\n\n🔗 **Imprint:** [View details](/pages/impressum.html)\n\nNeed specific legal information? Feel free to ask!"
             },
             // Social Media
             'linkedin|social media|follow|network': {
-                response: "🔗 **Connect with RadarRoster:**\n\n💼 **LinkedIn:** [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n📰 **Newsletter:** [radarroster.substack.com](https://radarroster.substack.com)\n\n**Follow us for:**\n• AI & data insights\n• Industry updates\n• Project showcases\n• Job opportunities\n\n👥 **Join our growing community**\n→ [Connect on LinkedIn](https://www.linkedin.com/company/radarroster)\n→ Then [book a 1-on-1 call](https://calendly.com/radarroster/meeting)!"
+                response: "🔗 **Connect with RadarRoster:**\n\n💼 **LinkedIn:** [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n📰 **Newsletter:** [radarroster.substack.com](https://radarroster.substack.com)\n\n**Follow us for:**\n• AI & data insights\n• Industry updates\n• Project showcases\n• Job opportunities\n\nSee you there!"
             },
             // Greetings
             'hello|hi|hey|greetings|good morning|good afternoon|good evening': {
-                response: "Hello! 👋 Welcome to RadarRoster.\n\nI'm here to help you explore our AI and data intelligence services.\n\n**Quick links:**\n• [Our Services](#services)\n• [Recent Projects](#projects)\n• [Book a Call](https://calendly.com/radarroster/meeting)\n\n👉 **Ready to transform your business?**\n→ Ask me anything or [book free consultation](https://calendly.com/radarroster/meeting)!"
+                response: "Hello! 👋 Welcome to RadarRoster.\n\nI'm here to help you explore our AI and data intelligence services.\n\n**Quick links:**\n• [Our Services](#services)\n• [Recent Projects](#projects)\n• [Book a Call](https://calendly.com/radarroster/meeting)\n\nWhat would you like to know about?"
             },
             // Thanks
             'thanks|thank you|great|awesome|perfect|appreciate|helpful': {
-                response: "You're very welcome! 😊\n\nI'm glad I could help!\n\n**Next steps:**\n• Ask another question\n• [Book a free consultation](https://calendly.com/radarroster/meeting)\n• Explore our [services](#services)\n\n🚀 **Turn insights into action**\n→ [Schedule your strategy call now](https://calendly.com/radarroster/meeting)\n→ First 30 minutes completely free!"
+                response: "You're very welcome! 😊\n\nI'm glad I could help!\n\n**Next steps:**\n• Ask another question\n• [Book a free consultation](https://calendly.com/radarroster/meeting)\n• Explore our [services](#services)\n\nAnything else I can help with?"
             },
             // Simple No
             'no|nope|nothing': {
-                response: "No problem! 👋\n\nFeel free to reach out anytime:\n📧 hello@radarroster.com\n📅 [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)\n\n✨ **Before you go:**\n→ [Grab a free meeting slot](https://calendly.com/radarroster/meeting)\n→ Subscribe to [our newsletter](https://radarroster.substack.com)\n\nHave a great day!"
+                response: "No problem! 👋\n\nFeel free to reach out anytime:\n📧 hello@radarroster.com\n📅 [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)\n\nHave a great day!"
             },
             // Simple Yes
             'yes|yeah|sure|okay|ok': {
-                response: "Great! 🎯\n\nHow can I assist you?\n\n**Popular topics:**\n• AI solutions\n• Data engineering\n• ERP modernization\n• Pricing & timeline\n• Book a call\n\n🚀 **Let's get started**\n→ [Skip the chat - book now](https://calendly.com/radarroster/meeting)\n→ Or ask me anything!"
+                response: "Great! 🎯\n\nHow can I assist you?\n\n**Popular topics:**\n• AI solutions\n• Data engineering\n• ERP modernization\n• Pricing & timeline\n• Book a call"
             }
         };
     }
@@ -208,7 +208,7 @@ class SmartChatbot {
 
         document.body.insertAdjacentHTML('beforeend', html);
         this.renderMessages();
-        // Don't render quick actions initially - only after email capture
+        this.renderQuickActions();
     }
 
     renderMessages() {
@@ -233,9 +233,7 @@ class SmartChatbot {
 
     renderQuickActions() {
         const quickActionsContainer = document.getElementById('quick-actions');
-        
-        // Only show quick actions AFTER email is captured
-        if (!quickActionsContainer || !this.emailCaptured || this.messages.length > 1) {
+        if (!quickActionsContainer || this.messages.length > 1) {
             if (quickActionsContainer) quickActionsContainer.style.display = 'none';
             return;
         }
@@ -330,7 +328,7 @@ class SmartChatbot {
             // Show confirmation to user
             const confirmMsg = {
                 type: 'bot',
-                text: "📧 Chat transcript sent to our team! We'll review and get back to you within 24 hours. Thanks for chatting! 👋",
+                text: "📧 Chat transcript has been sent to your email and our team. We'll be in touch soon!",
                 timestamp: new Date()
             };
             this.messages.push(confirmMsg);
@@ -645,16 +643,15 @@ class SmartChatbot {
         transcript += `This conversation was automatically saved and sent via the RadarRoster AI Chatbot.\n`;
         transcript += `To follow up, reply to ${this.visitorEmail} or use Calendly: https://calendly.com/radarroster/meeting`;
         
-        // Send ONLY to owner (no CC to visitor)
+        // Send via Web3Forms
         try {
             const formData = new FormData();
             formData.append('access_key', this.config.web3formsKey);
-            formData.append('name', 'RadarRoster Chatbot');
-            formData.append('email', 'noreply@radarroster.com'); // Static sender (no CC to visitor)
-            formData.append('subject', `💬 New Chat Lead: ${this.visitorEmail} - ${this.lastTopic || 'General Inquiry'}`);
-            formData.append('message', transcript);
+            formData.append('subject', `💬 Chat Transcript from ${this.visitorEmail}`);
             formData.append('from_name', 'RadarRoster Chatbot');
-            formData.append('redirect', 'false');
+            formData.append('email', this.visitorEmail);
+            formData.append('message', transcript);
+            formData.append('redirect', 'false'); // Don't redirect
             
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
@@ -664,11 +661,10 @@ class SmartChatbot {
             const result = await response.json();
             
             if (result.success) {
-                console.log('✅ Transcript sent successfully to hello@radarroster.com');
-                console.log('📧 Visitor email:', this.visitorEmail);
+                console.log('✅ Transcript sent successfully to', this.config.transcriptEmail);
+                console.log('📧 Copy sent to visitor:', this.visitorEmail);
             } else {
                 console.error('❌ Failed to send transcript:', result);
-                console.error('📝 Error details:', result.message);
                 this.transcriptSent = false; // Allow retry
             }
         } catch (error) {
@@ -685,7 +681,7 @@ document.addEventListener('DOMContentLoaded', () => {
         brandColor: '#4A90E2',
         welcomeMessage: 'Hi! 👋 I\'m your AI assistant for RadarRoster. I can help you learn about our AI & data services. What would you like to know?',
         transcriptEmail: 'hello@radarroster.com',
-        web3formsKey: '00c73c85-fb6c-4c81-80b5-85da6b375ffe'
+        web3formsKey: 'fc055f0b-0423-454a-8625-57e197ca487c'
     });
 });
 
