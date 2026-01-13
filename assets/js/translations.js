@@ -346,8 +346,61 @@ const translations = {
             benefit3Desc: "Learn from hands-on experience building and deploying AI solutions at scale.",
             linkedinTitle: "Follow Us on LinkedIn",
             linkedinSubtitle: "Get daily insights and join the conversation with our professional community.",
-            linkedinCta: "Follow RadarRoster"
-        }
+            linkedinCta: "Follow RadarRoster"        },
+        
+        // Trust Badges Section
+        trustBadges: {
+            title: "Trusted & Certified",
+            subtitle: "Industry-leading standards for security, privacy, and excellence",
+            gdpr: "GDPR",
+            gdprDesc: "Compliant",
+            iso: "ISO 27001",
+            isoDesc: "Security",
+            aiEthics: "AI Ethics",
+            aiEthicsDesc: "Responsible AI",
+            cloud: "Cloud Certified",
+            cloudDesc: "Azure, AWS, GCP",
+            dataQuality: "Data Quality",
+            dataQualityDesc: "Best Practices",
+            agile: "Agile",
+            agileDesc: "Methodology"
+        },
+        
+        // ROI Calculator Section
+        roiCalculator: {
+            title: "Data Pipeline & Analytics ROI Calculator",
+            subtitle: "Calculate your potential savings from automated data pipelines and AI-powered analytics",
+            inputTitle: "Your Current Data Challenges",
+            resultsTitle: "Your Potential Savings",
+            
+            label1: "Number of Employees Handling Data",
+            label2: "Average Hourly Rate (€)",
+            label3: "Hours/Week on Manual Data Tasks",
+            label3Hint: "Reports, exports, data reconciliation, manual analysis",
+            label4: "Data Quality Issues Per Month",
+            label4Hint: "Errors, rework, wrong reports, bad decisions",
+            label5: "Average Cost Per Data Issue (€)",
+            label5Hint: "Time to fix + opportunity cost",
+            
+            button: "Calculate My Savings 💰",
+            
+            result1: "⚡ Automation Time Savings",
+            result2: "💰 Annual Labor Cost Savings",
+            result3: "🛡️ Data Quality Cost Reduction",
+            result4: "📊 Faster Insights Value",
+            result4Hint: "70% faster decision-making",
+            result5: "🎯 Total Annual Value",
+            result6: "ROI",
+            result7: "Payback",
+            
+            readyCta: "Ready to unlock these savings?",
+            bookCall: "Book Free Strategy Call",
+            
+            stat1: "Productivity Increase with Our Solutions",
+            stat2: "Faster Decision-Making",
+            stat3: "Cost Reduction via Automation",
+            
+            disclaimer: "* Based on industry studies (GitHub, MIT/Princeton) and actual RadarRoster client results. Individual outcomes may vary."        }
     },
     de: {
         // Navigation
@@ -652,6 +705,61 @@ const translations = {
             linkedinTitle: "Folgen Sie uns auf LinkedIn",
             linkedinSubtitle: "Erhalten Sie tägliche Einblicke und beteiligen Sie sich am Gespräch mit unserer professionellen Community.",
             linkedinCta: "RadarRoster folgen"
+        },
+        
+        // Trust Badges Section
+        trustBadges: {
+            title: "Vertrauenswürdig & Zertifiziert",
+            subtitle: "Branchenführende Standards für Sicherheit, Datenschutz und Exzellenz",
+            gdpr: "DSGVO",
+            gdprDesc: "Konform",
+            iso: "ISO 27001",
+            isoDesc: "Sicherheit",
+            aiEthics: "KI-Ethik",
+            aiEthicsDesc: "Verantwortungsvolle KI",
+            cloud: "Cloud-Zertifiziert",
+            cloudDesc: "Azure, AWS, GCP",
+            dataQuality: "Datenqualität",
+            dataQualityDesc: "Best Practices",
+            agile: "Agil",
+            agileDesc: "Methodik"
+        },
+        
+        // ROI Calculator Section
+        roiCalculator: {
+            title: "Datenpipeline & Analytics ROI-Rechner",
+            subtitle: "Berechnen Sie Ihre potenziellen Einsparungen durch automatisierte Datenpipelines und KI-gestützte Analysen",
+            inputTitle: "Ihre aktuellen Datenherausforderungen",
+            resultsTitle: "Ihre potenziellen Einsparungen",
+            
+            label1: "Anzahl Mitarbeiter mit Datenverwaltung",
+            label2: "Durchschnittlicher Stundensatz (€)",
+            label3: "Stunden/Woche für manuelle Datenaufgaben",
+            label3Hint: "Berichte, Exporte, Datenabgleich, manuelle Analysen",
+            label4: "Datenqualitätsprobleme pro Monat",
+            label4Hint: "Fehler, Nacharbeit, falsche Berichte, schlechte Entscheidungen",
+            label5: "Durchschnittliche Kosten pro Problem (€)",
+            label5Hint: "Behebungszeit + Opportunitätskosten",
+            
+            button: "Einsparungen berechnen 💰",
+            
+            result1: "⚡ Zeitersparnis durch Automatisierung",
+            result2: "💰 Jährliche Personalkosteneinsparungen",
+            result3: "🛡️ Reduzierte Datenqualitätskosten",
+            result4: "📊 Wert schnellerer Erkenntnisse",
+            result4Hint: "70% schnellere Entscheidungsfindung",
+            result5: "🎯 Gesamter Jahreswert",
+            result6: "ROI",
+            result7: "Amortisation",
+            
+            readyCta: "Bereit, diese Einsparungen freizuschalten?",
+            bookCall: "Kostenlose Strategieberatung buchen",
+            
+            stat1: "Produktivitätssteigerung mit unseren Lösungen",
+            stat2: "Schnellere Entscheidungsfindung",
+            stat3: "Kostensenkung durch Automatisierung",
+            
+            disclaimer: "* Basierend auf Branchenstudien (GitHub, MIT/Princeton) und tatsächlichen RadarRoster-Kundenergebnissen. Individuelle Ergebnisse können variieren."
         }
     }
 };
