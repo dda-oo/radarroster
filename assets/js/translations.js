@@ -9,7 +9,7 @@ const translations = {
             newsletter: "Newsletter",
             cta: "Free Strategy Call"
         },
-        // Hero Section
+
         hero: {
             badge: "AI & DATA INTELLIGENCE CONSULTING",
             title: "Transform Data into",
@@ -24,12 +24,12 @@ const translations = {
                 satisfaction: "Client Satisfaction"
             }
         },
-        // Value Proposition
+
         valueProposition: {
             title: "More Innovation, Less Development Effort",
             description: "AI-native solutions that we integrate profitably and seamlessly into your existing processes to increase your efficiency and quality. We focus on custom development instead of standard solutions, with deep practical knowledge from real AI and data projects. Transparency, co-creation and genuine partnership are at the heart of everything we do, from the first idea to the final implementation."
         },
-        // Why Us Section
+
         whyUs: {
             badge: "THE STATE OF THE INDUSTRY",
             title: "Data & AI Revolution",
@@ -45,19 +45,17 @@ const translations = {
             actNowPoint4: "Early adopters dominate their markets with data-driven insights",
             actNowCta: "Start Your Transformation"
         },
-        // Services Section
+
         services: {
             badge: "OUR SERVICES AT A GLANCE",
             title: "More Than Just Consulting",
             subtitle: "We build your data & AI engine from the ground up",
             cta: "Request Free Consultation",
-            
-            // Service card labels
+
             challengeLabel: "❌ Your Challenge",
             solutionLabel: "✓ Our Solution",
             benefitsLabel: "📈 Your Benefits",
-            
-            // AI Strategy & Implementation
+
             ai: {
                 title: "AI Strategy & Implementation",
                 challenge: "Many companies struggle with selecting and optimally using appropriate AI technologies. Complexity and uncertainty hold you back.",
@@ -67,8 +65,7 @@ const translations = {
                 sol4: "Conversational AI agents & chatbots",
                 benefits: "Clarity in the AI market • Actionable next steps • Accelerated implementation • Competitive advantage"
             },
-            
-            // Data Engineering
+
             data: {
                 title: "Data Engineering & Pipelines",
                 challenge: "Your data is siloed, messy, or inaccessible. Existing processes and architectures aren't ready for modern data operations.",
@@ -78,8 +75,7 @@ const translations = {
                 sol4: "Data quality frameworks & monitoring",
                 benefits: "Seamless data flow • Single source of truth • Faster insights • Reduced manual work • Scalable infrastructure"
             },
-            
-            // ERP & Cloud
+
             erp: {
                 title: "ERP & Cloud Modernization",
                 challenge: "Legacy systems and technical debt slow you down. Your software or service lacks innovation power.",
@@ -89,8 +85,7 @@ const translations = {
                 sol4: "Legacy system modernization",
                 benefits: "Higher software quality • Faster development cycles • More innovation • Reduced technical debt • Long-term scalability"
             },
-            
-            // Training
+
             training: {
                 title: "Training & Enablement",
                 challenge: "Your team lacks AI and data-specific competencies. There's no long-term support for knowledge development.",
@@ -147,7 +142,7 @@ const translations = {
                 feat3: "Platform Optimization"
             }
         },
-        // How We Work Section
+
         howWeWork: {
             badge: "HOW WE WORK",
             title: "Your Data & AI Engine, Delivered",
@@ -176,7 +171,7 @@ const translations = {
                 item4: "Long-term strategic partnership"
             }
         },
-        // Projects Section
+
         projects: {
             badge: "SUCCESS STORIES",
             title: "Real Impact, Real Results",
@@ -213,8 +208,7 @@ const translations = {
             
             cta: "Want similar results?",
             ctaButton: "Let's talk about your project",
-            
-            // New project showcase items
+
             showcase: {
                 badge: "PROJECT SHOWCASE",
                 title: "Project Showcase",
@@ -253,8 +247,7 @@ const translations = {
                 }
             }
         },
-        
-        // Philosophy Section
+
         philosophy: {
             badge: "OUR PHILOSOPHY",
             title: "Transparency as a Service",
@@ -268,8 +261,7 @@ const translations = {
                 commitment: "Commitment"
             }
         },
-        
-        // Target Audience Section
+
         audience: {
             title: "Whether You're a Team of 5 or 5,000+",
             description: "You don't need to be a tech company to benefit from tech. We help organizations of all sizes make smarter, faster, and more human-centered decisions.",
@@ -293,7 +285,7 @@ const translations = {
                 desc: "Piloting cutting-edge AI technologies."
             }
         },
-        // Contact Section
+
         contact: {
             badge: "GET IN TOUCH",
             title: "Ready to Transform Your Data?",
@@ -320,7 +312,7 @@ const translations = {
             email: "hello@radarroster.com",
             calendly: "Schedule a call directly"
         },
-        // Footer
+
         footer: {
             tagline: "Your partner for AI & data intelligence",
             quickLinks: "Quick Links",
@@ -329,7 +321,7 @@ const translations = {
             imprint: "Imprint",
             copyright: "All rights reserved."
         },
-        // Blog/Newsletter Page
+
         blog: {
             heroTitle: "AI & Data Intelligence",
             heroTitleGradient: "Newsletter",
@@ -348,8 +340,7 @@ const translations = {
             linkedinTitle: "Follow Us on LinkedIn",
             linkedinSubtitle: "Get daily insights and join the conversation with our professional community.",
             linkedinCta: "Follow RadarRoster"        },
-        
-        // Trust Badges Section
+
         trustBadges: {
             title: "Trusted & Certified",
             subtitle: "Industry-leading standards for security, privacy, and excellence",
@@ -366,8 +357,7 @@ const translations = {
             agile: "Agile",
             agileDesc: "Methodology"
         },
-        
-        // ROI Calculator Section
+
         roiCalculator: {
             title: "Data Pipeline & Analytics ROI Calculator",
             subtitle: "Calculate your potential savings from automated data pipelines and AI-powered analytics",
@@ -403,7 +393,7 @@ const translations = {
             
             disclaimer: "* Based on industry studies (GitHub, MIT/Princeton) and actual RadarRoster client results. Individual outcomes may vary."        
         },
-        // FAQ CTA Section
+
         faqCta: {
             title: "Have Questions?",
             titleGradient: "We Have Answers",
@@ -411,7 +401,7 @@ const translations = {
             button: "📚 View All FAQs",
             callButton: "📅 Book a Call Instead"
         },
-        // Footer
+
         footer: {
             services: "Services",
             aiImplementation: "AI Implementation",
@@ -437,7 +427,7 @@ const translations = {
         }
     },
     de: {
-        // Navigation
+
         nav: {
             whyUs: "Warum Wir",
             services: "Leistungen",
@@ -447,7 +437,7 @@ const translations = {
             newsletter: "Newsletter",
             cta: "Kostenlose Strategieberatung"
         },
-        // Hero Section
+
         hero: {
             badge: "KI & DATEN INTELLIGENCE BERATUNG",
             title: "Verwandeln Sie Daten in",
@@ -462,12 +452,12 @@ const translations = {
                 satisfaction: "Kundenzufriedenheit"
             }
         },
-        // Value Proposition
+
         valueProposition: {
             title: "Mehr Innovation, Weniger Entwicklungsaufwand",
             description: "KI-native Lösungen, die wir profitabel und nahtlos in Ihre bestehenden Prozesse integrieren, um Ihre Effizienz und Qualität zu steigern. Wir setzen auf maßgeschneiderte Entwicklung statt Standardlösungen, mit tiefem Praxiswissen aus echten KI- und Datenprojekten. Transparenz, Co-Creation und echte Partnerschaft stehen im Mittelpunkt all unserer Aktivitäten, von der ersten Idee bis zur finalen Umsetzung."
         },
-        // Why Us Section
+
         whyUs: {
             badge: "DIE LAGE DER BRANCHE",
             title: "Daten & KI Revolution",
@@ -483,19 +473,17 @@ const translations = {
             actNowPoint4: "Frühe Anwender dominieren ihre Märkte mit datengesteuerten Erkenntnissen",
             actNowCta: "Starten Sie Ihre Transformation"
         },
-        // Services Section
+
         services: {
             badge: "UNSERE LEISTUNGEN AUF EINEN BLICK",
             title: "Mehr Als Nur Beratung",
             subtitle: "Wir bauen Ihre Daten- & KI-Engine von Grund auf",
             cta: "Kostenlose Beratung anfordern",
-            
-            // Service card labels
+
             challengeLabel: "❌ Ihre Herausforderung",
             solutionLabel: "✓ Unsere Lösung",
             benefitsLabel: "📈 Ihre Vorteile",
-            
-            // AI Strategy & Implementation
+
             ai: {
                 title: "KI-Strategie & Implementierung",
                 challenge: "Viele Unternehmen kämpfen mit der Auswahl und optimalen Nutzung geeigneter KI-Technologien. Komplexität und Unsicherheit halten Sie zurück.",
@@ -505,8 +493,7 @@ const translations = {
                 sol4: "Konversations-KI-Agenten & Chatbots",
                 benefits: "Klarheit im KI-Markt • Umsetzbare nächste Schritte • Beschleunigte Implementierung • Wettbewerbsvorteil"
             },
-            
-            // Data Engineering
+
             data: {
                 title: "Data Engineering & Pipelines",
                 challenge: "Ihre Daten sind isoliert, unübersichtlich oder nicht zugänglich. Bestehende Prozesse und Architekturen sind nicht bereit für moderne Datenoperationen.",
@@ -516,8 +503,7 @@ const translations = {
                 sol4: "Datenqualitäts-Frameworks & Monitoring",
                 benefits: "Nahtloser Datenfluss • Single Source of Truth • Schnellere Insights • Reduzierte manuelle Arbeit • Skalierbare Infrastruktur"
             },
-            
-            // ERP & Cloud
+
             erp: {
                 title: "ERP & Cloud-Modernisierung",
                 challenge: "Legacy-Systeme und technische Schulden bremsen Sie aus. Ihrer Software oder Ihrem Service fehlt Innovationskraft.",
@@ -527,8 +513,7 @@ const translations = {
                 sol4: "Legacy-System-Modernisierung",
                 benefits: "Höhere Softwarequalität • Schnellere Entwicklungszyklen • Mehr Innovation • Reduzierte technische Schulden • Langfristige Skalierbarkeit"
             },
-            
-            // Training
+
             training: {
                 title: "Training & Enablement",
                 challenge: "Ihrem Team fehlen KI- und datenspezifische Kompetenzen. Es gibt keine langfristige Unterstützung für die Wissensentwicklung.",
@@ -539,7 +524,7 @@ const translations = {
                 benefits: "Langfristiges Kompetenzwachstum • Höhere Produktivität • Gesteigerte Mitarbeiterzufriedenheit • Nachhaltige Entwicklung"
             }
         },
-        // How We Work Section
+
         howWeWork: {
             badge: "UNSERE ARBEITSWEISE",
             title: "Ihre Daten & KI Engine, Geliefert",
@@ -568,7 +553,7 @@ const translations = {
                 item4: "Langfristige strategische Partnerschaft"
             }
         },
-        // Projects Section
+
         projects: {
             badge: "ERFOLGSGESCHICHTEN",
             title: "Echter Impact, Echte Ergebnisse",
@@ -605,8 +590,7 @@ const translations = {
             
             cta: "Ähnliche Ergebnisse gewünscht?",
             ctaButton: "Sprechen wir über Ihr Projekt",
-            
-            // New project showcase items
+
             showcase: {
                 badge: "PROJEKT-SHOWCASE",
                 title: "Projekt-Showcase",
@@ -645,8 +629,7 @@ const translations = {
                 }
             }
         },
-        
-        // Philosophy Section
+
         philosophy: {
             badge: "UNSERE PHILOSOPHIE",
             title: "Transparenz als Service",
@@ -660,8 +643,7 @@ const translations = {
                 commitment: "Engagement"
             }
         },
-        
-        // Target Audience Section
+
         audience: {
             title: "Ob Sie ein Team von 5 oder 5.000+ sind",
             description: "Sie müssen kein Tech-Unternehmen sein, um von Technologie zu profitieren. Wir helfen Organisationen jeder Größe, intelligentere, schnellere und menschenzentriertere Entscheidungen zu treffen.",
@@ -685,7 +667,7 @@ const translations = {
                 desc: "Die modernste KI-Technologien pilotieren."
             }
         },
-        // Contact Section
+
         contact: {
             badge: "KONTAKT",
             title: "Bereit, Ihre Daten zu Transformieren?",
@@ -712,7 +694,7 @@ const translations = {
             email: "hello@radarroster.com",
             calendly: "Termin direkt vereinbaren"
         },
-        // Footer
+
         footer: {
             tagline: "Ihr Partner für KI & Daten-Intelligence",
             quickLinks: "Schnellzugriff",
@@ -721,7 +703,7 @@ const translations = {
             imprint: "Impressum",
             copyright: "Alle Rechte vorbehalten."
         },
-        // Blog/Newsletter Page
+
         blog: {
             heroTitle: "KI & Daten Intelligence",
             heroTitleGradient: "Newsletter",
@@ -741,8 +723,7 @@ const translations = {
             linkedinSubtitle: "Erhalten Sie tägliche Einblicke und beteiligen Sie sich am Gespräch mit unserer professionellen Community.",
             linkedinCta: "RadarRoster folgen"
         },
-        
-        // Trust Badges Section
+
         trustBadges: {
             title: "Vertrauenswürdig & Zertifiziert",
             subtitle: "Branchenführende Standards für Sicherheit, Datenschutz und Exzellenz",
@@ -759,8 +740,7 @@ const translations = {
             agile: "Agil",
             agileDesc: "Methodik"
         },
-        
-        // ROI Calculator Section
+
         roiCalculator: {
             title: "Datenpipeline & Analytics ROI-Rechner",
             subtitle: "Berechnen Sie Ihre potenziellen Einsparungen durch automatisierte Datenpipelines und KI-gestützte Analysen",
@@ -796,7 +776,7 @@ const translations = {
             
             disclaimer: "* Basierend auf Branchenstudien (GitHub, MIT/Princeton) und tatsächlichen RadarRoster-Kundenergebnissen. Individuelle Ergebnisse können variieren."
         },
-        // FAQ CTA Section
+
         faqCta: {
             title: "Haben Sie Fragen?",
             titleGradient: "Wir haben Antworten",
@@ -804,7 +784,7 @@ const translations = {
             button: "📚 Alle FAQs ansehen",
             callButton: "📅 Stattdessen Anruf buchen"
         },
-        // Footer
+
         footer: {
             services: "Leistungen",
             aiImplementation: "KI-Implementierung",
@@ -831,10 +811,8 @@ const translations = {
     }
 };
 
-// Language switcher functionality
-// Set default language to English
 window.currentLang = 'en';
-// Load saved preference or use default
+
 const savedLang = localStorage.getItem('language');
 if (savedLang === 'de' || savedLang === 'en') {
     window.currentLang = savedLang;
@@ -863,8 +841,7 @@ function updateLanguageButtons() {
 
 function updatePageContent() {
     const t = translations[window.currentLang];
-    
-    // Update all elements with data-i18n attribute
+
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const keys = element.dataset.i18n.split('.');
         let value = t;
@@ -884,7 +861,6 @@ function updatePageContent() {
     });
 }
 
-// Initialize language on page load
 document.addEventListener('DOMContentLoaded', () => {
     window.setLanguage(window.currentLang);
 });

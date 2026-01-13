@@ -1,10 +1,4 @@
-/**
- * RadarRoster Professional Chatbot
- * English-only, lead generation focused with automatic transcript sending
- * 
- * @version 2.0.0
- * @author RadarRoster
- */
+
 
 class SmartChatbot {
     constructor(config = {}) {
@@ -18,8 +12,7 @@ class SmartChatbot {
             web3formsKey: config.web3formsKey || 'fc055f0b-0423-454a-8625-57e197ca487c',
             ...config
         };
-        
-        // Generate unique session ID for this browser session
+
         this.sessionId = sessionStorage.getItem('chatbot_session_id') || this.generateSessionId();
         sessionStorage.setItem('chatbot_session_id', this.sessionId);
         
@@ -50,90 +43,90 @@ class SmartChatbot {
 
     getDefaultKnowledge() {
         return {
-            // Company Information & Leadership
+
             'who|owner|founder|ceo|lead|management|team|behind': {
                 response: "RadarRoster is led by **Daryoosh Dehestani**, founder and owner of this AI & Data Intelligence consultancy based in Offenburg, Germany.\n\nWe're a team of practitioners who use our own solutions daily and believe in transparency as a service.\n\nWould you like to connect with our team?"
             },
-            // Location & Contact
+
             'address|location|office|where|headquarter|based': {
                 response: "📍 **Location:** Offenburg, Germany\n📧 **Email:** hello@radarroster.com\n🌐 **Website:** radarroster.com\n\n💡 Ready to discuss your project? [Book a meeting](https://calendly.com/radarroster/meeting)!"
             },
-            // Booking & Calendly
+
             'book|appointment|meeting|schedule|calendly|call|demo|consultation': {
                 response: "📅 **Book a Free Strategy Call:**\n\n🔗 [Schedule on Calendly](https://calendly.com/radarroster/meeting)\n\nOr use the contact form at the bottom of the page, or email hello@radarroster.com\n\nWhat time works best for you?"
             },
-            // Services - AI
+
             'ai|artificial intelligence|machine learning|ml|predictive|chatbot|automation': {
                 response: "🤖 **AI Strategy & Implementation:**\n\n• Custom AI roadmaps tailored to your business\n• AI-powered dashboards (Power BI, Tableau)\n• Predictive modeling & machine learning\n• Conversational AI agents & chatbots like this one!\n\n✨ **Real Results:**\n• 55% productivity increase\n• 70% faster decision-making\n• 85% accuracy in predictions\n\nInterested in a specific AI solution?"
             },
-            // Services - Data Engineering
+
             'data engineering|pipeline|etl|warehouse|database|data integration|snowflake|bigquery': {
                 response: "⚙️ **Data Engineering Services:**\n\n• Custom ETL/ELT pipeline development\n• Real-time data streaming & processing\n• Data warehouse modernization (Snowflake, BigQuery, Azure)\n• Data quality frameworks & governance\n\n✨ **Transform** siloed data into seamless, scalable flow\n\nWhat's your current data challenge?"
             },
-            // ERP & SAP/Workday
+
             'erp|sap|workday|oracle|cloud migration|modernization|prism|legacy system': {
                 response: "☁️ **ERP & Cloud Modernization:**\n\n• SAP, Workday & Oracle integration (including Prism Analytics)\n• Cloud migration (Azure, AWS, GCP)\n• Process automation & optimization\n• Legacy system modernization\n\n✨ **Overcome** technical debt and accelerate innovation\n\nWhich ERP system are you using?"
             },
-            // Training
+
             'training|workshop|learning|upskilling|enablement|course|education': {
                 response: "📚 **Training & Enablement:**\n\n• Role-based learning paths (developers, analysts, managers)\n• Hands-on workshops with real tools\n• Custom training for your tech stack\n• Ongoing support & knowledge transfer\n\n✨ **Build** long-term competency in your team\n\nWhat skills does your team need most?"
             },
-            // All Services Overview
+
             'service|what do you do|offering|solutions|help': {
                 response: "🎯 **Our Core Services:**\n\n1️⃣ **AI Strategy & Implementation**\n   → Custom AI solutions & chatbots\n\n2️⃣ **Data Engineering & Pipelines**\n   → ETL, streaming, warehouse modernization\n\n3️⃣ **ERP & Cloud Modernization**\n   → SAP, Workday, Oracle integration\n\n4️⃣ **Training & Team Enablement**\n   → Hands-on workshops & upskilling\n\nWhich area interests you most?"
             },
-            // Pricing
+
             'price|cost|pricing|budget|how much|expensive|fee|rate': {
                 response: "💰 **Flexible Pricing:**\n\nOur pricing is customized based on your specific needs:\n\n✓ **Free** initial strategy consultation\n✓ **Flexible** engagement models (project/retainer)\n✓ **Transparent** pricing, no hidden costs\n✓ **ROI-focused** - we prove value first\n\n📅 [Book a free call](https://calendly.com/radarroster/meeting) to get a custom quote for your project!"
             },
-            // Contact
+
             'contact|email|phone|reach|connect|talk|speak': {
                 response: "📞 **Let's Connect:**\n\n📧 **Email:** hello@radarroster.com\n📅 **Calendly:** [Book a meeting](https://calendly.com/radarroster/meeting)\n💼 **LinkedIn:** [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n📰 **Newsletter:** [radarroster.substack.com](https://radarroster.substack.com)\n\n💡 **Prefer the contact form?** Scroll to the bottom of the page!\n\nHow would you like to proceed?"
             },
-            // Process/Methodology
+
             'process|methodology|how you work|approach|steps|timeline': {
                 response: "🔄 **Our 3-Step Methodology:**\n\n**Phase 1: Analysis & Strategy** (1-2 weeks)\n   → Data landscape assessment\n   → Use case prioritization\n   → Custom roadmap development\n\n**Phase 2: Implementation** (4-12 weeks)\n   → Rapid prototyping & MVP\n   → Data pipeline construction\n   → AI model integration\n\n**Phase 3: Enablement** (Ongoing)\n   → Team training\n   → Continuous optimization\n   → Long-term partnership\n\nWe use **Design Thinking**, **Double Diamond**, and **Agile** frameworks.\n\nWant to discuss your project timeline?"
             },
-            // Projects/Portfolio
+
             'project|portfolio|example|case study|showcase|work|clients|success': {
                 response: "🚀 **Project Showcase** (20+ delivered):\n\n**HR Analytics**\n• Burnout Risk Prediction (85% accuracy)\n\n**Mental Wellness**\n• Emotional AI Chatbot (60% faster support)\n\n**Finance**\n• Small Cap Intelligence Dashboard\n\n**Enterprise L&D**\n• AI Training Recommender System\n\n**ERP Integration**\n• SAP & Workday Data Integration\n\n**Operations**\n• Sales & Operations Automation Bots\n\nWhich industry/use case resonates with you?"
             },
-            // Why Choose Us
+
             'why|benefit|advantage|value proposition|different|better|choose': {
                 response: "⭐ **Why RadarRoster?**\n\n✅ **Proven Results:**\n   • 55% productivity increase\n   • 70% faster decision-making\n   • 30% cost reduction\n   • 20+ successful projects\n   • 100% client satisfaction\n\n✅ **Our Approach:**\n   • Custom solutions, not templates\n   • Deep AI & data expertise\n   • Transparent partnership\n   • We use what we build\n\n✅ **Your Success:**\n   • Free strategy call\n   • ROI-focused delivery\n   • Ongoing support\n\nReady to see what we can do for you?"
             },
-            // About/Company
+
             'about|company|philosophy|mission|vision|story': {
                 response: "🎯 **About RadarRoster:**\n\nYour partner for AI-driven data solutions — from startups to enterprises.\n\n📍 **Based in:** Offenburg, Germany\n👤 **Founded by:** Daryoosh Dehestani\n\n**Our Philosophy:** *Transparency as a Service*\n\nWe believe in:\n✓ Co-creation with clients\n✓ Open communication\n✓ Long-term partnerships\n✓ Practical, proven solutions\n\n**We're not just consultants** — we're practitioners who use our own solutions daily.\n\nWhat brought you to RadarRoster today?"
             },
-            // Newsletter/Blog
+
             'newsletter|blog|substack|article|news|content|insights': {
                 response: "📰 **Stay Updated:**\n\nSubscribe to our newsletter for AI & data insights:\n\n🔗 **Substack:** [radarroster.substack.com](https://radarroster.substack.com)\n🔗 **Newsletter Page:** [Visit our blog](/pages/blog.html)\n\nWe share:\n• Industry trends\n• Case studies\n• Practical tips\n• Technology updates\n\nWhat topics interest you most?"
             },
-            // Legal Pages
+
             'privacy|data protection|gdpr|security|safe': {
                 response: "🔒 **Privacy & Data Protection:**\n\nYour privacy matters to us.\n\n🔗 **Privacy Policy:** [View details](/pages/datenschutz.html)\n\n✓ Full GDPR compliance\n✓ Secure data handling\n✓ Transparent practices\n✓ Your data, your control\n\nWe take data protection seriously. Any questions?"
             },
             'imprint|impressum|legal|terms': {
                 response: "⚖️ **Legal Information:**\n\n🔗 **Imprint:** [View details](/pages/impressum.html)\n\nNeed specific legal information? Feel free to ask!"
             },
-            // Social Media
+
             'linkedin|social media|follow|network': {
                 response: "🔗 **Connect with RadarRoster:**\n\n💼 **LinkedIn:** [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n📰 **Newsletter:** [radarroster.substack.com](https://radarroster.substack.com)\n\n**Follow us for:**\n• AI & data insights\n• Industry updates\n• Project showcases\n• Job opportunities\n\nSee you there!"
             },
-            // Greetings
+
             'hello|hi|hey|greetings|good morning|good afternoon|good evening': {
                 response: "Hello! 👋 Welcome to RadarRoster.\n\nWe're here to help you explore our AI and data intelligence services.\n\n**Quick links:**\n• [Our Services](#services)\n• [Recent Projects](#projects)\n• [Book a Call](https://calendly.com/radarroster/meeting)\n\nWhat would you like to know about?"
             },
-            // Thanks
+
             'thanks|thank you|great|awesome|perfect|appreciate|helpful': {
                 response: "You're very welcome! 😊\n\nWe're glad we could help!\n\n**Next steps:**\n• Ask another question\n• [Book a free consultation](https://calendly.com/radarroster/meeting)\n• Explore our [services](#services)\n\nAnything else we can help with?"
             },
-            // Simple No
+
             'no|nope|nothing': {
                 response: "No problem! 👋\n\nFeel free to reach out anytime:\n📧 hello@radarroster.com\n📅 [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)\n\nHave a great day!"
             },
-            // Simple Yes
+
             'yes|yeah|sure|okay|ok': {
                 response: "Great! 🎯\n\nHow can we assist you?\n\n**Popular topics:**\n• AI solutions\n• Data engineering\n• ERP modernization\n• Pricing & timeline\n• Book a call"
             }
@@ -143,8 +136,7 @@ class SmartChatbot {
     init() {
         this.createChatWidget();
         this.attachEventListeners();
-        
-        // Add welcome message
+
         this.messages.push({
             type: 'bot',
             text: this.config.welcomeMessage,
@@ -243,7 +235,6 @@ class SmartChatbot {
             `;
         }).join('');
 
-        // Scroll to bottom smoothly
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }
 
@@ -268,7 +259,6 @@ class SmartChatbot {
             </button>
         `).join('');
 
-        // Attach listeners to quick action buttons
         document.querySelectorAll('.quick-action-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const query = e.currentTarget.dataset.query;
@@ -278,22 +268,19 @@ class SmartChatbot {
     }
 
     attachEventListeners() {
-        // Toggle chat
+
         document.getElementById('chat-toggle-btn').addEventListener('click', () => {
             this.toggleChat();
         });
 
-        // Close chat
         document.getElementById('chat-close-btn').addEventListener('click', () => {
             this.closeChat();
         });
 
-        // Send message
         document.getElementById('chat-send-btn').addEventListener('click', () => {
             this.sendMessage();
         });
 
-        // Enter key to send
         document.getElementById('chat-input').addEventListener('keypress', (e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
@@ -312,18 +299,16 @@ class SmartChatbot {
             chatWindow.classList.remove('hidden');
             chatWindow.style.animation = 'slideInUp 0.3s ease-out';
             toggleBtn.style.transform = 'scale(0.9)';
-            
-            // Show email capture if not already captured
+
             if (!this.emailCaptured) {
                 this.showEmailCapture();
             } else {
-                // Focus input if email already captured
+
                 setTimeout(() => {
                     document.getElementById('chat-input').focus();
                 }, 300);
             }
-            
-            // Track chat start time
+
             if (!this.chatStartTime) {
                 this.chatStartTime = new Date();
             }
@@ -337,11 +322,10 @@ class SmartChatbot {
     }
 
     closeChat() {
-        // Send transcript before closing if there are messages
+
         if (this.emailCaptured && this.messages.length > 1 && !this.transcriptSent) {
             this.sendTranscript();
-            
-            // Show confirmation to user
+
             const confirmMsg = {
                 type: 'bot',
                 text: "📧 Chat transcript has been sent to your email and our team. We'll be in touch soon!",
@@ -349,8 +333,7 @@ class SmartChatbot {
             };
             this.messages.push(confirmMsg);
             this.renderMessages();
-            
-            // Wait a bit to show the message before closing
+
             setTimeout(() => {
                 this.actuallyCloseChat();
             }, 2000);
@@ -376,8 +359,7 @@ class SmartChatbot {
         const message = input.value.trim();
         
         if (!message) return;
-        
-        // Block messages if email not captured
+
         if (!this.emailCaptured) {
             this.showEmailCapture();
             return;
@@ -388,7 +370,7 @@ class SmartChatbot {
     }
 
     handleUserMessage(message) {
-        // Add user message
+
         this.messages.push({
             type: 'user',
             text: message,
@@ -397,15 +379,12 @@ class SmartChatbot {
         
         this.messageCount++;
         this.renderMessages();
-        
-        // Show typing indicator
+
         this.showTypingIndicator();
-        
-        // Generate bot response
+
         setTimeout(() => {
             let response;
-            
-            // Handle qualification flow
+
             if (this.qualificationStep === 'challenge') {
                 response = this.handleChallengeResponse(message);
             } else if (this.qualificationStep === 'budget') {
@@ -431,14 +410,12 @@ class SmartChatbot {
     handleChallengeResponse(message) {
         const msg = message.trim().toLowerCase();
         
-        // Allow skipping
-        if (msg === 'skip' || msg === 'later' || msg === 'no') {
+        if (msg === 'skip' || msg === 'later' || msg === 'no' || msg === 'nothing' || msg === 'none' || msg === 'nope' || msg === 'not sure' || msg === 'idk' || msg === 'i don\'t know') {
             this.qualificationStep = null;
             this.qualificationData.challenge = 'Skipped - wants to explore first';
             return "No problem! We understand you'd like to explore first. \n\nFeel free to ask us anything about:\n• Our AI & Data services\n• Pricing & timeline\n• Case studies & success stories\n• How we work\n\nWhat would you like to know?";
         }
         
-        // Store the challenge
         this.qualificationData.challenge = message;
         this.qualificationStep = 'budget';
         
@@ -447,8 +424,7 @@ class SmartChatbot {
 
     handleBudgetResponse(message) {
         const msg = message.trim().toLowerCase();
-        
-        // Allow skipping with explanation
+
         if (msg === 'skip' || msg === 'later' || msg === 'no' || msg === 'not now') {
             this.qualificationStep = null;
             this.qualificationData.budget = 'Skipped';
@@ -476,8 +452,7 @@ class SmartChatbot {
 
     handleTimelineResponse(message) {
         const msg = message.trim().toLowerCase();
-        
-        // Allow skipping
+
         if (msg === 'skip' || msg === 'later' || msg === 'no' || msg === 'not now') {
             this.qualificationStep = null;
             this.qualificationData.timeline = 'Skipped';
@@ -494,11 +469,9 @@ class SmartChatbot {
         const choice = message.trim();
         if (timelineMap[choice]) {
             this.qualificationData.timeline = timelineMap[choice];
-            
-            // Calculate lead score
+
             this.qualificationData.leadScore = this.calculateLeadScore();
-            
-            // End qualification, move to normal chat
+
             this.qualificationStep = null;
             
             let response = `Perfect! Thanks for sharing that information with us. `;
@@ -520,34 +493,30 @@ class SmartChatbot {
     calculateLeadScore() {
         const budget = this.qualificationData.budget;
         const timeline = this.qualificationData.timeline;
-        
-        // HOT: High budget (€50K+) AND fast timeline (within 3 months)
+
         if ((budget === '€50,000 - €100,000' || budget === 'Over €100,000') && 
             (timeline === 'ASAP (within 1 month)' || timeline === 'Soon (1-3 months)')) {
             return 'HOT';
         }
-        
-        // WARM: Medium/high budget (€10K+) OR fast timeline
+
         if (budget === '€10,000 - €50,000' || budget === '€50,000 - €100,000' || budget === 'Over €100,000' ||
             timeline === 'ASAP (within 1 month)' || timeline === 'Soon (1-3 months)') {
             return 'WARM';
         }
-        
-        // COLD: Everything else
+
         return 'COLD';
     }
 
     generateResponse(userMessage) {
         const message = userMessage.toLowerCase();
-        
-        // Handle follow-up questions
+
         const followUpPatterns = [
             'what else', 'tell me more', 'more', 'continue', 'and', 'anything else', 'elaborate'
         ];
         
         if (followUpPatterns.some(pattern => message.includes(pattern))) {
             if (this.lastTopic && this.lastResponse) {
-                // Provide expanded information
+
                 const expandedResponses = {
                     'who|owner|founder|ceo|lead|management|team|behind': {
                         response: "📞 **Want to connect with Daryoosh?**\n\n✓ Book a call: [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)\n✓ Email: hello@radarroster.com\n✓ LinkedIn: [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n\nWe're always happy to discuss your project!"
@@ -563,16 +532,13 @@ class SmartChatbot {
                 if (expandedResponses[this.lastTopic]) {
                     return expandedResponses[this.lastTopic].response;
                 }
-                
-                // Generic follow-up
+
                 return "Sure! For more details, I recommend booking a personal call:\n📅 [Calendly](https://calendly.com/radarroster/meeting) or 📧 hello@radarroster.com";
             }
-            
-            // No previous context
+
             return "What would you like to know more about? Ask us about our services, projects, pricing, or team!";
         }
-        
-        // Handle simple yes/no responses
+
         if (message.match(/^(no|nope|nah|not really|don't|dont)$/)) {
             this.lastTopic = null;
             return "Understood! Is there anything else I can help you with?";
@@ -581,8 +547,7 @@ class SmartChatbot {
         if (message.match(/^(yes|yeah|yep|sure|ok|okay)$/)) {
             return "Great! Use the contact form below or email us at hello@radarroster.com\n\nOr book directly: [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)";
         }
-        
-        // Find best matching response and track topic
+
         for (const [pattern, data] of Object.entries(this.config.knowledgeBase)) {
             const keywords = pattern.split('|');
             if (keywords.some(keyword => message.includes(keyword))) {
@@ -591,8 +556,7 @@ class SmartChatbot {
                 return data.response;
             }
         }
-        
-        // Default fallback with helpful suggestions
+
         this.lastTopic = null;
         
         return "That's an interesting question! 🤔\n\nWe're best at answering questions about:\n• Services (AI, Data, ERP, Training)\n• Projects & Portfolio\n• Pricing & Process\n• Team & Contact\n\nOr speak with us directly:\n📅 [Calendly](https://calendly.com/radarroster/meeting) | 📧 hello@radarroster.com";
@@ -632,12 +596,10 @@ class SmartChatbot {
 
     showEmailCapture() {
         const messagesContainer = document.getElementById('chat-messages');
-        
-        // Disable input
+
         document.getElementById('chat-input').disabled = true;
         document.getElementById('chat-send-btn').disabled = true;
-        
-        // Show email capture in messages
+
         const emailCaptureHTML = `
             <div id="email-capture-container" class="flex justify-center items-center h-full animate-fadeIn">
                 <div class="bg-gray-800 rounded-2xl p-6 max-w-sm w-full border border-gray-700 shadow-2xl">
@@ -673,22 +635,19 @@ class SmartChatbot {
         `;
         
         messagesContainer.innerHTML = emailCaptureHTML;
-        
-        // Focus email input
+
         setTimeout(() => {
             const emailInput = document.getElementById('visitor-email-input');
             if (emailInput) emailInput.focus();
         }, 100);
-        
-        // Handle email submission
+
         const submitBtn = document.getElementById('submit-email-btn');
         if (submitBtn) {
             submitBtn.addEventListener('click', () => {
                 this.validateAndCaptureEmail();
             });
         }
-        
-        // Allow Enter key
+
         const emailInput = document.getElementById('visitor-email-input');
         if (emailInput) {
             emailInput.addEventListener('keypress', (e) => {
@@ -705,17 +664,15 @@ class SmartChatbot {
         if (!emailInput) return;
         
         const email = emailInput.value.trim();
-        
-        // Validate email format
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         
         if (!emailRegex.test(email)) {
-            // Show error
+
             emailInput.classList.add('ring-2', 'ring-red-500');
             emailInput.placeholder = 'Please enter a valid email';
             emailInput.value = '';
-            
-            // Add shake animation
+
             emailInput.style.animation = 'shake 0.5s';
             
             setTimeout(() => {
@@ -726,19 +683,15 @@ class SmartChatbot {
             
             return;
         }
-        
-        // Store email
+
         this.visitorEmail = email;
         this.emailCaptured = true;
-        
-        // Enable chat input
+
         document.getElementById('chat-input').disabled = false;
         document.getElementById('chat-send-btn').disabled = false;
-        
-        // Clear email capture and show welcome
+
         this.renderMessages();
-        
-        // Add qualification questions
+
         this.messages.push({
             type: 'bot',
             text: `Great! We've got your email (${email}). Before we dive in, let us ask you a few quick questions to better understand how we can help you:\n\n**1. What's your main challenge or goal?**\n\nFor example:\n• Struggling with messy/siloed data\n• Need AI/automation to save time\n• Want better business insights\n• Modernizing legacy ERP systems\n• Other (just describe it briefly)\n\nFeel free to type your answer, or type 'skip' if you prefer to ask questions first.`,
@@ -750,8 +703,7 @@ class SmartChatbot {
         
         this.renderMessages();
         this.renderQuickActions();
-        
-        // Focus chat input
+
         setTimeout(() => {
             document.getElementById('chat-input').focus();
         }, 300);
@@ -762,11 +714,9 @@ class SmartChatbot {
         
         this.transcriptSent = true; // Prevent duplicate sends
         this.markTranscriptAsSent(); // Mark in session storage
-        
-        // Build transcript
+
         const chatDuration = this.chatStartTime ? Math.round((new Date() - this.chatStartTime) / 1000 / 60) : 0;
-        
-        // Determine lead score emoji
+
         let leadScoreEmoji = '';
         if (this.qualificationData.leadScore === 'HOT') leadScoreEmoji = '🔥';
         else if (this.qualificationData.leadScore === 'WARM') leadScoreEmoji = '🟡';
@@ -778,8 +728,7 @@ class SmartChatbot {
         transcript += `Duration: ${chatDuration} minute${chatDuration !== 1 ? 's' : ''}\n`;
         transcript += `Messages Exchanged: ${this.messageCount}\n`;
         transcript += `Topics Discussed: ${this.lastTopic || 'General inquiry'}\n`;
-        
-        // Add qualification data if available
+
         if (this.qualificationData.challenge || this.qualificationData.budget || this.qualificationData.timeline) {
             transcript += `\n--- QUALIFICATION DATA ---\n\n`;
             if (this.qualificationData.challenge) transcript += `Challenge/Goal: ${this.qualificationData.challenge}\n`;
@@ -799,14 +748,12 @@ class SmartChatbot {
         transcript += `\n=== END TRANSCRIPT ===\n\n`;
         transcript += `This conversation was automatically saved and sent via the RadarRoster AI Chatbot.\n`;
         transcript += `To follow up, reply to ${this.visitorEmail} or use Calendly: https://calendly.com/radarroster/meeting`;
-        
-        // Build email subject with lead score
+
         let emailSubject = `💬 Chat Transcript from ${this.visitorEmail}`;
         if (this.qualificationData.leadScore) {
             emailSubject = `${leadScoreEmoji} ${this.qualificationData.leadScore} LEAD - Chat from ${this.visitorEmail}`;
         }
-        
-        // Send via Web3Forms
+
         try {
             const formData = new FormData();
             formData.append('access_key', this.config.web3formsKey);
@@ -837,7 +784,6 @@ class SmartChatbot {
     }
 }
 
-// Initialize chatbot when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     window.radarChatbot = new SmartChatbot({
         brandName: 'RadarRoster',
@@ -848,7 +794,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Add animation styles
 const style = document.createElement('style');
 style.textContent = `
     @keyframes slideInUp {
@@ -891,13 +836,11 @@ style.textContent = `
     .animate-fadeIn {
         animation: fadeIn 0.3s ease-out;
     }
-    
-    /* Smooth scrolling for chat messages */
+
     .scroll-smooth {
         scroll-behavior: smooth;
     }
-    
-    /* Mobile responsiveness */
+
     @media (max-width: 640px) {
         #chat-window {
             width: calc(100vw - 2rem) !important;

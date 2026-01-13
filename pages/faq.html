@@ -7,7 +7,7 @@
     <meta name="description" content="Get answers to common questions about RadarRoster's AI, data engineering, and cloud services. Learn about pricing, timelines, implementation, and more.">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Translations -->
+    
     <script src="../assets/js/translations.js"></script>
     
     <script>
@@ -59,7 +59,7 @@
 </head>
 <body class="bg-dark-bg text-gray-100">
     
-    <!-- Navigation -->
+    
     <nav class="fixed w-full bg-dark-bg/95 backdrop-blur-sm z-50 border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
@@ -70,7 +70,7 @@
                     <span class="text-xl font-bold">RadarRoster</span>
                 </a>
                 
-                <!-- Desktop Navigation -->
+                
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../index.html#why-us" class="hover:text-brand-blue transition" data-i18n="nav.whyUs">Why Us</a>
                     <a href="../index.html#services" class="hover:text-brand-blue transition" data-i18n="nav.services">Services</a>
@@ -78,7 +78,7 @@
                     <a href="../index.html#projects" class="hover:text-brand-blue transition" data-i18n="nav.projects">Projects</a>
                     <a href="faq.html" class="text-brand-blue transition" data-i18n="nav.faq">FAQ</a>
                     <a href="blog.html" class="hover:text-brand-blue transition" data-i18n="nav.newsletter">Newsletter</a>
-                    <!-- Language Switcher -->
+                    
                     <div class="flex items-center space-x-2 border-l border-gray-700 pl-4">
                         <button onclick="setLanguage('en')" data-lang-btn="en" class="text-sm hover:text-brand-blue transition">EN</button>
                         <span class="text-gray-600">|</span>
@@ -87,7 +87,7 @@
                     <a href="../index.html#contact" class="bg-brand-blue hover:bg-blue-600 px-6 py-2 rounded-lg transition font-semibold" data-i18n="nav.cta">Free Strategy Call</a>
                 </div>
 
-                <!-- Mobile menu button -->
+                
                 <button id="mobile-menu-button" class="md:hidden">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -95,7 +95,7 @@
                 </button>
             </div>
 
-            <!-- Mobile menu -->
+            
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <a href="../index.html#why-us" class="block py-2 hover:text-brand-blue transition" data-i18n="nav.whyUs">Why Us</a>
                 <a href="../index.html#services" class="block py-2 hover:text-brand-blue transition" data-i18n="nav.services">Services</a>
@@ -103,7 +103,7 @@
                 <a href="../index.html#projects" class="block py-2 hover:text-brand-blue transition" data-i18n="nav.projects">Projects</a>
                 <a href="faq.html" class="block py-2 text-brand-blue transition" data-i18n="nav.faq">FAQ</a>
                 <a href="blog.html" class="block py-2 hover:text-brand-blue transition" data-i18n="nav.newsletter">Newsletter</a>
-                <!-- Language Switcher -->
+                
                 <div class="flex items-center justify-center space-x-2 py-2">
                     <button onclick="setLanguage('en')" data-lang-btn="en" class="text-sm hover:text-brand-blue transition">EN</button>
                     <span class="text-gray-600">|</span>
@@ -114,7 +114,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    
     <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-5xl font-bold mb-6">
@@ -126,11 +126,11 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    
     <section class="pb-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto space-y-4">
             
-            <!-- FAQ Item 1 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">How much does AI implementation cost?</h3>
@@ -153,7 +153,7 @@
                 </div>
             </div>
 
-            <!-- FAQ Item 2 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">How long does a typical project take?</h3>
@@ -176,7 +176,7 @@
                 </div>
             </div>
 
-            <!-- FAQ Item 3 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">Do you work with small companies or just enterprises?</h3>
@@ -204,7 +204,7 @@
                 </div>
             </div>
 
-            <!-- FAQ Item 4 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">What if we don't have clean data?</h3>
@@ -228,7 +228,7 @@
                 </div>
             </div>
 
-            <!-- FAQ Item 5 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">Can you integrate with our existing ERP (SAP/Workday/Oracle)?</h3>
@@ -276,7 +276,7 @@
                 </div>
             </div>
 
-            <!-- FAQ Item 6 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">What's your implementation methodology?</h3>
@@ -320,7 +320,7 @@
                 </div>
             </div>
 
-            <!-- FAQ Item 7 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">Do you provide ongoing support after launch?</h3>
@@ -344,7 +344,7 @@
                 </div>
             </div>
 
-            <!-- FAQ Item 8 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">How do you handle data security and GDPR?</h3>
@@ -392,7 +392,7 @@
                 </div>
             </div>
 
-            <!-- FAQ Item 9 -->
+            
             <div class="faq-item bg-card-bg rounded-xl border border-gray-800 overflow-hidden">
                 <button class="w-full text-left p-6 flex justify-between items-center" onclick="toggleFAQ(this)">
                     <h3 class="text-xl font-bold pr-8">What makes RadarRoster different from other consultancies?</h3>
@@ -450,7 +450,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    
     <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-brand-blue/10 to-purple-600/10">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-3xl font-bold mb-4">How do I get started?</h2>
@@ -487,7 +487,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    
     <footer class="bg-card-bg border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
@@ -610,7 +610,7 @@
         document.querySelectorAll('.copyright-year').forEach(el => el.textContent = year);
     </script>
 
-    <!-- Smart Chatbot -->
+    
     <script src="../assets/js/chatbot.js"></script>
 </body>
 </html>
