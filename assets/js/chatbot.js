@@ -12,7 +12,7 @@ class SmartChatbot {
         this.config = {
             brandName: config.brandName || 'RadarRoster',
             brandColor: config.brandColor || '#4A90E2',
-            position: config.position || 'bottom-right', // bottom-right, bottom-left
+            position: config.position || 'bottom-left', // bottom-right, bottom-left
             welcomeMessage: config.welcomeMessage || 'Hi! I\'m here to help you learn about our services. Ask me anything!',
             language: config.language || 'en',
             knowledgeBase: config.knowledgeBase || this.getDefaultKnowledge(),
@@ -96,8 +96,8 @@ class SmartChatbot {
         const html = `
             <div id="smart-chatbot" class="fixed bottom-4 ${positionClass} z-50">
                 <!-- Chat Button -->
-                <button id="chat-toggle-btn" class="w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110" style="background: linear-gradient(135deg, ${this.config.brandColor} 0%, #8B5CF6 100%);">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="chat-toggle-btn" class="w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110" style="background: linear-gradient(135deg, ${this.config.brandColor} 0%, #8B5CF6 100%);">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
                     </svg>
                 </button>
