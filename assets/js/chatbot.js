@@ -800,7 +800,6 @@ class SmartChatbot {
             formData.append('subject', emailSubject);
             formData.append('from_name', 'RadarRoster Chatbot');
             formData.append('email', this.config.transcriptEmail);
-            formData.append('replyto', this.visitorEmail);
             formData.append('message', transcript);
             formData.append('redirect', 'false');
             
@@ -813,7 +812,6 @@ class SmartChatbot {
             
             if (result.success) {
                 console.log('✅ Transcript sent successfully to', this.config.transcriptEmail);
-                console.log('📧 Reply-to set to visitor:', this.visitorEmail);
             } else {
                 console.error('❌ Failed to send transcript:', result);
                 this.transcriptSent = false;
