@@ -952,77 +952,97 @@
     <section class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4">AI ROI Calculator</h2>
-                <p class="text-gray-400">See how much your business can save with AI automation</p>
+                <h2 class="text-4xl font-bold mb-4">Data Pipeline & Analytics ROI Calculator</h2>
+                <p class="text-gray-400">Calculate your potential savings from automated data pipelines and AI-powered analytics</p>
             </div>
 
             <div class="bg-gradient-to-br from-card-bg to-dark-bg rounded-2xl p-8 border border-gray-800 shadow-2xl">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="space-y-6">
-                        <h3 class="text-2xl font-bold mb-6">Your Current Situation</h3>
+                        <h3 class="text-2xl font-bold mb-6">Your Current Data Challenges</h3>
                         
                         <div>
-                            <label class="block text-sm font-medium mb-2">Number of Employees</label>
-                            <input type="number" id="roi-employees" value="50" min="1" max="10000" class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition">
+                            <label class="block text-sm font-medium mb-2">Number of Employees Handling Data</label>
+                            <input type="number" id="roi-employees" value="50" min="1" max="10000" class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition" oninput="calculateROI()">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium mb-2">Average Hourly Rate (€)</label>
-                            <input type="number" id="roi-hourly-rate" value="50" min="10" max="500" class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition">
+                            <input type="number" id="roi-hourly-rate" value="50" min="10" max="500" class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition" oninput="calculateROI()">
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium mb-2">Hours Spent on Manual Tasks (per week)</label>
-                            <input type="range" id="roi-manual-hours" value="10" min="1" max="40" class="w-full" oninput="document.getElementById('hours-display').textContent = this.value">
+                            <label class="block text-sm font-medium mb-2">Hours/Week on Manual Data Tasks</label>
+                            <p class="text-xs text-gray-500 mb-2">Reports, exports, data reconciliation, manual analysis</p>
+                            <input type="range" id="roi-manual-hours" value="8" min="1" max="40" class="w-full" oninput="document.getElementById('hours-display').textContent = this.value; calculateROI()">
                             <div class="flex justify-between text-sm text-gray-400 mt-2">
                                 <span>1h</span>
-                                <span id="hours-display" class="font-bold text-brand-blue">10h</span>
+                                <span id="hours-display" class="font-bold text-brand-blue">8h</span>
                                 <span>40h</span>
                             </div>
                         </div>
 
                         <div>
-                            <label class="block text-sm font-medium mb-2">AI Automation Impact</label>
-                            <select id="roi-impact" class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition">
-                                <option value="0.3">30% - Light Automation</option>
-                                <option value="0.55" selected>55% - Moderate Automation</option>
-                                <option value="0.7">70% - Heavy Automation</option>
-                                <option value="0.85">85% - Full Automation</option>
-                            </select>
+                            <label class="block text-sm font-medium mb-2">Data Quality Issues Per Month</label>
+                            <p class="text-xs text-gray-500 mb-2">Errors, rework, wrong reports, bad decisions</p>
+                            <input type="number" id="roi-data-issues" value="15" min="0" max="200" class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition" oninput="calculateROI()">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Average Cost Per Data Issue (€)</label>
+                            <p class="text-xs text-gray-500 mb-2">Time to fix + opportunity cost</p>
+                            <input type="number" id="roi-cost-per-issue" value="500" min="100" max="10000" class="w-full bg-dark-bg border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-blue transition" oninput="calculateROI()">
                         </div>
 
                         <button onclick="calculateROI()" class="w-full bg-gradient-to-r from-brand-blue to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-4 rounded-lg font-semibold transition transform hover:scale-105">
-                            Calculate Your Savings 💰
+                            Calculate My Savings 💰
                         </button>
                     </div>
 
-                    <div class="bg-gradient-to-br from-brand-blue/10 to-purple-600/10 rounded-xl p-6 border border-brand-blue/20">
-                        <h3 class="text-2xl font-bold mb-6">Your Potential Results</h3>
+                    <div class="bg-gradient-to-br from-brand-blue/10 to-purple-600/10 rounded-xl p-6 border border-brand-blue/20 roi-results-section">
+                        <h3 class="text-2xl font-bold mb-6">Your Potential Savings</h3>
                         
-                        <div class="space-y-6">
+                        <div class="space-y-4">
                             <div class="bg-dark-bg/50 rounded-lg p-4">
-                                <p class="text-sm text-gray-400 mb-1">Time Saved Per Week</p>
-                                <p id="result-time-saved" class="text-3xl font-bold text-brand-blue">0 hours</p>
+                                <p class="text-sm text-gray-400 mb-1">⚡ Automation Time Savings</p>
+                                <p id="result-time-saved" class="text-2xl font-bold text-brand-blue">0 hours/week</p>
                             </div>
 
                             <div class="bg-dark-bg/50 rounded-lg p-4">
-                                <p class="text-sm text-gray-400 mb-1">Annual Cost Savings</p>
-                                <p id="result-annual-savings" class="text-3xl font-bold text-green-400">€0</p>
+                                <p class="text-sm text-gray-400 mb-1">💰 Annual Labor Cost Savings</p>
+                                <p id="result-annual-savings" class="text-2xl font-bold text-green-400">€0</p>
                             </div>
 
                             <div class="bg-dark-bg/50 rounded-lg p-4">
-                                <p class="text-sm text-gray-400 mb-1">ROI After 1 Year</p>
-                                <p id="result-roi" class="text-3xl font-bold text-purple-400">0%</p>
+                                <p class="text-sm text-gray-400 mb-1">🛡️ Data Quality Cost Reduction</p>
+                                <p id="result-data-quality-savings" class="text-2xl font-bold text-emerald-400">€0</p>
                             </div>
 
                             <div class="bg-dark-bg/50 rounded-lg p-4">
-                                <p class="text-sm text-gray-400 mb-1">Productivity Gain</p>
-                                <p id="result-productivity" class="text-3xl font-bold text-yellow-400">0%</p>
+                                <p class="text-sm text-gray-400 mb-1">📊 Faster Insights Value</p>
+                                <p class="text-xs text-gray-500 mb-1">70% faster decision-making</p>
+                                <p id="result-insight-value" class="text-2xl font-bold text-cyan-400">€0</p>
+                            </div>
+
+                            <div class="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-lg p-4 border border-purple-500/30">
+                                <p class="text-sm text-gray-300 mb-1 font-semibold">🎯 Total Annual Value</p>
+                                <p id="result-total-value" class="text-3xl font-bold text-purple-300">€0</p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-dark-bg/50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-400 mb-1">ROI</p>
+                                    <p id="result-roi" class="text-xl font-bold text-yellow-400">0%</p>
+                                </div>
+                                <div class="bg-dark-bg/50 rounded-lg p-3">
+                                    <p class="text-xs text-gray-400 mb-1">Payback</p>
+                                    <p id="result-payback" class="text-xl font-bold text-orange-400">0 months</p>
+                                </div>
                             </div>
                         </div>
 
                         <div class="mt-6 pt-6 border-t border-gray-700">
-                            <p class="text-sm text-gray-400 mb-3">Ready to achieve these results?</p>
+                            <p class="text-sm text-gray-400 mb-3">Ready to unlock these savings?</p>
                             <a href="#contact" class="block text-center bg-brand-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition">
                                 Book Free Strategy Call
                             </a>
@@ -1034,22 +1054,22 @@
                     <div class="grid md:grid-cols-3 gap-4 text-center">
                         <div class="bg-dark-bg/50 rounded-lg p-4">
                             <p class="text-2xl font-bold text-brand-blue mb-1">55%</p>
-                            <p class="text-sm text-gray-400">Average Productivity Increase</p>
+                            <p class="text-sm text-gray-400">Productivity Increase with Our Solutions</p>
                         </div>
                         <div class="bg-dark-bg/50 rounded-lg p-4">
-                            <p class="text-2xl font-bold text-green-400 mb-1">€250K+</p>
-                            <p class="text-sm text-gray-400">Average Annual Savings</p>
+                            <p class="text-2xl font-bold text-green-400 mb-1">70%</p>
+                            <p class="text-sm text-gray-400">Faster Decision-Making</p>
                         </div>
                         <div class="bg-dark-bg/50 rounded-lg p-4">
-                            <p class="text-2xl font-bold text-purple-400 mb-1">6-12mo</p>
-                            <p class="text-sm text-gray-400">Typical ROI Timeline</p>
+                            <p class="text-2xl font-bold text-purple-400 mb-1">30%</p>
+                            <p class="text-sm text-gray-400">Cost Reduction via Automation</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="text-center mt-8 text-sm text-gray-500">
-                <p>* Calculations based on industry averages and actual client results. Individual results may vary.</p>
+                <p>* Based on industry studies (GitHub, MIT/Princeton) and actual RadarRoster client results. Individual outcomes may vary.</p>
             </div>
         </div>
     </section>
