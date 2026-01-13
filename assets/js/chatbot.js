@@ -19,6 +19,10 @@ class SmartChatbot {
             ...config
         };
         
+        // Generate unique session ID for this browser session
+        this.sessionId = sessionStorage.getItem('chatbot_session_id') || this.generateSessionId();
+        sessionStorage.setItem('chatbot_session_id', this.sessionId);
+        
         this.isOpen = false;
         this.messages = [];
         this.lastTopic = null;
@@ -27,9 +31,21 @@ class SmartChatbot {
         this.visitorName = null;
         this.emailCaptured = false;
         this.chatStartTime = null;
-        this.transcriptSent = false;
+        this.transcriptSent = this.checkIfTranscriptSent();
         this.messageCount = 0;
         this.init();
+    }
+
+    generateSessionId() {
+        return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    }
+
+    checkIfTranscriptSent() {
+        return sessionStorage.getItem('chatbot_transcript_sent_' + this.sessionId) === 'true';
+    }
+
+    markTranscriptAsSent() {
+        sessionStorage.setItem('chatbot_transcript_sent_' + this.sessionId, 'true');
     }
 
     getDefaultKnowledge() {
@@ -387,7 +403,17 @@ class SmartChatbot {
         
         // Generate bot response
         setTimeout(() => {
-            const response = this.generateResponse(message);
+            let response;
+            
+            // Handle qualification flow
+            if (this.qualificationStep === 'budget') {
+                response = this.handleBudgetResponse(message);
+            } else if (this.qualificationStep === 'timeline') {
+                response = this.handleTimelineResponse(message);
+            } else {
+                response = this.generateResponse(message);
+            }
+            
             this.messages.push({
                 type: 'bot',
                 text: response,
@@ -398,6 +424,80 @@ class SmartChatbot {
             this.renderMessages();
             this.renderQuickActions();
         }, 800 + Math.random() * 800); // Simulate thinking time
+    }
+
+    handleBudgetResponse(message) {
+        const budgetMap = {
+            '1': 'Under €10,000',
+            '2': '€10,000 - €50,000',
+            '3': '€50,000 - €100,000',
+            '4': 'Over €100,000',
+            '5': 'Not sure yet'
+        };
+        
+        const choice = message.trim();
+        if (budgetMap[choice]) {
+            this.qualificationData.budget = budgetMap[choice];
+            this.qualificationStep = 'timeline';
+            
+            return `Great! Now let's talk timeline.\n\n⏰ **When are you looking to start?**\n\n1️⃣ ASAP (within 1 month)\n2️⃣ Soon (1-3 months)\n3️⃣ Planning ahead (3-6 months)\n4️⃣ Exploring options (6+ months)\n\nPlease reply with a number (1-4).`;
+        } else {
+            return "Please select a valid option by replying with a number from 1-5.";
+        }
+    }
+
+    handleTimelineResponse(message) {
+        const timelineMap = {
+            '1': 'ASAP (within 1 month)',
+            '2': 'Soon (1-3 months)',
+            '3': 'Planning ahead (3-6 months)',
+            '4': 'Exploring options (6+ months)'
+        };
+        
+        const choice = message.trim();
+        if (timelineMap[choice]) {
+            this.qualificationData.timeline = timelineMap[choice];
+            
+            // Calculate lead score
+            this.qualificationData.leadScore = this.calculateLeadScore();
+            
+            // End qualification, move to normal chat
+            this.qualificationStep = null;
+            
+            let response = `Perfect! Thanks for sharing that information. `;
+            
+            if (this.qualificationData.leadScore === 'HOT') {
+                response += `🔥 **This sounds like a great fit!**\n\nBased on your budget and timeline, I'd love to connect you with our team ASAP.\n\n📅 **Next step:** [Book a strategy call](https://calendly.com/radarroster/meeting)\n\nOr ask me any questions about our services, past projects, or how we work!`;
+            } else if (this.qualificationData.leadScore === 'WARM') {
+                response += `✨ **Excellent timing!**\n\nWe'd be happy to discuss how we can help. Let me know if you have any questions about:\n\n• Our services & approach\n• Case studies & results\n• Pricing & packages\n• Technical capabilities\n\nOr 📅 [schedule a call](https://calendly.com/radarroster/meeting) when you're ready!`;
+            } else {
+                response += `Thanks for your interest! I'm here to answer any questions you have about:\n\n• Our services & methodology\n• Case studies & success stories\n• Pricing options\n• Technical expertise\n\nFeel free to ask anything, or 📅 [book a call](https://calendly.com/radarroster/meeting) when you're ready to explore further!`;
+            }
+            
+            return response;
+        } else {
+            return "Please select a valid option by replying with a number from 1-4.";
+        }
+    }
+
+    calculateLeadScore() {
+        const budget = this.qualificationData.budget;
+        const timeline = this.qualificationData.timeline;
+        
+        // HOT: High budget (€50K+) AND fast timeline (within 3 months)
+        if ((budget === '€50,000 - €100,000' || budget === 'Over €100,000') && 
+            (timeline === 'ASAP (within 1 month)' || timeline === 'Soon (1-3 months)')) {
+            return 'HOT';
+        }
+        
+        // WARM: Medium/high budget (€10K+) OR fast timeline
+        if (budget === '€10,000 - €50,000' || budget === '€50,000 - €100,000' || budget === 'Over €100,000' ||
+            timeline === 'ASAP (within 1 month)' || timeline === 'Soon (1-3 months)') {
+            return 'WARM';
+        }
+        
+        // COLD: Everything else
+        return 'COLD';
     }
 
     generateResponse(userMessage) {
@@ -601,12 +701,15 @@ class SmartChatbot {
         // Clear email capture and show welcome
         this.renderMessages();
         
-        // Add personalized welcome message
+        // Add qualification questions
         this.messages.push({
             type: 'bot',
-            text: `Great! I've got your email (${email}). How can I help you today?\n\n💡 I can answer questions about our services, projects, pricing, and more!\n\n✨ **Tip:** Your conversation will be saved and sent to both you and our team.`,
+            text: `Great! I've got your email (${email}). Before we dive in, let me ask you two quick questions to better help you:\n\n**1. What's your estimated budget for this project?**\n\nType the number that matches:\n1️⃣ Under €10,000\n2️⃣ €10,000 - €50,000\n3️⃣ €50,000 - €100,000\n4️⃣ Over €100,000\n5️⃣ Not sure yet`,
             timestamp: new Date()
         });
+        
+        this.qualificationStep = 'budget';
+        this.qualificationData = {};
         
         this.renderMessages();
         this.renderQuickActions();
@@ -621,9 +724,16 @@ class SmartChatbot {
         if (!this.visitorEmail || this.messages.length <= 1 || this.transcriptSent) return;
         
         this.transcriptSent = true; // Prevent duplicate sends
+        this.markTranscriptAsSent(); // Mark in session storage
         
         // Build transcript
         const chatDuration = this.chatStartTime ? Math.round((new Date() - this.chatStartTime) / 1000 / 60) : 0;
+        
+        // Determine lead score emoji
+        let leadScoreEmoji = '';
+        if (this.qualificationData.leadScore === 'HOT') leadScoreEmoji = '🔥';
+        else if (this.qualificationData.leadScore === 'WARM') leadScoreEmoji = '🟡';
+        else if (this.qualificationData.leadScore === 'COLD') leadScoreEmoji = '🟢';
         
         let transcript = `=== RADARROSTER CHAT TRANSCRIPT ===\n\n`;
         transcript += `Visitor Email: ${this.visitorEmail}\n`;
@@ -631,6 +741,15 @@ class SmartChatbot {
         transcript += `Duration: ${chatDuration} minute${chatDuration !== 1 ? 's' : ''}\n`;
         transcript += `Messages Exchanged: ${this.messageCount}\n`;
         transcript += `Topics Discussed: ${this.lastTopic || 'General inquiry'}\n`;
+        
+        // Add qualification data if available
+        if (this.qualificationData.budget || this.qualificationData.timeline) {
+            transcript += `\n--- QUALIFICATION DATA ---\n\n`;
+            if (this.qualificationData.budget) transcript += `Budget: ${this.qualificationData.budget}\n`;
+            if (this.qualificationData.timeline) transcript += `Timeline: ${this.qualificationData.timeline}\n`;
+            if (this.qualificationData.leadScore) transcript += `Lead Score: ${this.qualificationData.leadScore} ${leadScoreEmoji}\n`;
+        }
+        
         transcript += `\n--- CONVERSATION ---\n\n`;
         
         this.messages.forEach(msg => {
@@ -643,11 +762,17 @@ class SmartChatbot {
         transcript += `This conversation was automatically saved and sent via the RadarRoster AI Chatbot.\n`;
         transcript += `To follow up, reply to ${this.visitorEmail} or use Calendly: https://calendly.com/radarroster/meeting`;
         
+        // Build email subject with lead score
+        let emailSubject = `💬 Chat Transcript from ${this.visitorEmail}`;
+        if (this.qualificationData.leadScore) {
+            emailSubject = `${leadScoreEmoji} ${this.qualificationData.leadScore} LEAD - Chat from ${this.visitorEmail}`;
+        }
+        
         // Send via Web3Forms
         try {
             const formData = new FormData();
             formData.append('access_key', this.config.web3formsKey);
-            formData.append('subject', `💬 Chat Transcript from ${this.visitorEmail}`);
+            formData.append('subject', emailSubject);
             formData.append('from_name', 'RadarRoster Chatbot');
             formData.append('email', this.visitorEmail);
             formData.append('message', transcript);

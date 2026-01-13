@@ -5,6 +5,7 @@ const translations = {
             services: "Services",
             process: "Process",
             projects: "Projects",
+            faq: "FAQ",
             newsletter: "Newsletter",
             cta: "Free Strategy Call"
         },
@@ -409,6 +410,7 @@ const translations = {
             services: "Leistungen",
             process: "Vorgehen",
             projects: "Projekte",
+            faq: "FAQ",
             newsletter: "Newsletter",
             cta: "Kostenlose Strategieberatung"
         },
