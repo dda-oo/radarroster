@@ -153,19 +153,24 @@
     </script>
     
     
+    <!-- Google Analytics GA4 -->
     <script type="opt-in" data-type="application/javascript" data-name="googleAnalytics" async src="https://www.googletagmanager.com/gtag/js?id=G-2T8XLF4KWH"></script>
     <script type="opt-in" data-type="application/javascript" data-name="googleAnalytics">
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-2T8XLF4KWH', { 'anonymize_ip': true });
+        gtag('config', 'G-2T8XLF4KWH', { 
+            'anonymize_ip': true,
+            'cookie_flags': 'SameSite=None;Secure'
+        });
     </script>
     
     
+    <!-- Microsoft Clarity -->
     <script type="opt-in" data-type="application/javascript" data-name="microsoftClarity">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=gtm2";
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", "v0xqjav6pn");
     </script>
@@ -1125,9 +1130,6 @@
                     <form id="contactForm" class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
                         
                         <input type="hidden" name="access_key" value="fc055f0b-0423-454a-8625-57e197ca487c">
-                        
-                        
-                        <input type="hidden" name="email" value="noreply@radarroster.com">
                         
                         
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
