@@ -11,7 +11,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         
-        // Set default consent to 'denied' as a baseline
         gtag('consent', 'default', {
             'ad_storage': 'denied',
             'ad_user_data': 'denied',
@@ -40,7 +39,6 @@
             hideLearnMore: false,
             lang: 'de',
             callback: function(consent, service) {
-                // Update Google Consent Mode when user makes a choice
                 if (service.name === 'googleAnalytics') {
                     gtag('consent', 'update', {
                         'analytics_storage': consent ? 'granted' : 'denied'
@@ -1007,7 +1005,6 @@
     <!-- Custom Scripts -->
     <script src="assets/js/main.js"></script>
     <script>
-        // Set copyright year dynamically
         document.addEventListener('DOMContentLoaded', () => {
             const year = new Date().getFullYear();
             const el = document.getElementById('copyright-year');
