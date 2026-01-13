@@ -806,6 +806,7 @@ class SmartChatbot {
             formData.append('from_name', 'RadarRoster Chatbot');
             formData.append('email', this.config.transcriptEmail);
             formData.append('message', transcript);
+            formData.append('botcheck', '');
             formData.append('redirect', 'false');
             
             console.log('📤 Sending transcript to:', this.config.transcriptEmail);
