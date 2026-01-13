@@ -61,6 +61,9 @@
                     googleAnalytics: {
                         description: 'Google Analytics hilft uns, die Nutzung unserer Website zu verstehen und zu verbessern.',
                     },
+                    crispChat: {
+                        description: 'Crisp Chat ist unser Live-Chat-Tool zur Kommunikation mit Besuchern. Es werden Cookies gesetzt und Daten an Crisp übertragen.',
+                    },
                     purposes: {
                         analytics: 'Analyse',
                     },
@@ -100,6 +103,9 @@
                     googleAnalytics: {
                         description: 'Google Analytics helps us understand and improve website usage.',
                     },
+                    crispChat: {
+                        description: 'Crisp Chat is our live chat tool for visitor communication. It sets cookies and transfers data to Crisp.',
+                    },
                     purposes: {
                         analytics: 'Analytics',
                     },
@@ -117,6 +123,24 @@
                     required: false,
                     optOut: false,
                     onlyOnce: true,
+                },
+                {
+                    name: 'crispChat',
+                    title: 'Crisp Chat',
+                    purposes: ['analytics'],
+                    cookies: [
+                        ['crisp-client%2Fsession%2F*', '/', 'radarroster.com'],
+                    ],
+                    required: false,
+                    optOut: false,
+                    onlyOnce: true,
+                    callback: function(consent, service) {
+                        if (consent && window.$crisp) {
+                            window.$crisp.push(['do', 'chat:show']);
+                        } else if (window.$crisp) {
+                            window.$crisp.push(['do', 'chat:hide']);
+                        }
+                    },
                 },
             ],
         };
