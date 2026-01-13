@@ -170,7 +170,7 @@
                         <li><strong>Large Projects (€75K+):</strong> Enterprise-wide data platforms, custom AI solutions, cloud migrations</li>
                     </ul>
                     <p class="text-gray-400 mt-3">
-                        💡 <strong>Pro tip:</strong> Use our <a href="../index.html#roi-calculator" class="text-brand-blue hover:underline">ROI Calculator</a> to estimate your potential savings!
+                        💡 <strong>Pro tip:</strong> Use our <a href="../index.html#roi-calculator" target="_blank" class="text-brand-blue hover:underline">ROI Calculator</a> to estimate your potential savings!
                     </p>
                 </div>
             </div>
@@ -490,9 +490,10 @@
                     <div class="text-4xl mb-3">📧</div>
                     <h4 class="font-bold mb-2 text-lg">Email Us</h4>
                     <p class="text-sm text-gray-400 mb-4">Direct contact for details</p>
-                    <a href="mailto:hello@radarroster.com" class="text-brand-blue hover:underline text-sm font-semibold">
-                        hello@radarroster.com
+                    <a href="#" onclick="window.location.href='mailto:'+['hello','radarroster.com'].join('@'); return false;" class="text-brand-blue hover:underline text-sm font-semibold">
+                        <span id="email-display-1"></span>
                     </a>
+                    <script>document.getElementById('email-display-1').textContent = ['hello','radarroster.com'].join('@');</script>
                 </div>
                 <div class="bg-gradient-to-br from-brand-blue/10 to-purple-600/10 border border-brand-blue/30 rounded-lg p-6 text-center cursor-pointer hover:bg-brand-blue/20 transition" onclick="openChatbot()">
                     <div class="text-4xl mb-3">💬</div>
@@ -539,7 +540,7 @@
                     <h4 class="font-bold mb-4" data-i18n="footer.contact">Get in Touch</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
                         <li><a href="../index.html#contact" target="_blank" rel="noopener noreferrer" class="hover:text-brand-blue transition" data-i18n="footer.freeCall">Free Strategy Call</a></li>
-                        <li><a href="mailto:hello@radarroster.com" class="hover:text-brand-blue transition" data-i18n="footer.email">Email Us</a></li>
+                        <li><a href="#" onclick="window.location.href='mailto:'+['hello','radarroster.com'].join('@'); return false;" class="hover:text-brand-blue transition" data-i18n="footer.email">Email Us</a></li>
                         <li><a href="https://www.linkedin.com/company/radarroster" target="_blank" rel="noopener noreferrer" class="hover:text-brand-blue transition">LinkedIn</a></li>
                         <li><a href="https://radarroster.substack.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-blue transition">Substack</a></li>
                     </ul>

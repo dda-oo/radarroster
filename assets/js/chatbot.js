@@ -81,7 +81,7 @@ class SmartChatbot {
             },
 
             'contact|email|phone|reach|connect|talk|speak': {
-                response: "📞 **Let's Connect:**\n\n📧 **Email:** hello@radarroster.com\n📅 **Calendly:** [Book a meeting](https://calendly.com/radarroster/meeting)\n💼 **LinkedIn:** [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n📰 **Newsletter:** [radarroster.substack.com](https://radarroster.substack.com)\n\n💡 **Prefer the contact form?** Scroll to the bottom of the page!\n\nHow would you like to proceed?"
+                response: "📞 **Let's Connect:**\n\n📧 **Email:** hello[at]radarroster[dot]com\n📅 **Calendly:** [Book a meeting](https://calendly.com/radarroster/meeting)\n💼 **LinkedIn:** [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n📰 **Newsletter:** [radarroster.substack.com](https://radarroster.substack.com)\n\n💡 **Prefer the contact form?** Scroll to the bottom of the page!\n\nHow would you like to proceed?"
             },
 
             'process|methodology|how you work|approach|steps|timeline': {
@@ -124,7 +124,7 @@ class SmartChatbot {
             },
 
             'no|nope|nothing': {
-                response: "No problem! 👋\n\nFeel free to reach out anytime:\n📧 hello@radarroster.com\n📅 [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)\n\nHave a great day!"
+                response: "No problem! 👋\n\nFeel free to reach out anytime:\n📧 hello[at]radarroster[dot]com\n📅 [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)\n\nHave a great day!"
             },
 
             'yes|yeah|sure|okay|ok': {
@@ -368,7 +368,7 @@ class SmartChatbot {
 
             const confirmMsg = {
                 type: 'bot',
-                text: "📧 Chat transcript has been sent to your email and our team. We'll be in touch soon!",
+                text: "📧 Thank you for chatting! Our team has received your message and will be in touch soon!",
                 timestamp: new Date()
             };
             this.messages.push(confirmMsg);
@@ -559,7 +559,7 @@ class SmartChatbot {
 
                 const expandedResponses = {
                     'who|owner|founder|ceo|lead|management|team|behind': {
-                        response: "📞 **Want to connect with Daryoosh?**\n\n✓ Book a call: [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)\n✓ Email: hello@radarroster.com\n✓ LinkedIn: [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n\nWe're always happy to discuss your project!"
+                        response: "📞 **Want to connect with Daryoosh?**\n\n✓ Book a call: [calendly.com/radarroster/meeting](https://calendly.com/radarroster/meeting)\n✓ Email: hello[at]radarroster[dot]com\n✓ LinkedIn: [linkedin.com/company/radarroster](https://www.linkedin.com/company/radarroster)\n\nWe're always happy to discuss your project!"
                     },
                     'service|what do you do|offering|solutions|help': {
                         response: "💡 **How we work:**\n\nAll services follow our proven methodology:\n1. Free strategy consultation\n2. Custom roadmap development\n3. Agile implementation with your team\n4. Training & knowledge transfer\n\n📅 [Book a free call](https://calendly.com/radarroster/meeting) to discuss your needs!"
@@ -573,7 +573,7 @@ class SmartChatbot {
                     return expandedResponses[this.lastTopic].response;
                 }
 
-                return "Sure! For more details, I recommend booking a personal call:\n📅 [Calendly](https://calendly.com/radarroster/meeting) or 📧 hello@radarroster.com";
+                return "Sure! For more details, I recommend booking a personal call:\n📅 [Calendly](https://calendly.com/radarroster/meeting) or 📧 hello[at]radarroster[dot]com";
             }
 
             return "What would you like to know more about? Ask us about our services, projects, pricing, or team!";
