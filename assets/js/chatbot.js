@@ -12,7 +12,7 @@ class SmartChatbot {
             brandName: config.brandName || 'RadarRoster',
             brandColor: config.brandColor || '#4A90E2',
             position: config.position || 'bottom-left',
-            welcomeMessage: config.welcomeMessage || 'Hi! 👋 I\'m your AI assistant. How can I help you today?',
+            welcomeMessage: config.welcomeMessage || 'Hi! 👋 We\'re your AI assistant for RadarRoster. We can help you learn about our AI & data services. What would you like to know?',
             knowledgeBase: config.knowledgeBase || this.getDefaultKnowledge(),
             transcriptEmail: config.transcriptEmail || 'hello@radarroster.com',
             web3formsKey: config.web3formsKey || 'fc055f0b-0423-454a-8625-57e197ca487c',
@@ -123,11 +123,11 @@ class SmartChatbot {
             },
             // Greetings
             'hello|hi|hey|greetings|good morning|good afternoon|good evening': {
-                response: "Hello! 👋 Welcome to RadarRoster.\n\nI'm here to help you explore our AI and data intelligence services.\n\n**Quick links:**\n• [Our Services](#services)\n• [Recent Projects](#projects)\n• [Book a Call](https://calendly.com/radarroster/meeting)\n\nWhat would you like to know about?"
+                response: "Hello! 👋 Welcome to RadarRoster.\n\nWe're here to help you explore our AI and data intelligence services.\n\n**Quick links:**\n• [Our Services](#services)\n• [Recent Projects](#projects)\n• [Book a Call](https://calendly.com/radarroster/meeting)\n\nWhat would you like to know about?"
             },
             // Thanks
             'thanks|thank you|great|awesome|perfect|appreciate|helpful': {
-                response: "You're very welcome! 😊\n\nI'm glad I could help!\n\n**Next steps:**\n• Ask another question\n• [Book a free consultation](https://calendly.com/radarroster/meeting)\n• Explore our [services](#services)\n\nAnything else I can help with?"
+                response: "You're very welcome! 😊\n\nWe're glad we could help!\n\n**Next steps:**\n• Ask another question\n• [Book a free consultation](https://calendly.com/radarroster/meeting)\n• Explore our [services](#services)\n\nAnything else we can help with?"
             },
             // Simple No
             'no|nope|nothing': {
@@ -135,7 +135,7 @@ class SmartChatbot {
             },
             // Simple Yes
             'yes|yeah|sure|okay|ok': {
-                response: "Great! 🎯\n\nHow can I assist you?\n\n**Popular topics:**\n• AI solutions\n• Data engineering\n• ERP modernization\n• Pricing & timeline\n• Book a call"
+                response: "Great! 🎯\n\nHow can we assist you?\n\n**Popular topics:**\n• AI solutions\n• Data engineering\n• ERP modernization\n• Pricing & timeline\n• Book a call"
             }
         };
     }
@@ -207,7 +207,7 @@ class SmartChatbot {
                             <input 
                                 type="text" 
                                 id="chat-input" 
-                                placeholder="Ask me anything..."
+                                placeholder="Ask us anything..."
                                 class="flex-1 bg-gray-800 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-700"
                                 aria-label="Type your message"
                             />
@@ -257,7 +257,7 @@ class SmartChatbot {
         quickActionsContainer.style.display = 'flex';
 
         const actions = [
-            { label: '🤖 AI Services', query: 'Tell me about AI services' },
+            { label: '🤖 AI Services', query: 'Tell us about AI services' },
             { label: '📊 Data Engineering', query: 'What is data engineering?' },
             { label: '💼 Contact', query: 'How can I contact you?' }
         ];
@@ -406,7 +406,9 @@ class SmartChatbot {
             let response;
             
             // Handle qualification flow
-            if (this.qualificationStep === 'budget') {
+            if (this.qualificationStep === 'challenge') {
+                response = this.handleChallengeResponse(message);
+            } else if (this.qualificationStep === 'budget') {
                 response = this.handleBudgetResponse(message);
             } else if (this.qualificationStep === 'timeline') {
                 response = this.handleTimelineResponse(message);
@@ -426,7 +428,33 @@ class SmartChatbot {
         }, 800 + Math.random() * 800); // Simulate thinking time
     }
 
+    handleChallengeResponse(message) {
+        const msg = message.trim().toLowerCase();
+        
+        // Allow skipping
+        if (msg === 'skip' || msg === 'later' || msg === 'no') {
+            this.qualificationStep = null;
+            this.qualificationData.challenge = 'Skipped - wants to explore first';
+            return "No problem! We understand you'd like to explore first. \n\nFeel free to ask us anything about:\n• Our AI & Data services\n• Pricing & timeline\n• Case studies & success stories\n• How we work\n\nWhat would you like to know?";
+        }
+        
+        // Store the challenge
+        this.qualificationData.challenge = message;
+        this.qualificationStep = 'budget';
+        
+        return `Thanks for sharing! Understanding your challenge helps us provide better recommendations.\n\n**2. What's your estimated budget for this project?**\n\nType the number that matches:\n1️⃣ Under €10,000\n2️⃣ €10,000 - €50,000\n3️⃣ €50,000 - €100,000\n4️⃣ Over €100,000\n5️⃣ Not sure yet\n\n💡 Don't worry, these questions help us understand your needs better and save both of us time. You can also type 'skip' if you prefer.`;
+    }
+
     handleBudgetResponse(message) {
+        const msg = message.trim().toLowerCase();
+        
+        // Allow skipping with explanation
+        if (msg === 'skip' || msg === 'later' || msg === 'no' || msg === 'not now') {
+            this.qualificationStep = null;
+            this.qualificationData.budget = 'Skipped';
+            return "We understand! These questions help us tailor our recommendations to your needs, but we're happy to answer your questions first. 😊\n\nWhat would you like to know about our services?";
+        }
+        
         const budgetMap = {
             '1': 'Under €10,000',
             '2': '€10,000 - €50,000',
@@ -440,13 +468,22 @@ class SmartChatbot {
             this.qualificationData.budget = budgetMap[choice];
             this.qualificationStep = 'timeline';
             
-            return `Great! Now let's talk timeline.\n\n⏰ **When are you looking to start?**\n\n1️⃣ ASAP (within 1 month)\n2️⃣ Soon (1-3 months)\n3️⃣ Planning ahead (3-6 months)\n4️⃣ Exploring options (6+ months)\n\nPlease reply with a number (1-4).`;
+            return `Perfect! One last quick question:\n\n⏰ **When are you looking to start?**\n\n1️⃣ ASAP (within 1 month)\n2️⃣ Soon (1-3 months)\n3️⃣ Planning ahead (3-6 months)\n4️⃣ Exploring options (6+ months)\n\nPlease reply with a number (1-4), or type 'skip'.`;
         } else {
-            return "Please select a valid option by replying with a number from 1-5.";
+            return "We'd appreciate it if you could select one of the options above (1-5), as it helps us understand how we can best help you. If you're not ready to share, just type 'skip' and we can chat about our services instead! 😊";
         }
     }
 
     handleTimelineResponse(message) {
+        const msg = message.trim().toLowerCase();
+        
+        // Allow skipping
+        if (msg === 'skip' || msg === 'later' || msg === 'no' || msg === 'not now') {
+            this.qualificationStep = null;
+            this.qualificationData.timeline = 'Skipped';
+            return "No problem at all! We're here to help answer your questions. What would you like to know about our services?";
+        }
+        
         const timelineMap = {
             '1': 'ASAP (within 1 month)',
             '2': 'Soon (1-3 months)',
@@ -464,19 +501,19 @@ class SmartChatbot {
             // End qualification, move to normal chat
             this.qualificationStep = null;
             
-            let response = `Perfect! Thanks for sharing that information. `;
+            let response = `Perfect! Thanks for sharing that information with us. `;
             
             if (this.qualificationData.leadScore === 'HOT') {
-                response += `🔥 **This sounds like a great fit!**\n\nBased on your budget and timeline, I'd love to connect you with our team ASAP.\n\n📅 **Next step:** [Book a strategy call](https://calendly.com/radarroster/meeting)\n\nOr ask me any questions about our services, past projects, or how we work!`;
+                response += `🔥 **This sounds like a great fit!**\n\nBased on your budget and timeline, we'd love to connect you with our team ASAP.\n\n📅 **Next step:** [Book a strategy call](https://calendly.com/radarroster/meeting)\n\nOr ask us any questions about our services, past projects, or how we work!`;
             } else if (this.qualificationData.leadScore === 'WARM') {
-                response += `✨ **Excellent timing!**\n\nWe'd be happy to discuss how we can help. Let me know if you have any questions about:\n\n• Our services & approach\n• Case studies & results\n• Pricing & packages\n• Technical capabilities\n\nOr 📅 [schedule a call](https://calendly.com/radarroster/meeting) when you're ready!`;
+                response += `✨ **Excellent timing!**\n\nWe'd be happy to discuss how we can help. Let us know if you have any questions about:\n\n• Our services & approach\n• Case studies & results\n• Pricing & packages\n• Technical capabilities\n\nOr 📅 [schedule a call](https://calendly.com/radarroster/meeting) when you're ready!`;
             } else {
-                response += `Thanks for your interest! I'm here to answer any questions you have about:\n\n• Our services & methodology\n• Case studies & success stories\n• Pricing options\n• Technical expertise\n\nFeel free to ask anything, or 📅 [book a call](https://calendly.com/radarroster/meeting) when you're ready to explore further!`;
+                response += `Thanks for your interest! We're here to answer any questions you have about:\n\n• Our services & methodology\n• Case studies & success stories\n• Pricing options\n• Technical expertise\n\nFeel free to ask anything, or 📅 [book a call](https://calendly.com/radarroster/meeting) when you're ready to explore further!`;
             }
             
             return response;
         } else {
-            return "Please select a valid option by replying with a number from 1-4.";
+            return "We'd appreciate it if you could select one of the options above (1-4). This helps us understand your timeline better. Or just type 'skip' if you prefer! 😊";
         }
     }
 
@@ -532,7 +569,7 @@ class SmartChatbot {
             }
             
             // No previous context
-            return "What would you like to know more about? Ask me about our services, projects, pricing, or team!";
+            return "What would you like to know more about? Ask us about our services, projects, pricing, or team!";
         }
         
         // Handle simple yes/no responses
@@ -558,7 +595,7 @@ class SmartChatbot {
         // Default fallback with helpful suggestions
         this.lastTopic = null;
         
-        return "That's an interesting question! 🤔\n\nI'm best at answering questions about:\n• Services (AI, Data, ERP, Training)\n• Projects & Portfolio\n• Pricing & Process\n• Team & Contact\n\nOr speak with us directly:\n📅 [Calendly](https://calendly.com/radarroster/meeting) | 📧 hello@radarroster.com";
+        return "That's an interesting question! 🤔\n\nWe're best at answering questions about:\n• Services (AI, Data, ERP, Training)\n• Projects & Portfolio\n• Pricing & Process\n• Team & Contact\n\nOr speak with us directly:\n📅 [Calendly](https://calendly.com/radarroster/meeting) | 📧 hello@radarroster.com";
     }
 
     showTypingIndicator() {
@@ -704,11 +741,11 @@ class SmartChatbot {
         // Add qualification questions
         this.messages.push({
             type: 'bot',
-            text: `Great! I've got your email (${email}). Before we dive in, let me ask you two quick questions to better help you:\n\n**1. What's your estimated budget for this project?**\n\nType the number that matches:\n1️⃣ Under €10,000\n2️⃣ €10,000 - €50,000\n3️⃣ €50,000 - €100,000\n4️⃣ Over €100,000\n5️⃣ Not sure yet`,
+            text: `Great! We've got your email (${email}). Before we dive in, let us ask you a few quick questions to better understand how we can help you:\n\n**1. What's your main challenge or goal?**\n\nFor example:\n• Struggling with messy/siloed data\n• Need AI/automation to save time\n• Want better business insights\n• Modernizing legacy ERP systems\n• Other (just describe it briefly)\n\nFeel free to type your answer, or type 'skip' if you prefer to ask questions first.`,
             timestamp: new Date()
         });
         
-        this.qualificationStep = 'budget';
+        this.qualificationStep = 'challenge';
         this.qualificationData = {};
         
         this.renderMessages();
@@ -743,8 +780,9 @@ class SmartChatbot {
         transcript += `Topics Discussed: ${this.lastTopic || 'General inquiry'}\n`;
         
         // Add qualification data if available
-        if (this.qualificationData.budget || this.qualificationData.timeline) {
+        if (this.qualificationData.challenge || this.qualificationData.budget || this.qualificationData.timeline) {
             transcript += `\n--- QUALIFICATION DATA ---\n\n`;
+            if (this.qualificationData.challenge) transcript += `Challenge/Goal: ${this.qualificationData.challenge}\n`;
             if (this.qualificationData.budget) transcript += `Budget: ${this.qualificationData.budget}\n`;
             if (this.qualificationData.timeline) transcript += `Timeline: ${this.qualificationData.timeline}\n`;
             if (this.qualificationData.leadScore) transcript += `Lead Score: ${this.qualificationData.leadScore} ${leadScoreEmoji}\n`;
