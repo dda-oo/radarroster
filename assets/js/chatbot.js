@@ -363,6 +363,12 @@ class SmartChatbot {
     }
 
     async closeChat() {
+        console.log('🔍 Close chat check:', {
+            emailCaptured: this.emailCaptured,
+            messageCount: this.messages.length,
+            transcriptSent: this.transcriptSent,
+            visitorEmail: this.visitorEmail
+        });
 
         if (this.emailCaptured && this.messages.length > 1 && !this.transcriptSent) {
             const confirmMsg = {
