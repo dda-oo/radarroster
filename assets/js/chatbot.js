@@ -9,7 +9,7 @@ class SmartChatbot {
             welcomeMessage: config.welcomeMessage || 'Hi! 👋 We\'re your AI assistant for RadarRoster. We can help you learn about our AI & data services. What would you like to know?',
             knowledgeBase: config.knowledgeBase || this.getDefaultKnowledge(),
             transcriptEmail: config.transcriptEmail || 'hello@radarroster.com',
-            web3formsKey: config.web3formsKey || 'fc055f0b-0423-454a-8625-57e197ca487c',
+            web3formsKey: config.web3formsKey || '00c73c85-fb6c-4c81-80b5-85da6b375ffe',
             ...config
         };
 
@@ -846,7 +846,7 @@ document.addEventListener('DOMContentLoaded', () => {
         brandColor: '#4A90E2',
         welcomeMessage: 'Hi! 👋 I\'m your AI assistant for RadarRoster. I can help you learn about our AI & data services. What would you like to know?',
         transcriptEmail: 'hello@radarroster.com',
-        web3formsKey: 'fc055f0b-0423-454a-8625-57e197ca487c'
+        web3formsKey: '00c73c85-fb6c-4c81-80b5-85da6b375ffe'
     });
 });
 
