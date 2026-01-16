@@ -788,27 +788,27 @@ const translations = {
                     desc: "Marketing site with AI chatbot, multilingual content, and conversion-focused UX."
                 },
                 exchangeRates: {
-                    desc: "Daily FX updates for a Telegram bot with scheduled publishing and API-driven rates."
+                    desc: "Automated FX rate publishing for messaging channels with scheduled delivery, monitoring, and API-driven pricing."
                 },
                 smallcapScoutProject: {
                     label: "Finance",
-                    desc: "Small-cap analytics pipeline with scoring models and data-driven investment insights."
+                    desc: "Institutional-grade small-cap analytics pipeline combining scoring models, signals, and investment dashboards."
                 },
                 smallCapScout: {
                     label: "Finance",
-                    desc: "Notebook-driven research and screening toolkit for small-cap opportunities."
+                    desc: "Research workbench for small-cap screening, factor analysis, and idea vetting."
                 },
                 taxifareWebsite: {
                     label: "Product",
-                    desc: "Public-facing site with clear pricing, conversion flow, and polished UX."
+                    desc: "Conversion-optimized pricing website with quote capture, trust proof, and clear service tiers."
                 },
                 taxiFareInterface: {
                     label: "Product",
-                    desc: "Modern JavaScript front-end for fare estimation and booking flows."
+                    desc: "Fare estimation web app with dynamic pricing rules, UX flows, and booking handoff."
                 },
                 workflowChatbot: {
                     label: "Chatbot",
-                    desc: "Open-source conversational bot for structured alerts and workflow automation."
+                    desc: "Private workflow assistant orchestrating alerts, approvals, and automated handoffs."
                 },
                 workforceRiskSignals: {
                     label: "HR Analytics",
@@ -1636,27 +1636,27 @@ const translations = {
                     desc: "Marketing-Website mit KI-Chatbot, mehrsprachigem Content und conversion-fokussierter UX."
                 },
                 exchangeRates: {
-                    desc: "Tägliche FX-Updates für einen Telegram-Bot mit geplanter Veröffentlichung und API-basierten Kursen."
+                    desc: "Automatisierte FX-Kursveröffentlichung für Messaging-Kanäle mit Zeitplanung, Monitoring und API-basierten Kursen."
                 },
                 smallcapScoutProject: {
                     label: "Finanzen",
-                    desc: "Small-Cap-Analytics-Pipeline mit Scoring-Modellen und datengetriebenen Investment-Insights."
+                    desc: "Institutionelle Small-Cap-Analytics-Pipeline mit Scoring-Modellen, Signalen und Investment-Dashboards."
                 },
                 smallCapScout: {
                     label: "Finanzen",
-                    desc: "Notebook-basiertes Research- und Screening-Toolkit für Small-Cap-Chancen."
+                    desc: "Research-Workbench für Small-Cap-Screening, Faktorenanalyse und Ideeprüfung."
                 },
                 taxifareWebsite: {
                     label: "Produkt",
-                    desc: "Öffentliche Website mit klarer Preisstruktur, Conversion-Flow und polierter UX."
+                    desc: "Conversion-optimierte Pricing-Website mit Angebotsanfrage, Vertrauensnachweisen und klaren Service-Tiers."
                 },
                 taxiFareInterface: {
                     label: "Produkt",
-                    desc: "Modernes JavaScript-Frontend für Tarifkalkulation und Buchungsflows."
+                    desc: "Fare-Estimation-Web-App mit dynamischen Preisregeln, UX-Flows und Buchungsübergabe."
                 },
                 workflowChatbot: {
                     label: "Chatbot",
-                    desc: "Open-Source-Chatbot für strukturierte Alerts und Workflow-Automatisierung."
+                    desc: "Privater Workflow-Assistent für Alerts, Freigaben und automatisierte Übergaben."
                 },
                 workforceRiskSignals: {
                     label: "HR-Analytics",
