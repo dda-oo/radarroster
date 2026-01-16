@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadarRoster - About</title>
+    <meta name="description" content="Learn why RadarRoster leads with AI, data, and transparent partnerships." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/translations.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#4A90E2',
+                        'dark-bg': '#0A0E27',
+                        'card-bg': '#141B3D',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(74, 144, 226, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-gray-100">
+    <nav class="fixed w-full bg-dark-bg/95 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="../index.html" class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">R</span>
+                    </div>
+                    <span class="text-xl font-bold">RadarRoster</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="about.html#why-us" class="hover:text-brand-blue transition" data-i18n="nav.about">About</a>
+                    <a href="services.html" class="hover:text-brand-blue transition" data-i18n="nav.services">Services</a>
+                    <a href="process.html#how-we-work" class="hover:text-brand-blue transition" data-i18n="nav.process">Process</a>
+                    <a href="projects.html" class="hover:text-brand-blue transition" data-i18n="nav.projects">Projects</a>
+                    <a href="faq.html" class="hover:text-brand-blue transition" data-i18n="nav.faq">FAQ</a>
+                    <a href="blog.html" class="hover:text-brand-blue transition" data-i18n="nav.newsletter">Newsletter</a>
+                    
+                    <div class="flex items-center space-x-2 border-l border-gray-700 pl-4">
+                        <button onclick="setLanguage('en')" data-lang-btn="en" class="text-sm hover:text-brand-blue transition">EN</button>
+                        <span class="text-gray-600">|</span>
+                        <button onclick="setLanguage('de')" data-lang-btn="de" class="text-sm hover:text-brand-blue transition">DE</button>
+                    </div>
+                    <a href="../index.html#contact" class="bg-brand-blue hover:bg-blue-600 px-6 py-2 rounded-lg transition font-semibold" data-i18n="nav.cta">Free Strategy Call</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-card-bg border-t border-gray-800">
+            <div class="px-4 py-4 space-y-3">
+                <a href="about.html#why-us" class="block hover:text-brand-blue transition" data-i18n="nav.about">About</a>
+                <a href="services.html" class="block hover:text-brand-blue transition" data-i18n="nav.services">Services</a>
+                <a href="process.html#how-we-work" class="block hover:text-brand-blue transition" data-i18n="nav.process">Process</a>
+                <a href="projects.html" class="block hover:text-brand-blue transition" data-i18n="nav.projects">Projects</a>
+                    <a href="faq.html" class="block hover:text-brand-blue transition" data-i18n="nav.faq">FAQ</a>
+                    <a href="blog.html" class="block hover:text-brand-blue transition" data-i18n="nav.newsletter">Newsletter</a>
+                
+                <div class="flex items-center justify-center space-x-2 py-2">
+                    <button onclick="setLanguage('en')" data-lang-btn="en" class="text-sm hover:text-brand-blue transition">EN</button>
+                    <span class="text-gray-600">|</span>
+                    <button onclick="setLanguage('de')" data-lang-btn="de" class="text-sm hover:text-brand-blue transition">DE</button>
+                </div>
+                <a href="../index.html#contact" class="block bg-brand-blue hover:bg-blue-600 text-center px-6 py-3 rounded-lg font-semibold" data-i18n="nav.cta">Free Strategy Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24">
+        <section id="why-us" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <div class="inline-block mb-4 px-4 py-2 bg-brand-blue/20 rounded-full text-brand-blue text-sm font-semibold" data-i18n="whyUs.badge">
+                        THE STATE OF THE INDUSTRY
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6"><span data-i18n="whyUs.title">Data &amp; AI Revolution</span><br><span class="gradient-text" data-i18n="whyUs.titleGradient">Act Today, Lead Tomorrow</span></h2>
+                    <p class="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" data-i18n="whyUs.subtitle">
+                        One thing is clear: artificial intelligence and data intelligence are not trends—they're game changers transforming business operations and decision-making in equal measure.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-card-bg p-8 rounded-2xl border border-gray-800">
+                        <div class="text-5xl font-bold text-brand-blue mb-4">55%</div>
+                        <p class="text-gray-300" data-i18n="whyUs.stat1">Productivity increase with AI-powered analytics and automation (GitHub, MIT/Princeton studies)</p>
+                    </div>
+                    <div class="bg-card-bg p-8 rounded-2xl border border-gray-800">
+                        <div class="text-5xl font-bold text-brand-blue mb-4">70%</div>
+                        <p class="text-gray-300" data-i18n="whyUs.stat2">Faster decision-making with real-time data dashboards and predictive models</p>
+                    </div>
+                    <div class="bg-card-bg p-8 rounded-2xl border border-gray-800">
+                        <div class="text-5xl font-bold text-brand-blue mb-4">30%</div>
+                        <p class="text-gray-300" data-i18n="whyUs.stat3">Cost reduction through optimized data pipelines and intelligent automation</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-brand-blue/10 to-purple-600/10 rounded-2xl p-8 md:p-12 border border-brand-blue/20">
+                    <h3 class="text-3xl font-bold mb-6" data-i18n="whyUs.actNowTitle">Why Now is the Time to Act</h3>
+                    <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <span data-i18n="whyUs.actNowPoint1">Companies leveraging AI and data analytics grow 2-3x faster than competitors</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <span data-i18n="whyUs.actNowPoint2">Real-time insights enable proactive decision-making instead of reactive fire-fighting</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <span data-i18n="whyUs.actNowPoint3">Automated data pipelines free your team to focus on strategic initiatives</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg class="w-6 h-6 text-brand-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <span data-i18n="whyUs.actNowPoint4">Early adopters dominate their markets with data-driven insights</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a href="../index.html#contact" class="inline-flex items-center bg-white text-dark-bg px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition" data-i18n="whyUs.actNowCta">
+                            Start Your Transformation
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-dark-bg to-card-bg/30">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="inline-block mb-4 px-4 py-2 bg-brand-blue/20 rounded-full text-brand-blue text-sm font-semibold" data-i18n="philosophy.badge">
+                        OUR PHILOSOPHY
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="philosophy.title">Transparency as a Service</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="philosophy.description">
+                            Transparency changes everything. At RadarRoster, we live a philosophy where trust isn't just a value—it's our operating system. Our clients aren't spectators—they're active co-creators.
+                        </p>
+                        <p class="text-gray-300 mb-6 leading-relaxed" data-i18n="philosophy.paragraph">
+                            We share challenges, successes, and insights openly because we believe true innovation grows from honest communication. We use our own solutions daily and place great value on long-term partnerships.
+                        </p>
+                        <p class="text-gray-300 leading-relaxed" data-i18n="philosophy.belief">
+                            We're convinced: The future is best shaped together.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-card-bg p-6 rounded-xl border border-gray-800">
+                            <div class="text-4xl font-bold text-brand-blue mb-2">20+</div>
+                            <div class="text-gray-400 text-sm" data-i18n="philosophy.stats.projects">Successful Projects</div>
+                        </div>
+                        <div class="bg-card-bg p-6 rounded-xl border border-gray-800">
+                            <div class="text-4xl font-bold text-brand-blue mb-2">15+</div>
+                            <div class="text-gray-400 text-sm" data-i18n="philosophy.stats.technologies">Technologies in Stack</div>
+                        </div>
+                        <div class="bg-card-bg p-6 rounded-xl border border-gray-800">
+                            <div class="text-4xl font-bold text-brand-blue mb-2">100k+</div>
+                            <div class="text-gray-400 text-sm" data-i18n="philosophy.stats.users">Users of Our Solutions</div>
+                        </div>
+                        <div class="bg-card-bg p-6 rounded-xl border border-gray-800">
+                            <div class="text-4xl font-bold text-brand-blue mb-2">100%</div>
+                            <div class="text-gray-400 text-sm" data-i18n="philosophy.stats.commitment">Commitment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-dark-bg to-card-bg/30">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6" data-i18n="audience.title">Whether You're a Team of 5 or 5,000+</h2>
+                        <p class="text-gray-400 mb-8" data-i18n="audience.description">You don't need to be a tech company to benefit from tech. We help organizations of all sizes make smarter, faster, and more human-centered decisions.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-blue mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300" data-i18n="audience.examples.retailers">Small retailers automating inventory &amp; engagement</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-blue mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300" data-i18n="audience.examples.enterprises">Enterprises leveraging AI-powered analytics</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-blue mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300" data-i18n="audience.examples.teams">Teams utilizing predictive AI for wellbeing</span>
+                            </div>
+                            <div class="flex items-start">
+                                <svg class="w-6 h-6 text-brand-blue mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-300" data-i18n="audience.examples.startups">Startups launching data products in weeks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-card-bg rounded-2xl p-8 border border-gray-800">
+                        <h3 class="text-2xl font-bold mb-6" data-i18n="audience.partnering">We love partnering with:</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="border-l-4 border-brand-blue pl-4">
+                                <h4 class="font-bold mb-2" data-i18n="audience.smallTeams.title">Small Teams</h4>
+                                <p class="text-gray-400 text-sm" data-i18n="audience.smallTeams.desc">Seeking affordable, AI-powered automation.</p>
+                            </div>
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h4 class="font-bold mb-2" data-i18n="audience.companies.title">Companies</h4>
+                                <p class="text-gray-400 text-sm" data-i18n="audience.companies.desc">Undergoing ERP upgrades &amp; cloud migrations.</p>
+                            </div>
+                            <div class="border-l-4 border-pink-500 pl-4">
+                                <h4 class="font-bold mb-2" data-i18n="audience.innovationLeaders.title">Innovation Leaders</h4>
+                                <p class="text-gray-400 text-sm" data-i18n="audience.innovationLeaders.desc">Piloting cutting-edge AI technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 sm:px-6 lg:px-8 bg-card-bg/30">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4" data-i18n="trustBadges.title">Trusted &amp; Certified</h2>
+                    <p class="text-gray-400" data-i18n="trustBadges.subtitle">Industry-leading standards for security, privacy, and excellence</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-sm mb-1" data-i18n="trustBadges.gdpr">GDPR</h4>
+                        <p class="text-xs text-gray-400" data-i18n="trustBadges.gdprDesc">Compliant</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-sm mb-1" data-i18n="trustBadges.iso">ISO 27001</h4>
+                        <p class="text-xs text-gray-400" data-i18n="trustBadges.isoDesc">Security</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
+                            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M13.5 2c-5.629 0-10.212 4.436-10.475 10h-3.025l4.537 5.917 4.463-5.917h-2.975c.26-3.902 3.508-7 7.475-7 4.136 0 7.5 3.364 7.5 7.5s-3.364 7.5-7.5 7.5c-2.381 0-4.502-1.119-5.876-2.854l-1.847 2.449c1.919 2.088 4.664 3.405 7.723 3.405 5.798 0 10.5-4.702 10.5-10.5s-4.702-10.5-10.5-10.5z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-sm mb-1" data-i18n="trustBadges.aiEthics">AI Ethics</h4>
+                        <p class="text-xs text-gray-400" data-i18n="trustBadges.aiEthicsDesc">Responsible AI</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-sm mb-1" data-i18n="trustBadges.cloud">Cloud Certified</h4>
+                        <p class="text-xs text-gray-400" data-i18n="trustBadges.cloudDesc">Azure, AWS, GCP</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-sm mb-1" data-i18n="trustBadges.dataQuality">Data Quality</h4>
+                        <p class="text-xs text-gray-400" data-i18n="trustBadges.dataQualityDesc">Best Practices</p>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center group">
+                        <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-sm mb-1" data-i18n="trustBadges.agile">Agile</h4>
+                        <p class="text-xs text-gray-400" data-i18n="trustBadges.agileDesc">Methodology</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-card-bg border-t border-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">R</span>
+                        </div>
+                        <span class="text-xl font-bold">RadarRoster</span>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4" data-i18n="footer.tagline">Built for businesses and public sector teams seeking AI and data-driven insights.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/radarroster" target="_blank" class="text-gray-400 hover:text-brand-blue transition" aria-label="LinkedIn">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4" data-i18n="footer.servicesTitle">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="services.html" class="hover:text-brand-blue transition" data-i18n="footer.servicesAi">AI &amp; Intelligent Systems</a></li>
+                        <li><a href="services.html" class="hover:text-brand-blue transition" data-i18n="footer.servicesData">Data Engineering</a></li>
+                        <li><a href="services.html" class="hover:text-brand-blue transition" data-i18n="footer.servicesErp">ERP Modernization</a></li>
+                        <li><a href="services.html" class="hover:text-brand-blue transition" data-i18n="footer.servicesCloud">Cloud Strategy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4" data-i18n="footer.companyTitle">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-brand-blue transition" data-i18n="footer.about">About</a></li>
+                        <li><a href="projects.html" class="hover:text-brand-blue transition" data-i18n="footer.projects">Projects</a></li>
+                        <li><a href="blog.html" class="hover:text-brand-blue transition" data-i18n="footer.newsletter">Newsletter</a></li>
+                        <li><a href="impressum.html" class="hover:text-brand-blue transition" data-i18n="footer.impressum">Impressum</a></li>
+                        <li><a href="datenschutz.html" class="hover:text-brand-blue transition" data-i18n="footer.datenschutz">Datenschutz</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4" data-i18n="footer.contactTitle">Get in Touch</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="../index.html#contact" class="hover:text-brand-blue transition" data-i18n="footer.freeCall">Free Strategy Call</a></li>
+                        <li><a href="https://www.linkedin.com/company/radarroster" target="_blank" class="hover:text-brand-blue transition" data-i18n="footer.linkedin">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                © <span id="copyright-year"></span> RadarRoster. <span data-i18n="footer.rights">All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const year = new Date().getFullYear();
+            const el = document.getElementById('copyright-year');
+            if (el) el.textContent = year;
+        });
+    </script>
+</body>
+</html>

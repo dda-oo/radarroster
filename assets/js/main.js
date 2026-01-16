@@ -129,3 +129,69 @@ document.querySelectorAll('.card-hover').forEach(el => {
 });
 
 console.log('RadarRoster - Page loaded:', window.location.pathname);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = Array.from(document.querySelectorAll('.case-filter-btn'));
+    const caseGrid = document.getElementById('case-grid');
+    const sortSelect = document.getElementById('case-sort');
+    const caseCards = Array.from(document.querySelectorAll('.case-card'));
+
+    if (!caseGrid || !filterButtons.length || !caseCards.length) {
+        return;
+    }
+
+    let activeFilter = 'all';
+
+    const updateActiveButton = (selected) => {
+        filterButtons.forEach(button => {
+            const isActive = button.dataset.caseFilter === selected;
+            button.classList.toggle('bg-brand-blue', isActive);
+            button.classList.toggle('text-white', isActive);
+            button.classList.toggle('border-gray-700', !isActive);
+            button.classList.toggle('text-gray-300', !isActive);
+        });
+    };
+
+    const sortCards = (cards) => {
+        const sortValue = sortSelect?.value || 'recent';
+        return cards.sort((a, b) => {
+            if (sortValue === 'name') {
+                return a.dataset.name.localeCompare(b.dataset.name);
+            }
+
+            const dateA = new Date(a.dataset.updated);
+            const dateB = new Date(b.dataset.updated);
+            return dateB - dateA;
+        });
+    };
+
+    const applyFilterAndSort = () => {
+        const filteredCards = caseCards.filter(card => {
+            if (activeFilter === 'all') {
+                return true;
+            }
+            const categories = card.dataset.categories.split(' ');
+            return categories.includes(activeFilter);
+        });
+
+        caseCards.forEach(card => {
+            card.classList.toggle('hidden', !filteredCards.includes(card));
+        });
+
+        const sortedCards = sortCards(filteredCards);
+        sortedCards.forEach(card => caseGrid.appendChild(card));
+    };
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            activeFilter = button.dataset.caseFilter;
+            updateActiveButton(activeFilter);
+            applyFilterAndSort();
+        });
+    });
+
+    sortSelect?.addEventListener('change', applyFilterAndSort);
+
+    updateActiveButton(activeFilter);
+    applyFilterAndSort();
+});

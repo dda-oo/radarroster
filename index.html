@@ -227,11 +227,11 @@
                     </div>
                     <span class="text-xl font-bold">RadarRoster</span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#why-us" class="hover:text-brand-blue transition" data-i18n="nav.whyUs">Why Us</a>
-                    <a href="#services" class="hover:text-brand-blue transition" data-i18n="nav.services">Services</a>
-                    <a href="#how-we-work" class="hover:text-brand-blue transition" data-i18n="nav.process">Process</a>
-                    <a href="#projects" class="hover:text-brand-blue transition" data-i18n="nav.projects">Projects</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="pages/about.html#why-us" class="hover:text-brand-blue transition" data-i18n="nav.about">About</a>
+                    <a href="pages/services.html" class="hover:text-brand-blue transition" data-i18n="nav.services">Services</a>
+                    <a href="pages/process.html#how-we-work" class="hover:text-brand-blue transition" data-i18n="nav.process">Process</a>
+                    <a href="pages/projects.html" class="hover:text-brand-blue transition" data-i18n="nav.projects">Projects</a>
                     <a href="pages/faq.html" class="hover:text-brand-blue transition" data-i18n="nav.faq">FAQ</a>
                     <a href="pages/blog.html" class="hover:text-brand-blue transition" data-i18n="nav.newsletter">Newsletter</a>
                     
@@ -251,12 +251,13 @@
             </div>
         </div>
         
-        <div id="mobile-menu" class="hidden md:hidden bg-card-bg border-t border-gray-800">
+            <div id="mobile-menu" class="hidden md:hidden bg-card-bg border-t border-gray-800">
             <div class="px-4 py-4 space-y-3">
-                <a href="#why-us" class="block hover:text-brand-blue transition" data-i18n="nav.whyUs">Why Us</a>
-                <a href="#services" class="block hover:text-brand-blue transition" data-i18n="nav.services">Services</a>
-                <a href="#how-we-work" class="block hover:text-brand-blue transition" data-i18n="nav.process">Process</a>
-                <a href="#projects" class="block hover:text-brand-blue transition" data-i18n="nav.projects">Projects</a>
+                <a href="pages/about.html#why-us" class="block hover:text-brand-blue transition" data-i18n="nav.about">About</a>
+                <a href="pages/services.html" class="block hover:text-brand-blue transition" data-i18n="nav.services">Services</a>
+                <a href="pages/process.html#how-we-work" class="block hover:text-brand-blue transition" data-i18n="nav.process">Process</a>
+                <a href="pages/projects.html" class="block hover:text-brand-blue transition" data-i18n="nav.projects">Projects</a>
+                <a href="pages/faq.html" class="block hover:text-brand-blue transition" data-i18n="nav.faq">FAQ</a>
                 <a href="pages/blog.html" class="block hover:text-brand-blue transition" data-i18n="nav.newsletter">Newsletter</a>
                 
                 <div class="flex items-center justify-center space-x-2 py-2">
@@ -289,7 +290,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
-                <a href="#services" class="bg-card-bg hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold transition border border-gray-700" data-i18n="hero.ctaSecondary">
+                <a href="pages/services.html" class="bg-card-bg hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold transition border border-gray-700" data-i18n="hero.ctaSecondary">
                     Explore Services
                 </a>
             </div>
@@ -328,369 +329,74 @@
         </div>
     </section>
 
-    
-    <section id="why-us" class="py-20 px-4 sm:px-6 lg:px-8">
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <div class="inline-block mb-4 px-4 py-2 bg-brand-blue/20 rounded-full text-brand-blue text-sm font-semibold" data-i18n="whyUs.badge">
-                    THE STATE OF THE INDUSTRY
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6"><span data-i18n="whyUs.title">Data & AI Revolution</span><br><span class="gradient-text" data-i18n="whyUs.titleGradient">Act Today, Lead Tomorrow</span></h2>
-                <p class="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed" data-i18n="whyUs.subtitle">
-                    One thing is clear: artificial intelligence and data intelligence are not trends—they're game changers transforming business operations and decision-making in equal measure.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-card-bg p-8 rounded-2xl border border-gray-800">
-                    <div class="text-5xl font-bold text-brand-blue mb-4">55%</div>
-                    <p class="text-gray-300" data-i18n="whyUs.stat1">Productivity increase with AI-powered analytics and automation (GitHub, MIT/Princeton studies)</p>
-                </div>
-                <div class="bg-card-bg p-8 rounded-2xl border border-gray-800">
-                    <div class="text-5xl font-bold text-brand-blue mb-4">70%</div>
-                    <p class="text-gray-300" data-i18n="whyUs.stat2">Faster decision-making with real-time data dashboards and predictive models</p>
-                </div>
-                <div class="bg-card-bg p-8 rounded-2xl border border-gray-800">
-                    <div class="text-5xl font-bold text-brand-blue mb-4">30%</div>
-                    <p class="text-gray-300" data-i18n="whyUs.stat3">Cost reduction through optimized data pipelines and intelligent automation</p>
-                </div>
-            </div>
-
-            <div class="bg-gradient-to-br from-brand-blue/10 to-purple-600/10 rounded-2xl p-8 md:p-12 border border-brand-blue/20">
-                <h3 class="text-3xl font-bold mb-6" data-i18n="whyUs.actNowTitle">Why Now is the Time to Act</h3>
-                <div class="grid md:grid-cols-2 gap-6 text-gray-300">
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 text-brand-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                        <span data-i18n="whyUs.actNowPoint1">Companies leveraging AI and data analytics grow 2-3x faster than competitors</span>
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+                <div class="max-w-xl">
+                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-brand-blue/20 text-brand-blue text-sm font-semibold mb-4" data-i18n="home.projects.badge">
+                        PROJECT HIGHLIGHTS
                     </div>
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 text-brand-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                        <span data-i18n="whyUs.actNowPoint2">Real-time insights enable proactive decision-making instead of reactive fire-fighting</span>
-                    </div>
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 text-brand-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                        <span data-i18n="whyUs.actNowPoint3">Automated data pipelines free your team to focus on strategic initiatives</span>
-                    </div>
-                    <div class="flex items-start">
-                        <svg class="w-6 h-6 text-brand-blue mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                        <span data-i18n="whyUs.actNowPoint4">Early adopters dominate their markets with data-driven insights</span>
-                    </div>
-                </div>
-                <div class="mt-8 text-center">
-                    <a href="#contact" class="inline-flex items-center bg-white text-dark-bg px-8 py-4 rounded-lg font-semibold hover:bg-gray-200 transition" data-i18n="whyUs.actNowCta">
-                        Start Your Transformation
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="home.projects.title">A quick look at our work</h2>
+                    <p class="text-gray-400 mb-6" data-i18n="home.projects.subtitle">See a curated selection of projects and case studies. Dive deeper into real AI, data, and automation work on the full projects page.</p>
+                    <a href="pages/projects.html" class="inline-flex items-center bg-brand-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition" data-i18n="home.projects.cta">
+                        View All Projects
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                         </svg>
                     </a>
                 </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 flex-1">
+                    <div class="bg-card-bg rounded-2xl border border-gray-800 p-6 card-hover">
+                        <div class="text-brand-blue font-semibold text-sm mb-2" data-i18n="home.projects.cards.card1.label">Open Source</div>
+                        <h3 class="text-lg font-bold mb-2">HR-Intelligence-Hub</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="home.projects.cards.card1.desc">Flagship HR analytics hub built for continuous enrichment.</p>
+                    </div>
+                    <div class="bg-card-bg rounded-2xl border border-gray-800 p-6 card-hover">
+                        <div class="text-emerald-300 font-semibold text-sm mb-2" data-i18n="home.projects.cards.card2.label">Open Source</div>
+                        <h3 class="text-lg font-bold mb-2">Retention-Guard</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="home.projects.cards.card2.desc">Retention risk analytics with workforce signals and actionable insights.</p>
+                    </div>
+                    <div class="bg-card-bg rounded-2xl border border-gray-800 p-6 card-hover">
+                        <div class="text-cyan-300 font-semibold text-sm mb-2" data-i18n="home.projects.cards.card3.label">Automation</div>
+                        <h3 class="text-lg font-bold mb-2">Sales Ops Bots</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="home.projects.cards.card3.desc">CRM-connected WhatsApp & Telegram agents for sales ops.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     
-    <section id="how-we-work" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-dark-bg to-card-bg/30">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <div class="inline-block mb-4 px-4 py-2 bg-brand-blue/20 rounded-full text-brand-blue text-sm font-semibold" data-i18n="howWeWork.badge">
-                    HOW WE WORK
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="howWeWork.title">Your Data & AI Engine, Delivered</h2>
-                <p class="text-xl text-gray-400 max-w-4xl mx-auto" data-i18n="howWeWork.subtitle">
-                    A proven methodology combining strategy, implementation, and enablement for lasting results.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-card-bg p-8 rounded-2xl border border-gray-800 card-hover">
-                    <div class="w-16 h-16 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-6">
-                        <span class="text-3xl font-bold text-brand-blue">1</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="howWeWork.step1.title">Analysis & Strategy</h3>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step1.item1">Data landscape assessment</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step1.item2">Use case identification & prioritization</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step1.item3">Custom roadmap development</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step1.item4">Technology stack selection</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-card-bg p-8 rounded-2xl border border-gray-800 card-hover">
-                    <div class="w-16 h-16 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-6">
-                        <span class="text-3xl font-bold text-brand-blue">2</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="howWeWork.step2.title">Implementation & Development</h3>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step2.item1">Rapid prototyping & MVP development</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step2.item2">Data pipeline construction</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step2.item3">AI model integration & fine-tuning</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step2.item4">Dashboard & analytics setup</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-card-bg p-8 rounded-2xl border border-gray-800 card-hover">
-                    <div class="w-16 h-16 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-6">
-                        <span class="text-3xl font-bold text-brand-blue">3</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4" data-i18n="howWeWork.step3.title">Guidance & Enablement</h3>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step3.item1">Team training & upskilling</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step3.item2">Ongoing optimization support</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step3.item3">Best practices & documentation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-brand-blue mr-2">•</span>
-                            <span data-i18n="howWeWork.step3.item4">Long-term strategic partnership</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="text-center">
-                <p class="text-gray-400 mb-6" data-i18n="howWeWork.methodology">We use proven methodologies: Design Thinking, Double Diamond, and Agile Development</p>
-            </div>
-        </div>
-    </section>
 
     
     <section id="services" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12">
                 <div class="inline-block mb-4 px-4 py-2 bg-brand-blue/20 rounded-full text-brand-blue text-sm font-semibold" data-i18n="services.badge">
                     OUR SERVICES AT A GLANCE
                 </div>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="services.title">More Than Just Consulting</h2>
                 <p class="text-xl text-gray-400" data-i18n="services.subtitle">We build your data & AI engine from the ground up</p>
             </div>
-            
-            
-            <div class="space-y-8">
-                
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden border border-gray-800">
-                    <div class="grid md:grid-cols-5 gap-0">
-                        <div class="md:col-span-2 bg-gradient-to-br from-blue-600 to-purple-600 p-8 flex items-center justify-center">
-                            <div class="text-center">
-                                <svg class="w-24 h-24 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
-                                <h3 class="text-2xl font-bold text-white" data-i18n="services.ai.title">AI Strategy & Implementation</h3>
-                            </div>
-                        </div>
-                        <div class="md:col-span-3 p-8">
-                            <div class="mb-6">
-                                <h4 class="font-bold text-red-400 mb-2" data-i18n="services.challengeLabel">❌ Your Challenge</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="services.ai.challenge">Many companies struggle with selecting and optimally using appropriate AI technologies. Complexity and uncertainty hold you back.</p>
-                            </div>
-                            <div class="mb-6">
-                                <h4 class="font-bold text-green-400 mb-2" data-i18n="services.solutionLabel">✓ Our Solution</h4>
-                                <ul class="space-y-2 text-gray-300 text-sm">
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.ai.sol1">Custom AI roadmap tailored to your business goals</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.ai.sol2">AI-powered dashboards (Power BI, Tableau, custom)</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.ai.sol3">Predictive modeling & machine learning integration</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.ai.sol4">Conversational AI agents & chatbots</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-brand-blue mb-2" data-i18n="services.benefitsLabel">📈 Your Benefits</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="services.ai.benefits">Clarity in the AI market • Actionable next steps • Accelerated implementation • Competitive advantage</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden border border-gray-800">
-                    <div class="grid md:grid-cols-5 gap-0">
-                        <div class="md:col-span-2 bg-gradient-to-br from-cyan-600 to-blue-600 p-8 flex items-center justify-center">
-                            <div class="text-center">
-                                <svg class="w-24 h-24 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-                                </svg>
-                                <h3 class="text-2xl font-bold text-white" data-i18n="services.data.title">Data Engineering & Pipelines</h3>
-                            </div>
-                        </div>
-                        <div class="md:col-span-3 p-8">
-                            <div class="mb-6">
-                                <h4 class="font-bold text-red-400 mb-2" data-i18n="services.challengeLabel">❌ Your Challenge</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="services.data.challenge">Your data is siloed, messy, or inaccessible. Existing processes and architectures aren't ready for modern data operations.</p>
-                            </div>
-                            <div class="mb-6">
-                                <h4 class="font-bold text-green-400 mb-2" data-i18n="services.solutionLabel">✓ Our Solution</h4>
-                                <ul class="space-y-2 text-gray-300 text-sm">
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.data.sol1">Custom ETL/ELT pipeline development</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.data.sol2">Real-time data streaming & processing</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.data.sol3">Data warehouse modernization (Snowflake, BigQuery, Azure)</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.data.sol4">Data quality frameworks & monitoring</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-brand-blue mb-2" data-i18n="services.benefitsLabel">📈 Your Benefits</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="services.data.benefits">Seamless data flow • Single source of truth • Faster insights • Reduced manual work • Scalable infrastructure</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-card-bg rounded-2xl border border-gray-800 p-6">
+                    <h3 class="text-xl font-bold mb-3" data-i18n="home.servicesOverview.card1Title">AI Strategy & Intelligent Agents</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="home.servicesOverview.card1Desc">From roadmap to production-ready agents, we design practical AI systems that drive decisions and automation.</p>
                 </div>
-
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden border border-gray-800">
-                    <div class="grid md:grid-cols-5 gap-0">
-                        <div class="md:col-span-2 bg-gradient-to-br from-purple-600 to-pink-600 p-8 flex items-center justify-center">
-                            <div class="text-center">
-                                <svg class="w-24 h-24 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-                                </svg>
-                                <h3 class="text-2xl font-bold text-white" data-i18n="services.erp.title">ERP & Cloud Modernization</h3>
-                            </div>
-                        </div>
-                        <div class="md:col-span-3 p-8">
-                            <div class="mb-6">
-                                <h4 class="font-bold text-red-400 mb-2" data-i18n="services.challengeLabel">❌ Your Challenge</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="services.erp.challenge">Legacy systems and technical debt slow you down. Your software or service lacks innovation power.</p>
-                            </div>
-                            <div class="mb-6">
-                                <h4 class="font-bold text-green-400 mb-2" data-i18n="services.solutionLabel">✓ Our Solution</h4>
-                                <ul class="space-y-2 text-gray-300 text-sm">
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.erp.sol1">SAP, Workday & Oracle integration</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.erp.sol2">Cloud migration strategy & execution (Azure, AWS, GCP)</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.erp.sol3">Process automation & optimization</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.erp.sol4">Legacy system modernization</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-brand-blue mb-2" data-i18n="services.benefitsLabel">📈 Your Benefits</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="services.erp.benefits">Higher software quality • Faster development cycles • More innovation • Reduced technical debt • Long-term scalability</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="bg-card-bg rounded-2xl border border-gray-800 p-6">
+                    <h3 class="text-xl font-bold mb-3" data-i18n="home.servicesOverview.card2Title">Data Engineering & Analytics</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="home.servicesOverview.card2Desc">We build resilient pipelines, warehouses, and dashboards to turn raw data into trusted, real-time insights.</p>
                 </div>
-
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden border border-gray-800">
-                    <div class="grid md:grid-cols-5 gap-0">
-                        <div class="md:col-span-2 bg-gradient-to-br from-green-600 to-teal-600 p-8 flex items-center justify-center">
-                            <div class="text-center">
-                                <svg class="w-24 h-24 text-white mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                                </svg>
-                                <h3 class="text-2xl font-bold text-white" data-i18n="services.training.title">Training & Enablement</h3>
-                            </div>
-                        </div>
-                        <div class="md:col-span-3 p-8">
-                            <div class="mb-6">
-                                <h4 class="font-bold text-red-400 mb-2" data-i18n="services.challengeLabel">❌ Your Challenge</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="services.training.challenge">Your team lacks AI and data-specific competencies. There's no long-term support for knowledge development.</p>
-                            </div>
-                            <div class="mb-6">
-                                <h4 class="font-bold text-green-400 mb-2" data-i18n="services.solutionLabel">✓ Our Solution</h4>
-                                <ul class="space-y-2 text-gray-300 text-sm">
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.training.sol1">Role-based learning paths (developers, analysts, managers)</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.training.sol2">Hands-on workshops with real tools and data</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.training.sol3">Custom training programs for your tech stack</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <span class="text-brand-blue mr-2">→</span>
-                                        <span data-i18n="services.training.sol4">Ongoing support & knowledge transfer</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-brand-blue mb-2" data-i18n="services.benefitsLabel">📈 Your Benefits</h4>
-                                <p class="text-gray-400 text-sm" data-i18n="services.training.benefits">Long-term competency growth • Higher productivity • Increased employee satisfaction • Sustainable development</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="bg-card-bg rounded-2xl border border-gray-800 p-6">
+                    <h3 class="text-xl font-bold mb-3" data-i18n="home.servicesOverview.card3Title">Automation & Modernization</h3>
+                    <p class="text-gray-400 text-sm" data-i18n="home.servicesOverview.card3Desc">Integrations, workflow automation, and cloud upgrades that eliminate manual work and modernize legacy stacks.</p>
                 </div>
-
             </div>
 
-            <div class="text-center mt-12">
-                <a href="#contact" class="inline-flex items-center bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition" data-i18n="services.cta">
-                    Request Free Consultation
+            <div class="text-center mt-10">
+                <a href="pages/services.html" class="inline-flex items-center bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition" data-i18n="home.servicesOverview.cta">
+                    Explore Full Services
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -700,71 +406,37 @@
     </section>
 
     
-    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="roi-calculator" class="py-20 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="projects.title">Project Showcase</h2>
-                <p class="text-xl text-gray-400" data-i18n="projects.subtitle">Real solutions in action. A curated selection of projects that turn complex data into actionable insights.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden card-hover border border-gray-800">
-                    <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-blue-500/20 text-brand-blue text-xs font-semibold rounded-full mb-3">HR Analytics</span>
-                        <h3 class="text-xl font-bold mb-2" data-i18n="projects.showcase.burnoutRisk.title">Burnout Risk Prediction</h3>
-                        <p class="text-gray-400 text-sm" data-i18n="projects.showcase.burnoutRisk.desc">Machine learning solution for HR and People Analytics teams integrating Workday and SAP HR data to identify early burnout signals, absenteeism risk, and workload imbalances. Supports proactive workforce planning and targeted interventions.</p>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center mb-4 px-4 py-2 bg-brand-blue/20 rounded-full text-brand-blue text-sm font-semibold" data-i18n="home.process.badge">
+                        HOW WE WORK
                     </div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-i18n="home.process.title">A proven delivery process</h2>
+                    <p class="text-xl text-gray-400 mb-8" data-i18n="home.process.subtitle">From strategy to implementation and enablement, we guide teams through a clear, efficient path that reduces risk and speeds up outcomes.</p>
+                    <a href="pages/process.html" class="inline-flex items-center bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition" data-i18n="home.process.cta">
+                        Explore Our Process
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
                 </div>
-
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden card-hover border border-gray-800">
-                    <div class="h-48 bg-gradient-to-br from-cyan-600 to-blue-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-semibold rounded-full mb-3">NLP / Mental Wellness</span>
-                        <h3 class="text-xl font-bold mb-2" data-i18n="projects.showcase.emotionalAI.title">Emotional AI Chatbot</h3>
-                        <p class="text-gray-400 text-sm" data-i18n="projects.showcase.emotionalAI.desc">NLP-driven conversational system analyzing anonymized employee interactions to surface stress patterns, recurring concerns, and wellbeing trends. Enables organizations to strengthen mental health support with measurable insights.</p>
+                <div class="grid gap-6">
+                    <div class="bg-card-bg rounded-2xl p-6 border border-gray-800">
+                        <div class="text-brand-blue font-bold text-sm mb-2">01 • Strategy</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="home.process.steps.step1Title">Assess & prioritize</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="home.process.steps.step1Desc">We map your data landscape, align goals, and define the most valuable AI use cases.</p>
                     </div>
-                </div>
-
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden card-hover border border-gray-800">
-                    <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-3">Finance</span>
-                        <h3 class="text-xl font-bold mb-2" data-i18n="projects.showcase.smallCap.title">Small Cap Intelligence Dashboard</h3>
-                        <p class="text-gray-400 text-sm" data-i18n="projects.showcase.smallCap.desc">Analytics platform combining market data and financial indicators with AI-based forecasting models. Supports faster investment analysis, scenario evaluation, and data-driven decision making for finance teams.</p>
+                    <div class="bg-card-bg rounded-2xl p-6 border border-gray-800">
+                        <div class="text-brand-blue font-bold text-sm mb-2">02 • Build</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="home.process.steps.step2Title">Deliver fast wins</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="home.process.steps.step2Desc">Rapid prototypes and production-ready pipelines built with your stack and team.</p>
                     </div>
-                </div>
-
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden card-hover border border-gray-800">
-                    <div class="h-48 bg-gradient-to-br from-yellow-600 to-orange-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-semibold rounded-full mb-3">Enterprise L&D</span>
-                        <h3 class="text-xl font-bold mb-2" data-i18n="projects.showcase.aiTraining.title">AI Training Recommender</h3>
-                        <p class="text-gray-400 text-sm" data-i18n="projects.showcase.aiTraining.desc">Recommendation engine linking role profiles, performance data, and business priorities to personalized learning paths. Helps enterprises focus L&D budgets on skills with measurable business impact.</p>
-                    </div>
-                </div>
-
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden card-hover border border-gray-800">
-                    <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full mb-3">Data Engineering</span>
-                        <h3 class="text-xl font-bold mb-2" data-i18n="projects.showcase.sapWorkday.title">SAP & Workday Data Integration & Automation</h3>
-                        <p class="text-gray-400 text-sm" data-i18n="projects.showcase.sapWorkday.desc">Real-time pipelines connecting SAP and Workday to analytics (Power BI, Tableau) and automation tools (Power Automate). Provides a unified, reliable source of truth for HR, finance, and operations, enabling accurate reporting and streamlined processes.</p>
-                    </div>
-                </div>
-
-                
-                <div class="bg-card-bg rounded-2xl overflow-hidden card-hover border border-gray-800">
-                    <div class="h-48 bg-gradient-to-br from-indigo-600 to-blue-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-400 text-xs font-semibold rounded-full mb-3">Automation</span>
-                        <h3 class="text-xl font-bold mb-2" data-i18n="projects.showcase.salesBots.title">Sales and Operations Automation Bots</h3>
-                        <p class="text-gray-400 text-sm" data-i18n="projects.showcase.salesBots.desc">WhatsApp and Telegram agents integrated with CRM and inventory systems. Automates customer inquiries, order handling, and internal workflows for small and mid-sized businesses.</p>
+                    <div class="bg-card-bg rounded-2xl p-6 border border-gray-800">
+                        <div class="text-brand-blue font-bold text-sm mb-2">03 • Enable</div>
+                        <h3 class="text-xl font-bold mb-2" data-i18n="home.process.steps.step3Title">Upskill & scale</h3>
+                        <p class="text-gray-400 text-sm" data-i18n="home.process.steps.step3Desc">We transfer know-how, optimize performance, and support long-term growth.</p>
                     </div>
                 </div>
             </div>
@@ -1171,15 +843,15 @@
     
     <section class="py-12 px-4 sm:px-6 lg:px-8 bg-card-bg/30">
         <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-2xl font-bold mb-4">Stay Updated with Data & AI Insights</h3>
-            <p class="text-gray-400 mb-6">Join our newsletter for practical tips, industry trends, and exclusive resources.</p>
+            <h3 class="text-2xl font-bold mb-4" data-i18n="home.newsletter.title">Stay Updated with Data & AI Insights</h3>
+            <p class="text-gray-400 mb-6" data-i18n="home.newsletter.subtitle">Join our newsletter for practical tips, industry trends, and exclusive resources.</p>
             <a href="https://radarroster.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-blue hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold transition">
-                <span>Subscribe to Newsletter</span>
+                <span data-i18n="home.newsletter.cta">Subscribe to Newsletter</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
             </a>
-            <p class="text-gray-500 text-sm mt-4">We respect your privacy. Unsubscribe anytime.</p>
+            <p class="text-gray-500 text-sm mt-4" data-i18n="home.newsletter.note">We respect your privacy. Unsubscribe anytime.</p>
         </div>
     </section>
 
@@ -1194,7 +866,7 @@
                         </div>
                         <span class="text-xl font-bold">RadarRoster</span>
                     </div>
-                    <p class="text-gray-400 text-sm mb-4">Empowering businesses from startups to enterprises with AI and data-driven insights.</p>
+                    <p class="text-gray-400 text-sm mb-4" data-i18n="footer.tagline">Built for businesses and public sector teams seeking AI and data-driven insights.</p>
                     <div class="flex space-x-4">
                         <a href="https://www.linkedin.com/company/radarroster" target="_blank" class="text-gray-400 hover:text-brand-blue transition" aria-label="LinkedIn">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -1203,37 +875,37 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-bold mb-4">Services</h4>
+                    <h4 class="font-bold mb-4" data-i18n="footer.servicesTitle">Services</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#services" class="hover:text-brand-blue transition">AI & Intelligent Systems</a></li>
-                        <li><a href="#services" class="hover:text-brand-blue transition">Data Engineering</a></li>
-                        <li><a href="#services" class="hover:text-brand-blue transition">ERP Modernization</a></li>
-                        <li><a href="#services" class="hover:text-brand-blue transition">Cloud Strategy</a></li>
+                        <li><a href="pages/services.html" class="hover:text-brand-blue transition" data-i18n="footer.servicesAi">AI & Intelligent Systems</a></li>
+                        <li><a href="pages/services.html" class="hover:text-brand-blue transition" data-i18n="footer.servicesData">Data Engineering</a></li>
+                        <li><a href="pages/services.html" class="hover:text-brand-blue transition" data-i18n="footer.servicesErp">ERP Modernization</a></li>
+                        <li><a href="pages/services.html" class="hover:text-brand-blue transition" data-i18n="footer.servicesCloud">Cloud Strategy</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-bold mb-4">Company</h4>
+                    <h4 class="font-bold mb-4" data-i18n="footer.companyTitle">Company</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#about" class="hover:text-brand-blue transition">About</a></li>
-                        <li><a href="#projects" class="hover:text-brand-blue transition">Projects</a></li>
-                        <li><a href="pages/blog.html" class="hover:text-brand-blue transition">Newsletter</a></li>
-                        <li><a href="pages/impressum.html" class="hover:text-brand-blue transition">Impressum</a></li>
-                        <li><a href="pages/datenschutz.html" class="hover:text-brand-blue transition">Datenschutz</a></li>
+                        <li><a href="pages/about.html" class="hover:text-brand-blue transition" data-i18n="footer.about">About</a></li>
+                        <li><a href="pages/projects.html" class="hover:text-brand-blue transition" data-i18n="footer.projects">Projects</a></li>
+                        <li><a href="pages/blog.html" class="hover:text-brand-blue transition" data-i18n="footer.newsletter">Newsletter</a></li>
+                        <li><a href="pages/impressum.html" class="hover:text-brand-blue transition" data-i18n="footer.impressum">Impressum</a></li>
+                        <li><a href="pages/datenschutz.html" class="hover:text-brand-blue transition" data-i18n="footer.datenschutz">Datenschutz</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-bold mb-4">Get in Touch</h4>
+                    <h4 class="font-bold mb-4" data-i18n="footer.contactTitle">Get in Touch</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#contact" class="hover:text-brand-blue transition">Free Strategy Call</a></li>
-                        <li><a href="https://www.linkedin.com/company/radarroster" target="_blank" class="hover:text-brand-blue transition">LinkedIn</a></li>
+                        <li><a href="#contact" class="hover:text-brand-blue transition" data-i18n="footer.freeCall">Free Strategy Call</a></li>
+                        <li><a href="https://www.linkedin.com/company/radarroster" target="_blank" class="hover:text-brand-blue transition" data-i18n="footer.linkedin">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                © <span id="copyright-year"></span> RadarRoster. All rights reserved.
+                © <span id="copyright-year"></span> RadarRoster. <span data-i18n="footer.rights">All rights reserved.</span>
             </div>
         </div>
     </footer>
@@ -1245,6 +917,9 @@
     <script src="https://web3forms.com/client/script.js" async defer></script>
     
     
+    <script src="assets/js/roi-calculator.js"></script>
+    
+    
     <script src="assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -1254,10 +929,6 @@
         });
     </script>
 
-    
-    <script src="assets/js/roi-calculator.js"></script>
-    
-    
     <script src="assets/js/chatbot.js"></script>
 </body>
 </html>
