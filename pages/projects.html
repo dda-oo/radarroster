@@ -253,8 +253,8 @@
                             </div>
                             <div class="glass rounded-2xl border border-gray-800 p-5">
                                 <div class="text-sm text-gray-400 mb-2" data-i18n="projectsPage.cardAutomation">Automation</div>
-                                <h4 class="text-lg font-bold mb-2" data-i18n="projectsPage.cardSalesOps">Sales Ops Bots</h4>
-                                <p class="text-sm text-gray-400" data-i18n="projectsPage.cardSalesOpsDesc">CRM-connected WhatsApp & Telegram agents.</p>
+                                <h4 class="text-lg font-bold mb-2" data-i18n="projectsPage.cardSalesOps">Sales Ops Automation</h4>
+                                <p class="text-sm text-gray-400" data-i18n="projectsPage.cardSalesOpsDesc">CRM-integrated messaging agents for WhatsApp & Telegram.</p>
                             </div>
                         </div>
                     </div>
@@ -264,20 +264,30 @@
             <div id="project-filters" class="mb-12 sticky top-20 bg-dark-bg/80 backdrop-blur-sm z-30 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-4 border-b border-gray-800/60 scroll-mt-28">
                 <div class="max-w-7xl mx-auto">
                     <div class="rounded-2xl border border-gray-800 bg-card-bg/60 px-4 py-4">
-                        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                        <div class="flex flex-col gap-6">
                             <div class="flex flex-wrap gap-3">
-                                <button type="button" data-case-filter="all" class="case-filter-btn filter-btn-active px-4 py-2 rounded-full text-sm font-semibold transition border border-gray-700" data-i18n="projectsPage.filterAll">All Projects</button>
-                                <button type="button" data-case-filter="ai" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterAi">AI</button>
-                                <button type="button" data-case-filter="hr" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterHr">HR</button>
-                                <button type="button" data-case-filter="finance" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterFinance">Finance</button>
-                                <button type="button" data-case-filter="automation" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterAutomation">Automation</button>
-                                <button type="button" data-case-filter="chatbot" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterChatbot">Chatbot</button>
-                                <button type="button" data-case-filter="legal" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterLegal">Legal</button>
-                                <button type="button" data-case-filter="marketing" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterMarketing">Marketing</button>
-                                <button type="button" data-case-filter="product" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterProduct">Product</button>
+                                    <button type="button" data-case-filter="all" class="case-filter-btn filter-btn-active px-4 py-2 rounded-full text-sm font-semibold transition border border-gray-700" data-i18n="projectsPage.filterAll">All Projects</button>
+                                    <button type="button" data-case-filter="ai" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterAi">AI</button>
+                                    <button type="button" data-case-filter="hr" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterHr">HR</button>
+                                    <button type="button" data-case-filter="finance" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterFinance">Finance</button>
+                                    <button type="button" data-case-filter="automation" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterAutomation">Automation</button>
+                                    <button type="button" data-case-filter="chatbot" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterChatbot">Chatbot</button>
+                                    <button type="button" data-case-filter="legal" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterLegal">Legal</button>
+                                    <button type="button" data-case-filter="marketing" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterMarketing">Marketing</button>
+                                    <button type="button" data-case-filter="product" class="case-filter-btn px-4 py-2 rounded-full text-sm font-semibold border border-gray-700 text-gray-300 hover:text-white hover:border-brand-blue/60 transition" data-i18n="projectsPage.filterProduct">Product</button>
                             </div>
                             
-                            <div class="flex items-center gap-3">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <span class="text-sm text-gray-400 whitespace-nowrap" data-i18n="projectsPage.sectorLabel">Sector</span>
+                                <select id="sector-select" class="bg-card-bg border border-gray-700 text-gray-200 rounded-lg px-4 py-2 text-sm hover:border-brand-blue transition">
+                                    <option value="all" data-i18n="projectsPage.filterSectorAll">All Sectors</option>
+                                    <option value="telecom" data-i18n="projectsPage.filterSectorTelecom">Telecom</option>
+                                    <option value="energy" data-i18n="projectsPage.filterSectorEnergy">Energy</option>
+                                    <option value="healthcare" data-i18n="projectsPage.filterSectorHealthcare">Healthcare</option>
+                                    <option value="it" data-i18n="projectsPage.filterSectorIT">IT</option>
+                                    <option value="manufacturing" data-i18n="projectsPage.filterSectorManufacturing">Manufacturing</option>
+                                    <option value="finance" data-i18n="projectsPage.filterSectorFinance">Finance</option>
+                                </select>
                                 <span class="text-sm text-gray-400 whitespace-nowrap" data-i18n="projectsPage.sortLabel">View</span>
                                 <select id="case-sort" class="bg-card-bg border border-gray-700 text-gray-200 rounded-lg px-4 py-2 text-sm hover:border-brand-blue transition">
                                     <option value="recent" data-i18n="projectsPage.sortFeatured">Featured order</option>
@@ -294,7 +304,7 @@
             </div>
 
             <div id="case-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai" data-updated="2026-01-14" data-name="Retention-Guard" data-popular="8">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai" data-sectors="healthcare it telecom energy manufacturing finance" data-updated="2026-01-14" data-name="Retention-Guard" data-popular="8">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
@@ -320,16 +330,51 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="product chatbot ai" data-updated="2026-01-13" data-name="radarroster" data-popular="10">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai" data-sectors="healthcare it telecom energy manufacturing finance" data-updated="2026-01-15" data-name="HR-Intelligence-Hub" data-popular="9">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
-                                <span class="inline-flex items-center px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.radarroster.label">Product • Chatbot</span>
+                                <span class="inline-flex items-center px-3 py-1 bg-blue-500/20 text-brand-blue text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.hrIntelligenceHub.label">HR Analytics</span>
                                 <span class="inline-flex items-center px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cardOpenSource">Open Source</span>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">radarroster.com</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-i18n="projectsPage.cards.radarroster.desc">Marketing site with AI chatbot, multilingual content, and conversion-focused UX.</p>
+                        <h3 class="text-xl font-bold mb-2">HR-Intelligence-Hub</h3>
+                        <p class="text-gray-400 text-sm mb-4" data-i18n="projectsPage.cards.hrIntelligenceHub.desc">Flagship HR analytics hub built for extensibility. Designed for continuous enrichment and real-world enterprise adoption.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-2 py-1 bg-gray-800 text-xs text-gray-300 rounded">Python</span>
+                            <span class="px-2 py-1 bg-gray-800 text-xs text-gray-300 rounded">ML</span>
+                            <span class="px-2 py-1 bg-gray-800 text-xs text-gray-300 rounded">Analytics</span>
+                            <span class="px-2 py-1 bg-gray-800 text-xs text-gray-300 rounded">Dashboard</span>
+                        </div>
+                        
+                        <div class="flex items-center gap-4">
+                            <a href="https://github.com/dda-oo/HR-Intelligence-Hub" target="_blank" rel="noopener" class="inline-flex items-center text-brand-blue font-semibold hover:text-blue-400 transition">
+                                <span data-i18n="projectsPage.viewGithub">View on GitHub</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                            <a href="https://dda-oo.github.io/HR-Intelligence-Hub/" target="_blank" rel="noopener" class="inline-flex items-center text-gray-300 font-semibold hover:text-white transition">
+                                <span data-i18n="projectsPage.liveDemo">Live Demo</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="product chatbot ai" data-sectors="it" data-updated="2026-01-13" data-name="ai-consulting-platform" data-popular="10">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <span class="inline-flex items-center px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.aiConsultingPlatform.label">Product • Chatbot</span>
+                                <span class="inline-flex items-center px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cardOpenSource">Open Source</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">AI Consulting Platform</h3>
+                        <p class="text-gray-400 text-sm mb-4" data-i18n="projectsPage.cards.aiConsultingPlatform.desc">Modern consulting website with AI chatbot, multilingual content, and conversion-focused UX.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-5">
                             <span class="px-2 py-1 bg-gray-800 text-xs text-gray-300 rounded">HTML</span>
@@ -346,7 +391,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="chatbot automation ai" data-updated="2025-07-14" data-name="fx-rate-automation-bot" data-popular="6">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="chatbot automation ai" data-sectors="finance it" data-updated="2025-07-14" data-name="fx-rate-automation-bot" data-popular="6">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
@@ -367,7 +412,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="finance ai" data-updated="2024-09-14" data-name="small-cap-intelligence-engine" data-popular="7">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="finance ai" data-sectors="energy it" data-updated="2024-09-14" data-name="small-cap-intelligence-engine" data-popular="7">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
@@ -388,7 +433,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="finance ai" data-updated="2024-09-13" data-name="small-cap-research-lab" data-popular="6">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="finance ai" data-sectors="telecom finance" data-updated="2024-09-13" data-name="small-cap-research-lab" data-popular="6">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
@@ -409,16 +454,16 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="product" data-updated="2024-08-30" data-name="taxi-fare-pricing-website" data-popular="5">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="product" data-sectors="manufacturing energy" data-updated="2024-08-30" data-name="service-pricing-portal" data-popular="5">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
-                                <span class="inline-flex items-center px-3 py-1 bg-orange-500/20 text-orange-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.taxifareWebsite.label">Product</span>
+                                <span class="inline-flex items-center px-3 py-1 bg-orange-500/20 text-orange-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.servicePricingPortal.label">Product</span>
                                 <span class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.confidentialityTag">Confidential engagement</span>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Taxi Fare Pricing Website</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-i18n="projectsPage.cards.taxifareWebsite.desc">Public-facing site with clear pricing, conversion flow, and polished UX.</p>
+                        <h3 class="text-xl font-bold mb-2">Service Pricing Portal</h3>
+                        <p class="text-gray-400 text-sm mb-4" data-i18n="projectsPage.cards.servicePricingPortal.desc">Public-facing site with clear pricing tiers, conversion flow, and polished UX.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-5">
                             <span class="px-2 py-1 bg-gray-800 text-xs text-gray-300 rounded">Python</span>
@@ -430,16 +475,16 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="product" data-updated="2024-08-30" data-name="fare-estimation-web-app" data-popular="5">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="product" data-sectors="manufacturing it" data-updated="2024-08-30" data-name="quote-estimation-interface" data-popular="5">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
-                                <span class="inline-flex items-center px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.taxiFareInterface.label">Product</span>
+                                <span class="inline-flex items-center px-3 py-1 bg-amber-500/20 text-amber-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.quoteEstimationInterface.label">Product</span>
                                 <span class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.confidentialityTag">Confidential engagement</span>
                             </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Fare Estimation Web App</h3>
-                        <p class="text-gray-400 text-sm mb-4" data-i18n="projectsPage.cards.taxiFareInterface.desc">Modern JavaScript front-end for fare estimation and booking flows.</p>
+                        <h3 class="text-xl font-bold mb-2">Quote Estimation Interface</h3>
+                        <p class="text-gray-400 text-sm mb-4" data-i18n="projectsPage.cards.quoteEstimationInterface.desc">Modern JavaScript front-end for dynamic pricing and booking flows.</p>
                         
                         <div class="flex flex-wrap gap-2 mb-5">
                             <span class="px-2 py-1 bg-gray-800 text-xs text-gray-300 rounded">JavaScript</span>
@@ -451,7 +496,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="chatbot automation ai" data-updated="2025-05-19" data-name="workflow-automation-chatbot" data-popular="6">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="chatbot automation ai" data-sectors="it telecom" data-updated="2025-05-19" data-name="workflow-automation-chatbot" data-popular="6">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
@@ -472,7 +517,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai" data-updated="2026-01-14" data-name="Workforce Risk Signals" data-popular="9">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai" data-sectors="healthcare manufacturing" data-updated="2026-01-14" data-name="Workforce Risk Signals" data-popular="9">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-blue-500/20 text-brand-blue text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.workforceRiskSignals.label">HR Analytics</span>
@@ -491,7 +536,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="chatbot ai" data-updated="2026-01-14" data-name="Wellbeing Insights Bot" data-popular="8">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="chatbot ai" data-sectors="healthcare it" data-updated="2026-01-14" data-name="Wellbeing Insights Bot" data-popular="8">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.wellbeingInsightsBot.label">NLP / Wellness</span>
@@ -510,7 +555,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="finance ai" data-updated="2026-01-14" data-name="Market Intelligence Suite" data-popular="8">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="finance ai" data-sectors="energy telecom" data-updated="2026-01-14" data-name="Market Intelligence Suite" data-popular="8">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.marketIntelligenceSuite.label">Finance</span>
@@ -529,7 +574,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai" data-updated="2026-01-14" data-name="Skills Enablement Recommender" data-popular="7">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai" data-sectors="healthcare it" data-updated="2026-01-14" data-name="Skills Enablement Recommender" data-popular="7">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-yellow-500/20 text-yellow-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.skillsEnablementRecommender.label">L&amp;D</span>
@@ -548,7 +593,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="automation" data-updated="2026-01-14" data-name="ERP Data Integration" data-popular="8">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="automation" data-sectors="energy manufacturing" data-updated="2026-01-14" data-name="ERP Data Integration" data-popular="8">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-green-500/20 text-green-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.erpDataIntegration.label">Data Engineering</span>
@@ -567,7 +612,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="automation chatbot ai" data-updated="2026-01-14" data-name="Sales Ops Automation" data-popular="7">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="automation chatbot ai" data-sectors="telecom it" data-updated="2026-01-14" data-name="Sales Ops Automation" data-popular="7">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.salesOpsAutomation.label">Automation</span>
@@ -586,7 +631,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai chatbot" data-updated="2026-01-14" data-name="HR SaaS AI Agent" data-popular="9">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="hr ai chatbot" data-sectors="healthcare it" data-updated="2026-01-14" data-name="HR SaaS AI Agent" data-popular="9">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-blue-500/20 text-brand-blue text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.hrSaasAiAgent.label">HR SaaS</span>
@@ -605,7 +650,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="legal ai" data-updated="2026-01-14" data-name="Legal Compliance Intelligence" data-popular="7">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="legal ai" data-sectors="energy manufacturing" data-updated="2026-01-14" data-name="Legal Compliance Intelligence" data-popular="7">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-slate-500/20 text-slate-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.legalComplianceIntelligence.label">Legal</span>
@@ -624,7 +669,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="marketing ai product" data-updated="2026-01-14" data-name="Growth Intelligence Studio" data-popular="8">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="marketing ai product" data-sectors="telecom it" data-updated="2026-01-14" data-name="Growth Intelligence Studio" data-popular="8">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-pink-500/20 text-pink-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.growthIntelligenceStudio.label">Marketing</span>
@@ -643,7 +688,7 @@
                     </div>
                 </div>
 
-                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="marketing product" data-updated="2026-01-14" data-name="Sales Enablement Playbooks" data-popular="7">
+                <div class="case-card bg-card-bg rounded-2xl border border-gray-800 card-hover animate-fade-in" data-categories="marketing product" data-sectors="telecom it" data-updated="2026-01-14" data-name="Sales Enablement Playbooks" data-popular="7">
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-4">
                             <span class="inline-flex items-center px-3 py-1 bg-rose-500/20 text-rose-300 text-xs font-semibold rounded-full" data-i18n="projectsPage.cards.salesEnablementPlaybooks.label">Sales Enablement</span>
@@ -664,12 +709,12 @@
             </div>
 
             <div class="gradient-bg rounded-2xl border border-gray-800 p-8 md:p-12 text-center">
-                <h2 class="text-3xl font-bold mb-4" data-i18n="projectsPage.ctaTitle">Have a custom project in mind?</h2>
+                <h2 class="text-3xl font-bold mb-4" data-i18n="projectsPage.ctaTitle">Ready to explore what's possible?</h2>
                 <p class="text-gray-400 mb-8 max-w-2xl mx-auto" data-i18n="projectsPage.ctaSubtitle">
-                    Let's discuss how we can build intelligent, scalable solutions for your business. Book a free strategy call with our team.
+                    Every organization has unique challenges. Let's discuss your data and AI opportunities in a complimentary strategy session.
                 </p>
                 <a href="../index.html#contact" class="inline-flex items-center bg-brand-blue hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition" data-i18n="projectsPage.ctaButton">
-                    Start Your Project
+                    Schedule a Consultation
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
@@ -735,93 +780,207 @@
 
     <script src="../assets/js/main.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Copyright year
             const year = new Date().getFullYear();
             const el = document.getElementById('copyright-year');
             if (el) el.textContent = year;
-        });
 
-        const scrollLinks = document.querySelectorAll('[data-scroll-target]');
-        scrollLinks.forEach(link => {
-            link.addEventListener('click', (event) => {
-                const targetId = link.getAttribute('data-scroll-target');
-                const target = document.getElementById(targetId);
-                if (!target) return;
-                event.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                history.replaceState(null, '', window.location.pathname);
+            // Smooth scroll
+            const scrollLinks = document.querySelectorAll('[data-scroll-target]');
+            scrollLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    const targetId = link.getAttribute('data-scroll-target');
+                    const target = document.getElementById(targetId);
+                    if (!target) return;
+                    event.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.replaceState(null, '', window.location.pathname);
+                });
             });
-        });
 
-        const filterBtns = document.querySelectorAll('.case-filter-btn');
-        const sortSelect = document.getElementById('case-sort');
-        const caseGrid = document.getElementById('case-grid');
-        const caseCards = document.querySelectorAll('.case-card');
-        const resultsCount = document.getElementById('results-count');
-        let activeFilter = 'all';
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('filter-btn-active'));
-                btn.classList.add('filter-btn-active');
-                
-                activeFilter = btn.dataset.caseFilter;
-                applyFiltersAndSort();
-            });
-        });
-
-        sortSelect.addEventListener('change', applyFiltersAndSort);
-
-        function applyFiltersAndSort() {
-            const sortValue = sortSelect.value;
-            const cards = Array.from(caseCards);
+            // Filter and sort elements
+            const filterContainer = document.getElementById('project-filters');
+            const filterBtns = document.querySelectorAll('.case-filter-btn');
+            const sectorSelect = document.getElementById('sector-select');
+            const sortSelect = document.getElementById('case-sort');
+            const caseGrid = document.getElementById('case-grid');
+            const resultsCount = document.getElementById('results-count');
             
-            let filtered = cards.filter(card => {
-                if (activeFilter === 'all') return true;
-                const categories = card.dataset.categories.split(' ');
-                return categories.includes(activeFilter);
-            });
+            let activeFilter = 'all';
+            let activeSector = 'all';
 
-            filtered.sort((a, b) => {
-                if (sortValue === 'recent') {
-                    return new Date(b.dataset.updated) - new Date(a.dataset.updated);
-                } else if (sortValue === 'name') {
-                    return a.dataset.name.localeCompare(b.dataset.name);
-                }
-                return 0;
-            });
+            // Debug log
+            console.log('Projects filter initialized');
+            console.log('Sector select found:', !!sectorSelect);
+            console.log('Case cards found:', document.querySelectorAll('.case-card').length);
 
-            cards.forEach(card => card.remove());
+            // Business function filter buttons
+            if (filterContainer) {
+                filterContainer.addEventListener('click', function(event) {
+                    const btn = event.target.closest('button');
+                    if (!btn || !btn.dataset.caseFilter) return;
 
-            filtered.forEach(card => {
-                card.classList.add('animate-fade-in');
-                caseGrid.appendChild(card);
-            });
-
-            if (resultsCount) {
-                const t = translations[window.currentLang] || translations.en;
-                resultsCount.textContent = activeFilter === 'all'
-                    ? t.projectsPage.resultsAll
-                    : t.projectsPage.resultsFiltered;
+                    filterBtns.forEach(function(b) { b.classList.remove('filter-btn-active'); });
+                    btn.classList.add('filter-btn-active');
+                    activeFilter = btn.dataset.caseFilter;
+                    applyFiltersAndSort();
+                });
             }
-        }
 
-        if (typeof window.setLanguage === 'function') {
-            const originalSetLanguage = window.setLanguage;
-            window.setLanguage = function(lang) {
-                originalSetLanguage(lang);
+            // Sector dropdown handler
+            function handleSectorChange() {
+                activeSector = sectorSelect.value || 'all';
+                console.log('Sector changed to:', activeSector);
+                applyFiltersAndSort();
+            }
+
+            if (sectorSelect) {
+                sectorSelect.addEventListener('change', handleSectorChange);
+            }
+
+            // Sort dropdown handler
+            if (sortSelect) {
+                sortSelect.addEventListener('change', applyFiltersAndSort);
+            }
+
+            function getSectorLabel(sectorKey) {
+                const lang = window.currentLang || 'en';
+                const t = window.translations && window.translations[lang];
+                if (t && t.projectsPage) {
+                    if (sectorKey === 'telecom') return t.projectsPage.filterSectorTelecom || 'Telecom';
+                    if (sectorKey === 'energy') return t.projectsPage.filterSectorEnergy || 'Energy';
+                    if (sectorKey === 'healthcare') return t.projectsPage.filterSectorHealthcare || 'Healthcare';
+                    if (sectorKey === 'it') return t.projectsPage.filterSectorIT || 'IT';
+                    if (sectorKey === 'manufacturing') return t.projectsPage.filterSectorManufacturing || 'Manufacturing';
+                    if (sectorKey === 'finance') return t.projectsPage.filterSectorFinance || 'Finance';
+                }
+                if (sectorKey === 'it') return 'IT';
+                if (sectorKey === 'manufacturing') return 'Manufacturing';
+                if (sectorKey === 'finance') return 'Finance';
+                return sectorKey.charAt(0).toUpperCase() + sectorKey.slice(1);
+            }
+
+            function renderSectorTags() {
+                document.querySelectorAll('.case-card').forEach(function(card) {
+                    const sectorValues = (card.dataset.sectors || '').split(' ').filter(Boolean);
+                    if (!sectorValues.length) return;
+
+                    // Remove existing sector tags
+                    const existing = card.querySelector('.sector-tags');
+                    if (existing) existing.remove();
+
+                    // Create new container
+                    const container = document.createElement('div');
+                    container.className = 'sector-tags flex flex-wrap gap-2 mb-4';
+
+                    sectorValues.forEach(function(value) {
+                        const chip = document.createElement('span');
+                        chip.className = 'px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded';
+                        chip.textContent = getSectorLabel(value);
+                        container.appendChild(chip);
+                    });
+
+                    // Insert after tech stack
+                    const techStack = card.querySelector('.flex.flex-wrap.gap-2.mb-5');
+                    if (techStack && techStack.parentElement) {
+                        techStack.parentElement.insertBefore(container, techStack.nextSibling);
+                    } else {
+                        const p6 = card.querySelector('.p-6');
+                        if (p6) p6.appendChild(container);
+                    }
+                });
+            }
+
+            function applyFiltersAndSort() {
+                const sortValue = sortSelect ? sortSelect.value : 'recent';
+                const cards = document.querySelectorAll('.case-card');
+                let visibleCount = 0;
+
+                console.log('Applying filters - activeFilter:', activeFilter, 'activeSector:', activeSector);
+
+                cards.forEach(function(card) {
+                    const categories = (card.dataset.categories || '').split(' ');
+                    const sectors = (card.dataset.sectors || '').split(' ');
+
+                    const matchesCategory = (activeFilter === 'all') || categories.includes(activeFilter);
+                    const matchesSector = (activeSector === 'all') || sectors.includes(activeSector);
+
+                    if (matchesCategory && matchesSector) {
+                        card.style.display = '';
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                        card.classList.add('hidden');
+                    }
+                });
+
+                console.log('Visible cards:', visibleCount);
+
+                // Sorting
+                if (caseGrid) {
+                    const visibleCards = Array.from(cards).filter(function(c) { 
+                        return c.style.display !== 'none'; 
+                    });
+                    
+                    visibleCards.sort(function(a, b) {
+                        if (sortValue === 'name') {
+                            return (a.dataset.name || '').localeCompare(b.dataset.name || '');
+                        }
+                        return new Date(b.dataset.updated || 0) - new Date(a.dataset.updated || 0);
+                    });
+
+                    visibleCards.forEach(function(card) {
+                        caseGrid.appendChild(card);
+                    });
+                }
+
+                // Update results text
+                if (resultsCount) {
+                    const lang = window.currentLang || 'en';
+                    const t = window.translations && window.translations[lang];
+                    if (t && t.projectsPage) {
+                        resultsCount.textContent = (activeFilter === 'all' && activeSector === 'all')
+                            ? t.projectsPage.resultsAll
+                            : t.projectsPage.resultsFiltered;
+                    }
+                }
+
+                renderSectorTags();
+            }
+
+            // Expose global handlers for inline event attributes
+            window.handleSectorFilterChange = function(value) {
+                activeSector = value || 'all';
+                console.log('Global sector handler called:', activeSector);
                 applyFiltersAndSort();
             };
-        }
 
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
+            window.applyProjectFilters = applyFiltersAndSort;
+
+            // Initial render
+            applyFiltersAndSort();
+
+            // Hook into language changes
+            if (typeof window.setLanguage === 'function') {
+                const originalSetLanguage = window.setLanguage;
+                window.setLanguage = function(lang) {
+                    originalSetLanguage(lang);
+                    applyFiltersAndSort();
+                };
+            }
+
+            // Mobile menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
     </script>
 </body>
 </html>

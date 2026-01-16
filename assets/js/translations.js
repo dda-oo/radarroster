@@ -775,17 +775,21 @@ const translations = {
             liveDemo: "Live Demo",
             cardOpenSource: "Open Source",
             cardAutomation: "Automation",
-            cardSalesOps: "Sales Ops Bots",
-            cardSalesOpsDesc: "CRM-connected WhatsApp & Telegram agents.",
+            cardSalesOps: "Sales Ops Automation",
+            cardSalesOpsDesc: "CRM-integrated messaging agents for WhatsApp & Telegram.",
             cards: {
                 retentionGuardTeaser: "Retention risk analytics with workforce signals and actionable insights.",
                 retentionGuard: {
                     label: "HR Analytics",
                     desc: "Retention risk analytics with workforce signals, early warnings, and action-ready insights for HR teams."
                 },
-                radarroster: {
+                hrIntelligenceHub: {
+                    label: "HR Analytics",
+                    desc: "Flagship HR analytics hub built for extensibility. Designed for continuous enrichment and real-world enterprise adoption."
+                },
+                aiConsultingPlatform: {
                     label: "Product • Chatbot",
-                    desc: "Marketing site with AI chatbot, multilingual content, and conversion-focused UX."
+                    desc: "Modern consulting website with AI chatbot, multilingual content, and conversion-focused UX."
                 },
                 exchangeRates: {
                     desc: "Automated FX rate publishing for messaging channels with scheduled delivery, monitoring, and API-driven pricing."
@@ -798,13 +802,13 @@ const translations = {
                     label: "Finance",
                     desc: "Research workbench for small-cap screening, factor analysis, and idea vetting."
                 },
-                taxifareWebsite: {
+                servicePricingPortal: {
                     label: "Product",
-                    desc: "Conversion-optimized pricing website with quote capture, trust proof, and clear service tiers."
+                    desc: "Conversion-optimized pricing portal with quote capture, trust indicators, and clear service tiers."
                 },
-                taxiFareInterface: {
+                quoteEstimationInterface: {
                     label: "Product",
-                    desc: "Fare estimation web app with dynamic pricing rules, UX flows, and booking handoff."
+                    desc: "Dynamic pricing interface with real-time estimation, UX flows, and booking handoff."
                 },
                 workflowChatbot: {
                     label: "Chatbot",
@@ -860,6 +864,16 @@ const translations = {
             filterLegal: "Legal",
             filterMarketing: "Marketing",
             filterProduct: "Product",
+            filterFunctionLabel: "Business functions",
+            filterSectorLabel: "Industry sectors",
+            filterSectorAll: "All Sectors",
+            filterSectorTelecom: "Telecom",
+            filterSectorEnergy: "Energy",
+            filterSectorHealthcare: "Healthcare",
+            filterSectorIT: "IT",
+            filterSectorManufacturing: "Manufacturing",
+            filterSectorFinance: "Finance",
+            sectorLabel: "Sector",
             sortLabel: "View",
             sortFeatured: "Featured order",
             sortName: "Name (A–Z)",
@@ -867,9 +881,9 @@ const translations = {
             resultsFiltered: "Filtered selection shown.",
             confidentiality: "Confidential",
             confidentialityTag: "Confidential engagement",
-            ctaTitle: "Have a custom project in mind?",
-            ctaSubtitle: "Let's discuss how we can build intelligent, scalable solutions for your business. Book a free strategy call with our team.",
-            ctaButton: "Start Your Project"
+            ctaTitle: "Ready to explore what's possible?",
+            ctaSubtitle: "Every organization has unique challenges. Let's discuss your data and AI opportunities in a complimentary strategy session.",
+            ctaButton: "Schedule a Consultation"
         },
 
         footer: {
@@ -1617,23 +1631,27 @@ const translations = {
             featuredLabel: "Featured Open Source",
             featuredMeta: "Featured Open Source",
             featuredTitle: "HR-Intelligence-Hub",
-            featuredSubtitle: "Open Source • Ready for enrichment",
+            featuredSubtitle: "Open Source • Bereit zur Erweiterung",
             featuredDesc: "Ein Flaggschiff-HR-Analytics-Hub, der offen und erweiterbar bleibt. Für kontinuierliche Erweiterung und echte Nutzung.",
             viewGithub: "Auf GitHub ansehen",
             liveDemo: "Live-Demo",
             cardOpenSource: "Open Source",
             cardAutomation: "Automatisierung",
-            cardSalesOps: "Sales Ops Bots",
-            cardSalesOpsDesc: "CRM-verbundene WhatsApp- & Telegram-Agenten.",
+            cardSalesOps: "Sales Ops Automation",
+            cardSalesOpsDesc: "CRM-integrierte Messaging-Agenten für WhatsApp & Telegram.",
             cards: {
                 retentionGuardTeaser: "Retention-Risiko-Analytik mit Workforce-Signalen und umsetzbaren Insights.",
                 retentionGuard: {
                     label: "HR-Analytics",
                     desc: "Retention-Risiko-Analytik mit Workforce-Signalen, Frühwarnungen und handlungsreifen Insights für HR-Teams."
                 },
-                radarroster: {
+                hrIntelligenceHub: {
+                    label: "HR-Analytics",
+                    desc: "Flaggschiff-HR-Analytics-Hub für Erweiterbarkeit. Entwickelt für kontinuierliche Anreicherung und echten Unternehmenseinsatz."
+                },
+                aiConsultingPlatform: {
                     label: "Produkt • Chatbot",
-                    desc: "Marketing-Website mit KI-Chatbot, mehrsprachigem Content und conversion-fokussierter UX."
+                    desc: "Moderne Consulting-Website mit KI-Chatbot, mehrsprachigem Content und conversion-fokussierter UX."
                 },
                 exchangeRates: {
                     desc: "Automatisierte FX-Kursveröffentlichung für Messaging-Kanäle mit Zeitplanung, Monitoring und API-basierten Kursen."
@@ -1646,13 +1664,13 @@ const translations = {
                     label: "Finanzen",
                     desc: "Research-Workbench für Small-Cap-Screening, Faktorenanalyse und Ideeprüfung."
                 },
-                taxifareWebsite: {
+                servicePricingPortal: {
                     label: "Produkt",
-                    desc: "Conversion-optimierte Pricing-Website mit Angebotsanfrage, Vertrauensnachweisen und klaren Service-Tiers."
+                    desc: "Conversion-optimiertes Pricing-Portal mit Angebotserfassung, Vertrauensindikatoren und klaren Service-Tiers."
                 },
-                taxiFareInterface: {
+                quoteEstimationInterface: {
                     label: "Produkt",
-                    desc: "Fare-Estimation-Web-App mit dynamischen Preisregeln, UX-Flows und Buchungsübergabe."
+                    desc: "Dynamische Pricing-Oberfläche mit Echtzeit-Kalkulation, UX-Flows und Buchungsübergabe."
                 },
                 workflowChatbot: {
                     label: "Chatbot",
@@ -1708,6 +1726,16 @@ const translations = {
             filterLegal: "Legal",
             filterMarketing: "Marketing",
             filterProduct: "Produkt",
+            filterFunctionLabel: "Geschäftsfunktionen",
+            filterSectorLabel: "Branchen",
+            filterSectorAll: "Alle Branchen",
+            filterSectorTelecom: "Telekommunikation",
+            filterSectorEnergy: "Energie",
+            filterSectorHealthcare: "Gesundheitswesen",
+            filterSectorIT: "IT",
+            filterSectorManufacturing: "Fertigung",
+            filterSectorFinance: "Finanzwesen",
+            sectorLabel: "Branche",
             sortLabel: "Ansicht",
             sortFeatured: "Featured-Reihenfolge",
             sortName: "Name (A–Z)",
@@ -1715,9 +1743,9 @@ const translations = {
             resultsFiltered: "Gefilterte Auswahl angezeigt.",
             confidentiality: "Vertraulich",
             confidentialityTag: "Vertrauliches Engagement",
-            ctaTitle: "Haben Sie ein individuelles Projekt im Sinn?",
-            ctaSubtitle: "Lassen Sie uns besprechen, wie wir intelligente, skalierbare Lösungen für Ihr Unternehmen bauen. Buchen Sie eine kostenlose Strategieberatung.",
-            ctaButton: "Projekt starten"
+            ctaTitle: "Bereit zu erkunden, was möglich ist?",
+            ctaSubtitle: "Jede Organisation hat einzigartige Herausforderungen. Lassen Sie uns Ihre Daten- und KI-Möglichkeiten in einem unverbindlichen Strategiegespräch besprechen.",
+            ctaButton: "Beratungsgespräch vereinbaren"
         },
 
         footer: {
@@ -1798,6 +1826,8 @@ window.updatePageContent = function() {
         if (value) {
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                 element.placeholder = value;
+            } else if (element.tagName === 'OPTION') {
+                element.textContent = value;
             } else if (element.children.length) {
                 const textNode = Array.from(element.childNodes).find(
                     node => node.nodeType === Node.TEXT_NODE && node.textContent.trim().length
@@ -1813,6 +1843,9 @@ window.updatePageContent = function() {
         }
     });
 }
+
+// Expose translations globally for other scripts
+window.translations = translations;
 
 document.addEventListener('DOMContentLoaded', () => {
     window.currentLang = localStorage.getItem('language') || 'en';
