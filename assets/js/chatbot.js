@@ -190,16 +190,13 @@ class SmartChatbot {
         
         const html = `
             <div id="smart-chatbot" class="fixed bottom-4 ${positionClass} z-50">
-                <!-- Chat Button -->
                 <button id="chat-toggle-btn" class="w-14 h-14 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" style="background: linear-gradient(135deg, ${this.config.brandColor} 0%, #8B5CF6 100%);" aria-label="Open chat">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
                     </svg>
                 </button>
 
-                <!-- Chat Window -->
                 <div id="chat-window" class="hidden absolute bottom-20 w-96 h-[600px] bg-gray-900 rounded-2xl shadow-2xl border border-gray-800 flex flex-col overflow-hidden" style="max-height: calc(100vh - 8rem);" role="dialog" aria-label="Chat window">
-                    <!-- Header -->
                     <div class="p-4 border-b border-gray-800" style="background: linear-gradient(135deg, ${this.config.brandColor} 0%, #8B5CF6 100%);">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-3">
@@ -224,17 +221,12 @@ class SmartChatbot {
                         </div>
                     </div>
 
-                    <!-- Messages -->
                     <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-900 scroll-smooth">
-                        <!-- Messages will be inserted here -->
                     </div>
 
-                    <!-- Quick Actions -->
                     <div id="quick-actions" class="px-4 py-2 border-t border-gray-800 flex flex-wrap gap-2 bg-gray-900/50">
-                        <!-- Quick action buttons -->
                     </div>
 
-                    <!-- Input -->
                     <div class="p-4 border-t border-gray-800 bg-gray-900">
                         <div class="flex space-x-2">
                             <input 
@@ -458,7 +450,7 @@ class SmartChatbot {
             this.hideTypingIndicator();
             this.renderMessages();
             this.renderQuickActions();
-        }, 800 + Math.random() * 800); // Simulate thinking time
+        }, 800 + Math.random() * 800);
     }
 
     handleChallengeResponse(message) {

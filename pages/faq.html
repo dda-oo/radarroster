@@ -574,7 +574,6 @@
             const answer = faqItem.querySelector('.faq-answer');
             const icon = button.querySelector('.faq-icon');
             
-            // Close all other FAQs
             document.querySelectorAll('.faq-answer').forEach(item => {
                 if (item !== answer) {
                     item.classList.remove('open');
@@ -582,7 +581,6 @@
                 }
             });
             
-            // Toggle current FAQ
             answer.classList.toggle('open');
             icon.classList.toggle('rotate');
         }
@@ -602,13 +600,10 @@
             setLanguage(savedLang);
         });
         
-        // Open chatbot function
         function openChatbot() {
-            // Trigger chatbot if available
             if (window.chatbot && window.chatbot.isOpen === false) {
                 window.chatbot.toggleChat();
             } else if (window.chatbot) {
-                // Chatbot already open, highlight it
                 const chatWindow = document.getElementById('chat-window');
                 if (chatWindow) {
                     chatWindow.style.animation = 'pulse 0.5s';
@@ -617,12 +612,10 @@
                     }, 500);
                 }
             } else {
-                // Fallback if chatbot not loaded yet
                 alert('💬 Look for the chat icon in the bottom-left corner of your screen!');
             }
         }
         
-        // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenuButton && mobileMenu) {
@@ -631,7 +624,6 @@
             });
         }
         
-        // Set footer year
         const year = new Date().getFullYear();
         const el = document.getElementById('copyright-year');
         if (el) el.textContent = year;
